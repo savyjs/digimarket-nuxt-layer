@@ -22,8 +22,8 @@
     "ecommerce ui",
     "blog ui"
   ],
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "src/module.ts",
+  "module": "src/module.ts",
   "sideEffects": [
     "*.sass",
     "*.scss",
@@ -72,11 +72,11 @@
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/savyjs/nuxt3-tailwind-marketplace-kit/issues"
+    "url": "https://github.com/savyjs/nuxt-tailwind-marketplace-kit/issues"
   },
   "homepage": "http://ntm.savyjs.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/savyjs/nuxt3-tailwind-marketplace-kit.git"
+    "url": "git+https://github.com/savyjs/nuxt-tailwind-marketplace-kit.git"
   }
 }
