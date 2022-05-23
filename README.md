@@ -1,24 +1,8 @@
 
-# VSP (Vuetify Strapi Page)
-
-[![nuxt vuetify strapi dashboard](http://vsp.savyjs.com/banner.png)](https://vsd.savyjs.com)
+# NTM (Nuxt3 Tailwind Marketplace Kit)
 
 ## documentation (alpha version)
 
-- [Install And Usage Guide](http://vsp.savyjs.com)
+- [Install And Usage Guide](http://ntm.savyjs.com)
 
-## build front-end pages with vuetify and strapi 
-
-- marketing landing pages (funnel convert method)
-- simple blog with nuxt content (list - tag - article - author)
-- media sharing (podcast blog) 
-- product page
-- product list
-- invoice
-- login page
-- different layouts
-- ready to use slides and cards
-- set of headers and footers
-- contact us
-- about us
-- ...
+## build online markets with tailwind css faster
