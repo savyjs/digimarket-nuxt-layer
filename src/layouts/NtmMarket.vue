@@ -1,8 +1,8 @@
 <template>
   <div>
     <NtmHeader/>
-    NtmMarket
     <NuxtPage/>
+    <slot/>
     <NtmFooter/>
   </div>
 </template>
