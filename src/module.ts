@@ -35,6 +35,9 @@ export default defineNuxtModule({
         await addComponentsDir({
             path: await resolvePath((__dirname + '/components'))
         })
+        await addComponentsDir({
+            path: await resolvePath((__dirname + '/components/blog'))
+        })
 
         await addPlugin({
             src: await resolvePath(__dirname + '/plugins/NtmPlugin.ts'),

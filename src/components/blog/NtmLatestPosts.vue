@@ -1,10 +1,16 @@
 <template>
   <div>
-    {{ articles }}
+    {{ props?.articles }}
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 // implicit (assumes $eq operator)
-const articles = await $content('articles').fetch()
+const props = defineProps(
+    {
+      articles: {type: String, required: true},
+    }
+)
+
+console.log(props.foo)
 </script>
