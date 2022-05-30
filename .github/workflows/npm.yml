@@ -30,4 +30,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script:  cd /home/ntm && git pull origin master && pm2 stop ntmDocsFront && yarn build && pm2 start ntmDocsFront
+        script:  cd /home/ntm && git pull origin master && cd /home/ntm/docs  && pm2 stop ntmDocsFront && yarn && yarn build && pm2 start ntmDocsFront
