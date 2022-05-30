@@ -43,7 +43,8 @@
   "devDependencies": {
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
-    "nuxt": "3.0.0-rc.3",
+    "nuxt": "npm:nuxt3@latest",
+    "vitest": "^0.13.0",
     "@nuxthq/admin": "npm:@nuxthq/admin-edge@latest",
     "@nuxt/test-utils": "npm:@nuxt/test-utils-edge@latest"
   },
