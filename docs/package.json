@@ -2,8 +2,8 @@
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
-    "start": "nuxi start --PORT=4091",
-    "build": "nuxi build ",
+    "start": "PORT=4091 && nuxi start",
+    "build": "PORT=4091 && nuxi build",
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
