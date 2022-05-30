@@ -11,6 +11,4 @@ const props = defineProps(
       articles: {type: String, required: true},
     }
 )
-
-console.log(props.foo)
 </script>

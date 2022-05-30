@@ -42,7 +42,10 @@
   },
   "devDependencies": {
     "fs": "^0.0.1-security",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "nuxt": "3.0.0-rc.3",
+    "@nuxthq/admin": "npm:@nuxthq/admin-edge@latest",
+    "@nuxt/test-utils": "npm:@nuxt/test-utils-edge@latest"
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^5.1.2",
