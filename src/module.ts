@@ -35,6 +35,7 @@ export default defineNuxtModule({
         await addComponentsDir({
             path: await resolvePath((__dirname + '/components'))
         })
+
         await addComponentsDir({
             path: await resolvePath((__dirname + '/components/blog'))
         })
