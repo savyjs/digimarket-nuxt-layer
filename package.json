@@ -58,7 +58,7 @@
     "lodash": "^4.17.21",
     "lodash-deep": "^1.6.0",
     "moment-jalaali": "^0.9.2",
-    "nuxt-jsonld": "^2.0.3",
+    "nuxt-jsonld": "^2.0.3"
   },
   "publishConfig": {
     "access": "public"
