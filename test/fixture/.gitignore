@@ -1,7 +1,7 @@
 node_modules/
 .idea/
+.nuxt
+.nuxt/
 yarn.lock
 package-lock.json
 coverage/tmp/
-
-test/fixture/.nuxt/
