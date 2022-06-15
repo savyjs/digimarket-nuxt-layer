@@ -51,15 +51,15 @@ export default defineNuxtModule({
             }, "NtmPanel"
         )
         await addTemplate({
-            filename: "layouts/NtmMarket.vue",
-            src: await resolvePath(__dirname + '/layouts/NtmMarket.vue'),
+            filename: "layouts/ntmmarket.vue",
+            src: await resolvePath(__dirname + '/layouts/ntmmarket.vue'),
         })
 
         await moduleContainer.addLayout(
             {
-                filename: "layouts/NtmMarket.vue",
-                src: await resolvePath(__dirname + '/layouts/NtmMarket.vue'),
-            }, "NtmMarket"
+                filename: "layouts/ntmmarket.vue",
+                src: await resolvePath(__dirname + '/layouts/ntmmarket.vue'),
+            }, "ntmmarket"
         )
     }
 });
