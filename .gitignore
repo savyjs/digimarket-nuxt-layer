@@ -5,3 +5,5 @@ package-lock.json
 coverage/tmp/
 
 test/fixture/.nuxt/
+
+yarn-error.log

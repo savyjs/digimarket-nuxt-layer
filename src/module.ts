@@ -5,12 +5,14 @@ import {
     addPlugin,
     useModuleContainer,
     addAutoImportDir,
+    addAutoImport,
     addComponentsDir,
     addPluginTemplate,
     isNuxt2,
     isNuxt3,
     resolvePath, addComponent
 } from '@nuxt/kit'
+import {fileURLToPath} from 'node:url'
 import {ScanDir} from '@nuxt/schema';
 
 export default defineNuxtModule({
@@ -26,19 +28,18 @@ export default defineNuxtModule({
         }
     },
     defaults: {},
-    hooks: {},
+    hooks: {
+        'components:dirs'(dirs) {
+            // Add ./components dir to the list
+            dirs.push({
+                path: fileURLToPath(new URL('./components', import.meta.url))
+            })
+        }
+    },
     async setup(moduleOptions, nuxt) {
-        const moduleContainer = useModuleContainer(nuxt);
+        const moduleContainer = useModuleContainer();
 
         await installModule('@nuxtjs/tailwindcss')
-
-        await addComponentsDir({
-            path: await resolvePath((__dirname + '/components'))
-        })
-
-        await addComponentsDir({
-            path: await resolvePath((__dirname + '/components/blog'))
-        })
 
         await addPlugin({
             src: await resolvePath(__dirname + '/plugins/NtmPlugin.ts'),
@@ -48,18 +49,22 @@ export default defineNuxtModule({
             {
                 fileName: "NtmPanel.vue",
                 src: await resolvePath(__dirname + '/layouts/NtmPanel.vue'),
-            }, "NtmPanel"
+            }, "ntm-panel"
         )
+
         await addTemplate({
-            filename: "layouts/ntmmarket.vue",
-            src: await resolvePath(__dirname + '/layouts/ntmmarket.vue'),
+            fileName: "layouts/NtmMarket.vue",
+            src: await resolvePath(__dirname + '/layouts/NtmMarket.vue'),
         })
 
-        await moduleContainer.addLayout(
-            {
-                filename: "layouts/ntmmarket.vue",
-                src: await resolvePath(__dirname + '/layouts/ntmmarket.vue'),
-            }, "ntmmarket"
-        )
+        nuxt.hook('app:created', async () => {
+            console.log('app:created')
+            await moduleContainer.addLayout(
+                {
+                    filename: "layouts/NtmMarket.vue",
+                    src: await resolvePath(__dirname + '/layouts/NtmMarket.vue'),
+                }, "ntm-market"
+            )
+        })
     }
 });
