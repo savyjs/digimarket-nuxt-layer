@@ -47,7 +47,6 @@ export default defineNuxtModule({
 
         await moduleContainer.addLayout(
             {
-                fileName: "NtmPanel.vue",
                 src: await resolvePath(__dirname + '/layouts/NtmPanel.vue'),
             }, "ntm-panel"
         )
