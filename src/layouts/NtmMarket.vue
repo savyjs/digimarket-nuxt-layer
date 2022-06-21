@@ -1,9 +1,8 @@
 <template>
   <div>
     <NtmHeader/>
-    layout
+
     <NuxtPage/>
-    <slot/>
     <NtmFooter/>
   </div>
 </template>

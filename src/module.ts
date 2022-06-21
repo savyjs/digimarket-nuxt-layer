@@ -4,16 +4,10 @@ import {
     addTemplate,
     addPlugin,
     useModuleContainer,
-    addAutoImportDir,
-    addAutoImport,
-    addComponentsDir,
-    addPluginTemplate,
-    isNuxt2,
-    isNuxt3,
     resolvePath, addComponent
 } from '@nuxt/kit'
 import {fileURLToPath} from 'node:url'
-import {ScanDir} from '@nuxt/schema';
+
 
 export default defineNuxtModule({
     meta: {
@@ -30,7 +24,6 @@ export default defineNuxtModule({
     defaults: {},
     hooks: {
         'components:dirs'(dirs) {
-            // Add ./components dir to the list
             dirs.push({
                 path: fileURLToPath(new URL('./components', import.meta.url))
             })
@@ -41,29 +34,24 @@ export default defineNuxtModule({
 
         await installModule('@nuxtjs/tailwindcss')
 
-        await addPlugin({
+        addPlugin({
             src: await resolvePath(__dirname + '/plugins/NtmPlugin.ts'),
         })
 
         await moduleContainer.addLayout(
             {
-                src: await resolvePath(__dirname + '/layouts/NtmPanel.vue'),
-            }, "ntm-panel"
+                write: true,
+                filename: "../layouts/NtmMarket.vue",
+                src: await resolvePath(__dirname + '/layouts/NtmMarket.vue'),
+            }, "NtmMarket"
         )
 
-        await addTemplate({
-            fileName: "layouts/NtmMarket.vue",
-            src: await resolvePath(__dirname + '/layouts/NtmMarket.vue'),
-        })
-
-        nuxt.hook('app:created', async () => {
-            console.log('app:created')
-            await moduleContainer.addLayout(
-                {
-                    filename: "layouts/NtmMarket.vue",
-                    src: await resolvePath(__dirname + '/layouts/NtmMarket.vue'),
-                }, "ntm-market"
-            )
-        })
+        await moduleContainer.addLayout(
+            {
+                write: true,
+                filename: "../layouts/NtmPanel.vue",
+                src: await resolvePath(__dirname + '/layouts/NtmPanel.vue'),
+            }, "NtmPanel"
+        )
     }
 });
