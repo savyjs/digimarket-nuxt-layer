@@ -9,6 +9,7 @@ import {
 } from '@nuxt/kit'
 import {fileURLToPath} from 'node:url'
 import consola from 'consola'
+
 const logger = consola.withScope('nuxt:ntm')
 
 export default defineNuxtModule({
@@ -35,7 +36,12 @@ export default defineNuxtModule({
         const moduleContainer = useModuleContainer();
 
         await installModule('@nuxtjs/tailwindcss')
-        logger(nuxt.options.css)
+
+        nuxt.hook('ready', async nuxt => {
+            nuxt.options.css.push(await resolvePath(__dirname + '/assets/styles/ntm.scss'))
+            console.log(nuxt.options.css)
+            console.log('Nuxt is ready')
+        })
 
         addPlugin({
             src: await resolvePath(__dirname + '/plugins/NtmPlugin.ts'),
