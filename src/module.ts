@@ -2,12 +2,14 @@ import {
     defineNuxtModule,
     installModule,
     addTemplate,
+    addAutoImportDir,
     addPlugin,
     useModuleContainer,
     resolvePath, addComponent
 } from '@nuxt/kit'
 import {fileURLToPath} from 'node:url'
-
+import consola from 'consola'
+const logger = consola.withScope('nuxt:ntm')
 
 export default defineNuxtModule({
     meta: {
@@ -33,10 +35,13 @@ export default defineNuxtModule({
         const moduleContainer = useModuleContainer();
 
         await installModule('@nuxtjs/tailwindcss')
+        logger(nuxt.options.css)
 
         addPlugin({
             src: await resolvePath(__dirname + '/plugins/NtmPlugin.ts'),
         })
+
+        await addAutoImportDir([await resolvePath(__dirname + '/static'), await resolvePath(__dirname + '/assets')])
 
         await moduleContainer.addLayout(
             {

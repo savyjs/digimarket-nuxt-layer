@@ -181,13 +181,13 @@
           <p >همراه ما باشید</p>
           <div calss="flex pt-4">
             <a href="" calss="ml-5 text-gray-400">
-              <FaInstagram size="2rem" />
+
             </a>
             <a href="" calss="ml-5 text-gray-400">
-              <FaTwitter size="2rem" />
+
             </a>
             <a href="" calss="ml-5 text-gray-400">
-              <FaLinkedin size="2rem" />
+
             </a>
           </div>
           <p >
