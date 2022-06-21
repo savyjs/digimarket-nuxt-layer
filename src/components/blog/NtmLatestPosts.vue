@@ -1,7 +1,5 @@
 <template>
   <div>
-    ntm is up
-    {{ props?.articles }}
   </div>
 </template>
 

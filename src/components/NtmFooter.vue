@@ -4,16 +4,14 @@
       <div calss="px-5">
         <div calss="flex select-none items-center justify-between">
           <div calss="ml-4">
-            
               <a calss="text-link px-0.5">
                 <img
                         width="100"
                         height="30"
-                        src="/dkala/logo-fa.svg"
+                        src="../public/dkala/logo-fa.svg"
                         alt="logo"
                 />
               </a>
-            
           </div>
           <button
                   calss="btn-gray-outlined mx-1 flex h-10 text-[12px]"
@@ -54,7 +52,7 @@
               <img
                       width="56"
                       height="56"
-                      src="/dkala/express-delivery.svg"
+                      src="../public/dkala/express-delivery.svg"
                       alt="express-delivery"
                       calss="mx-auto"
               />
@@ -69,7 +67,7 @@
               <img
                       width="56"
                       height="56"
-                      src="/dkala/cash-on-delivery.svg"
+                      src="../public/dkala/cash-on-delivery.svg"
                       alt="cash-on-delivery"
                       calss="mx-auto"
               />
@@ -84,7 +82,7 @@
               <img
                       width="56"
                       height="56"
-                      src="/dkala/support.svg"
+                      src="../public/dkala/support.svg"
                       alt="support"
                       calss="mx-auto"
               />
@@ -99,7 +97,7 @@
               <img
                       width="56"
                       height="56"
-                      src="/dkala/days-return.svg"
+                      src="../public/dkala/days-return.svg"
                       alt="days-return"
                       calss="mx-auto"
               />
@@ -114,7 +112,7 @@
               <img
                       width="56"
                       height="56"
-                      src="/dkala/original-products.svg"
+                      src="../public/dkala/original-products.svg"
                       alt="original-products"
                       calss="mx-auto"
               />

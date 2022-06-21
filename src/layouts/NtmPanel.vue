@@ -1,6 +1,5 @@
 <template>
   <div>
-  <NtmHeader />
-  NTM pANEL
+    <NtmHeader/>
   </div>
 </template>

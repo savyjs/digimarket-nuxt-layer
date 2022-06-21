@@ -1,8 +1,14 @@
 <template>
-  <div>
+  <div class="container mx-auto">
     <NtmHeader/>
-
-    <NuxtPage/>
+    <Header/>
+    <Flowbite/>
+    <TWElement/>
+    <main class="">
+      <NuxtPage/>
+      <SvgIcons/>
+    </main>
+    <Footer/>
     <NtmFooter/>
   </div>
 </template>
