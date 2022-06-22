@@ -27,9 +27,20 @@ export default defineNuxtModule({
     defaults: {},
     hooks: {
         'components:dirs'(dirs) {
-            dirs.push({
-                path: fileURLToPath(new URL('./components', import.meta.url))
-            })
+            dirs.push(...[{
+                path: fileURLToPath(new URL('./components', import.meta.url)),
+                global: true
+            }, {
+                path: fileURLToPath(new URL('./components/blog', import.meta.url)),
+                global: true
+            }, {
+                path: fileURLToPath(new URL('./components/market', import.meta.url)),
+                global: true
+            }, {
+                path: fileURLToPath(new URL('./components/market/header', import.meta.url)),
+                global: true
+            }])
+            console.log(fileURLToPath(new URL('./components', import.meta.url)), {dirs});
         }
     },
     async setup(moduleOptions, nuxt) {
@@ -39,8 +50,6 @@ export default defineNuxtModule({
 
         nuxt.hook('ready', async nuxt => {
             nuxt.options.css.push(await resolvePath(__dirname + '/assets/styles/ntm.scss'))
-            console.log(nuxt.options.css)
-            console.log('Nuxt is ready')
         })
 
         addPlugin({

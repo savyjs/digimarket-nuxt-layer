@@ -1,14 +1,10 @@
 <template>
   <div class="container mx-auto">
-    <NtmHeader/>
-    <Header/>
-    <Flowbite/>
-    <TWElement/>
+    <NtmMarketHeader/>
     <main class="">
+      Layout
       <NuxtPage/>
-      <SvgIcons/>
     </main>
-    <Footer/>
-    <NtmFooter/>
+    <NtmMarketFooter/>
   </div>
 </template>
