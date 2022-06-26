@@ -3,6 +3,7 @@ import {
     installModule,
     addTemplate,
     addAutoImportDir,
+    addComponentsDir,
     addPlugin,
     useModuleContainer,
     resolvePath, addComponent
@@ -25,24 +26,6 @@ export default defineNuxtModule({
         }
     },
     defaults: {},
-    hooks: {
-        'components:dirs'(dirs) {
-            dirs.push(...[{
-                path: fileURLToPath(new URL('./components', import.meta.url)),
-                global: true
-            }, {
-                path: fileURLToPath(new URL('./components/blog', import.meta.url)),
-                global: true
-            }, {
-                path: fileURLToPath(new URL('./components/market', import.meta.url)),
-                global: true
-            }, {
-                path: fileURLToPath(new URL('./components/market/header', import.meta.url)),
-                global: true
-            }])
-            console.log(fileURLToPath(new URL('./components', import.meta.url)), {dirs});
-        }
-    },
     async setup(moduleOptions, nuxt) {
         const moduleContainer = useModuleContainer();
 
@@ -55,6 +38,8 @@ export default defineNuxtModule({
         addPlugin({
             src: await resolvePath(__dirname + '/plugins/NtmPlugin.ts'),
         })
+
+        await addComponentsDir({path: await resolvePath(__dirname + '/components')})
 
         await addAutoImportDir([await resolvePath(__dirname + '/static'), await resolvePath(__dirname + '/assets')])
 
