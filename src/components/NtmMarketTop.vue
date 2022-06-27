@@ -3,7 +3,7 @@
     <div class="flex-auto">
       <div class="flex w-full items-center">
         <a href="/" class="ml-5 shrink-0">
-          <img width="100" height="30" src="/dkala/logo.svg" alt="logo"/>
+          <img width="100" height="30" src="assets/dkala/logo.svg" alt="logo"/>
         </a>
         <div class="ml-auto h-10 flex-auto grow">
           <div
@@ -11,7 +11,7 @@
               class="px-4-lg text-body-2 rounded-8p flex h-10 items-center md:w-3/4 xl:w-2/3">
 
           <span class="pr-2 pl-3 text-[13px] text-gray-400">
-                    <FaSearch/>
+                    FaSearch
                   </span>
             <span class="cursor-text text-[12px] text-gray-400">
                     جستجو

@@ -11,7 +11,7 @@
             <a>
               <img
                   class="rounded-2xl"
-                  src="ntmRoot/assets/img/landing/banners/tage-400-300.jpg"
+                  src="assets/img/landing/banners/tage-400-300.jpg"
                   alt=""
               />
             </a>
@@ -22,7 +22,7 @@
             <a>
               <img
                   class="rounded-2xl"
-                  src="ntmRoot/assets/img/landing/banners/bingo-400-300.jpg"
+                  src="assets/img/landing/banners/bingo-400-300.jpg"
                   alt=""
               />
             </a>
@@ -33,7 +33,7 @@
             <a>
               <img
                   class="rounded-2xl"
-                  src="ntmRoot/assets/img/landing/banners/cif-400-300.jpg"
+                  src="assets/img/landing/banners/cif-400-300.jpg"
                   alt=""
               />
             </a>
@@ -44,7 +44,7 @@
             <a>
               <img
                   class="rounded-2xl"
-                  src="ntmRoot/assets/img/landing/banners/golrang-400-300.jpg"
+                  src="assets/img/landing/banners/golrang-400-300.jpg"
                   alt=""
               />
             </a>

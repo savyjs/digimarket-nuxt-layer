@@ -5,7 +5,7 @@
         <use href="#hamburgerMenu"></use>
       </svg>
       <a href="/" class="ml-5 shrink-0">
-        <img width="100" height="30" src="/dkala/logo.svg" alt="logo"/>
+        <img width="100" height="30" src="assets/dkala/logo.svg" alt="logo"/>
       </a>
 
       <svg class="h-6 w-6" fill="currentColor">
@@ -17,7 +17,7 @@
           id="search-box"
           class="px-4-lg text-body-2 rounded-8p flex h-10 w-3/4 items-center">
       <span class="pr-2 pl-3 text-[13px] text-gray-400">
-                <FaSearch/>
+                FaSearch
               </span>
         <span class="cursor-text text-[12px] text-gray-400">
                 جستجو

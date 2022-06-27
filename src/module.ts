@@ -35,8 +35,8 @@ export default defineNuxtModule({
         nuxt.hook('ready', async nuxt => {
             nuxt.options.css.push(await resolvePath(__dirname + '/assets/styles/ntm.scss'))
             nuxt.options.alias['ntmRoot'] = await resolvePath(__dirname);
-
         })
+
         addPlugin({
             src: await resolvePath(__dirname + '/plugins/NtmPlugin.ts'),
         })

@@ -1,7 +1,7 @@
 import {defineNuxtConfig} from 'nuxt'
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-    cs:[
+    cs: [
         '~/assets/font-css/font-iran.css'
     ],
     modules: [
@@ -13,6 +13,9 @@ export default defineNuxtConfig({
         // 'vuetify-strapi-page',
         // Providing options
     ],
+    ntm: {
+        logo: 'assets/dkala/logo.svg',
+    },
     content: {
         base: '/content'
     }
