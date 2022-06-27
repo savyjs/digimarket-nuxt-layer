@@ -1,5 +1,3 @@
 <template>
-  <div>
-    <b>Hello Nuxt!!</b>
-  </div>
+  <div>Hello world!</div>
 </template>

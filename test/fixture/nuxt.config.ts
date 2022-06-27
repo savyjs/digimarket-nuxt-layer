@@ -1,9 +1,17 @@
 import {defineNuxtConfig} from 'nuxt'
-
+// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+    cs:[
+        '~/assets/font-css/font-iran.css'
+    ],
     modules: [
         // Using package name
-        '~/../../src',
+        '@nuxt/content',
+        // Relative to your project srcDir
+        // '~/modules/vsd',
+        '~/../..',
+        // 'vuetify-strapi-page',
+        // Providing options
     ],
     content: {
         base: '/content'

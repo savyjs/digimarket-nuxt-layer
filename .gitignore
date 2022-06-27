@@ -3,7 +3,10 @@ node_modules/
 yarn.lock
 package-lock.json
 coverage/tmp/
+test/fixture2
 
 test/fixture/.nuxt/
 
 yarn-error.log
+
+test/fixture/public/fonts/

@@ -29,12 +29,14 @@ export default defineNuxtModule({
     async setup(moduleOptions, nuxt) {
         const moduleContainer = useModuleContainer();
 
+        // installing tailwindcss first
         await installModule('@nuxtjs/tailwindcss')
 
         nuxt.hook('ready', async nuxt => {
             nuxt.options.css.push(await resolvePath(__dirname + '/assets/styles/ntm.scss'))
-        })
+            nuxt.options.alias['ntmRoot'] = await resolvePath(__dirname);
 
+        })
         addPlugin({
             src: await resolvePath(__dirname + '/plugins/NtmPlugin.ts'),
         })
