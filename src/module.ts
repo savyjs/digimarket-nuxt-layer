@@ -47,16 +47,14 @@ export default defineNuxtModule({
 
         await moduleContainer.addLayout(
             {
-                write: true,
-                filename: "../layouts/NtmMarket.vue",
+                filename: "layouts/NtmMarket.vue",
                 src: await resolvePath(__dirname + '/layouts/NtmMarket.vue'),
             }, "NtmMarket"
         )
 
         await moduleContainer.addLayout(
             {
-                write: true,
-                filename: "../layouts/NtmPanel.vue",
+                filename: "layouts/NtmPanel.vue",
                 src: await resolvePath(__dirname + '/layouts/NtmPanel.vue'),
             }, "NtmPanel"
         )

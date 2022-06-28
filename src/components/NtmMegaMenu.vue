@@ -7,7 +7,7 @@
         class="hover flex items-center py-3 text-right text-sm"
     >
       <svg class="h-4 w-4" fill="currentColor">
-        <use href="category.icon"></use>
+        <use :href="category.icon"></use>
       </svg>
       <span class="pr-2"> {{ category.title }}</span>
     </a>
