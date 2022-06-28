@@ -41,9 +41,14 @@ export default defineNuxtModule({
             src: await resolvePath(__dirname + '/plugins/NtmPlugin.ts'),
         })
 
+        //
+        await addComponentsDir({path: await resolvePath(__dirname + '/components/market/landing')})
+        await addComponentsDir({path: await resolvePath(__dirname + '/components/market/layout')})
+        await addComponentsDir({path: await resolvePath(__dirname + '/components/market')})
+        await addComponentsDir({path: await resolvePath(__dirname + '/components/blog')})
         await addComponentsDir({path: await resolvePath(__dirname + '/components')})
 
-        await addAutoImportDir([await resolvePath(__dirname + '/static'), await resolvePath(__dirname + '/assets')])
+        await addAutoImportDir([await resolvePath(__dirname + '/static'), await resolvePath(__dirname + '/assets'), await resolvePath(__dirname + '/components')])
 
         await moduleContainer.addLayout(
             {

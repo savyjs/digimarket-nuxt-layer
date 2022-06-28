@@ -1,8 +1,7 @@
 <template>
   <div class="container mx-auto">
     <NtmMarketHeader/>
-    <main class="">
-      Layout
+    <main class="container bg-red-700">
       <NuxtPage/>
     </main>
     <NtmMarketFooter/>

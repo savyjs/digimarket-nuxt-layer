@@ -30,7 +30,6 @@ describe('Module Test', async () => {
 describe('layouts', () => {
     it('should apply NtmMarket layout', async () => {
         const html = await $fetch('/market')
-
         expect(html).toContain('ntm-market.vue')
     })
 })
