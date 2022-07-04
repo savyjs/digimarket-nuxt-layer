@@ -1,7 +1,8 @@
 <template>
   <div>
-    <div class="">
-      PAGE
+    PAGE
+    {{ntm}}
+    <div>
       <div class="">
         <section class="w-full">
           <NtmSlider/>
@@ -24,7 +25,8 @@
     </div>
   </div>
 </template>
-<script>
+<script setup>
+const ntm = useNtm();
 definePageMeta({
   title: 'nuxt 3 tailwind marketplace theme',
   layout: 'ntm-market'

@@ -1,6 +1,6 @@
 <template>
-  <footer class="border-n-200 mt-10 w-full border-t bg-white pt-2">
-    <div class="container-4xl-w mx-auto">
+  <footer class="border-n-200 w-full border-t bg-white pt-2">
+    <div class="container-4xl-w mx-auto ">
       <div class="px-5">
         <div class="flex select-none items-center justify-between">
           <div class="ml-4">

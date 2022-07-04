@@ -18,7 +18,9 @@
     </Swiper>
   </div>
 </template>
-<script>
+<script setup>
+import Swiper from 'Swiper/vue'
+
 const slides = [
   {
     key: 'b1',
