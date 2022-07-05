@@ -1,27 +1,21 @@
 <template>
-  <div>
-    PAGE
-    {{ntm}}
-    <div>
-      <div class="">
-        <section class="w-full">
-          <NtmSlider/>
-        </section>
-        <div class="container mx-auto block">
-          <section class="w-full">
-            <NtmBranchs/>
-          </section>
-          <section class="w-full">
-            <NtmIncredible/>
-          </section>
-          <section>
-            <NtmBanners/>
-          </section>
-          <section>
-            <NtmCategories/>
-          </section>
-        </div>
-      </div>
+  <div class="">
+    <section class="w-full">
+      <NtmSlider/>
+    </section>
+    <div class="container mx-auto block">
+      <section class="w-full">
+        <NtmBranchs/>
+      </section>
+      <section class="w-full">
+        <NtmIncredible/>
+      </section>
+      <section>
+        <NtmBanners/>
+      </section>
+      <section>
+        <NtmCategories/>
+      </section>
     </div>
   </div>
 </template>

@@ -27,7 +27,7 @@ export default defineNuxtModule({
     },
     defaults: {},
     async setup(moduleOptions, nuxt) {
-        const moduleContainer = useModuleContainer();
+        const moduleContainer = useModuleContainer(nuxt);
 
         // installing tailwindcss first
         await installModule('@nuxtjs/tailwindcss')
@@ -48,12 +48,11 @@ export default defineNuxtModule({
         await addComponentsDir({path: await resolvePath(__dirname + '/components/blog')})
         await addComponentsDir({path: await resolvePath(__dirname + '/components')})
 
-        await addAutoImportDir([await resolvePath(__dirname + '/static'), await resolvePath(__dirname + '/assets'), await resolvePath(__dirname + '/composables'), await resolvePath(__dirname + '/components')])
+        await addAutoImportDir([await resolvePath(__dirname + '/public'), await resolvePath(__dirname + '/assets'), await resolvePath(__dirname + '/composables'), await resolvePath(__dirname + '/components')])
 
         await moduleContainer.addLayout(
             {
                 filename: "NtmMarket.vue",
-                write: true,
                 src: await resolvePath(__dirname + '/layouts/NtmMarket.vue'),
             }, "NtmMarket"
         )
@@ -61,7 +60,6 @@ export default defineNuxtModule({
         await moduleContainer.addLayout(
             {
                 filename: "NtmPanel.vue",
-                write: true,
                 src: await resolvePath(__dirname + '/layouts/NtmPanel.vue'),
             }, "NtmPanel"
         )
