@@ -20,7 +20,7 @@
   </div>
 </template>
 <script setup>
-const ntm = useNtm();
+
 definePageMeta({
   title: 'nuxt 3 tailwind marketplace theme',
   layout: 'ntm-market'
