@@ -1,3 +1,10 @@
+import _ from 'lodash'
+import {ModuleOptions} from "../module";
+
 export const useNtm = () => {
-    return 'Hi from composabel'
+    return {
+        options: (): ModuleOptions => {
+            return useRuntimeConfig()?.public?.ntm;
+        }
+    }
 }

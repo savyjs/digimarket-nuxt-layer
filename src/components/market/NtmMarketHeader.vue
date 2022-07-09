@@ -11,6 +11,6 @@
     </section>
   </div>
 </template>
-<script>
-
+<script setup>
+const {logo} = useNtm().options();
 </script>

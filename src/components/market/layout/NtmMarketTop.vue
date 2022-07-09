@@ -3,7 +3,7 @@
     <div class="flex-auto">
       <div class="flex w-full items-center">
         <a href="/" class="ml-5 shrink-0">
-          <img width="100" height="30" src="assets/dkala/logo.svg" alt="logo"/>
+          <img width="100" height="30" src="{{logo}}" alt="{{title}}"/>
         </a>
         <div class="ml-auto h-10 flex-auto grow">
           <div
@@ -54,3 +54,7 @@
     </div>
   </header>
 </template>
+
+<script setup>
+const {logo, title} = useNtm().options();
+</script>

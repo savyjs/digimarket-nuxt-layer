@@ -5,15 +5,35 @@ import {
     addAutoImportDir,
     addComponentsDir,
     addPlugin,
+    useNuxt,
     useModuleContainer,
     resolvePath, addComponent
 } from '@nuxt/kit'
 import {fileURLToPath} from 'node:url'
 import consola from 'consola'
 
+export interface ModuleOptions {
+    /**
+     * Base url that will be used for main logo
+     *
+     * @default 'ntm.png'
+     */
+    logo: string
+    /**
+     * Base title that will be used for theme
+     *
+     * @default 'ntm.png'
+     */
+    title: string | void
+}
+
 const logger = consola.withScope('nuxt:ntm')
 
-export default defineNuxtModule({
+export default defineNuxtModule<ModuleOptions>({
+    defaults: {
+        logo: '~ntmRoot/img/logo.png',
+        title: undefined,
+    },
     meta: {
         // Usually  npm package name of your module
         name: 'ntm',
@@ -25,13 +45,12 @@ export default defineNuxtModule({
             nuxt: '^3.0.0'
         }
     },
-    defaults: {},
     async setup(moduleOptions, nuxt) {
         const moduleContainer = useModuleContainer(nuxt);
 
         // installing tailwindcss first
         await installModule('@nuxtjs/tailwindcss')
-
+        nuxt.options.runtimeConfig.public.ntm = moduleOptions;
         nuxt.hook('ready', async nuxt => {
             nuxt.options.css.push(await resolvePath(__dirname + '/assets/styles/ntm.scss'))
             nuxt.options.alias['ntmRoot'] = await resolvePath(__dirname);
