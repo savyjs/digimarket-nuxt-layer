@@ -3,6 +3,7 @@
     {{ items }}
   </div>
 </template>
+
 <script setup lang="ts">
 export interface Product {
   /**
@@ -193,5 +194,14 @@ export interface Image {
   title: string
 }
 
-const items = defineProps<Category>()
+export interface Products {
+  /**
+   * products
+   *
+   * @default null
+   */
+  items: Product[] | void
+}
+
+const {items} = defineProps<Products>()
 </script>
