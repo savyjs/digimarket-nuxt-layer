@@ -6,28 +6,20 @@ import {
     addComponentsDir,
     addPlugin,
     useNuxt,
+    addServerHandler,
     useModuleContainer,
     resolvePath, addComponent
 } from '@nuxt/kit'
 import {fileURLToPath} from 'node:url'
 import consola from 'consola'
-
-export interface ModuleOptions {
-    /**
-     * Base url that will be used for main logo
-     *
-     * @default 'ntm.png'
-     */
-    logo: string
-    /**
-     * Base title that will be used for theme
-     *
-     * @default 'ntm.png'
-     */
-    title: string | void
-}
+import {Layout} from "./schema/types/layout";
 
 const logger = consola.withScope('nuxt:ntm')
+
+
+export interface ModuleOptions extends Layout {
+
+}
 
 export default defineNuxtModule<ModuleOptions>({
     defaults: {
@@ -51,6 +43,9 @@ export default defineNuxtModule<ModuleOptions>({
         // installing tailwindcss first
         await installModule('@nuxtjs/tailwindcss')
         nuxt.options.runtimeConfig.public.ntm = moduleOptions;
+        nuxt.options.nitro.rootDir = await resolvePath(__dirname + '/')
+        nuxt.options.nitro.srcDir = await resolvePath(__dirname + '/')
+        nuxt.options.nitro.scanDirs = [await resolvePath(__dirname + '/server')]
         nuxt.hook('ready', async nuxt => {
             nuxt.options.css.push(await resolvePath(__dirname + '/assets/styles/ntm.scss'))
             nuxt.options.alias['ntmRoot'] = await resolvePath(__dirname);
@@ -61,6 +56,7 @@ export default defineNuxtModule<ModuleOptions>({
         })
 
         //
+        await addComponentsDir({path: await resolvePath(__dirname + '/components/market/product')})
         await addComponentsDir({path: await resolvePath(__dirname + '/components/market/landing')})
         await addComponentsDir({path: await resolvePath(__dirname + '/components/market/layout')})
         await addComponentsDir({path: await resolvePath(__dirname + '/components/market')})
@@ -68,6 +64,8 @@ export default defineNuxtModule<ModuleOptions>({
         await addComponentsDir({path: await resolvePath(__dirname + '/components')})
 
         await addAutoImportDir([await resolvePath(__dirname + '/public'), await resolvePath(__dirname + '/assets'), await resolvePath(__dirname + '/composables'), await resolvePath(__dirname + '/components')])
+
+        // addServerHandler({handler: await resolvePath(__dirname + '/server/api/market/product/[id].ts')})
 
         await moduleContainer.addLayout(
             {
