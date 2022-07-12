@@ -151,7 +151,8 @@ export interface Category {
     category: string
 }
 
-export interface Categories extends Array<Category> {
+export interface Categories {
+    [index: number]: string | Category | void
 }
 
 export interface Feature {

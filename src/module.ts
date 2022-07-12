@@ -42,7 +42,7 @@ export default defineNuxtModule<ModuleOptions>({
 
         // installing tailwindcss first
         await installModule('@nuxtjs/tailwindcss')
-        await installModule('vite-plugin-vue-type-imports/nuxt')
+        // await installModule('vite-plugin-vue-type-imports/nuxt')
         nuxt.options.runtimeConfig.public.ntm = moduleOptions;
         nuxt.options.nitro.rootDir = await resolvePath(__dirname + '/')
         nuxt.options.nitro.srcDir = await resolvePath(__dirname + '/')

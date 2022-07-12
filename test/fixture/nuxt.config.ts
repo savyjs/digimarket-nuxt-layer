@@ -4,9 +4,12 @@ export default defineNuxtConfig({
     css: [
         '~/assets/font-css/fontiran.css'
     ],
+    buildModules: [
+        'vite-plugin-vue-type-imports/nuxt',
+    ],
     modules: [
         // Using package name
-        '@nuxt/content',
+        // '@nuxt/content',
         // Relative to your project srcDir
         '~/../..',
         // Providing options

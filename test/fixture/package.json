@@ -9,12 +9,13 @@
   "devDependencies": {
     "nuxt": "npm:nuxt3@latest",
     "sass": "^1.52.3",
-    "sass-loader": "latest"
+    "sass-loader": "latest",
+    "vite-plugin-vue-type-imports": "^0.2.0"
   },
   "dependencies": {
-    "@nuxtjs/tailwindcss": "^5.0.3",
     "@nuxt/content": "^2.0.0",
     "@nuxtjs/google-analytics": "^2.4.0",
+    "@nuxtjs/tailwindcss": "^5.0.3",
     "nuxt-tailwind-marketpalce-kit": "npm:nuxt-tailwind-marketpalce-kit@latest"
   }
 }
