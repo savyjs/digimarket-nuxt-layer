@@ -8,7 +8,7 @@
               <img
                   width="100"
                   height="30"
-                  src="ntmRoot/public/dkala/logo-fa.svg"
+                  src="@ntmRoot/public/dkala/logo-fa.svg"
                   alt="logo"
               />
             </a>
@@ -51,7 +51,7 @@
             <img
                 width="56"
                 height="56"
-                src="ntmRoot/public/dkala/express-delivery.svg"
+                src="@ntmRoot/public/dkala/express-delivery.svg"
                 alt="express-delivery"
                 class="mx-auto"
             />
@@ -66,7 +66,7 @@
             <img
                 width="56"
                 height="56"
-                src="ntmRoot/public/dkala/cash-on-delivery.svg"
+                src="@ntmRoot/public/dkala/cash-on-delivery.svg"
                 alt="cash-on-delivery"
                 class="mx-auto"
             />
@@ -81,7 +81,7 @@
             <img
                 width="56"
                 height="56"
-                src="ntmRoot/public/dkala/support.svg"
+                src="@ntmRoot/public/dkala/support.svg"
                 alt="support"
                 class="mx-auto"
             />
@@ -96,7 +96,7 @@
             <img
                 width="56"
                 height="56"
-                src="ntmRoot/public/dkala/days-return.svg"
+                src="@ntmRoot/public/dkala/days-return.svg"
                 alt="days-return"
                 class="mx-auto"
             />
@@ -111,7 +111,7 @@
             <img
                 width="56"
                 height="56"
-                src="ntmRoot/public/dkala/original-products.svg"
+                src="@ntmRoot/public/dkala/original-products.svg"
                 alt="original-products"
                 class="mx-auto"
             />

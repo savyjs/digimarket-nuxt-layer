@@ -3,57 +3,56 @@
     <nav>
       <ul class="flex items-end md:text-[12px] lg:text-[13px]">
         <li class="hoverable">
-          <button class="flex items-center gap-1 font-bold text-gray-800">
+          <button @click="megaMenuStatus=!megaMenuStatus" class="flex items-center gap-1 font-bold text-gray-800">
             <svg class="h-4 w-4" fill="currentColor">
               <use href="#hamburgerMenu"></use>
             </svg>
-
             <span> دسته‌بندی کالا</span>
           </button>
-          <NtmMegaMenu/>
+          <NtmMegaMenu :class="megaMenuStatus ? '':'hidden'"/>
         </li>
         <div class="py-2 pr-3">
           <span class="mx-3 block h-4 w-px bg-neutral-200"></span>
         </div>
         <li class="">
-          <Link href="/best-selling">
+          <nuxt-link to="/best-selling">
             <a class="flex items-center gap-1 text-[12px] text-gray-500">
               <svg class="h-4 w-4" fill="currentColor">
                 <use href="#searchTrend"></use>
               </svg>
               پرفروش‌ترین‌ها
             </a>
-          </Link>
+          </nuxt-link>
         </li>
         <li class="">
-          <Link href="/promotion-center">
+          <nuxt-link href="/promotion-center">
             <a class="flex items-center gap-1 text-[12px] text-gray-500">
               <svg class="h-4 w-4" fill="currentColor">
                 <use href="#discount"></use>
               </svg>
               تخفیف‌ها و پیشنهادها
             </a>
-          </Link>
+         </nuxt-link>
         </li>
         <li class="">
-          <Link href="/incredible-offers">
+          <nuxt-link href="/incredible-offers">
             <a class="flex items-center gap-1 text-[12px] text-gray-500">
               <svg class="h-4 w-4" fill="currentColor">
                 <use href="#amazing"></use>
               </svg>
               شگفت‌انگیزها
             </a>
-          </Link>
+         </nuxt-link>
         </li>
         <li class="">
-          <Link href="/faq">
+          <nuxt-link href="/faq">
             <a class="text-[12px] text-gray-500">سوالی دارید؟</a>
-          </Link>
+         </nuxt-link>
         </li>
         <li class="">
-          <Link href="/faq">
+          <nuxt-link href="/faq">
             <a class="text-[12px] text-gray-500">فروشنده شوید!</a>
-          </Link>
+         </nuxt-link>
         </li>
       </ul>
     </nav>
@@ -71,3 +70,7 @@
     </div>
   </div>
 </template>
+<script setup>
+let megaMenuStatus = ref();
+
+</script>

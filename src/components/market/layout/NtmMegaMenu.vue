@@ -13,7 +13,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-const dummyData: Array<MainCategory> = [
+const dummyData = [
   {
     key: 'electronic',
     title: 'کالای دیجیتال',
