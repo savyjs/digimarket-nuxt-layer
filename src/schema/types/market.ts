@@ -1,4 +1,3 @@
-
 export interface Product {
     /**
      * product id
@@ -128,13 +127,31 @@ export interface Product {
     metaTags?: Array<Meta> | void
 }
 
+export interface Products extends Array<Product> {
+}
+
 export interface Category {
+    /**
+     * product id
+     *
+     * @default null
+     */
+    id: number | string
     /**
      * product title
      *
      * @default null
      */
     title: string
+    /**
+     * product title
+     *
+     * @default null
+     */
+    category: string
+}
+
+export interface Categories extends Array<Category> {
 }
 
 export interface Feature {
