@@ -127,7 +127,8 @@ export interface Product {
     metaTags?: Array<Meta> | void
 }
 
-export interface Products extends Array<Product> {
+export interface Products extends Array<Product | string | void> {
+    items?: Product[] | string[] | void
 }
 
 export interface Category {
@@ -151,8 +152,8 @@ export interface Category {
     category: string
 }
 
-export interface Categories {
-    [index: number]: string | Category | void
+export interface Categories extends Array<string | Category | void> {
+    items?: Category[] | string[] | void
 }
 
 export interface Feature {

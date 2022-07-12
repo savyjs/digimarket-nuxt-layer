@@ -1,10 +1,10 @@
 <template>
   <div>
-    {{ items }}
+    {{ props }}
   </div>
 </template>
 <script setup lang="ts">
 import {Categories} from "ntmRoot/schema/types/market";
 
-const {items} = defineProps<Categories>()
+const props = defineProps<Categories>()
 </script>
