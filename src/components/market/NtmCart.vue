@@ -1,3 +1,3 @@
 <template>
-  <div>Slider</div>
+  <div>NtmCart</div>
 </template>

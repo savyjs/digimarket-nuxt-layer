@@ -1,6 +1,5 @@
 <template>
   <div>
-    dummy: {{ dummyData }}
     <a
         v-for="category in dummyData"
         :key="category.key"

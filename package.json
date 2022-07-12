@@ -1,7 +1,7 @@
 {
   "name": "nuxt-tailwind-marketpalce-kit",
   "description": "Nuxt ui kit module, powered by tailwindCss. build a modern and beautiful marketplace ui easily ",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -63,7 +63,8 @@
     "ts-jest": "^28.0.3",
     "vitest": "^0.13.0",
     "sass": "^1.52.3",
-    "sass-loader": "latest"
+    "sass-loader": "latest",
+    "vite-plugin-vue-type-imports": "^0.2.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
@@ -72,7 +73,7 @@
     "@mdi/font": "^6.1.95",
     "@mdi/js": "^6.1.95",
     "@nuxtjs/i18n": "^7.2.2",
-    "@nuxtjs/tailwindcss": "^5.1.2",
+    "@nuxtjs/tailwindcss": "^5.2.0",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.21",
     "lodash-deep": "^1.6.0",
