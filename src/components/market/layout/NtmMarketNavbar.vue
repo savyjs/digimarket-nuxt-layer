@@ -25,7 +25,7 @@
           </nuxt-link>
         </li>
         <li class="">
-          <nuxt-link href="/promotion-center">
+          <nuxt-link to="/promotion-center">
             <a class="flex items-center gap-1 text-[12px] text-gray-500">
               <svg class="h-4 w-4" fill="currentColor">
                 <use href="#discount"></use>
@@ -35,7 +35,7 @@
          </nuxt-link>
         </li>
         <li class="">
-          <nuxt-link href="/incredible-offers">
+          <nuxt-link to="/incredible-offers">
             <a class="flex items-center gap-1 text-[12px] text-gray-500">
               <svg class="h-4 w-4" fill="currentColor">
                 <use href="#amazing"></use>
@@ -45,12 +45,12 @@
          </nuxt-link>
         </li>
         <li class="">
-          <nuxt-link href="/faq">
+          <nuxt-link to="/faq">
             <a class="text-[12px] text-gray-500">سوالی دارید؟</a>
          </nuxt-link>
         </li>
         <li class="">
-          <nuxt-link href="/faq">
+          <nuxt-link to="/faq">
             <a class="text-[12px] text-gray-500">فروشنده شوید!</a>
          </nuxt-link>
         </li>
