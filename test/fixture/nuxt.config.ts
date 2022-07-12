@@ -11,6 +11,7 @@ export default defineNuxtConfig({
         // Using package name
         // '@nuxt/content',
         // Relative to your project srcDir
+        '@nuxtjs/tailwindcss',
         '~/../..',
         // Providing options
     ],
