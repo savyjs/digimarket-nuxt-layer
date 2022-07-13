@@ -16,8 +16,8 @@ export default defineNuxtConfig({
         // Providing options
     ],
     ntm: {
-        logo: 'assets/dkala/logo.svg',
-        title: 'NTM MARKET'
+        logo: '/assets/dkala/logo.svg',
+        title: 'NTM'
     },
     content: {
         base: '/content'

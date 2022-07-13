@@ -1,9 +1,10 @@
 <template>
-  <div>
-    <nav>
+  <div :class="`navbar-wrapper ${showNavbar ? 'show-nav' : 'hide-nav'}`">
+    <nav class="nav">
       <ul class="flex items-end md:text-[12px] lg:text-[13px]">
-        <li class="hoverable">
-          <button @click="megaMenuStatus=!megaMenuStatus" class="flex items-center gap-1 font-bold text-gray-800">
+        <li class="hoverable" @mouseover="megaMenuStatus = true" @mouseleave="megaMenuStatus = false">
+          <button
+              class="flex items-center gap-1 font-bold text-gray-800">
             <svg class="h-4 w-4" fill="currentColor">
               <use href="#hamburgerMenu"></use>
             </svg>
@@ -32,7 +33,7 @@
               </svg>
               تخفیف‌ها و پیشنهادها
             </a>
-         </nuxt-link>
+          </nuxt-link>
         </li>
         <li class="">
           <nuxt-link to="/incredible-offers">
@@ -42,17 +43,17 @@
               </svg>
               شگفت‌انگیزها
             </a>
-         </nuxt-link>
+          </nuxt-link>
         </li>
         <li class="">
           <nuxt-link to="/faq">
             <a class="text-[12px] text-gray-500">سوالی دارید؟</a>
-         </nuxt-link>
+          </nuxt-link>
         </li>
         <li class="">
           <nuxt-link to="/faq">
             <a class="text-[12px] text-gray-500">فروشنده شوید!</a>
-         </nuxt-link>
+          </nuxt-link>
         </li>
       </ul>
     </nav>
@@ -71,6 +72,70 @@
   </div>
 </template>
 <script setup>
-let megaMenuStatus = ref();
+let megaMenuStatus = useState('megaMenuStatus', () => false)
+const toggleNavbar = useState('showNavbar', () => true);
+const showNavbar = useState('toggleNavbar', () => true);
+const lastScrollY = useState('lastScrollY', () => 0);
+const setLastScrollY = useState('setLastScrollY', () => 0);
+
+const controlNavbar = () => {
+  if (typeof window !== 'undefined') {
+    if (window.scrollY > lastScrollY) {
+      // if scroll down hide the navbar
+      toggleNavbar(false);
+    } else {
+      // if scroll up show the navbar
+      toggleNavbar(true);
+    }
+    setLastScrollY(window.scrollY);
+  }
+};
+
+const toggleCitiesModal = useState('toggleCitiesModal', () => false);
+const citiesModal = useState('citiesModal', () => false);
+
+const closeCitiesModal = () => {
+  toggleCitiesModal(false);
+};
 
 </script>
+<style scoped>
+.nav li {
+  margin-right: 1rem;
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav li:hover {
+  border-bottom: 2px solid red;
+}
+
+li .bordernone:hover {
+  border-bottom: transparent;
+}
+
+.navbar-wrapper {
+  width: 100%;
+  position: relative;
+  transition: 0.3s linear;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navbar-wrapper.show-nav {
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  z-index: 2;
+  padding-top: 5px;
+}
+
+.navbar-wrapper.hide-nav {
+  z-index: 1;
+  top: -35px;
+}
+
+</style>
