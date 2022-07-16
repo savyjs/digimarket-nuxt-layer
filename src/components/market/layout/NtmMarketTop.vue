@@ -1,29 +1,11 @@
 <template>
-  <header class="pos-relative container-4xl-w z-[3] flex w-full bg-white px-3 pt-4 pb-1">
+  <header class="relative rtl container-4xl-w z-[3] flex w-full bg-white px-3 pt-4 pb-1">
     <div class="flex-auto">
       <div class="flex w-full items-center">
         <a href="/" class="ml-5 shrink-0">
           <img width="100" height="30" :src="logo" :alt="title"/>
         </a>
-        <div class="ml-auto h-10 flex-auto grow">
-          <div
-              id="search-box"
-              class="px-4-lg text-body-2 rounded-8p flex h-10 items-center md:w-3/4 xl:w-2/3">
-
-          <span class="pr-2 pl-3 text-[13px] text-gray-400">
-            <i class="fa fa-search"></i>
-                  </span>
-            <span class="cursor-text text-[12px] text-gray-400">
-                    جستجو
-                  </span>
-
-            <div id="backdrop-searchModal"></div>
-            <div
-                id="overlay-searchModal"
-                class="relative h-full w-full md:h-auto"
-            ></div>
-          </div>
-        </div>
+        <NtmSearchModal/>
       </div>
     </div>
 
@@ -56,4 +38,5 @@
 
 <script setup>
 const {logo, title} = useNtm().options();
+
 </script>

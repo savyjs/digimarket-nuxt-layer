@@ -54,7 +54,7 @@
             <div class="w-1/5 pt-4">
               <a class="">
                 <img
-                    src="/assets/img/MegaMenuRandom.jpg"
+                    :src="mainCategory?.img || '/assets/img/MegaMenuRandom.jpg'"
                     class="rounded-lg"
                     alt=""
                 />

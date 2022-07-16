@@ -14,9 +14,10 @@
             </a>
           </div>
           <button
+              onclick="window.scrollTo({top: 0,behavior: 'smooth',})"
               class="btn-gray-outlined mx-1 flex h-10 text-[12px]"
           >
-            <span class="flex-auto pl-2 font-bold"> بازگشت به بالا</span>
+            <span class="flex-auto pl-2 font-bold">بازگشت به بالا</span>
             <div>
               <svg
                   class="h-4 w-4"
