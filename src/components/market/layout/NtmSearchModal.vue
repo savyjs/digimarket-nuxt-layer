@@ -1,9 +1,9 @@
 <template>
-  <div class="ml-auto h-10 flex sm:w-1/3 md:w-2/3 xl:w-2/5 w-1/2">
+  <div class="ml-auto h-10 flex md:w-1/2 xl:w-1/2 ">
     <div
         @click="showSearchModal=true"
         v-show="!showSearchModal"
-        class="px-4-lg bg-gray-100 text-body-2 rounded-8p flex h-10 items-center w-full">
+        class="px-4-lg bg-gray-100 text-body-2 rounded-xl flex h-10 items-center w-full">
 
       <div class="pr-2 pl-3 text-[13px] text-gray-400">
         <i class="fa fa-search"></i>
@@ -73,6 +73,7 @@ const showSearchModal = useState('showSearchModal', () => false);
 const backdrop = useState('backdrop')
 watch(showSearchModal, async (val) => {
   if (val) backdrop.value = true;
+  if (!val && backdrop.value != false) backdrop.value = false;
 })
 watch(backdrop, async (val) => {
   if (!val) showSearchModal.value = false;
