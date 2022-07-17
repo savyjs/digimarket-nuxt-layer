@@ -10,7 +10,6 @@ import {
     useModuleContainer,
     resolvePath, addComponent
 } from '@nuxt/kit'
-import {fileURLToPath} from 'node:url'
 import consola from 'consola'
 import {Layout} from "./schema/types/layout";
 
@@ -47,8 +46,10 @@ export default defineNuxtModule<ModuleOptions>({
         nuxt.options.nitro.rootDir = await resolvePath(__dirname + '/')
         nuxt.options.nitro.srcDir = await resolvePath(__dirname + '/')
         nuxt.options.nitro.scanDirs = [await resolvePath(__dirname + '/server')]
+
         nuxt.hook('ready', async nuxt => {
             nuxt.options.css.push(await resolvePath(__dirname + '/assets/styles/ntm.scss'))
+            import('@fortawesome/fontawesome-free/js/all')
             nuxt.options.alias['ntmRoot'] = await resolvePath(__dirname);
             nuxt.options.alias['@ntmRoot'] = await resolvePath(__dirname);
         })

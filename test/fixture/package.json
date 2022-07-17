@@ -10,9 +10,11 @@
     "nuxt": "npm:nuxt3@latest",
     "sass": "^1.52.3",
     "sass-loader": "latest",
-    "vite-plugin-vue-type-imports": "^0.2.0"
+    "vite-plugin-vue-type-imports": "^0.2.0",
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge@latest"
   },
   "dependencies": {
+    "@fortawesome/vue-fontawesome": "^3.0.1",
     "@nuxt/content": "^2.0.0",
     "@nuxtjs/google-analytics": "^2.4.0",
     "nuxt-tailwind-marketpalce-kit": "^0.1.9"

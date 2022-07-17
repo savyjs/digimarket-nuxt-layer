@@ -1,5 +1,5 @@
 <template>
-  <div :class="`navbar-wrapper ${showNavbar ? 'show-nav' : 'hide-nav'}`">
+  <div :class="`rtl navbar-wrapper ${showNavbar ? 'show-nav' : 'hide-nav'}`">
     <nav class="nav">
       <ul class="flex items-end md:text-[12px] lg:text-[13px]">
         <li class="hoverable" @mouseover="megaMenuStatus = true" @mouseleave="megaMenuStatus = false">
@@ -72,11 +72,15 @@
   </div>
 </template>
 <script setup>
-let megaMenuStatus = useState('megaMenuStatus', () => false)
+const megaMenuStatus = useState('megaMenuStatus', () => false)
 const toggleNavbar = useState('showNavbar', () => true);
 const showNavbar = useState('toggleNavbar', () => true);
 const lastScrollY = useState('lastScrollY', () => 0);
 const setLastScrollY = useState('setLastScrollY', () => 0);
+
+const locales = useLocales()
+const locale = useLocale()
+const date = useLocaleDate(new Date() /* NUXT_BIRTHDAY */)
 
 const controlNavbar = () => {
   if (typeof window !== 'undefined') {

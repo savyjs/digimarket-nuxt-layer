@@ -9,12 +9,12 @@
                 :key="category.key"
                 :href="category.key"
                 @mouseover="megaMenuMainCategoryIndex = index"
-                class="hover flex items-center py-3 text-right text-sm"
+                class="hover flex items-center px-1 py-4 text-right hover:bg-gray-100 hover:fill-red-500 hover:text-red-500"
             >
               <svg class="h-4 w-4" fill="currentColor">
                 <use :href="category?.icon"></use>
               </svg>
-              <span class="pr-2"> {{ category?.title }}</span>
+              <span class="pr-2 text-[11px] font-bold"> {{ category?.title }}</span>
             </a>
           </div>
         </div>

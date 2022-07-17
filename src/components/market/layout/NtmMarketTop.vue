@@ -11,21 +11,21 @@
 
     <div class="mr-auto flex-auto grow-0">
       <div class="flex items-center text-[11px]">
-        <div class="rounded-8p flex-auto cursor-pointer border border-gray-200 py-1 px-2">
+        <div class="rounded-xl flex-auto cursor-pointer border border-gray-200 py-2.5 px-4">
           <nuxt-link to="/login">
-            <a class="">
+            <a class="flex justify-around align-baseline gap-3">
               <svg class="h-5 w-5" fill="currentColor">
                 <use href="#registerationSignIn"></use>
               </svg>
-              <span class="text-neutral-800"> ورود | ثبت‌نام</span>
+              <span class="text-neutral-800 text-bold font-bold text-[12px]"> ورود | ثبت‌نام</span>
             </a>
           </nuxt-link>
         </div>
-        <span class="d-none d-block-lg mx-3 w-px bg-neutral-200 py-3 "></span>
+        <span class="d-none d-block-lg mx-3 w-px bg-neutral-200 py-3"></span>
         <div class="flex items-center text-neutral-500">
           <nuxt-link to="/checkout/cart">
             <a class="shrink-0">
-              <svg class="h-5 w-5" fill="currentColor">
+              <svg style="width: 24px; height: 24px; fill: var(--color-icon-high-emphasis);">
                 <use href="#cartOff"></use>
               </svg>
             </a>

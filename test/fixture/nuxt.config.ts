@@ -2,7 +2,8 @@ import {defineNuxtConfig} from 'nuxt'
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
     css: [
-        '~/assets/font-css/fontiran.css'
+        'assets/font-css/fontiran.css',
+        'assets/font-css/style.css'
     ],
     buildModules: [
         'vite-plugin-vue-type-imports/nuxt',

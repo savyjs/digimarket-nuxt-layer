@@ -1,5 +1,4 @@
 <template>
-
   <div class="ml-auto h-10 flex sm:w-1/3 md:w-2/3 xl:w-2/5 w-1/2">
     <div
         @click="showSearchModal=true"
@@ -12,19 +11,17 @@
       <div class="cursor-text text-[12px] text-gray-400">
         جستجو
       </div>
-
     </div>
-
-    <div id="backdrop-searchModal">
-      <div class="backdrop" v-show="showSearchModal" @click="showSearchModal=false"></div>
-    </div>
-
+    <transition>
+      <div id="backdrop-searchModal" v-show="showSearchModal">
+        <div class="backdrop .backdrop-opacity-5 delay-700" @click="showSearchModal=false"></div>
+      </div>
+    </transition>
     <div
         v-show="showSearchModal"
         id="overlay-searchModal"
-        class="h-full w-full md:h-auto z-50"
+        class="h-full delay-700 w-full md:h-auto z-50"
     >
-
       <div id="searchModal" class="relative h-full w-full md:h-auto">
         <div class="relative rounded-lg bg-white shadow-lg dark:bg-gray-700">
           <div class="ml-auto h-10 flex-auto grow">
@@ -73,7 +70,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 <script setup>
