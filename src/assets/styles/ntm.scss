@@ -1,35 +1,8 @@
 @import 'colors.css';
 @import 'tailwind.css';
- .rtl {
-   direction: rtl;
- }
-/* #hoverable Class Styles
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.hoverable {
-  position: static;
-}
 
-.hoverable > a:after {
-  content: '\25BC';
-  font-size: 10px;
-  padding-left: 6px;
-  position: relative;
-  top: -1px;
-}
-
-.hoverable:hover .megaMenu {
-  display: block;
-}
-
-.megaMenu {
-  display: none;
-  left: 1%;
-  right: 1%;
-  position: absolute;
-  width: 98%;
-  margin-top: 11px;
-  z-index: 1;
-  height: 460px;
+.rtl {
+  direction: rtl;
 }
 
 .backdrop {
@@ -38,7 +11,6 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 13;
+  z-index: 10;
   background: rgba(155, 153, 153, 0.75);
-  // backdrop-filter: blur(1px);
 }

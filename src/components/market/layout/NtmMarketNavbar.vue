@@ -2,7 +2,7 @@
   <div :class="`rtl navbar-wrapper ${showNavbar ? 'show-nav' : 'hide-nav'}`">
     <nav class="nav">
       <ul class="flex items-end md:text-[12px] lg:text-[13px]">
-        <li class="hoverable" @mouseover="megaMenuStatus = true" @mouseleave="megaMenuStatus = false">
+        <li @mouseover="megaMenuStatus = true" @mouseleave="megaMenuStatus = false">
           <button
               class="flex items-center gap-1 font-bold text-gray-800">
             <svg class="h-4 w-4" fill="currentColor">
@@ -10,7 +10,7 @@
             </svg>
             <span> دسته‌بندی کالا</span>
           </button>
-          <NtmMegaMenu :class="megaMenuStatus ? '':'hidden'"/>
+          <NtmMegaMenu v-show="megaMenuStatus"/>
         </li>
         <div class="py-2 pr-3">
           <span class="mx-3 block h-4 w-px bg-neutral-200"></span>

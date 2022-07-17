@@ -12,11 +12,7 @@
         جستجو
       </div>
     </div>
-    <transition>
-      <div id="backdrop-searchModal" v-show="showSearchModal">
-        <div class="backdrop .backdrop-opacity-5 delay-700" @click="showSearchModal=false"></div>
-      </div>
-    </transition>
+
     <div
         v-show="showSearchModal"
         id="overlay-searchModal"
@@ -74,6 +70,13 @@
 </template>
 <script setup>
 const showSearchModal = useState('showSearchModal', () => false);
+const backdrop = useState('backdrop')
+watch(showSearchModal, async (val) => {
+  if (val) backdrop.value = true;
+})
+watch(backdrop, async (val) => {
+  if (!val) showSearchModal.value = false;
+})
 const tags = [
   {
     key: '1',
@@ -121,15 +124,5 @@ const tags = [
   margin-right: 1.5rem;
 }
 
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 10;
-  background: rgba(155, 153, 153, 0.75);
-  // backdrop-filter: blur(1px);
-}
 
 </style>
