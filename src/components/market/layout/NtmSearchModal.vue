@@ -1,5 +1,5 @@
 <template>
-  <div class="ml-auto h-10 flex md:w-1/2 xl:w-1/2 ">
+  <div class="ml-auto h-10 flex md:w-1/2 xl:w-1/2" v-clickoutside="showSearchModal=false">
     <div
         @click="showSearchModal=true"
         v-show="!showSearchModal"
@@ -100,6 +100,23 @@ const tags = [
     title: 'ورزشی زنانه',
   },
 ];
+
+const vClickoutside = {
+  beforeMount: function (el, binding, vnode) {
+    binding.event = function (event) {
+      if (!(el === event.target || el.contains(event.target))) {
+        if (binding.value instanceof Function) {
+          binding.value(event)
+        }
+      }
+    }
+    document.body.addEventListener('click', binding.event)
+  },
+  unmounted: function (el, binding, vnode) {
+    document.body.removeEventListener('click', binding.event)
+  }
+}
+
 </script>
 
 <style lang="scss" scoped>
