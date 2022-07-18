@@ -12,5 +12,4 @@
   </div>
 </template>
 <script setup>
-const {logo} = useNtm().options();
 </script>

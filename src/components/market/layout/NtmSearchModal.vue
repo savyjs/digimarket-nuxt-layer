@@ -1,5 +1,5 @@
 <template>
-  <div class="ml-auto h-10 flex md:w-1/2 xl:w-1/2" v-clickoutside="showSearchModal=false">
+  <div class="ml-auto h-10 flex md:w-1/2 xl:w-1/2" v-clickoutside="()=>{showSearchModal=false}">
     <div
         @click="showSearchModal=true"
         v-show="!showSearchModal"
