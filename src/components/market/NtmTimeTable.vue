@@ -24,56 +24,34 @@
         <ul
             class='nav nav-tabs border-b-2 border-gray-200 pb-0 p-0 md:items-stretch md:items-end flex flex-col md:flex-row flex-wrap list-none px-5 mb-4 '
             id='tabs-tab'
+            data-tabs-toggle="#myTabContent"
             role='tablist'>
-          <li class='nav-item' role='presentation'>
-            <a href='#tabs-home' class='nav-link active' id='tabs-home-tab'
-               data-bs-toggle='pill'
-               data-bs-target='#tabs-home' role='tab' aria-controls='tabs-home'
-               aria-selected='true'>
+          <li v-for="(item,key) in timeDivisions"
+              class='nav-item' :role='`t${key}`'>
+            <a
+                :href='`#tabs-t${key}`'
+                :class='`nav-link ${key==0 ? "active" :""}`'
+                :id='`tabs-t${key}-tab`'
+                data-bs-toggle='pill'
+                :data-bs-target='`#tabs-t${key}`'
+                role='tab'
+                :aria-controls='`tabs-t${key}`'
+                :aria-selected='`${key==0 ? "true" :""}`'>
               <div>
-                <p>جمعه</p>
-                <p>۲۳</p>
-              </div>
-            </a>
-          </li>
-          <li class='nav-item' role='presentation'>
-            <a href='#tabs-profile' class='nav-link' id='tabs-profile-tab'
-               data-bs-toggle='pill'
-               data-bs-target='#tabs-profile' role='tab'
-               aria-controls='tabs-profile' aria-selected='false'>
-              <div>
-                <p>شنبه</p>
-                <p>۲۵</p>
-              </div>
-            </a>
-          </li>
-          <li class='nav-item' role='presentation'>
-            <a href='#tabs-messages' class='nav-link' id='tabs-messages-tab'
-               data-bs-toggle='pill'
-               data-bs-target='#tabs-messages' role='tab'
-               aria-controls='tabs-messages' aria-selected='false'>
-              <div>
-                <p>یکشنبه</p>
-                <p>۲۶</p>
-              </div>
-            </a>
-          </li>
-          <li class='nav-item' role='presentation'>
-            <a href='#tabs-contact' class='nav-link' id='tabs-contact-tab'
-               data-bs-toggle='pill'
-               data-bs-target='#tabs-contact' role='tab'
-               aria-controls='tabs-contact' aria-selected='false'>
-              <div>
-                <p>دوشنبه</p>
-                <p>۲۷</p>
+                <p>{{ item?.title }}</p>
+                <p>{{ item?.subtitle }}</p>
               </div>
             </a>
           </li>
         </ul>
       </div>
-      <div class='tab-content p-5' id='tabs-tabContent'>
-        <div class='tab-pane fade show active' id='tabs-home' role='tabpanel'
-             aria-labelledby='tabs-home-tab'>
+      <div class='tab-content p-5' id='myTabContent'>
+        <div
+            v-for="(item,key) in timeDivisions"
+            :class='`tab-pane fade show ${key==0 ? "active" : ""}`'
+            :id='`tabs-t${key}`'
+            role='tabpanel'
+            :aria-labelledby='`tabs-t${key}-tab`'>
           <ul class='options flex flex-col justify-center'>
             <li class='flex items-center py-5 border-b border-gray-100'>
               <div class='flex gap-3 grow'>
@@ -82,7 +60,7 @@
                        class='radio-option'
                        aria-labelledby='country-option-2'
                        aria-describedby='country-option-2'/>
-                <label htmlFor='country-option-2'
+                <label for='country-option-2'
                        class='block ml-2 text-sm font-medium text-gray-300 dark:text-gray-300'>
                   ساعت ۹ تا ۱۲
                 </label>
@@ -98,7 +76,7 @@
                        class='radio-option'
                        aria-labelledby='country-option-3'
                        aria-describedby='country-option-3'/>
-                <label htmlFor='country-option-3'
+                <label for='country-option-3'
                        class='block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
                   ساعت ۱۲ تا ۱۵
                 </label>
@@ -119,7 +97,7 @@
                        class='radio-option'
                        aria-labelledby='country-option-4'
                        aria-describedby='country-option-4'/>
-                <label htmlFor='country-option-4'
+                <label for='country-option-4'
                        class='block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
                   ساعت ۱۵ تا ۱۸
                 </label>
@@ -140,259 +118,7 @@
                        class='radio-option'
                        aria-labelledby='country-option-5'
                        aria-describedby='country-option-5'/>
-                <label htmlFor='country-option-5'
-                       class='block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
-                  ساعت ۱۸ تا ۲۱
-                </label>
-              </div>
-              <div class='flex items-center gap-2 text-[11px] text-gray-600'>
-                <span>اختصاصی دیجی پلاس</span>
-                <span>
-                  <svg class='icon-small icon-gray fill-purple-600'>
-                    <use href='#plus'/>
-                  </svg>
-                </span>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class='tab-pane fade' id='tabs-profile' role='tabpanel'
-             aria-labelledby='tabs-profile-tab'>
-          <ul class='options flex flex-col justify-center'>
-            <li class='flex items-center py-5 border-b border-gray-100'>
-              <div class='flex gap-3 grow'>
-                <input disabled id='country-option-2' type='radio'
-                       name='time' value='1'
-                       class='radio-option'
-                       aria-labelledby='country-option-2'
-                       aria-describedby='country-option-2'/>
-                <label htmlFor='country-option-2'
-                       class='block ml-2 text-sm font-medium text-gray-300 dark:text-gray-300'>
-                  ساعت ۹ تا ۱۲
-                </label>
-              </div>
-              <div>
-                <span class='badge-warning text-[11px] text-regular px-5 py-1'>تکمیل</span>
-              </div>
-            </li>
-            <li class='flex items-center py-5 border-b border-gray-100 items-center'>
-              <div class='flex gap-3 grow'>
-                <input id='country-option-3' type='radio' name='time'
-                       value='3'
-                       class='radio-option'
-                       aria-labelledby='country-option-3'
-                       aria-describedby='country-option-3'/>
-                <label htmlFor='country-option-3'
-                       class='block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
-                  ساعت ۱۲ تا ۱۵
-                </label>
-              </div>
-              <div class='flex items-center gap-2 text-[11px] text-gray-600'>
-                <span>اختصاصی دیجی پلاس</span>
-                <span>
-                  <svg class='icon-small icon-gray fill-purple-600'>
-                    <use href='#plus'/>
-                  </svg>
-                </span>
-              </div>
-            </li>
-            <li class='flex items-center py-5 border-b border-gray-100'>
-              <div class='flex items-center gap-3 grow'>
-                <input id='country-option-4' type='radio' name='time'
-                       value='4'
-                       class='radio-option'
-                       aria-labelledby='country-option-4'
-                       aria-describedby='country-option-4'/>
-                <label htmlFor='country-option-4'
-                       class='block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
-                  ساعت ۱۵ تا ۱۸
-                </label>
-              </div>
-              <div class='flex items-center gap-2 text-[11px] text-gray-600'>
-                <span>اختصاصی دیجی پلاس</span>
-                <span>
-                  <svg class='icon-small icon-gray fill-purple-600'>
-                    <use href='#plus'/>
-                  </svg>
-                </span>
-              </div>
-            </li>
-            <li class='flex items-center py-5'>
-              <div class='flex items-center gap-3 grow'>
-                <input id='country-option-5' type='radio' name='time'
-                       value='5'
-                       class='radio-option'
-                       aria-labelledby='country-option-5'
-                       aria-describedby='country-option-5'/>
-                <label htmlFor='country-option-5'
-                       class='block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
-                  ساعت ۱۸ تا ۲۱
-                </label>
-              </div>
-              <div class='flex items-center gap-2 text-[11px] text-gray-600'>
-                <span>اختصاصی دیجی پلاس</span>
-                <span>
-                  <svg class='icon-small icon-gray fill-purple-600'>
-                    <use href='#plus'/>
-                  </svg>
-                </span>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class='tab-pane fade' id='tabs-messages' role='tabpanel'
-             aria-labelledby='tabs-profile-tab'>
-          <ul class='options flex flex-col justify-center'>
-            <li class='flex items-center py-5 border-b border-gray-100'>
-              <div class='flex gap-3 grow'>
-                <input disabled id='country-option-2' type='radio'
-                       name='time' value='1'
-                       class='radio-option'
-                       aria-labelledby='country-option-2'
-                       aria-describedby='country-option-2'/>
-                <label htmlFor='country-option-2'
-                       class='block ml-2 text-sm font-medium text-gray-300 dark:text-gray-300'>
-                  ساعت ۹ تا ۱۲
-                </label>
-              </div>
-              <div>
-                <span class='badge-warning text-[11px] text-regular px-5 py-1'>تکمیل</span>
-              </div>
-            </li>
-            <li class='flex items-center py-5 border-b border-gray-100 items-center'>
-              <div class='flex gap-3 grow'>
-                <input id='country-option-3' type='radio' name='time'
-                       value='3'
-                       class='radio-option'
-                       aria-labelledby='country-option-3'
-                       aria-describedby='country-option-3'/>
-                <label htmlFor='country-option-3'
-                       class='block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
-                  ساعت ۱۲ تا ۱۵
-                </label>
-              </div>
-              <div class='flex items-center gap-2 text-[11px] text-gray-600'>
-                <span>اختصاصی دیجی پلاس</span>
-                <span>
-                  <svg class='icon-small icon-gray fill-purple-600'>
-                    <use href='#plus'/>
-                  </svg>
-                </span>
-              </div>
-            </li>
-            <li class='flex items-center py-5 border-b border-gray-100'>
-              <div class='flex items-center gap-3 grow'>
-                <input id='country-option-4' type='radio' name='time'
-                       value='4'
-                       class='radio-option'
-                       aria-labelledby='country-option-4'
-                       aria-describedby='country-option-4'/>
-                <label htmlFor='country-option-4'
-                       class='block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
-                  ساعت ۱۵ تا ۱۸
-                </label>
-              </div>
-              <div class='flex items-center gap-2 text-[11px] text-gray-600'>
-                <span>اختصاصی دیجی پلاس</span>
-                <span>
-                  <svg class='icon-small icon-gray fill-purple-600'>
-                    <use href='#plus'/>
-                  </svg>
-                </span>
-              </div>
-            </li>
-            <li class='flex items-center py-5'>
-              <div class='flex items-center gap-3 grow'>
-                <input id='country-option-5' type='radio' name='time'
-                       value='5'
-                       class='radio-option'
-                       aria-labelledby='country-option-5'
-                       aria-describedby='country-option-5'/>
-                <label htmlFor='country-option-5'
-                       class='block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
-                  ساعت ۱۸ تا ۲۱
-                </label>
-              </div>
-              <div class='flex items-center gap-2 text-[11px] text-gray-600'>
-                <span>اختصاصی دیجی پلاس</span>
-                <span>
-                  <svg class='icon-small icon-gray fill-purple-600'>
-                    <use href='#plus'/>
-                  </svg>
-                </span>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class='tab-pane fade' id='tabs-contact' role='tabpanel'
-             aria-labelledby='tabs-contact-tab'>
-          <ul class='options flex flex-col justify-center'>
-            <li class='flex items-center py-5 border-b border-gray-100'>
-              <div class='flex gap-3 grow'>
-                <input disabled id='country-option-2' type='radio'
-                       name='time' value='1'
-                       class='radio-option'
-                       aria-labelledby='country-option-2'
-                       aria-describedby='country-option-2'/>
-                <label htmlFor='country-option-2'
-                       class='block ml-2 text-sm font-medium text-gray-300 dark:text-gray-300'>
-                  ساعت ۹ تا ۱۲
-                </label>
-              </div>
-              <div>
-                <span class='badge-warning text-[11px] text-regular px-5 py-1'>تکمیل</span>
-              </div>
-            </li>
-            <li class='flex items-center py-5 border-b border-gray-100 items-center'>
-              <div class='flex gap-3 grow'>
-                <input id='country-option-3' type='radio' name='time'
-                       value='3'
-                       class='radio-option'
-                       aria-labelledby='country-option-3'
-                       aria-describedby='country-option-3'/>
-                <label htmlFor='country-option-3'
-                       class='block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
-                  ساعت ۱۲ تا ۱۵
-                </label>
-              </div>
-              <div class='flex items-center gap-2 text-[11px] text-gray-600'>
-                <span>اختصاصی دیجی پلاس</span>
-                <span>
-                  <svg class='icon-small icon-gray fill-purple-600'>
-                    <use href='#plus'/>
-                  </svg>
-                </span>
-              </div>
-            </li>
-            <li class='flex items-center py-5 border-b border-gray-100'>
-              <div class='flex items-center gap-3 grow'>
-                <input id='country-option-4' type='radio' name='time'
-                       value='4'
-                       class='radio-option'
-                       aria-labelledby='country-option-4'
-                       aria-describedby='country-option-4'/>
-                <label htmlFor='country-option-4'
-                       class='block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
-                  ساعت ۱۵ تا ۱۸
-                </label>
-              </div>
-              <div class='flex items-center gap-2 text-[11px] text-gray-600'>
-                <span>اختصاصی دیجی پلاس</span>
-                <span>
-                  <svg class='icon-small icon-gray fill-purple-600'>
-                    <use href='#plus'/>
-                  </svg>
-                </span>
-              </div>
-            </li>
-            <li class='flex items-center py-5'>
-              <div class='flex items-center gap-3 grow'>
-                <input id='country-option-5' type='radio' name='time'
-                       value='5'
-                       class='radio-option'
-                       aria-labelledby='country-option-5'
-                       aria-describedby='country-option-5'/>
-                <label htmlFor='country-option-5'
+                <label for='country-option-5'
                        class='block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
                   ساعت ۱۸ تا ۲۱
                 </label>
@@ -412,3 +138,119 @@
     </div>
   </div>
 </template>
+<script setup>
+const timeDivisions = [
+  {
+    key: 1,
+    title: "جمعه",
+    subtitle: '۲۳',
+    items: [
+      {
+        key: 1,
+        title: 'ساعت ۹ تا ۱۲',
+        disabled: true,
+        warning: 'تکمیل'
+      },
+      {
+        key: 2,
+        title: 'ساعت ۱۲ تا ۱۵',
+        plus: true
+      },
+      {
+        key: 3,
+        title: ' ساعت ۱۵ تا ۱۸',
+        plus: false
+      },
+      {
+        key: 4,
+        title: 'ساعت ۱۸ تا ۲۱',
+        plus: true
+      }
+    ]
+  },
+  {
+    key: 2,
+    title: "شنبه",
+    subtitle: '۲۴',
+    items: [
+      {
+        key: 1,
+        title: 'ساعت ۹ تا ۱۲',
+        disabled: true,
+        warning: 'تکمیل'
+      },
+      {
+        key: 2,
+        title: 'ساعت ۱۲ تا ۱۵',
+        plus: true
+      },
+      {
+        key: 3,
+        title: ' ساعت ۱۵ تا ۱۸',
+        plus: false
+      },
+      {
+        key: 4,
+        title: 'ساعت ۱۸ تا ۲۱',
+        plus: true
+      }
+    ]
+  },
+  {
+    key: 3,
+    title: "یکشنبه",
+    subtitle: '۲۵',
+    items: [
+      {
+        key: 1,
+        title: 'ساعت ۹ تا ۱۲',
+        disabled: true,
+        warning: 'تکمیل'
+      },
+      {
+        key: 2,
+        title: 'ساعت ۱۲ تا ۱۵',
+        plus: true
+      },
+      {
+        key: 3,
+        title: ' ساعت ۱۵ تا ۱۸',
+        plus: false
+      },
+      {
+        key: 4,
+        title: 'ساعت ۱۸ تا ۲۱',
+        plus: true
+      }
+    ]
+  },
+  {
+    key: 3,
+    title: "چهارشنبه",
+    subtitle: '۲۶',
+    items: [
+      {
+        key: 1,
+        title: 'ساعت ۹ تا ۱۲',
+        disabled: true,
+        warning: 'تکمیل'
+      },
+      {
+        key: 2,
+        title: 'ساعت ۱۲ تا ۱۵',
+        plus: true
+      },
+      {
+        key: 3,
+        title: ' ساعت ۱۵ تا ۱۸',
+        plus: false
+      },
+      {
+        key: 4,
+        title: 'ساعت ۱۸ تا ۲۱',
+        plus: true
+      }
+    ]
+  },
+];
+</script>

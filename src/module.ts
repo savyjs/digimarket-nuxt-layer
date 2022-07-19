@@ -51,15 +51,15 @@ export default defineNuxtModule<ModuleOptions>({
         nuxt.options.nitro.scanDirs = [await resolvePath(__dirname + '/server')]
 
         nuxt.hook('ready', async nuxt => {
-            nuxt.options.css.push(await resolvePath(__dirname + '/assets/styles/ntm.scss'))
             nuxt.options.alias['ntmRoot'] = await resolvePath(__dirname);
             nuxt.options.alias['@ntmRoot'] = await resolvePath(__dirname);
-        })
+            nuxt.options.css.push(await resolvePath(__dirname + '/assets/styles/ntm.scss'))
+            nuxt.options.css.push('https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css')
+            nuxt.options.css.push('https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css')
+            nuxt.options.app.head.script.push({src: 'https://unpkg.com/flowbite@1.4.7/dist/flowbite.js'})
+            nuxt.options.app.head.script.push({src: 'https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js'})
 
-        addPlugin({
-            src: await resolvePath(__dirname + '/plugins/NtmPlugin.ts'),
         })
-
 
         //
         await addComponentsDir({path: await resolvePath(__dirname + '/components/market/logistic')})
