@@ -42,11 +42,11 @@
                 </div>
             </div>
         </div>
-        <Flowbite/>
-        <TEElement/>
         <NtmSvgIcons/>
         <main>
+          <div class='container mx-auto rtl'>
             <nuxt-page />
+          </div>
         </main>
     </div>
 </template>
