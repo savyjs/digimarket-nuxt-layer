@@ -5,6 +5,7 @@ import {
     addAutoImportDir,
     addComponentsDir,
     addPlugin,
+    extendPages,
     useNuxt,
     addServerHandler,
     useModuleContainer,
@@ -12,18 +13,20 @@ import {
 } from '@nuxt/kit'
 import consola from 'consola'
 import {Layout} from "./schema/types/layout";
+import {divisions} from "./schema/types/options";
 
 const logger = consola.withScope('nuxt:ntm')
 
 
 export interface ModuleOptions extends Layout {
-
+    divisions?: divisions[]
 }
 
 export default defineNuxtModule<ModuleOptions>({
     defaults: {
         logo: '~ntmRoot/img/logo.png',
         title: undefined,
+        divisions: []
     },
     meta: {
         // Usually  npm package name of your module
@@ -49,7 +52,6 @@ export default defineNuxtModule<ModuleOptions>({
 
         nuxt.hook('ready', async nuxt => {
             nuxt.options.css.push(await resolvePath(__dirname + '/assets/styles/ntm.scss'))
-            import('@fortawesome/fontawesome-free/js/all')
             nuxt.options.alias['ntmRoot'] = await resolvePath(__dirname);
             nuxt.options.alias['@ntmRoot'] = await resolvePath(__dirname);
         })
@@ -58,7 +60,9 @@ export default defineNuxtModule<ModuleOptions>({
             src: await resolvePath(__dirname + '/plugins/NtmPlugin.ts'),
         })
 
+
         //
+        await addComponentsDir({path: await resolvePath(__dirname + '/components/market/logistic')})
         await addComponentsDir({path: await resolvePath(__dirname + '/components/market/products')})
         await addComponentsDir({path: await resolvePath(__dirname + '/components/market/categories')})
         await addComponentsDir({path: await resolvePath(__dirname + '/components/market/landing')})
@@ -83,6 +87,18 @@ export default defineNuxtModule<ModuleOptions>({
                 filename: "NtmPanel.vue",
                 src: await resolvePath(__dirname + '/layouts/NtmPanel.vue'),
             }, "NtmPanel"
+        )
+        await moduleContainer.addLayout(
+            {
+                filename: "NtmMarketPayment.vue",
+                src: await resolvePath(__dirname + '/layouts/NtmMarketPayment.vue'),
+            }, "NtmMarketPayment"
+        )
+        await moduleContainer.addLayout(
+            {
+                filename: "NtmMarketShipping.vue",
+                src: await resolvePath(__dirname + '/layouts/NtmMarketShipping.vue'),
+            }, "NtmMarketShipping"
         )
     }
 });
