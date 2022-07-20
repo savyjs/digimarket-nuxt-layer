@@ -59,6 +59,8 @@
     </nav>
     <div class="pl-4">
       <button
+          data-bs-toggle="modal"
+          data-bs-target="#divisionsModal"
           class="flex items-center justify-between gap-1 text-gray-600"
       >
       <span>
@@ -68,15 +70,20 @@
             </span>
         <span class="text-[11px]">لطفا شهر خود را انتخاب کنید</span>
       </button>
+
+      <NtmDivisions/>
+
     </div>
   </div>
 </template>
 <script setup>
+
 const megaMenuStatus = useState('megaMenuStatus', () => false)
 const toggleNavbar = useState('showNavbar', () => true);
 const showNavbar = useState('toggleNavbar', () => true);
 const lastScrollY = useState('lastScrollY', () => 0);
 const setLastScrollY = useState('setLastScrollY', () => 0);
+const divisionsModal = useState('divisionsModal');
 
 const locales = useLocales()
 const locale = useLocale()
@@ -93,13 +100,6 @@ const controlNavbar = () => {
     }
     setLastScrollY(window.scrollY);
   }
-};
-
-const toggleCitiesModal = useState('toggleCitiesModal', () => false);
-const citiesModal = useState('citiesModal', () => false);
-
-const closeCitiesModal = () => {
-  toggleCitiesModal(false);
 };
 
 </script>
