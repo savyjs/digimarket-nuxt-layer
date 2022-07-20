@@ -1,5 +1,5 @@
 <template>
-  <div class="h-80 overflow-y-scroll px-2">
+  <div class="h-80 overflow-y-auto px-2">
     <div
         v-if="depthLevel > 0"
         @click="unselectDivision"
