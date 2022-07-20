@@ -43,7 +43,7 @@
             </div>
         </div>
         <main>
-          <div class='container mx-auto rtl'>
+          <div class='container mx-auto rtl my-5'>
             <nuxt-page />
           </div>
         </main>
