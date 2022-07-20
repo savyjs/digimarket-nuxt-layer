@@ -15,7 +15,8 @@ export default <Config>{
         `plugins/**/*.{js,ts}`,
         `App.{js,ts,vue}`,
         `app.{js,ts,vue}`,
-        './node_modules/flowbite/**/*.js'
+        './node_modules/flowbite/**/*.js',
+        './node_modules/tw-elements/dist/js/**/*.js'
     ],
     theme: {
         extend: {

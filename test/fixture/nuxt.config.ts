@@ -62,10 +62,10 @@ export default defineNuxtConfig({
             {
                 key: '1',
                 title: 'Asia',
-                childs: [{
+                items: [{
                     key: "1",
                     title: "Iran",
-                    childs: Provinces
+                    items: Provinces
                 }]
             }
         ]

@@ -213,7 +213,8 @@
                                                     </svg>
                                                 </div>
                                             </button>
-                                            <div id='deliveryPrice' role='tooltip'
+                                            <div id='deliveryPrice'
+                                                 role='tooltip'
                                                  data-tooltip-placement='bottom'
                                                  class='gap-y-3 w-64 inline-block absolute space-y-3 gap-y-3 invisible z-10 py-2 px-3 font-medium shadow-lg rounded-sm bg-white opacity-0 tooltip'>
                                                 <div class='w-full flex text-red-600 gap-2 my-2 text-[11px]'>
@@ -297,7 +298,7 @@
                                     <div class='flex justify-between'>
                                         <div class='flex align-middle items-center justify-between gap-1 text-gray-400'>
           <span class=''>
-            <img src='/dkala/club-point.svg' class='w-4'/>
+            <img src='ntmRoot/dkala/club-point.svg' class='w-4'/>
           </span>
                                             <span class=''>دیجی کلاب</span>
                                             <div class='flex items-end'>
