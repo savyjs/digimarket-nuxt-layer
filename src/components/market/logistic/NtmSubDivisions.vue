@@ -14,6 +14,7 @@
     <div
         v-for="(item,key) in activeDivisions"
         @click="selectDivision(item,key)"
+        :data-bs-dismiss="item?.items ? '' : 'modal'"
         class="mr-2 flex cursor-pointer items-center justify-between border-b
              border-gray-100 p-2 py-4 text-sm font-bold text-gray-800"
     >
