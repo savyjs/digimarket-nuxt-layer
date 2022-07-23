@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container mt-5 mx-auto text-[14px]">
+        <div class="container mt-5 mx-auto text-[14px] rtl">
             <div class="card-primary mx-auto">
                 <div class="mx-auto text-center flex items-center justify-center mb-10 mt-2">
                     <NuxtLink href="/"><a><img :src="logo" :alt="title"/></a></NuxtLink>
