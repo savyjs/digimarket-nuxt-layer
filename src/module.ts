@@ -75,6 +75,7 @@ export default defineNuxtModule<ModuleOptions>({
         await addComponentsDir({path: await resolvePath(__dirname + '/components/market/categories')})
         await addComponentsDir({path: await resolvePath(__dirname + '/components/market/landing')})
         await addComponentsDir({path: await resolvePath(__dirname + '/components/market/layout')})
+        await addComponentsDir({path: await resolvePath(__dirname + '/components/market/profile')})
         await addComponentsDir({path: await resolvePath(__dirname + '/components/market')})
         await addComponentsDir({path: await resolvePath(__dirname + '/components/blog')})
         await addComponentsDir({path: await resolvePath(__dirname + '/components')})

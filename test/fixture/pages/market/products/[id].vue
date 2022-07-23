@@ -6,4 +6,7 @@
 <script setup>
 const {id} = useRoute().params;
 const {data} = await useFetch(`/api/market/products/${id}`)
+definePageMeta({
+  layout: 'ntm-market'
+})
 </script>

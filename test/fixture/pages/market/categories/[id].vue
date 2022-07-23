@@ -8,4 +8,7 @@
 <script setup>
 const {id} = useRoute().params;
 const {products, total, limit, skip} = await $fetch(`/api/market/categories/${id}`)
+definePageMeta({
+  layout: 'ntm-market'
+})
 </script>
