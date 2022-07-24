@@ -1,9 +1,9 @@
 <template>
   <div class="flex w-full gap-2">
-    <div class="card-primary grow w-1/3">
+    <div class="grow w-1/3">
 
     </div>
-    <div class="card-primary grow w-2/3">
+    <div class="grow w-2/3">
 
     </div>
   </div>
