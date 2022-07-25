@@ -19,14 +19,16 @@ const logger = consola.withScope('nuxt:ntm')
 
 
 export interface ModuleOptions extends Layout {
-    divisions?: divisions[]
+    divisions?: divisions[],
+    profileMenuItems?: { title: string, to: string, icon?: string }[]
 }
 
 export default defineNuxtModule<ModuleOptions>({
     defaults: {
         logo: '~ntmRoot/img/logo.png',
         title: undefined,
-        divisions: []
+        divisions: [],
+        profileMenuItems: [],
     },
     meta: {
         // Usually  npm package name of your module
