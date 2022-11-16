@@ -56,10 +56,6 @@ export default defineNuxtModule<ModuleOptions>({
             nuxt.options.alias['ntmRoot'] = await resolvePath(__dirname);
             nuxt.options.alias['@ntmRoot'] = await resolvePath(__dirname);
             nuxt.options.css.push(await resolvePath(__dirname + '/assets/styles/ntm.scss'))
-            // nuxt.options.css.push('https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css')
-            // nuxt.options.css.push('https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css')
-            // nuxt.options.app.head.script.push({src: 'https://unpkg.com/flowbite@1.4.7/dist/flowbite.js'})
-            // nuxt.options.app.head.script.push({src: 'https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js'})
         })
 
         addPlugin({
@@ -83,8 +79,6 @@ export default defineNuxtModule<ModuleOptions>({
         await addComponentsDir({path: await resolvePath(__dirname + '/components')})
 
         await addAutoImportDir([await resolvePath(__dirname + '/public'), await resolvePath(__dirname + '/assets'), await resolvePath(__dirname + '/composables'), await resolvePath(__dirname + '/components')])
-
-        // addServerHandler({handler: await resolvePath(__dirname + '/server/api/market/product/[id].ts')})
 
         await moduleContainer.addLayout(
             {
