@@ -1,7 +1,7 @@
 {
   "name": "nuxt-tailwind-marketpalce-kit",
   "description": "Nuxt ui kit module, powered by tailwindCss. build a modern and beautiful marketplace ui easily ",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -83,7 +83,7 @@
     "material-design-icons-iconfont": "^5.0.1",
     "material-icons": "^0.3.1",
     "moment-jalaali": "^0.9.2",
-    "nuxt-jsonld": "^2.0.3",
+    "nuxt-jsonld": "^2.0.6",
     "swiper": "^8.3.1",
     "tw-elements": "^1.0.0-alpha12"
   },
