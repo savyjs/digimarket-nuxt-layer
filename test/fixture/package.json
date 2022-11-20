@@ -7,7 +7,7 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "nuxt": "^3.0.0-rc.14",
+    "nuxt": "^3.0.0",
     "sass": "^1.52.3",
     "sass-loader": "latest",
     "vite-plugin-vue-type-imports": "^0.2.0",

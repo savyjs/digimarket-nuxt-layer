@@ -1,5 +1,5 @@
-import {defineNuxtConfig} from 'nuxt'
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
+import {defineNuxtConfig} from "nuxt/config";
 const Provinces = [
     {
         key: '1',
