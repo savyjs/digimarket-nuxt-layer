@@ -1,5 +1,6 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 import {defineNuxtConfig} from "nuxt/config";
+
 const Provinces = [
     {
         key: '1',
@@ -44,10 +45,8 @@ export default defineNuxtConfig({
         'assets/font-css/fontiran.css',
         'assets/font-css/style.css'
     ],
-    buildModules: [
-        'vite-plugin-vue-type-imports/nuxt',
-    ],
     modules: [
+        // 'vite-plugin-vue-type-imports/nuxt',
         // Using package name
         // '@nuxt/content',
         // Relative to your project srcDir
