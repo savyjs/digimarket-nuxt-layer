@@ -8,9 +8,9 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v3
       with:
-        node-version: '18.x'
+        node-version: '16'
         registry-url: 'https://registry.npmjs.org'
 
     - name: executing remote ssh commands using password
@@ -28,7 +28,8 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
-    - uses: actions/setup-node@v1
+    - uses: actions/setup-node@v3
       with:
+        node-version: '16'
         registry-url: 'https://npm.pkg.github.com'
 
