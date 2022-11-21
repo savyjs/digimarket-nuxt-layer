@@ -13,14 +13,6 @@ jobs:
         node-version: '16'
         registry-url: 'https://registry.npmjs.org'
 
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        script:  cd /home/ntm && git pull origin master && cd /home/ntm/docs  && pm2 stop ntmDocsFront && yarn && yarn build && pm2 start ntmDocsFront
 
     - name: Publish tag to npm
       if: contains(github.ref, 'tags')
@@ -33,3 +25,11 @@ jobs:
         node-version: '16'
         registry-url: 'https://npm.pkg.github.com'
 
+    - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script:  cd /home/ntm && git pull origin master && cd /home/ntm/docs  && pm2 stop ntmDocsFront && yarn && yarn build && pm2 start ntmDocsFront
