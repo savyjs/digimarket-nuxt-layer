@@ -165,7 +165,7 @@ export interface Feature {
     title: string
 }
 
-export interface Meta {
+interface Meta {
     /**
      * title
      *

@@ -33,6 +33,6 @@
     "*.config.js",
     "dist",
     "node_modules",
-    ".nuxt",
+    ".nuxt"
   ]
 }

@@ -1,15 +1,11 @@
 import {
     defineNuxtModule,
     installModule,
-    addTemplate,
-    addAutoImportDir,
-    addComponentsDir,
     addPlugin,
-    extendPages,
-    useNuxt,
-    addServerHandler,
-    useModuleContainer,
-    resolvePath, addComponent
+    addLayout,
+    resolvePath,
+    addComponentsDir,
+    addImportsDir
 } from '@nuxt/kit'
 import consola from 'consola'
 import {Layout} from "./schema/types/layout";
@@ -42,22 +38,24 @@ export default defineNuxtModule<ModuleOptions>({
         }
     },
     async setup(moduleOptions, nuxt) {
-        const moduleContainer = useModuleContainer(nuxt);
 
-        // installing tailwindcss first
+        // installing tailwindcss
         await installModule('@nuxtjs/tailwindcss')
         await installModule('vite-plugin-vue-type-imports/nuxt')
+
+        // load server API files
         nuxt.options.runtimeConfig.public.ntm = moduleOptions;
         nuxt.options.nitro.rootDir = await resolvePath(__dirname + '/')
         nuxt.options.nitro.srcDir = await resolvePath(__dirname + '/')
         nuxt.options.nitro.scanDirs = [await resolvePath(__dirname + '/server')]
 
+        // add NTM alias and load ntm style
         nuxt.hook('ready', async nuxt => {
-            nuxt.options.alias['ntmRoot'] = await resolvePath(__dirname);
             nuxt.options.alias['@ntmRoot'] = await resolvePath(__dirname);
             nuxt.options.css.push(await resolvePath(__dirname + '/assets/styles/ntm.scss'))
         })
 
+        // add plugins
         addPlugin({
             src: await resolvePath(__dirname + '/plugins/NtmPlugin.ts'),
         })
@@ -66,40 +64,43 @@ export default defineNuxtModule<ModuleOptions>({
             mode: 'client'
         })
 
+        // load NTM components
+        await addComponentsDir({path: __dirname + '/components'})
 
-        //
-        await addComponentsDir({path: await resolvePath(__dirname + '/components/market/logistic')})
-        await addComponentsDir({path: await resolvePath(__dirname + '/components/market/products')})
-        await addComponentsDir({path: await resolvePath(__dirname + '/components/market/categories')})
-        await addComponentsDir({path: await resolvePath(__dirname + '/components/market/landing')})
-        await addComponentsDir({path: await resolvePath(__dirname + '/components/market/layout')})
-        await addComponentsDir({path: await resolvePath(__dirname + '/components/market/profile')})
-        await addComponentsDir({path: await resolvePath(__dirname + '/components/market')})
-        await addComponentsDir({path: await resolvePath(__dirname + '/components/blog')})
-        await addComponentsDir({path: await resolvePath(__dirname + '/components')})
+        // import other folders
+        await addImportsDir([
+            await resolvePath(__dirname + '/public'),
+            await resolvePath(__dirname + '/assets'),
+            await resolvePath(__dirname + '/composables'),
+            await resolvePath(__dirname + '/components')
+        ])
 
-        await addAutoImportDir([await resolvePath(__dirname + '/public'), await resolvePath(__dirname + '/assets'), await resolvePath(__dirname + '/composables'), await resolvePath(__dirname + '/components')])
-
-        await moduleContainer.addLayout(
+        // adding layouts - ntm market default page
+        await addLayout(
             {
                 filename: "NtmMarket.vue",
                 src: await resolvePath(__dirname + '/layouts/NtmMarket.vue'),
             }, "NtmMarket"
         )
 
-        await moduleContainer.addLayout(
+        // user panel layout
+        await addLayout(
             {
                 filename: "NtmPanel.vue",
                 src: await resolvePath(__dirname + '/layouts/NtmPanel.vue'),
             }, "NtmPanel"
         )
-        await moduleContainer.addLayout(
+
+        // add payment page
+        await addLayout(
             {
                 filename: "NtmMarketPayment.vue",
                 src: await resolvePath(__dirname + '/layouts/NtmMarketPayment.vue'),
             }, "NtmMarketPayment"
         )
-        await moduleContainer.addLayout(
+
+        // cart and shipping layouts
+        await addLayout(
             {
                 filename: "NtmMarketShipping.vue",
                 src: await resolvePath(__dirname + '/layouts/NtmMarketShipping.vue'),
