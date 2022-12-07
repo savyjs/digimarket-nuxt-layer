@@ -6,30 +6,30 @@ jobs:
   npm:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+      - uses: actions/checkout@master
 
-    - uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-        registry-url: 'https://registry.npmjs.org'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          registry-url: 'https://registry.npmjs.org'
 
-    - name: Publish tag to npm
-      if: contains(github.ref, 'tags')
-      run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: Publish tag to npm
+        if: contains(github.ref, 'tags')
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        script:  cd /home/ntm && git pull origin master && cd /home/ntm/docs  && pm2 stop ntmDocsFront && yarn && yarn build && pm2 start ntmDocsFront
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script:  cd /home/ntm && git pull origin master && cd /home/ntm/docs  && pm2 stop ntmDocsFront && yarn && yarn build && pm2 start ntmDocsFront
 
 
-    - uses: actions/setup-node@v3
-      with:
-        registry-url: 'https://npm.pkg.github.com'
+      - uses: actions/setup-node@v3
+        with:
+          registry-url: 'https://npm.pkg.github.com'
 
