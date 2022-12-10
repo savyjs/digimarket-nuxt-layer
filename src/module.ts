@@ -65,7 +65,10 @@ export default defineNuxtModule<ModuleOptions>({
         })
 
         // load NTM components
+        await addComponentsDir({path: __dirname + '/components/market'})
+        await addComponentsDir({path: __dirname + '/components/blog'})
         await addComponentsDir({path: __dirname + '/components'})
+
 
         // import other folders
         await addImportsDir([

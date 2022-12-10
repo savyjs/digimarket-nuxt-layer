@@ -1,3 +1,18 @@
+export interface Shipping {
+    /**
+     * list of available methods
+     *
+     * @default null
+     */
+    methods?: Array<Meta> | void
+    /**
+     * cart
+     *
+     * @default null
+     */
+    cart?: Array<Product> | void
+}
+
 export interface Product {
     /**
      * product id

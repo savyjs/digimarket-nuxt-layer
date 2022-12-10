@@ -46,7 +46,7 @@ export default defineNuxtConfig({
         'assets/font-css/style.css'
     ],
     modules: [
-        // 'vite-plugin-vue-type-imports/nuxt',
+        'vite-plugin-vue-type-imports/nuxt',
         // Using package name
         '@nuxt/content',
         // Relative to your project srcDir
