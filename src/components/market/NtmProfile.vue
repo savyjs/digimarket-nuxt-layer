@@ -9,6 +9,6 @@
     </div>
   </div>
 </template>
-<script script>
+<script setup>
 const {profileMenuItems} = useNtm()?.options();
 </script>

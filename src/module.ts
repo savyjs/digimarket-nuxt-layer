@@ -42,6 +42,7 @@ export default defineNuxtModule<ModuleOptions>({
         // installing tailwindcss
         await installModule('@nuxtjs/tailwindcss')
         await installModule('vite-plugin-vue-type-imports/nuxt')
+        // await
 
         // load server API files
         nuxt.options.runtimeConfig.public.ntm = moduleOptions;
