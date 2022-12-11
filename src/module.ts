@@ -56,6 +56,15 @@ export default defineNuxtModule<ModuleOptions>({
             nuxt.options.css.push(await resolvePath(__dirname + '/assets/styles/ntm.scss'))
         })
 
+
+        // import folders
+        await addImportsDir([
+            await resolvePath(__dirname + '/public'),
+            await resolvePath(__dirname + '/assets'),
+            await resolvePath(__dirname + '/composables'),
+            await resolvePath(__dirname + '/components')
+        ])
+
         // add plugins
         addPlugin({
             src: await resolvePath(__dirname + '/plugins/NtmPlugin.ts'),
@@ -65,19 +74,13 @@ export default defineNuxtModule<ModuleOptions>({
             mode: 'client'
         })
 
+
         // load NTM components
         await addComponentsDir({path: __dirname + '/components/market'})
         await addComponentsDir({path: __dirname + '/components/blog'})
         await addComponentsDir({path: __dirname + '/components'})
 
 
-        // import other folders
-        await addImportsDir([
-            await resolvePath(__dirname + '/public'),
-            await resolvePath(__dirname + '/assets'),
-            await resolvePath(__dirname + '/composables'),
-            await resolvePath(__dirname + '/components')
-        ])
 
         // adding layouts - ntm market default page
         await addLayout(

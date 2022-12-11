@@ -57,6 +57,10 @@ export default defineNuxtConfig({
     ntm: {
         logo: '/assets/dkala/logo.svg',
         title: 'NTM',
+        profileMenuItems: [
+            {icon: 'fa fa-plus', text: 'پلاس اکانت', svg: 'plus', link: '/profile/plus'},
+            {icon: 'fa fa-list', text: 'خلاصه فعالیت‌ها', svg: 'list', link: '/profile/activity'},
+        ],
         divisions: [
             {
                 key: '1',
