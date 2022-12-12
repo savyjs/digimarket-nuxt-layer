@@ -43,9 +43,13 @@
     "test:module": "node test/module.test.ts",
     "test:e2e-browser": "jest test/browser.test",
     "test:unit": "jest test/unit.test",
-    "test:types": "tsc -p types/test"
+    "test:types": "tsc -p types/test",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
+    "vitepress": "^1.0.0-alpha.31",
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.18.6",
