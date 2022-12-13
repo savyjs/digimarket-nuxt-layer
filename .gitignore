@@ -12,3 +12,5 @@ yarn-error.log
 test/fixture/public/fonts/
 
 tailwind/
+
+docs/.vitepress/dist/
