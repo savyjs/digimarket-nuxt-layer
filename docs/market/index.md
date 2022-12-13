@@ -12,7 +12,8 @@ layout: NTMPanel
 
 ## NTM Config
 
-```json:[nuxt.config.ts]
+```js
+// nuxt.config.ts
 ntm:{
 
 }
