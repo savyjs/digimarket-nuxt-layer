@@ -9,9 +9,9 @@
   </div>
 </template>
 <script setup>
-const runtimeConfig = useRuntimeConfig().ntm;
+const options = useNtm()?.options();
 const userData = ref();
-const sideMenu = ref(runtimeConfig.profileMenuItems);
+const sideMenu = ref(options.profileMenuItems);
 const userOrdersSummeryData = ref();
 const userList = ref();
 const userFavourites = ref();
