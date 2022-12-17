@@ -5,7 +5,10 @@
         :user="userData"
         :statistics="userOrdersSummeryData"
         :productSliders="[userList,userFavourites,recommendedProducts]"
-    />
+    >
+      <template #topsidebar>
+      </template>
+    </NtmProfile>
   </div>
 </template>
 <script setup>

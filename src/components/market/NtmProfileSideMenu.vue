@@ -1,5 +1,7 @@
 <template>
   <div class="card-primary p-0">
+    <slot name="topsidebar">
+    </slot>
     <div class="list list-primary">
       <nuxt-link class="list-item" v-for="item in items" :to="item?.link">
         <div v-if="item.svg" class="list-item-icon">
