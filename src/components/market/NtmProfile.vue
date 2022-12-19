@@ -17,6 +17,10 @@
                 </div>
               </div>
               <div class="list-item">
+                <div class="list-item-decoration">
+                  <div class="list-item-linedot"></div>
+                  <div class="list-item-dot"></div>
+                </div>
                 <div class="list-item-text">
                   <div>
                     <div class="flex full">
@@ -28,6 +32,10 @@
                 </div>
               </div>
               <div class="list-item">
+                <div class="list-item-decoration">
+                  <div class="list-item-linedot"></div>
+                  <div class="list-item-dot"></div>
+                </div>
                 <div class="list-item-text">
                   <div>
                     <div class="flex full">
