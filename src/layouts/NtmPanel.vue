@@ -1,5 +1,5 @@
 <template>
-  <div class="rtl">
+  <div :class="`rtl ${darkMode ? 'dark' : 'light'}`">
     <NtmMarketHeader/>
     <main class="container mx-auto mt-[110px]">
       <transition>
@@ -14,4 +14,5 @@
 </template>
 <script setup>
 let backdrop = useState('backdrop', () => false)
+const darkMode = useDarkMode()
 </script>

@@ -4,7 +4,7 @@
       <NtmProfileSideMenu :items="profileMenuItems">
         <template #topsidebar>
           <slot name="topsidebar">
-            <div class="list list-timeline">
+            <div class="list list-timeline py-2">
               <div class="list-item">
                 <div class="list-item-avatar">
                   <img src="@ntmRoot/assets/img/profile/avatar.svg"/>
@@ -47,6 +47,7 @@
                 </div>
               </div>
             </div>
+            <div class="border-b-[1px] mx-5" ></div>
           </slot>
         </template>
       </NtmProfileSideMenu>

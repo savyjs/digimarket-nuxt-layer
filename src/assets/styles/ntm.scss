@@ -1,6 +1,17 @@
 @import 'colors.css';
 @import 'tailwind.css';
 
-.rtl {
-  direction: rtl;
+
+@layer components {
+
+}
+
+@layer utilities {
+  .rtl {
+    direction: rtl;
+  }
+}
+
+.swiper-button-prev, .swiper-button-next {
+  @apply bg-white text-white p-10 rounded-full scale-50
 }
