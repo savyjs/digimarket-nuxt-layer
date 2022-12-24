@@ -11,7 +11,7 @@
 
     <div class="mr-auto flex-auto grow-0">
       <div class="flex items-center text-[11px]">
-        <span><button @click="toggleDarkMode()">X</button></span>
+        <span><button @click="darkmode()">X</button></span>
         <div class="rounded-xl flex-auto cursor-pointer border border-gray-200 py-2.5 px-4">
           <nuxt-link :to="{name:'NtmLogin'}" no-rel external>
             <a class="flex justify-around align-baseline gap-3">
@@ -39,5 +39,5 @@
 
 <script setup>
 const {logo, title} = useNtm().options();
-const darkMode = useDarkMode()
+let darkMode = useDarkmode()
 </script>

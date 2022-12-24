@@ -10,4 +10,3 @@ export const useNtm = () => {
     }
 }
 
-export const useDarkMode = () => useState('darkMode', () => process.server ? (localStorage?.darkMode == 'dark') : false)
