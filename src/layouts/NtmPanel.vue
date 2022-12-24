@@ -1,5 +1,9 @@
+<script setup>
+let darkmode = useDarkmode
+let backdrop = useState('backdrop', () => false)
+</script>
 <template>
-  <div :class="`rtl ${darkMode ? 'dark' : 'light'}`">
+  <div :class="`rtl ${false ? 'dark' : 'light'}`">
     <NtmMarketHeader/>
     <main class="container mx-auto mt-[110px]">
       <transition>
@@ -8,11 +12,8 @@
         </div>
       </transition>
       <NuxtPage/>
+      type: {{ typeof darkmode }}
     </main>
     <NtmSvgIcons/>
   </div>
 </template>
-<script setup>
-let backdrop = useState('backdrop', () => false)
-const darkMode = useDarkMode()
-</script>
