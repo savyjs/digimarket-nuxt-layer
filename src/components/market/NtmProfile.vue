@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full gap-2">
+  <div class="flex w-full gap-2 bg-default">
     <div class="grow w-1/3">
       <NtmProfileSideMenu :items="profileMenuItems">
         <template #topsidebar>

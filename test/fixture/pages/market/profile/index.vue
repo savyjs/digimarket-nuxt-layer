@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <NtmProfile
-        :sideMenu="sideMenu"
-        :user="userData"
-        :statistics="userOrdersSummeryData"
-        :productSliders="[userList,userFavourites,recommendedProducts]"
-    >
-      <template #topsidebar>
-      </template>
-    </NtmProfile>
-  </div>
+  <NtmProfile
+      :sideMenu="sideMenu"
+      :user="userData"
+      :statistics="userOrdersSummeryData"
+      :productSliders="[userList,userFavourites,recommendedProducts]"
+  >
+    <template #topsidebar>
+    </template>
+  </NtmProfile>
 </template>
 <script setup>
 const options = useNtm()?.options();

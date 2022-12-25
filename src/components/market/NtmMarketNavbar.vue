@@ -1,10 +1,10 @@
 <template>
-  <div :class="`rtl navbar-wrapper ${showNavbar ? 'show-nav' : 'hide-nav'}`">
-    <nav class="nav">
+  <div :class="`rtl bg-default navbar-wrapper ${showNavbar ? 'show-nav' : 'hide-nav'}`">
+    <nav class="nav bg-default">
       <ul class="flex items-end md:text-[12px] lg:text-[13px]">
         <li @mouseover="megaMenuStatus = true" @mouseleave="megaMenuStatus = false">
           <button
-              class="flex items-center gap-1 font-bold text-gray-800">
+              class="flex items-center gap-1 font-bold text-gray-800 dark:text-gray-200">
             <svg class="h-4 w-4" fill="currentColor">
               <use href="#hamburgerMenu"></use>
             </svg>
@@ -13,11 +13,11 @@
           <NtmMegaMenu v-show="megaMenuStatus"/>
         </li>
         <div class="py-2 pr-3">
-          <span class="mx-3 block h-4 w-px bg-neutral-200"></span>
+          <span class="mx-3 block h-4 w-px"></span>
         </div>
         <li class="">
           <nuxt-link to="/best-selling">
-            <a class="flex items-center gap-1 text-[12px] text-gray-500">
+            <a class="flex items-center gap-1 text-[12px] text-gray-500 dark:text-gray-200">
               <svg class="h-4 w-4" fill="currentColor">
                 <use href="#searchTrend"></use>
               </svg>
@@ -27,7 +27,7 @@
         </li>
         <li class="">
           <nuxt-link to="/promotion-center">
-            <a class="flex items-center gap-1 text-[12px] text-gray-500">
+            <a class="flex items-center gap-1 text-[12px] text-gray-500 dark:text-gray-200">
               <svg class="h-4 w-4" fill="currentColor">
                 <use href="#discount"></use>
               </svg>
@@ -37,7 +37,7 @@
         </li>
         <li class="">
           <nuxt-link to="/incredible-offers">
-            <a class="flex items-center gap-1 text-[12px] text-gray-500">
+            <a class="flex items-center gap-1 text-[12px] text-gray-500 dark:text-gray-200">
               <svg class="h-4 w-4" fill="currentColor">
                 <use href="#amazing"></use>
               </svg>
@@ -47,17 +47,17 @@
         </li>
         <li class="">
           <nuxt-link to="/faq">
-            <a class="text-[12px] text-gray-500">سوالی دارید؟</a>
+            <a class="text-[12px] text-gray-500 dark:text-gray-200">سوالی دارید؟</a>
           </nuxt-link>
         </li>
         <li class="">
           <nuxt-link to="/faq">
-            <a class="text-[12px] text-gray-500">فروشنده شوید!</a>
+            <a class="text-[12px] text-gray-500 dark:text-gray-200">فروشنده شوید!</a>
           </nuxt-link>
         </li>
       </ul>
     </nav>
-    <div class="pl-4">
+    <div class="pl-4 bg-default">
       <button
           data-bs-toggle="modal"
           data-bs-target="#divisionsModal"
@@ -70,9 +70,7 @@
             </span>
         <span class="text-[11px]">لطفا شهر خود را انتخاب کنید</span>
       </button>
-
       <NtmDivisions/>
-
     </div>
   </div>
 </template>
@@ -108,6 +106,7 @@ const controlNavbar = () => {
   margin-right: 1rem;
   padding-bottom: 8px;
   border-bottom: 2px solid transparent;
+  transition: 0.3s linear;
 }
 
 .nav li:hover {
@@ -121,7 +120,6 @@ li .bordernone:hover {
 .navbar-wrapper {
   width: 100%;
   position: relative;
-  transition: 0.3s linear;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -132,7 +130,6 @@ li .bordernone:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #ffffff;
   z-index: 2;
   padding-top: 5px;
 }
