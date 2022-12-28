@@ -1,7 +1,7 @@
 <template>
   <div :class="{'dark' :!!darkmode , 'light': !darkmode , 'rtl': true,'min-h-screen' : true,'bg-default' : true }">
     <NtmMarketHeader/>
-    <main class="container mx-auto mt-[110px]">
+    <main class="container mx-auto pt-[110px]">
       <transition>
         <div id="backdrop-searchModal" v-show="backdrop">
           <div class="backdrop delay-700" @click="backdrop=false"></div>

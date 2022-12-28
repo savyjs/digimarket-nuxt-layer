@@ -9,7 +9,7 @@
         <i class="fa fa-search"></i>
       </div>
       <div class="cursor-text text-[12px] text-gray-400">
-        جستجو
+        ‌جستجو
       </div>
     </div>
 

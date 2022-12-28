@@ -7,6 +7,8 @@
   >
     <template #topsidebar>
     </template>
+    <template #main>
+    </template>
   </NtmProfile>
 </template>
 <script setup>

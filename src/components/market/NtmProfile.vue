@@ -47,14 +47,16 @@
                 </div>
               </div>
             </div>
-            <div class="border-b-[1px] mx-5" ></div>
+            <div class="border-b-[1px] mx-5"></div>
           </slot>
         </template>
       </NtmProfileSideMenu>
     </div>
     <div class="grow w-2/3">
-      <NtmVerifyMessage/>
-      <NtmMyOrdersSummery/>
+      <slot name="main">
+        <NtmVerifyMessage/>
+        <NtmMyOrdersSummery class="my-2"/>
+      </slot>
     </div>
   </div>
 </template>
