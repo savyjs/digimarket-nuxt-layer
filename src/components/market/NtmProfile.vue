@@ -56,6 +56,40 @@
       <slot name="main">
         <NtmVerifyMessage/>
         <NtmMyOrdersSummery class="my-2"/>
+        <div class="card-primary">
+          <div class="card-title card-title-underline-primary flex justify-between">
+            <div>
+              <b>سفارش‌های من</b>
+              <div class="title-decoration-underline"></div>
+            </div>
+          </div>
+          <div class='card products-sweeper w-full'>
+            <NtmSwiper :slidesPerView="5">
+              <NtmSwiperSlide v-for="i in 6" class="flex">
+                <div class='product-carousel gap-1 mx-1'>
+                  <div class='image inline-block justify-center grow w-full flex-row'>
+                    <img :src='`/dkala/products/product-${i}.jpg`'/>
+                    <div class='flex justify-between'>
+                      <div>
+                        <svg class='icon-small icon-small icon-gray fill-orange-600'>
+                          <use href='#deliveryInPerson'/>
+                        </svg>
+                      </div>
+                      <span class='bg-gray-200 text-gray-900 px-2 text-[11px] rounded-md'>۱</span>
+                    </div>
+                  </div>
+                  <div class='grow'>
+                    <div class='flex items-center gap-1 my-1'>
+                      <div class='bg-slate-300 border border-gray-50 w-3 h-3 rounded-8p'></div>
+                      <span class='text-gray-600 text-[10px]'>نوک مدادی</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="h-full w-2 bg-red-500 border-r-[1px]"></div>
+              </NtmSwiperSlide>
+            </NtmSwiper>
+          </div>
+        </div>
       </slot>
     </div>
   </div>
