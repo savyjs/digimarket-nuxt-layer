@@ -66,9 +66,9 @@
           <div class='card products-sweeper w-full'>
             <NtmSwiper :slidesPerView="5">
               <NtmSwiperSlide v-for="i in 6" class="flex">
-                <div class='product-carousel gap-1 mx-1'>
+                <div class='product-carousel gap-1 mx-1 border-l-[1px]'>
                   <div class='image inline-block justify-center grow w-full flex-row'>
-                    <img :src='`/dkala/products/product-${i}.jpg`'/>
+                    <img :src='`/dkala/products/product-${(i%5)+1}.jpg`'/>
                     <div class='flex justify-between'>
                       <div>
                         <svg class='icon-small icon-small icon-gray fill-orange-600'>
@@ -85,7 +85,6 @@
                     </div>
                   </div>
                 </div>
-                <div class="h-full w-2 bg-red-500 border-r-[1px]"></div>
               </NtmSwiperSlide>
             </NtmSwiper>
           </div>
