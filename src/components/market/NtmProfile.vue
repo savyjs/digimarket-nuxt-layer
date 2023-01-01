@@ -59,15 +59,15 @@
         <div class="card-primary">
           <div class="card-title card-title-underline-primary flex justify-between">
             <div>
-              <b>سفارش‌های من</b>
+              <b>خرید های پرتکرار شما</b>
               <div class="title-decoration-underline"></div>
             </div>
           </div>
           <div class='card products-sweeper w-full'>
             <NtmSwiper :slidesPerView="5">
               <NtmSwiperSlide v-for="i in 6" class="flex">
-                <div class='product-carousel gap-1 mx-1 border-l-[1px]'>
-                  <div class='image inline-block justify-center grow w-full flex-row'>
+                <div class='product-carousel gap-1 mx-1 border-l-[1px] px-4'>
+                  <div class='image inline-block justify-center grow w-full flex-row py-12'>
                     <img :src='`/dkala/products/product-${(i%5)+1}.jpg`'/>
                     <div class='flex justify-between'>
                       <div>
