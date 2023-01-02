@@ -60,6 +60,7 @@ export default defineNuxtConfig({
         profileMenuItems: [
             {icon: 'fa fa-plus', text: 'پلاس اکانت', svg: 'plus', link: '/profile/plus'},
             {icon: 'fa fa-list', text: 'خلاصه فعالیت‌ها', svg: 'list', link: '/profile/activity'},
+            {icon: 'fa fa-list', text: 'سفارش‌ها', svg: 'order', link: '/profile/orders'},
         ],
         divisions: [
             {
