@@ -64,24 +64,49 @@
             </div>
           </div>
           <div class='card products-sweeper w-full'>
-            <NtmSwiper :slidesPerView="5">
-              <NtmSwiperSlide v-for="i in 6" class="flex">
-                <div class='product-carousel gap-1 mx-1 border-l-[1px] px-4'>
-                  <div class='image inline-block justify-center grow w-full flex-row py-12'>
-                    <img :src='`/dkala/products/product-${(i%5)+1}.jpg`'/>
-                    <div class='flex justify-between'>
-                      <div>
-                        <svg class='icon-small icon-small icon-gray fill-orange-600'>
-                          <use href='#deliveryInPerson'/>
+            <NtmSwiper :slidesPerView="4">
+              <NtmSwiperSlide v-for="i in 6">
+                <div class="flex">
+                  <div class='product-carousel gap-1 mx-1 border-l-[1px] px-4'>
+                    <div class='image inline-block justify-center grow w-full flex py-12'>
+                      <div class='justify-between self-end h-full'>
+                        <svg class='icon-medium fill-orange-600 rounded-full border-red-700 border-[1px]'>
+                          <use href='#addSimple'/>
                         </svg>
                       </div>
-                      <span class='bg-gray-200 text-gray-900 px-2 text-[11px] rounded-md'>۱</span>
+                      <img :src='`/dkala/products/product-${(i%5)+1}.jpg`'/>
                     </div>
-                  </div>
-                  <div class='grow'>
-                    <div class='flex items-center gap-1 my-1'>
-                      <div class='bg-slate-300 border border-gray-50 w-3 h-3 rounded-8p'></div>
-                      <span class='text-gray-600 text-[10px]'>نوک مدادی</span>
+                    <div class='text-[8pt]'>
+                      <b>قهوه فوری گلد نسکافه - 190 گرم</b>
+                    </div>
+                    <div class='grow my-4'>
+                      <div class='flex items-center gap-1 my-1'>
+                        <small class='text-primary text-[10px]'>تنها یک عدد در انبار باقی مانده</small>
+                      </div>
+                      <div class='flex items-center gap-1 my-1'>
+                        <svg class="icon-small icon-gray fill-purple-600">
+                          <use href="#deliveryJet"/>
+                        </svg>
+                        <b class='text-gray-600 text-[10px]'>ارسال امروز ویژه دیجی‌پلاس</b>
+                      </div>
+                    </div>
+                    <div>
+                      <div class='font-bold text-[15px] flex justify-between'>
+                        <div class="bg-primary text-white px-3 h-5 flex text-[8pt] rounded-full">
+                          <span class="self-center">۶%</span>
+                        </div>
+                        <div class="flex">
+                          <div class='mx-1 ltr'>۳۶,۵۰۰
+                            <p class="text-gray-400 text-[80%] font-light line-through">۳۹,۵۰۰</p>
+                          </div>
+                          <div class=''>
+                            <svg class='icon-gray icon-small'>
+                              <use href='#toman'/>
+                            </svg>
+                          </div>
+
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
