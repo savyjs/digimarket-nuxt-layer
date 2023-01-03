@@ -8,7 +8,6 @@
         </div>
       </transition>
       <NuxtPage/>
-      type: {{ !!darkmode }}
     </main>
     <NtmSvgIcons/>
   </div>
