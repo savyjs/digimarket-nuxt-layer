@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="card-body">
-          <NuxtPage />
+          <LazyNuxtPage />
         </div>
       </div>
     </template>
@@ -38,8 +38,4 @@ const userList = ref();
 const userFavourites = ref();
 const recommendedProducts = ref();
 const customList = ref();
-
-definePageMeta({
-  layout: 'ntm-panel'
-})
 </script>
