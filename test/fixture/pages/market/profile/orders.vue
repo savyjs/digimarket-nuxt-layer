@@ -16,7 +16,7 @@
           </div>
           <div>
             <button>
-              <svg class="icon-medium">
+              <svg class="icon-medium fill-gray-500 dark:fill-gray-200">
                 <use href="#searchSearch"/>
               </svg>
             </button>

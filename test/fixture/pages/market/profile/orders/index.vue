@@ -27,7 +27,7 @@
                 type='button'
                 role='tab'
                 aria-controls='delivered'
-                aria-selected='true'>تحویل شده
+                aria-selected='false'>تحویل شده
             </button>
           </nuxt-link>
         </li>
@@ -40,7 +40,7 @@
                 type='button'
                 role='tab'
                 aria-controls='returned'
-                aria-selected='true'>مرجوع شده
+                aria-selected='false'>مرجوع شده
             </button>
           </nuxt-link>
         </li>
@@ -53,7 +53,7 @@
                 type='button'
                 role='tab'
                 aria-controls='cancelled'
-                aria-selected='true'>لغو شده
+                aria-selected='false'>لغو شده
             </button>
           </nuxt-link>
         </li>
@@ -61,9 +61,52 @@
     </div>
     <div id='tabs'>
       <div id='in_progress'
-           class='card-primary my-5 grid grid-cols-1 items-center justify-center text-center align-middle'
            role='tabpanel' aria-labelledby='cart-tab'>
-        
+        <div class="card-primary px-0">
+          <div class="card-title w-full px-2">
+            <div class="flex justify-between ">
+              <div class="flex gap-1">
+                <svg class="icon-small fill-gray-800 dark:fill-gray-200" style="width: 24px; height: 24px; fill: var(--color-icon-success);">
+                  <use href="#packageInProgress"/>
+                </svg>
+                <b>آماده سازی سفارش</b>
+              </div>
+              <span>
+              <svg class="icon-small">
+                <use href="#chevronLeft"/>
+              </svg>
+            </span>
+            </div>
+            <div class="my-3 flex gap-2 fill-gray-400 align-middle dark:text-gray-200 text-gray-500 text-[70%]">
+              <span>۱۶ دی ۱۴۰۱</span>
+              <svg class="self-center icon-small">
+                <use href="#dotOutline"/>
+              </svg>
+              <span>کدسفارش <b>۵۴۹۲۸۴۵</b></span>
+              <svg class="self-center icon-small">
+                <use href="#dotOutline"/>
+              </svg>
+              <div class="flex">مبلغ ۴۵۶.۰۰۰
+                <svg class="mx-1 icon-small">
+                  <use href="#toman"/>
+                </svg>
+              </div>
+            </div>
+            <div class="flex gap-2 text-[75%] text-gray-500 dark:text-gray-200">
+              <span>
+                <svg class="icon-small">
+                  <use href="#clubCoinOutline" />
+                </svg>
+              </span>
+              <span>امتیاز کلاب</span>
+              <b class="text-gray-800 dark:text-gray-100">۱۸</b>
+            </div>
+          </div>
+          <div class="w-full h-1 border-b-[1px] border-gray-200"></div>
+          <div class="card-body">
+
+          </div>
+        </div>
       </div>
     </div>
   </div>

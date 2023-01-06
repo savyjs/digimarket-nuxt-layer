@@ -9,9 +9,10 @@
       </div>
     </div>
     <div class="mr-auto flex-auto grow-0">
-      <div class="flex items-center text-[11px]">
-        <span><button @click="toggleDarkmode()">
-            <svg class="icon icon-small transition-all delay-75" xmlns="http://www.w3.org/2000/svg"
+      <div class="flex items-center gap-2 text-[11px]">
+        <span class="px-5 self-center">
+          <button @click="toggleDarkmode()">
+            <svg class="icon icon-small transition-all delay-75  text-gray-200 fill-gray-200" xmlns="http://www.w3.org/2000/svg"
                  aria-hidden="true" focusable="false" viewBox="0 0 24 24">
           <path v-if="darkmode"
                 d="M12.1,22c-0.3,0-0.6,0-0.9,0c-5.5-0.5-9.5-5.4-9-10.9c0.4-4.8,4.2-8.6,9-9c0.4,0,0.8,0.2,1,0.5c0.2,0.3,0.2,0.8-0.1,1.1c-2,2.7-1.4,6.4,1.3,8.4c2.1,1.6,5,1.6,7.1,0c0.3-0.2,0.7-0.3,1.1-0.1c0.3,0.2,0.5,0.6,0.5,1c-0.2,2.7-1.5,5.1-3.6,6.8C16.6,21.2,14.4,22,12.1,22zM9.3,4.4c-2.9,1-5,3.6-5.2,6.8c-0.4,4.4,2.8,8.3,7.2,8.7c2.1,0.2,4.2-0.4,5.8-1.8c1.1-0.9,1.9-2.1,2.4-3.4c-2.5,0.9-5.3,0.5-7.5-1.1C9.2,11.4,8.1,7.7,9.3,4.4z"></path>
@@ -28,11 +29,12 @@
             d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"></path>
         </template>
           </svg>
-        </button></span>
+        </button>
+        </span>
         <div class="rounded-xl flex-auto cursor-pointer border border-gray-200 py-2.5 px-4">
           <nuxt-link :to="{name:'NtmLogin'}" no-rel external>
             <a class="flex justify-around align-baseline gap-3">
-              <svg class="h-5 w-5" fill="currentColor">
+              <svg class="h-5 w-5 dark:text-gray-200" fill="currentColor">
                 <use href="#registerationSignIn"></use>
               </svg>
               <span class="text-neutral-800 text-bold font-bold text-[12px] dark:text-white"> ورود | ثبت‌نام</span>
