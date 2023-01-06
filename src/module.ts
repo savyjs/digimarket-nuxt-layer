@@ -21,7 +21,7 @@ export interface ModuleOptions extends Layout {
 
 export default defineNuxtModule<ModuleOptions>({
   defaults: {
-    logo: "~ntmRoot/img/logo.png",
+    logo: "@ntmRoot/img/logo.png",
     title: undefined,
     divisions: [],
     profileMenuItems: [],
