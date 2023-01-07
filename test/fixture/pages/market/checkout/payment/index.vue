@@ -44,7 +44,6 @@
                                                         </div>
                                                     </label>
                                                 </div>
-
                                             </li>
                                             <li class='flex items-center py-5 border-b border-gray-100 items-center'>
                                                 <div class='flex items-center gap-5 grow'>

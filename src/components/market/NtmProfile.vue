@@ -29,7 +29,7 @@
                   <div class="w-full py-5">
                     <div class="flex justify-between">
                       <span>کیف پول</span>
-                      <span class="flex gap-1">۲۵۰ <svg class="icon-small"><use href="#toman"/></svg></span>
+                      <span class="flex gap-1">۲۵۰ <svg class="icon-small dark:fill-gray-200"><use href="#toman"/></svg></span>
                     </div>
                     <nuxt-link class="text-link flex pt-2 text-[11pt] align-center">
                       <small>افزایش موجودی</small>
