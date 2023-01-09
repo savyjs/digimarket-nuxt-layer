@@ -4,6 +4,8 @@
   </div>
 </template>
 <script setup lang="ts">
+import {Meta} from "../schema/types/market";
+
 export interface Product {
   /**
    * product id
@@ -133,7 +135,7 @@ export interface Product {
   metaTags?: Array<Meta> | void
 }
 
-export interface Shipping {
+interface Shipping {
   /**
    * list of available methods
    *

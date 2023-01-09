@@ -1,5 +1,5 @@
 <template>
-  <footer class="border-n-200 w-full border-t bg-white pt-2">
+  <footer class="rtl border-n-200 w-full border-t bg-white pt-2">
     <div class="container-4xl-w mx-auto ">
       <div class="px-5">
         <div class="flex select-none items-center justify-between">
@@ -8,15 +8,16 @@
               <img
                   width="100"
                   height="30"
-                  src="ntmRoot/public/dkala/logo-fa.svg"
+                  src="@ntmRoot/public/dkala/logo-fa.svg"
                   alt="logo"
               />
             </a>
           </div>
           <button
+              onclick="window.scrollTo({top: 0,behavior: 'smooth',})"
               class="btn-gray-outlined mx-1 flex h-10 text-[12px]"
           >
-            <span class="flex-auto pl-2 font-bold"> بازگشت به بالا</span>
+            <span class="flex-auto pl-2 font-bold">بازگشت به بالا</span>
             <div>
               <svg
                   class="h-4 w-4"
@@ -51,7 +52,7 @@
             <img
                 width="56"
                 height="56"
-                src="ntmRoot/public/dkala/express-delivery.svg"
+                src="@ntmRoot/public/dkala/express-delivery.svg"
                 alt="express-delivery"
                 class="mx-auto"
             />
@@ -66,7 +67,7 @@
             <img
                 width="56"
                 height="56"
-                src="ntmRoot/public/dkala/cash-on-delivery.svg"
+                src="@ntmRoot/public/dkala/cash-on-delivery.svg"
                 alt="cash-on-delivery"
                 class="mx-auto"
             />
@@ -81,7 +82,7 @@
             <img
                 width="56"
                 height="56"
-                src="ntmRoot/public/dkala/support.svg"
+                src="@ntmRoot/public/dkala/support.svg"
                 alt="support"
                 class="mx-auto"
             />
@@ -96,7 +97,7 @@
             <img
                 width="56"
                 height="56"
-                src="ntmRoot/public/dkala/days-return.svg"
+                src="@ntmRoot/public/dkala/days-return.svg"
                 alt="days-return"
                 class="mx-auto"
             />
@@ -111,7 +112,7 @@
             <img
                 width="56"
                 height="56"
-                src="ntmRoot/public/dkala/original-products.svg"
+                src="@ntmRoot/public/dkala/original-products.svg"
                 alt="original-products"
                 class="mx-auto"
             />

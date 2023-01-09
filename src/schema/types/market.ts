@@ -1,3 +1,18 @@
+export interface Shipping {
+    /**
+     * list of available methods
+     *
+     * @default null
+     */
+    methods?: Array<Meta> | void
+    /**
+     * cart
+     *
+     * @default null
+     */
+    cart?: Array<Product> | void
+}
+
 export interface Product {
     /**
      * product id
@@ -165,7 +180,7 @@ export interface Feature {
     title: string
 }
 
-export interface Meta {
+interface Meta {
     /**
      * title
      *

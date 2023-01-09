@@ -15,7 +15,8 @@ export default <Config>{
         `plugins/**/*.{js,ts}`,
         `App.{js,ts,vue}`,
         `app.{js,ts,vue}`,
-        './node_modules/flowbite/**/*.js'
+        './node_modules/flowbite/**/*.js',
+        './node_modules/tw-elements/dist/js/**/*.js'
     ],
     theme: {
         extend: {
@@ -28,6 +29,10 @@ export default <Config>{
                 success: '#4caf50',
                 alert: '#ff9800',
                 dark: '#212121',
+                'dark-primary': '#131212',
+                'dark-accent': '#343232',
+                'light-accent': '#CCC',
+                'light': '#EEE',
                 gray: colors.gray,
                 blue: colors.sky,
                 red: colors.rose,

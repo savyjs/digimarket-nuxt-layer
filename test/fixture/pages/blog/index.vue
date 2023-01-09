@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <NtmLatestPosts :articles="articles"/>
-  </div>
+    <div>
+        <NtmBlogLatestPosts :articles="articles"/>
+        <ContentDoc path="/articles"/>
+    </div>
 </template>
 <script setup>
-const articles = await queryContent('/').find()
-console.log({articles})
-definePageMeta({})
+    const articles = await queryContent('/').find()
+    definePageMeta({})
 </script>
