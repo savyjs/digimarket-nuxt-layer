@@ -8,7 +8,6 @@
     <template #topsidebar>
     </template>
     <template #main>
-      Main
     </template>
   </NtmProfile>
 </template>
