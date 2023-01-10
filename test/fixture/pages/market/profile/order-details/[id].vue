@@ -196,11 +196,11 @@
                   <div class="grow h-1 border-b-[1px] border-gray-100"></div>
                   <div class="w-full flex gap-2 my-3">
                     <nuxt-link to="#">
-                      <div class='product-box-primary py-2 my-2'>
+                      <div class='product-box-primary  dark:text-gray-200 py-2 my-2'>
                         <div class='flex'>
                           <div class='w-36 max-h-6'>
                             <NuxtLink to='/product/1'>
-                              <img src='/dkala/products/product-2.jpg'/>
+                              <img src='/dkala/products/product-2.jpg' class="max-w-full px-3 py-1"/>
                             </NuxtLink>
                             <div class='counter-box-container flex justify-end'>
                               <div class='mx-3 text-xs'>
@@ -210,7 +210,7 @@
                           </div>
                           <div class='grow'>
                             <div class='title'>
-                              <h3 class='text-sm font-bold'>
+                              <h3 class='text-sm font-bold dark:text-gray-100'>
                                 قهوه فوری گلد نسکافه - 190 گرم
                               </h3>
                             </div>
@@ -219,33 +219,33 @@
             <span class='mx-1'>
               <div class='bg-yellow-300 border border-gray-50 w-4 h-4 rounded-full '></div>
             </span>
-                                <span>طلایی</span>
+                                <span class="dark:text-gray-100">طلایی</span>
                               </div>
                               <div class='flex my-1'>
             <span class='mx-1'>
               <div>
-                <svg class='icon-gray icon-small'>
+                <svg class='icon-gray icon-small dark:fill-gray-100'>
                    <use href="#guarantee"/>
                 </svg>
               </div>
             </span>
-                                <span>گارانتی اصالت و سلامت فیزیکی کالا</span>
+                                <span class="dark:text-gray-100">گارانتی اصالت و سلامت فیزیکی کالا</span>
                               </div>
                               <div class='flex my-1'>
             <span class='mx-1'>
               <div>
-                <svg class='icon-gray icon-small' fill='#444'>
+                <svg class='icon-gray icon-small dark:fill-gray-100' fill='#444'>
                   <use href="#seller"/>
                 </svg>
               </div>
             </span>
-                                <span>فروشگاه آسمان کوچک</span>
+                                <span class="dark:text-gray-100">فروشگاه آسمان کوچک</span>
                               </div>
                               <div class='prices'>
                                 <div class='py-3 flex'>
-                                  <span class='font-bold text-lg'>۱۸۱،۰۰۰</span>
+                                  <span class='font-bold text-lg dark:text-gray-100'>۱۸۱،۰۰۰</span>
                                   <span>
-              <svg class='icon-gray w-6 h-5 mx-2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'>
+              <svg class='icon-gray w-6 h-5 mx-2 dark:fill-gray-100' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'>
                 <path
                     id='toman'
                     fill-rule='evenodd'
