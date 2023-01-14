@@ -35,7 +35,7 @@
   - Line decoration (567abef)
   - Type of darkMode -> darkmode (da4caf6)
   - Typo of darkMode -> darkmode (6042fe1)
-  - **fixture:** Most sale -slider test (4e68c36)
+  - **fixture:** Most sale - slider test (4e68c36)
   - Ntm profile - most sale gap (bf47aea)
   - **order:** Dark mode in order details (5649c5b)
 
