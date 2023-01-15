@@ -1,6 +1,6 @@
 {
   "name": "nuxt-digimarket-kit",
-  "description": "Nuxt ui kit module, powered by tailwindCss. build a modern and beautiful marketplace ui easily ",
+  "description": "Nuxt ui kit module for nuxt 3. a modern and beautiful marketplace ui",
   "version": "0.2.8",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
