@@ -1,6 +1,6 @@
 const colors = require('tailwindcss/colors')
 import {Config} from 'tailwindcss'
-const path = process.env.NODE_ENV == 'development' ? '../../tailwind/plugin' : 'tailwind-marketplace-kit'
+const path = process.env.NODE_ENV == 'development' ? '../../tailwind/plugin' : 'digimarket-kit'
 export default <Config>{
     content: [
         `../../src/components/**/*.{vue,js}`,

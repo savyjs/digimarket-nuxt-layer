@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-marketplce-kit",
+  "name": "nuxt-digimarket-kit",
   "description": "Nuxt ui kit module, powered by tailwindCss. build a modern and beautiful marketplace ui easily ",
   "version": "0.2.7",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
@@ -90,17 +90,17 @@
     "nuxt-jsonld": "^2.0.7",
     "swiper": "^9.0.0-beta.2",
     "tw-elements": "^1.0.0-alpha12",
-    "tailwind-marketplace-kit": "latest"
+    "digimarket-kit": "latest"
   },
   "publishConfig": {
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/savyjs/nuxt-tailwind-marketplace-kit/issues"
+    "url": "https://github.com/savyjs/nuxt-digimarket-kit/issues"
   },
-  "homepage": "http://ntm.savyjs.com",
+  "homepage": "https://digimarket.savyjs.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/savyjs/nuxt-tailwind-marketplace-kit.git"
+    "url": "git+https://github.com/savyjs/nuxt-digimarket-kit.git"
   }
 }

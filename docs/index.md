@@ -16,6 +16,6 @@ hero:
       link: /guide/introduction
     - theme: alt
       text: View on GitHub
-      link: https://github.com/savyjs/tailwind-marketplace-kit
+      link: https://github.com/savyjs/digimarket-kit
 
 ---

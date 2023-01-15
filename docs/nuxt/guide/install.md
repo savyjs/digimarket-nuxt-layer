@@ -5,7 +5,7 @@ title: Tailwind Marketplace Kit (TMK)
 ## NPM
 
 ```sh
-npm i nuxt-tailwind-marketplace-kit
+npm i nuxt-digimarket-kit
 ```
 
 ## Add module
@@ -14,7 +14,7 @@ npm i nuxt-tailwind-marketplace-kit
 //  nuxt.config.ts
 export default defineNuxtConfig({
 modules: [
-        'nuxt-tailwind-marketplace-kit'
+        'nuxt-digimarket-kit'
     ]
 })
 ```
