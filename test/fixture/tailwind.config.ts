@@ -1,6 +1,6 @@
 const colors = require('tailwindcss/colors')
 import {Config} from 'tailwindcss'
-
+const path = process.env.NODE_ENV == 'development' ? '../../tailwind/plugin' : 'tailwind-marketplace-kit'
 export default <Config>{
     content: [
         `../../src/components/**/*.{vue,js}`,
@@ -21,6 +21,6 @@ export default <Config>{
     plugins: [
         require('flowbite/plugin'),
         require('tw-elements/dist/plugin'),
-        require('../../tailwind/index')
+        require(path)
     ]
 }
