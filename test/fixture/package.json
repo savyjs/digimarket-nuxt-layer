@@ -18,6 +18,6 @@
     "@nuxt/content": "^2.2.2",
     "@nuxtjs/google-analytics": "^2.4.0",
     "nuxt-digimarket-kit": "0.2.6",
-    "digimarket-kit": "^0.1.7"
+    "digimarket-kit": "^0.1.8"
   }
 }
