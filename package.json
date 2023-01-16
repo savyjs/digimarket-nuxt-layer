@@ -46,10 +46,12 @@
     "test:types": "tsc -p types/test",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs  --port 4092",
+    "release": "standard-version"
   },
   "devDependencies": {
-    "vitepress": "^1.0.0-alpha.31",
+    "standard-version": "^9.1.0",
+    "vitepress": "^1.0.0-alpha.36",
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.18.6",

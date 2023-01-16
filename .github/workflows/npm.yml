@@ -26,7 +26,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script:  ${{ secret.bash }}
+          script:  ${{ secret.BASH }}
 
 
       - uses: actions/setup-node@v3
