@@ -14,3 +14,5 @@ test/fixture/public/fonts/
 tailwind/
 
 docs/.vitepress/dist/
+
+src/.output/
