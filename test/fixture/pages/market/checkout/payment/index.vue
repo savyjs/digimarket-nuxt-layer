@@ -297,7 +297,7 @@
                                     <div class='flex justify-between'>
                                         <div class='flex align-middle items-center justify-between gap-1 text-gray-400'>
           <span class=''>
-            <img src='ntmRoot/dkala/club-point.svg' class='w-4'/>
+            <img src='@ntmRoot/dkala/club-point.svg' class='w-4'/>
           </span>
                                             <span class=''>دیجی کلاب</span>
                                             <div class='flex items-end'>
