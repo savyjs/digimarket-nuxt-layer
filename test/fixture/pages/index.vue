@@ -6,6 +6,7 @@
       <nuxt-link class="btn btn-primary" to="/market/profile">Profile</nuxt-link>
       <nuxt-link class="btn btn-primary" to="/market/profile/orders">Orders</nuxt-link>
       <nuxt-link class="btn btn-primary" to="/market/profile/order-details/1">view Sample Order</nuxt-link>
+      <nuxt-link class="btn btn-primary" to="/market/products/1">view Sample Order</nuxt-link>
     </div>
   </div>
 </template>
