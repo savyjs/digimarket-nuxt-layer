@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors')
 import {Config} from 'tailwindcss'
-const path = process.env.NODE_ENV == 'development' ? '../../tailwind/plugin' : 'digimarket-kit'
+
+const path = process.env.NODE_ENV == 'development' ? '../../tailwind/plugin' : 'digimarket-kit/plugin'
 export default <Config>{
     content: [
         `../../src/components/**/*.{vue,js}`,
@@ -21,6 +22,7 @@ export default <Config>{
     plugins: [
         require('flowbite/plugin'),
         require('tw-elements/dist/plugin'),
-        require(path)
+        require('digimarket-kit/plugin'),
+        // require(path)
     ]
 }

@@ -6,9 +6,9 @@
         <nuxt-link class="btn bg-green-500 btn-primary" to="/market">Market Landing</nuxt-link>
         <nuxt-link class="btn bg-green-500 btn-primary" to="/market/profile">Profile</nuxt-link>
         <nuxt-link class="btn bg-green-500 btn-primary" to="/market/profile/orders">Orders</nuxt-link>
-        <nuxt-link class="btn bg-green-500 btn-primary" to="/market/profile/order-details/1">view Sample Order
+        <nuxt-link class="btn bg-green-500 btn-primary" to="/market/profile/order-details/1">Order Details
         </nuxt-link>
-        <nuxt-link class="btn bg-green-500 btn-gray-outlined" to="/market/products/8364953">Product page</nuxt-link>
+        <nuxt-link class="btn border-green-500 btn-primary-outlined text-success" to="/market/products/8364953">Product page</nuxt-link>
       </div>
     </div>
     <div class="m-5">
@@ -27,7 +27,7 @@
     <div class="m-5">
       <p class="">Angular pages:</p>
       <div class="gap-3 flex">
-        <nuxt-link class="btn btn-primary" href="https://digiangular.savyjs.com/">Market Landing</nuxt-link>
+        <nuxt-link class="btn btn-primary-outlined" href="https://digiangular.savyjs.com/">Market Landing</nuxt-link>
         <nuxt-link class="btn btn-primary" href="https://digiangular.savyjs.com/products/8364953">Product page</nuxt-link>
       </div>
     </div>
