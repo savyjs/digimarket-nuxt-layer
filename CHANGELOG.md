@@ -1,5 +1,19 @@
 # Changelog
 
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.2.9](https://github.com/savyjs/nuxt-digimarket-kit/compare/v0.2.8...v0.2.9) (2023-01-17)
+
+
+### Bug Fixes
+
+* digi.svg path ([d2c7bcf](https://github.com/savyjs/nuxt-digimarket-kit/commit/d2c7bcf220c9bba37d140519af59651653b8181d))
+* import club svg ([86495c5](https://github.com/savyjs/nuxt-digimarket-kit/commit/86495c523b8062113fdb75ca2f38bf926a127f18))
+* remove tailwind plugin ([f3683d9](https://github.com/savyjs/nuxt-digimarket-kit/commit/f3683d912b03df4319972adb4ef6f93a13a01f39))
+* **typo:** ntmRoot to [@ntm](https://github.com/ntm)Root ([94b0340](https://github.com/savyjs/nuxt-digimarket-kit/commit/94b034038e817fbe8c4cd2cf55e14e58fef79127))
+
+# Changelog
+
 
 ## v0.2.7
 
