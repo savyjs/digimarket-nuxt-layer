@@ -1,10 +1,11 @@
 <template>
-  <div class="flex flex-col gap-3">
-    Welcome!
-    <br />
-    <nuxt-link to="/market">Market Landing</nuxt-link>
-    <nuxt-link to="/market/profile">Profile</nuxt-link>
-    <nuxt-link to="/market/profile/orders">Orders</nuxt-link>
-    <nuxt-link to="/market/profile/orders/1">view Order</nuxt-link>
+  <div class="m-5">
+    <p class="">new pages:</p>
+    <div class="gap-3 flex">
+      <nuxt-link class="btn btn-primary" to="/market">Market Landing</nuxt-link>
+      <nuxt-link class="btn btn-primary" to="/market/profile">Profile</nuxt-link>
+      <nuxt-link class="btn btn-primary" to="/market/profile/orders">Orders</nuxt-link>
+      <nuxt-link class="btn btn-primary" to="/market/profile/order-details/1">view Sample Order</nuxt-link>
+    </div>
   </div>
 </template>
