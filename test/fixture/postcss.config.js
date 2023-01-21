@@ -1,10 +1,11 @@
 module.exports = {
-  plugins: {
-    'postcss-import-ext-glob': {},
-    'postcss-import': {},
-    tailwindcss: {},
-    autoprefixer: {},
-    'postcss-nested': {},
-    'tailwindcss/nesting': {}
-  },
+    plugins: [
+        'postcss-partial-import',
+        'postcss-import-ext-glob',
+        'postcss-import',
+        'tailwindcss',
+        'autoprefixer',
+        'postcss-nested',
+        'tailwindcss/nesting'
+    ],
 }
