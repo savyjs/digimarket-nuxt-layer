@@ -14,18 +14,32 @@ export default <Config>{
         `pages/**/*.vue`,
         `pages/*.vue`,
         `components/**/*.{vue,js}`,
-        `layouts/**/*.{vue}`, `pages/**/*.vue`,
+        `layouts/**/*.vue`,
+        `pages/**/*.vue`,
         `composables/**/*.{js,ts}`,
         `plugins/**/*.{js,ts}`,
         `App.{js,ts,vue}`,
         `app.{js,ts,vue}`,
-        './node_modules/flowbite/**/*.{js}',
-        './node_modules/tw-elements/dist/js/**/*.{js}'
+        './node_modules/flowbite/**/*.js',
+        './node_modules/tw-elements/dist/js/**/*.js'
     ],
     darkMode: ['class', '[data-mode="dark"]'],
+    theme: {
+        colors: {
+            transparent: 'transparent',
+            secondary: '#008eb2',
+            error: '#f44336',
+            success: '#EE00EE',
+            alert: '#ff9800',
+            dark: '#212121',
+            primary: '#009000',
+            accent: '#343232',
+            light: '#EEE',
+        },
+    },
     plugins: [
         // require('flowbite/plugin'),
         // require('tw-elements/dist/plugin'),
-        // require(path)
+        require(path)
     ]
 }
