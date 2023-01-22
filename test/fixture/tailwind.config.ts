@@ -22,9 +22,10 @@ export default <Config>{
         './node_modules/flowbite/**/*.{js}',
         './node_modules/tw-elements/dist/js/**/*.{js}'
     ],
+    darkMode: ['class', '[data-mode="dark"]'],
     plugins: [
         // require('flowbite/plugin'),
         // require('tw-elements/dist/plugin'),
-        require(path)
+        // require(path)
     ]
 }
