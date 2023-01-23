@@ -22,3 +22,5 @@ test/fixture/ecosystem.config.js
 bash.sh
 
 docs/.vitepress/
+
+ecosystem.config.js
