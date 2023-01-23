@@ -20,3 +20,5 @@ src/.output/
 test/fixture/ecosystem.config.js
 
 bash.sh
+
+docs/.vitepress/

@@ -8,11 +8,15 @@ title: Marketplace Kit for Tailwind
 npm i digimarket-kit
 ```
 
-## using styles in Tailwind projects
+## Tailwindcss
 
-```css
-/* main.css */
-@import('~digimarket-kit/src/styles.css')
+```js
+/* tailwind.config.js */
+module.exports =  {
+    plugins: [
+         'digimarket-kit/plugin'
+    ]
+}
 ```
 
 ## Nuxt
@@ -21,6 +25,10 @@ add nuxt module `nuxt-digimarket-kit` to your nuxt<Badge size="small">3</Badge> 
 
 ## Next
 
+coming soon ...
+
 ## Angular
+
+coming soon ...
 
 

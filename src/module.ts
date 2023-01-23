@@ -55,7 +55,7 @@ export default defineNuxtModule<ModuleOptions>({
         await resolvePath(__dirname + "/assets/styles/ntm.scss")
       );
       if(isDev) nuxt.options.css.push(
-        await resolvePath(__dirname + "/assets/styles/ntmDev.scss")
+        await resolvePath(__dirname + "/assets/styles/ntmDev.css")
       );
     });
 

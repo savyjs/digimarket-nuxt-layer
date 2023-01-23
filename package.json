@@ -1,7 +1,7 @@
 {
   "name": "nuxt-digimarket-kit",
   "description": "Nuxt ui kit module for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "standard-version": "^9.1.0",
-    "vitepress": "^1.0.0-alpha.36",
+    "vitepress": "^1.0.0-alpha.40",
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.18.6",

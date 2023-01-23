@@ -7,6 +7,7 @@
     "preview": "nuxt preview  --port 3410"
   },
   "devDependencies": {
+    "postcss-partial-import": "^4.1.0",
     "postcss-import-ext-glob": "^2.1.1",
     "postcss-import": "^15.1.0",
     "postcss-nested": "^6.0.0",
@@ -22,6 +23,6 @@
     "@nuxt/content": "^2.2.2",
     "@nuxtjs/google-analytics": "^2.4.0",
     "nuxt-digimarket-kit": "^0.2.8",
-    "digimarket-kit": "^0.1.14"
+    "digimarket-kit": "^0.2.2"
   }
 }

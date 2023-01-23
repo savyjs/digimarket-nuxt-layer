@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.10](https://github.com/savyjs/nuxt-digimarket-kit/compare/v0.2.9...v0.2.10) (2023-01-23)
+
+
+### Features
+
+* add new pages in index ([4febdb1](https://github.com/savyjs/nuxt-digimarket-kit/commit/4febdb162d6664ce58ec124424541d5a0f6c7663))
+* **darkmode:** save darkmode value in LocalStorage ([8f64e15](https://github.com/savyjs/nuxt-digimarket-kit/commit/8f64e151cc0a258902ef4502013718f109ddc394))
+* **index list:** add product link ([54cabf8](https://github.com/savyjs/nuxt-digimarket-kit/commit/54cabf8d24fb988d698c1859c680a67c2a57cf6f))
+
+
+### Bug Fixes
+
+* clean [@imports](https://github.com/imports) ([8c00ff9](https://github.com/savyjs/nuxt-digimarket-kit/commit/8c00ff9635e1378b920332f61dc6ba048799a671))
+* dark mode colors for tailwind ([0df18ed](https://github.com/savyjs/nuxt-digimarket-kit/commit/0df18edda58ecb1d0644a98b2cf63a18531cf747))
+
 ### [0.2.9](https://github.com/savyjs/nuxt-digimarket-kit/compare/v0.2.8...v0.2.9) (2023-01-17)
 
 
