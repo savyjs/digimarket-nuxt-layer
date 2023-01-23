@@ -1,6 +1,6 @@
 ---
 title: TMK
-titleTemplate: Marketplace Kit for Tailwind
+titleTemplate: Marketplace Kit for TailwindCss
 
 layout: home
 hero:
