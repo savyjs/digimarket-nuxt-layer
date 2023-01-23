@@ -14,6 +14,7 @@ test/fixture/public/fonts/
 tailwind/
 
 docs/.vitepress/dist/
+docs/.vitepress/cache/
 
 src/.output/
 
@@ -21,6 +22,5 @@ test/fixture/ecosystem.config.js
 
 bash.sh
 
-docs/.vitepress/
 
 ecosystem.config.js
