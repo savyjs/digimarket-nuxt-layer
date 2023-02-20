@@ -45,7 +45,7 @@
     "test:unit": "jest test/unit.test",
     "test:types": "tsc -p types/test",
     "docsdev": "vitepress dev docs --port 4092",
-    "docsbuild": "vitepress build docs --port 4092",
+    "docsbuild": "vitepress build docs --port 4092 && cp ./docs/logo.png ./docs/.vitepress/dist",
     "docspreview": "vitepress preview docs  --port 4092",
     "release": "standard-version"
   },
