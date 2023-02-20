@@ -9,7 +9,7 @@ hero:
   tagline: HTML/CSS - Nuxt - Angular - Next
   image:
     src: /logo.png
-    alt: VitePress
+    alt: Savyjs
   actions:
     - theme: brand
       text: Get Started
