@@ -7,6 +7,7 @@ import {
   addComponentsDir,
   addImportsDir,
 } from "@nuxt/kit";
+
 import consola from "consola";
 import { Layout } from "./schema/types/layout";
 import { divisions } from "./schema/types/options";

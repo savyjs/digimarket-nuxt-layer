@@ -1,5 +1,4 @@
-
-export default defineNuxtPlugin((nuxtApp) => {
+export default ((nuxtApp) => {
 
     const vClickoutside = {
         beforeMount: function (el, binding, vnode) {

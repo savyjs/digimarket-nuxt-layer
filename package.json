@@ -45,18 +45,18 @@
     "test:unit": "jest test/unit.test",
     "test:types": "tsc -p types/test",
     "docsdev": "vitepress dev docs --port 4092",
-    "docsbuild": "vitepress build docs --port 4092",
+    "docsbuild": "vitepress build docs --port 4092 && cp ./docs/logo.png ./docs/.vitepress/dist",
+    "demobuild": "cd ./test/fixture && nuxt build ",
     "docspreview": "vitepress preview docs  --port 4092",
     "release": "standard-version"
   },
   "devDependencies": {
-    "standard-version": "^9.1.0",
-    "vitepress": "^1.0.0-alpha.40",
+    "standard-version": "^9.5.0",
+    "vitepress": "^1.0.0-alpha.46",
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.18.6",
     "@nuxt/test-utils": "npm:@nuxt/test-utils-edge@latest",
-    "@nuxthq/admin": "npm:@nuxthq/admin-edge@latest",
     "@types/jest": "^29.2.3",
     "@types/jest-dev-server": "^5.0.0",
     "@types/jsdom": "^20.0.1",
@@ -70,8 +70,9 @@
     "sass-loader": "latest",
     "ts-jest": "^29.0.3",
     "vite-plugin-vue-type-imports": "^0.2.4",
-    "vitest": "^0.25.2",
-    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge@latest"
+    "vitest": "^0.28.5",
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge@latest",
+    "@nuxt/kit": "npm:@nuxt/kit-edge@latest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
