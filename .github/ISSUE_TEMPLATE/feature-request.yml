@@ -33,5 +33,5 @@ body:
       options:
         - label: Read the [contribution guide](https://savyj.com/community/contribution).
           required: true
-        - label: Check existing [discussions](https://github.com/savyjs/nuxt-tailwind-marketplace-kit/discussions) and [issues](https://github.com/nuxt/framework/issues).
+        - label: Check existing [discussions](https://github.com/savyjs/nuxt-digimarket-kit/discussions) and [issues](https://github.com/nuxt/framework/issues).
           required: true

@@ -7,11 +7,10 @@ import {
   addComponentsDir,
   addImportsDir,
 } from "@nuxt/kit";
-import _ from "lodash";
 import consola from "consola";
 import { Layout } from "./schema/types/layout";
 import { divisions } from "./schema/types/options";
-
+const isDev = process.env.MODULE_DEV == 'digimarket_dev';
 const logger = consola.withScope("nuxt:ntm");
 
 export interface ModuleOptions extends Layout {
@@ -54,6 +53,9 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.options.alias["@ntmRoot"] = await resolvePath(__dirname);
       nuxt.options.css.push(
         await resolvePath(__dirname + "/assets/styles/ntm.scss")
+      );
+      if(isDev) nuxt.options.css.push(
+        await resolvePath(__dirname + "/assets/styles/ntmDev.css")
       );
     });
 
