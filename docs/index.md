@@ -1,6 +1,6 @@
 ---
 title: TMK
-titleTemplate: Marketplace Kit for Tailwind
+titleTemplate: Marketplace Kit for TailwindCss
 
 layout: home
 hero:
@@ -16,6 +16,6 @@ hero:
       link: /guide/introduction
     - theme: alt
       text: View on GitHub
-      link: https://github.com/savyjs/tailwind-marketplace-kit
+      link: https://github.com/savyjs/digimarket-kit
 
 ---
