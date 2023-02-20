@@ -1,9 +1,9 @@
 export default {
     title: 'Marketplace Kit for Tailwind',
     description: 'under construction.',
-    outDir: '../public',
     cleanUrls: true,
     themeConfig: {
+        logo: '/logo.png',
         footer: {
             message: 'Released under the MIT License.',
             copyright: 'Copyright © 2021-present SavyJS'
