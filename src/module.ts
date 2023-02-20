@@ -70,7 +70,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     // add plugins
     addPlugin({
-      src: await resolvePath(__dirname + "/plugins/NtmPlugin.ts"),
+      src: await resolvePath(__dirname + "/plugins/NtmPlugin.client.ts"),
     });
     addPlugin({
       src: await resolvePath(__dirname + "/plugins/NtmAssets.client.js"),
