@@ -1,7 +1,6 @@
 export default {
     title: 'Marketplace Kit for Tailwind',
     description: 'under construction.',
-    cleanUrls: true,
     themeConfig: {
         logo: '/logo.png',
         footer: {
