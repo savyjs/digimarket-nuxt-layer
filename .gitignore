@@ -19,6 +19,8 @@ docs/.vitepress/cache/
 src/.output/
 
 test/fixture/ecosystem.config.js
+test/fixture/.ignore
+test/fixture/*pnpm*
 
 bash.sh
 
