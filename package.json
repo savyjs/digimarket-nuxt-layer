@@ -50,7 +50,7 @@
     "release": "standard-version"
   },
   "devDependencies": {
-    "standard-version": "^9.1.0",
+    "standard-version": "^9.5.0",
     "vitepress": "^1.0.0-alpha.46",
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
@@ -70,7 +70,7 @@
     "sass-loader": "latest",
     "ts-jest": "^29.0.3",
     "vite-plugin-vue-type-imports": "^0.2.4",
-    "vitest": "^0.25.2",
+    "vitest": "^0.28.5",
     "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge@latest"
   },
   "dependencies": {
