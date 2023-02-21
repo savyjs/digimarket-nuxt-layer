@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.13](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.12...v0.2.13) (2023-02-21)
+
 ### [0.2.12](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.10...v0.2.12) (2023-02-20)
 
 ### [0.2.10](https://github.com/savyjs/nuxt-digimarket-kit/compare/v0.2.9...v0.2.10) (2023-01-23)

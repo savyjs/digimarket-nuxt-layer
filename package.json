@@ -1,7 +1,7 @@
 {
   "name": "digimarket-nuxt-module",
   "description": "Nuxt ui kit module for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -71,7 +71,6 @@
     "ts-jest": "^29.0.3",
     "vite-plugin-vue-type-imports": "^0.2.4",
     "vitest": "^0.28.5",
-    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge@latest",
     "@nuxt/kit": "npm:@nuxt/kit-edge@latest"
   },
   "dependencies": {
@@ -81,8 +80,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@mdi/font": "^6.1.95",
     "@mdi/js": "^6.1.95",
-    "@nuxtjs/i18n": "^7.2.2",
-    "@nuxtjs/tailwindcss": "^6.1.3",
+    "@nuxtjs/tailwindcss": "^6.4.1",
     "flowbite": "^1.4.7",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.21",
@@ -91,8 +89,8 @@
     "material-icons": "^0.3.1",
     "moment-jalaali": "^0.9.2",
     "nuxt-jsonld": "^2.0.7",
-    "swiper": "^9.0.0-beta.2",
-    "tw-elements": "^1.0.0-alpha12",
+    "swiper": "^9.0.5",
+    "tw-elements": "^1.0.0-beta1",
     "digimarket-kit": "latest"
   },
   "publishConfig": {
