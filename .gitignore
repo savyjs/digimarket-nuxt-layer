@@ -29,3 +29,5 @@ ecosystem.config.js
 # Local Netlify folder
 .netlify
 
+
+pnpm-lock.yaml
