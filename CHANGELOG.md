@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.17](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.14...v0.2.17) (2023-05-13)
+
+
+### Miscellaneous Chores
+
+* **RP:** change .yaml ([120f57a](https://github.com/savyjs/digimarket-nuxt-module/commit/120f57a947b023971aff4e7403fc60368f9a11e4))
+* **RP:** change .yaml ([aa498b3](https://github.com/savyjs/digimarket-nuxt-module/commit/aa498b3541cda413d6f06b27637c85c458dbb5a1))
+* **RP:** change .yaml ([202ef96](https://github.com/savyjs/digimarket-nuxt-module/commit/202ef969ed697aabf970ef52d635b8b9aa3decb7))
+* **RP:** change .yaml ([22a46a7](https://github.com/savyjs/digimarket-nuxt-module/commit/22a46a76089e23e54dd2181afa6093994267bb3f))
+* **RP:** change .yaml ([0804e38](https://github.com/savyjs/digimarket-nuxt-module/commit/0804e38861f9148ba705151fe1fd714f48b432cb))
+* **RP:** change .yaml ([7f9d2fa](https://github.com/savyjs/digimarket-nuxt-module/commit/7f9d2fae155ca10c075694c1ab9b3abc5cf48507))
+
 ## [0.2.14](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.13...v0.2.14) (2023-05-13)
 
 
