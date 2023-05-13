@@ -11,7 +11,7 @@ import {
 import consola from "consola";
 import { Layout } from "./schema/types/layout";
 import { divisions } from "./schema/types/options";
-const isDev = process.env.MODULE_DEV == 'digimarket_dev';
+const isDev = process?.env?.MODULE_DEV == 'digimarket_dev';
 const logger = consola.withScope("nuxt:ntm");
 
 export interface ModuleOptions extends Layout {
@@ -40,7 +40,7 @@ export default defineNuxtModule<ModuleOptions>({
   async setup(moduleOptions, nuxt) {
     // installing tailwindcss
     await installModule("@nuxtjs/tailwindcss");
-    await installModule("vite-plugin-vue-type-imports/nuxt");
+    // await installModule("vite-plugin-vue-type-imports/nuxt");
     // await
 
     // load server API files
@@ -70,7 +70,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     // add plugins
     addPlugin({
-      src: await resolvePath(__dirname + "/plugins/NtmPlugin.ts"),
+      src: await resolvePath(__dirname + "/plugins/NtmPlugin.client.ts"),
     });
     addPlugin({
       src: await resolvePath(__dirname + "/plugins/NtmAssets.client.js"),

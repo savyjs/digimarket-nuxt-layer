@@ -1,7 +1,6 @@
 <template>
   <div v-for="article in articles">
     article: {{ article.data }}
-    <ContentRenderer :value="article.data"/>
   </div>
 </template>
 
