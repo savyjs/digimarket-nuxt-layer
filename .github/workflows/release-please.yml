@@ -11,13 +11,12 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: digimarket-nuxt-module
       # The logic below handles the npm publication:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
         # these if statements ensure that a publication only occurs when
         # a new release is created:
         if: ${{ steps.release.outputs.release_created }}
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v1
         with:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
