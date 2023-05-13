@@ -6,13 +6,14 @@ import {
   resolvePath,
   addComponentsDir,
   addImportsDir,
+  useLogger,
 } from "@nuxt/kit";
 
-import consola from "consola";
+
 import { Layout } from "./schema/types/layout";
 import { divisions } from "./schema/types/options";
 const isDev = process?.env?.MODULE_DEV == 'digimarket_dev';
-const logger = consola.withScope("nuxt:ntm");
+const logger = useLogger('nuxt:ntm')
 
 export interface ModuleOptions extends Layout {
   divisions?: divisions[];
@@ -38,6 +39,8 @@ export default defineNuxtModule<ModuleOptions>({
     },
   },
   async setup(moduleOptions, nuxt) {
+    logger.success(`Digimarket Nuxt Module Started!`)
+
     // installing tailwindcss
     await installModule("@nuxtjs/tailwindcss");
     // await installModule("vite-plugin-vue-type-imports/nuxt");
