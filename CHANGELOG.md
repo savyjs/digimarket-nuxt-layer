@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * **packages:** remove unnecessary packages ([e2be23d](https://github.com/savyjs/digimarket-nuxt-module/commit/e2be23d6da2e9bde8c213d447e96b04f5693b8bd))
 
+
 ### [0.2.13](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.12...v0.2.13) (2023-02-21)
 
 ### [0.2.12](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.10...v0.2.12) (2023-02-20)
