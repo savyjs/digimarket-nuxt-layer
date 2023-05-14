@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.30](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.29...v0.2.30) (2023-05-14)
+
+
+### Miscellaneous Chores
+
+* remove server api ([108f190](https://github.com/savyjs/digimarket-nuxt-module/commit/108f190b7686a9a9401d61e808a64cca5575f3be))
+
 ## [0.2.29](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.28...v0.2.29) (2023-05-14)
 
 
