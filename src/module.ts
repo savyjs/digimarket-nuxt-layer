@@ -54,7 +54,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     // add NTM alias and load ntm style
     nuxt.hook("ready", async (nuxt) => {
-      // nuxt.options.alias["@ntmRoot"] = await resolvePath(__dirname);
+      nuxt.options.alias["@ntmRoot"] = await resolvePath(__dirname);
       nuxt.options.css.push(
         await resolvePath(__dirname + "/assets/styles/ntm.scss")
       );

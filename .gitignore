@@ -44,3 +44,5 @@ pnpm-lock.yaml
 /src/plugins/NtmPlugin.client.js
 /src/schema/types/options.js
 /src/server/api/market/products.js
+/src/server/api/market/categories/[id].js
+/src/server/api/market/products/[id].js
