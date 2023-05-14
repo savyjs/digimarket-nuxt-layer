@@ -18,15 +18,13 @@ jobs:
           release-type: node
           package-name: release-please-action
       # The logic below handles the npm publication:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
         # these if statements ensure that a publication only occurs when
         # a new release is created:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
-        if: ${{ steps.release.outputs.release_created }}
