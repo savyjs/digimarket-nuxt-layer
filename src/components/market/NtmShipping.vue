@@ -4,7 +4,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import {Meta} from "../schema/types/market";
+import {Meta} from "@ntmRoot/schema/types/market";
 
 export interface Product {
   /**

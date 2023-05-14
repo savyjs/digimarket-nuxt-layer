@@ -1,4 +1,4 @@
-import {defineNuxtPlugin, useRouter} from "nuxt/app";
+import {defineNuxtPlugin} from "nuxt/app";
 
 export default defineNuxtPlugin((nuxtApp) => {
 
@@ -19,11 +19,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     }
 
     nuxtApp?.vueApp?.directive('clickoutside', vClickoutside)
-    const router = useRouter();
-    router?.addRoute({
-        name: 'NtmLogin',
-        path: '/market/user/login',
-    })
+    
     return {
         provide: {}
     }

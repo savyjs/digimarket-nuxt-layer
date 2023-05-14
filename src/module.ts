@@ -50,11 +50,11 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.runtimeConfig.public.ntm = moduleOptions;
     nuxt.options.nitro.rootDir = await resolvePath(__dirname + "/");
     nuxt.options.nitro.srcDir = await resolvePath(__dirname + "/");
-    nuxt.options.nitro.scanDirs = [await resolvePath(__dirname + "/server")];
+    // nuxt.options.nitro.scanDirs = [await resolvePath(__dirname + "/server")];
 
     // add NTM alias and load ntm style
     nuxt.hook("ready", async (nuxt) => {
-      nuxt.options.alias["@ntmRoot"] = await resolvePath(__dirname);
+      // nuxt.options.alias["@ntmRoot"] = await resolvePath(__dirname);
       nuxt.options.css.push(
         await resolvePath(__dirname + "/assets/styles/ntm.scss")
       );
