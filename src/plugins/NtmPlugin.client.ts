@@ -1,4 +1,4 @@
-import {defineNuxtPlugin} from "nuxt/app";
+import {defineNuxtPlugin, useRouter} from "nuxt/app";
 
 export default defineNuxtPlugin((nuxtApp) => {
 

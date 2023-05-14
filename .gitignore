@@ -31,3 +31,16 @@ ecosystem.config.js
 
 
 pnpm-lock.yaml
+/src/server/api/market/categories/[id].js
+/src/server/api/market/products/[id].js
+/src/server/api/market/categories.js
+/src/composables/darkmode.js
+/src/schema/types/layout.js
+/src/schema/types/market.js
+/src/server/api/market/megamenu.js
+/src/module.js
+/src/composables/ntm.js
+/src/composables/ntmLocale.js
+/src/plugins/NtmPlugin.client.js
+/src/schema/types/options.js
+/src/server/api/market/products.js
