@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.24](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.22...v0.2.24) (2023-05-14)
+
+
+### Miscellaneous Chores
+
+* **RP:** test NPM ci ([ebfe9b9](https://github.com/savyjs/digimarket-nuxt-module/commit/ebfe9b91acd86458b42aba29aa808b3b2f410639))
+* **RP:** test NPM ci ([ef24dd3](https://github.com/savyjs/digimarket-nuxt-module/commit/ef24dd32001912b403f7ab09ebf1de42774b76e1))
+
 ## [0.2.22](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.21...v0.2.22) (2023-05-14)
 
 

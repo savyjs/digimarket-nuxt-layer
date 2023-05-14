@@ -1,7 +1,7 @@
 {
   "name": "digimarket-nuxt-module",
   "description": "Nuxt ui kit module for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "0.2.22",
+  "version": "0.2.24",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
