@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.29](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.28...v0.2.29) (2023-05-14)
+
+
+### Miscellaneous Chores
+
+* remove flowbite and tw-element ([18cd8d9](https://github.com/savyjs/digimarket-nuxt-module/commit/18cd8d95a02d9abebda75a0fcaf80fa20dbd4098))
+
 ## [0.2.28](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.27...v0.2.28) (2023-05-14)
 
 
