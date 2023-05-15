@@ -1,4 +1,5 @@
-import type { Ref } from 'vue'
+import {useState, useNuxtApp} from "nuxt/app";
+import {ref, watch} from 'vue'
 
 export const useLocale = () => useState<string>('locale', () => useDefaultLocale().value)
 
@@ -37,8 +38,3 @@ export const useLocales = () => {
     return locales
 }
 
-// Using Intl.DateTimeFormat for language-sensitive date and time formatting
-// Learn more: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
-export const useLocaleDate = (date: Ref<Date> | Date, locale = useLocale()) => {
-    return computed(() => new Intl.DateTimeFormat(locale.value, { dateStyle: 'full' }).format(unref(date)))
-}
