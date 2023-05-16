@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.33](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.31...v0.2.33) (2023-05-15)
+
+
+### Miscellaneous Chores
+
+* add alias [@ntm](https://github.com/ntm)Root ([10b154b](https://github.com/savyjs/digimarket-nuxt-module/commit/10b154be343a685fea13b00f7944d1637956d731))
+* add alias [@ntm](https://github.com/ntm)Root ([d13cf29](https://github.com/savyjs/digimarket-nuxt-module/commit/d13cf29900a1c04a4eb95277a48758ee3692b9a0))
+
 ## [0.2.31](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.30...v0.2.31) (2023-05-14)
 
 
