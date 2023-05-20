@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.33...v0.3.0) (2023-05-20)
+
+
+### Features
+
+* add NtmLogin with username and password ([8d8ae28](https://github.com/savyjs/digimarket-nuxt-module/commit/8d8ae287338f4b0e1cbf21243eb284723ffb2fca))
+
 ## [0.2.33](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.2.31...v0.2.33) (2023-05-15)
 
 
