@@ -65,6 +65,7 @@
     "@mdi/font": "^6.1.95",
     "@mdi/js": "^6.1.95",
     "@nuxtjs/tailwindcss": "^6.6.8",
+    "@nuxtjs/i18n": "^7.3.1",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.21",
     "lodash-deep": "^1.6.0",

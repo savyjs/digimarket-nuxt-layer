@@ -1,5 +1,3 @@
 export default () => {
-  // import("flowbite");
-  // import("tw-elements");
-  // import("tailwind/src/tmk");
+  // import("./tailwind/src/all.css");
 };

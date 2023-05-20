@@ -5,13 +5,13 @@ import {
     addLayout,
     resolvePath,
     addComponentsDir,
-    addImportsDir,
     useLogger,
 } from "@nuxt/kit";
 
 
 import {Layout} from "./schema/types/layout";
 import {divisions} from "./schema/types/options";
+import I18nConfig from "./i18n.config";
 
 const logger = useLogger('nuxt:ntm')
 
@@ -43,18 +43,21 @@ export default defineNuxtModule<ModuleOptions>({
 
         // installing tailwindcss
         await installModule("@nuxtjs/tailwindcss");
-        // await installModule("vite-plugin-vue-type-imports/nuxt");
-        // await
 
+        try {
+            await installModule("@nuxtjs/i18n", I18nConfig);
+            logger.success(`I18n is ok`)
+        } catch (err) {
+            logger.error("i18n error!", err)
+        }
 
         // add NTM alias and load ntm style
         nuxt.hook("ready", async (nuxt) => {
             nuxt.options.alias["@ntmRoot"] = await resolvePath(__dirname);
+            nuxt.options.vite.server.fs.allow.push(__dirname)
+            nuxt.options.vite.server.fs.allow.push('..')
             nuxt.options.css.push(
                 "@ntmRoot/assets/styles/ntm.scss"
-            );
-            nuxt.options.css.push(
-                "@ntmRoot/assets/styles/ntmDev.css"
             );
         });
 
@@ -68,6 +71,7 @@ export default defineNuxtModule<ModuleOptions>({
         });
 
         // load NTM components
+        await addComponentsDir({path: __dirname + "/components/user"});
         await addComponentsDir({path: __dirname + "/components/market"});
         await addComponentsDir({path: __dirname + "/components/blog"});
         await addComponentsDir({path: __dirname + "/components"});
