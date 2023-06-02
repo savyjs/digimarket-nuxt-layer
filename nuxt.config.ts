@@ -19,6 +19,18 @@ export default defineNuxtConfig({
         join(currentDir, "./assets/styles/ntm.scss")
     ],
     i18n: {
-        vueI18n: join(currentDir, "./i18n.config.ts")
+        debug: true,
+        locale: 'en',
+        langDir: join(currentDir, './lang'),
+        locales: [
+            {
+                code: 'en',
+                file: 'en.json',
+            },
+            {
+                code: 'fa',
+                file: 'fa.json',
+            },
+        ]
     }
 })
