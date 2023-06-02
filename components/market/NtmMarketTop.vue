@@ -57,7 +57,7 @@
 </template>
 
 <script setup>
-const {logo, title} = useNtm()?.options();
+const {logo, title} = [];
 let darkmode = useDarkmode()
 
 function toggleDarkmode() {

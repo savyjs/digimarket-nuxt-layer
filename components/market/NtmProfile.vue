@@ -136,5 +136,5 @@
 const {sideMenu, user, statistics, productSliders} = defineProps([
   'sideMenu', 'user', 'statistics', 'productSliders'
 ]);
-const {profileMenuItems} = useNtm()?.options();
+const {profileMenuItems} = []
 </script>

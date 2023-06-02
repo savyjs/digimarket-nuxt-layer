@@ -29,7 +29,7 @@
 
 const emit = defineEmits(['input'])
 const props = defineProps(['value'])
-const {divisions} = useNtm()?.options()
+const {divisions} = []
 const activeDivisions = ref(divisions);
 const lastActiveDivision = ref(divisions);
 const depthLevel = ref(0);
