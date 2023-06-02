@@ -1,5 +1,5 @@
-import {useState} from "nuxt/app";
 import { ref, watch } from 'vue'
+import {useState} from "nuxt/app";
 
 export const useDarkmode = () => {
     const darkmode = useState('darkmode', () => false)

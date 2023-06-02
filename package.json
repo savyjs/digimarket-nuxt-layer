@@ -1,7 +1,7 @@
 {
   "name": "digimarket-nuxt-module",
   "description": "Nuxt ui kit module for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "0.3.0",
+  "version": "0.3.01",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -22,13 +22,22 @@
     "ecommerce ui",
     "blog ui"
   ],
-  "main": "src/module.ts",
+  "type": "module",
   "module": "src/module.ts",
   "sideEffects": [
     "*.sass",
     "*.scss",
     "*.css"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
   "files": [
     "src/",
     "dist/",
@@ -37,9 +46,14 @@
     "types/"
   ],
   "scripts": {
+    "prepack": "nuxt-module-build",
+    "dev:build": "nuxi build ../fixture",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare ../fixture",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.config.js --hot",
     "postinstall": "node ./src/postinstall.js",
-    "test": "vitest",
     "test:module": "node test/module.test.ts",
     "test:e2e-browser": "jest test/browser.test",
     "test:unit": "jest test/unit.test",
@@ -55,9 +69,13 @@
     "jest": "^29.3.1",
     "nuxt": "npm:nuxt3@latest",
     "path": "^0.12.7",
-    "@nuxt/kit": "npm:@nuxt/kit-edge@latest"
+    "@nuxt/module-builder": "latest",
+    "@nuxt/schema": "latest",
+    "@nuxt/test-utils": "latest",
+    "@types/node": "^18"
   },
   "dependencies": {
+    "@nuxt/kit": "latest",
     "@fortawesome/fontawesome-free": "^5.15.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
@@ -65,7 +83,7 @@
     "@mdi/font": "^6.1.95",
     "@mdi/js": "^6.1.95",
     "@nuxtjs/tailwindcss": "^6.6.8",
-    "@nuxtjs/i18n": "^7.3.1",
+    "@nuxtjs/i18n": "^8.0.0-beta.12",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.21",
     "lodash-deep": "^1.6.0",

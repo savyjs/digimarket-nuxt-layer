@@ -1,5 +1,6 @@
-import {useState, useNuxtApp} from "nuxt/app";
 import {ref, watch} from 'vue'
+import {useNuxtApp, useState} from "nuxt/app";
+
 
 export const useLocale = () => useState<string>('locale', () => useDefaultLocale().value)
 
