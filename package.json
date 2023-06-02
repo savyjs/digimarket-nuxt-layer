@@ -1,7 +1,7 @@
 {
-  "name": "digimarket-nuxt-module",
-  "description": "Nuxt ui kit module for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "0.3.01",
+  "name": "digimarket-nuxt-layer",
+  "description": "Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
+  "version": "0.4.00",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -23,66 +23,37 @@
     "blog ui"
   ],
   "type": "module",
-  "module": "src/module.ts",
-  "sideEffects": [
-    "*.sass",
-    "*.scss",
-    "*.css"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/types.d.ts",
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
-    }
-  },
-  "main": "./dist/module.cjs",
-  "types": "./dist/types.d.ts",
-  "files": [
-    "src/",
-    "dist/",
-    "lib/",
-    "es5/",
-    "types/"
-  ],
+  "main": "./nuxt.config.ts",
   "scripts": {
-    "prepack": "nuxt-module-build",
-    "dev:build": "nuxi build ../fixture",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare ../fixture",
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.config.js --hot",
-    "postinstall": "node ./src/postinstall.js",
-    "test:module": "node test/module.test.ts",
     "test:e2e-browser": "jest test/browser.test",
     "test:unit": "jest test/unit.test",
-    "test:types": "tsc -p types/test",
-    "docsdev": "vitepress dev docs --port 4092",
-    "docsbuild": "vitepress build docs --port 4092 && cp ./docs/logo.png ./docs/.vitepress/dist",
-    "demobuild": "cd ./test/fixture && nuxt build ",
-    "docspreview": "vitepress preview docs  --port 4092",
-    "release": "standard-version"
+    "test:types": "tsc -p types/test"
   },
   "devDependencies": {
     "fs": "^0.0.1-security",
     "jest": "^29.3.1",
     "nuxt": "npm:nuxt3@latest",
     "path": "^0.12.7",
-    "@nuxt/module-builder": "latest",
     "@nuxt/schema": "latest",
     "@nuxt/test-utils": "latest",
-    "@types/node": "^18"
+    "@types/node": "^18",
+    "@nuxt/kit": "latest"
   },
   "dependencies": {
-    "@nuxt/kit": "latest",
     "@fortawesome/fontawesome-free": "^5.15.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@mdi/font": "^6.1.95",
     "@mdi/js": "^6.1.95",
-    "@nuxtjs/tailwindcss": "^6.6.8",
+    "@nuxtjs/tailwindcss": "^6.7.0",
     "@nuxtjs/i18n": "^8.0.0-beta.12",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.21",
@@ -92,7 +63,7 @@
     "moment-jalaali": "^0.9.2",
     "nuxt-jsonld": "^2.0.8",
     "swiper": "^9.0.5",
-    "digimarket-kit": "latest"
+    "digimarket-kit": "file:../tailwind"
   },
   "publishConfig": {
     "access": "public"
