@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     ],
     i18n: {
         locale: 'en',
-        langDir: join(currentDir, './lang'),
+        langDir: './lang',
         locales: [
             {
                 code: 'en',
