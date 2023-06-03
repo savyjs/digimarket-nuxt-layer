@@ -35,5 +35,5 @@ module.exports = {
             },
         },
     },
-    plugin: "digimarket-kit"
+    plugin: "digimarket-kit/plugin.js"
 };

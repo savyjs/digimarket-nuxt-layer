@@ -13,7 +13,6 @@
   </div>
 </template>
 <script setup>
-import {useState} from "nuxt3/app";
 
 const darkmode = useDarkmode()
 const backdrop = useState('backdrop', () => false)

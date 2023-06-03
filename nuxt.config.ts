@@ -12,14 +12,10 @@ export default defineNuxtConfig({
         "@nuxtjs/tailwindcss",
         "@nuxtjs/i18n"
     ],
-    alias: {
-        "@ntmRoot": dirname(currentDir)
-    },
     css: [
         join(currentDir, "./assets/styles/ntm.scss")
     ],
     i18n: {
-        debug: true,
         locale: 'en',
         langDir: join(currentDir, './lang'),
         locales: [
