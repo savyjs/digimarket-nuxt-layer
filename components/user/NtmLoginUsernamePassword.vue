@@ -1,5 +1,5 @@
 <template>
-  <div class="container grid h-full min-w-full content-center py-10">
+  <div class="grid h-full min-w-full content-center py-10">
     <div
         class="mx-auto max-w-md rounded-lg border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6 lg:p-6">
       <div class="mb-5 flex w-full justify-center text-center">
@@ -32,14 +32,7 @@
           </button>
 
           <p class="font-weight-light mt-5 w-full text-right text-[10px]">
-            با ورود به {{ title }}،
-            <nuxt-link to="rules" class="text-link px-0.5">
-              شرایط {{ title }}
-            </nuxt-link>
-            و
-            <nuxt-link to="privacy" class="text-link px-0.5"> قوانین حریم‌خصوصی
-            </nuxt-link>
-            را می‌پذیرم
+            {{ $t("ntm.terms_and_conditions", {title}) }}
           </p>
         </div>
       </div>
@@ -49,23 +42,8 @@
 
 <script setup>
 
-const logo = ""
-const title = "title"
+import {useAppConfig} from "#app";
 
+const logo = useAppConfig()?.ntm?.logo
+const title = useAppConfig()?.ntm?.title
 </script>
-
-
-<i18n lang="json">
-{
-  "en": {
-    "ntm": {
-      "login_title": "hello world!"
-    }
-  },
-  "fa": {
-    "ntm": {
-      "login_title": "ورود"
-    }
-  }
-}
-</i18n>

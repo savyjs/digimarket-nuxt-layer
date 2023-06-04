@@ -1,5 +1,7 @@
 {
+  "register": "Register",
   "ntm": {
-    "login_title": "Login"
+    "login_title": "Login",
+    "terms_and_conditions": "I accept terms and conditions of {title}"
   }
 }

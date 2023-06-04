@@ -1,13 +1,16 @@
 <template>
   <div>
     <span class="btn btn-primary mx-2">
-      <button @click="switchLocalePath('en')">English</button>
+      <button @click="locale = 'en'">English</button>
     </span>
     <span class="btn btn-primary mx-2">
-      <button @click="switchLocalePath('fa')">فارسی</button>
+      <button @click="locale = 'fa'">فارسی</button>
     </span>
   </div>
 </template>
+
 <script setup>
-const switchLocalePath = useSwitchLocalePath()
+import {useI18n} from "vue-i18n";
+
+let {locale} = useI18n()
 </script>

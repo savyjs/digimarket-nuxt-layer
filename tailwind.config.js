@@ -1,23 +1,16 @@
 module.exports = {
     content: [
+        './components/*.{scss,css,vue,jsx,html}',
         './components/**/*.{scss,css,vue,jsx,html}',
         './general/*.{scss,css,vue,jsx,html}',
-        `./components/**/*.{vue,js}`,
-        `./components/market/**/*.{vue,js}`,
-        `./components/blog/**/*.{vue,js}`,
+        `./layouts/*.vue`,
         `./layouts/**/*.vue`,
-        `pages/**/*.vue`,
+        `./pages/*.vue`,
+        `./pages/**/*.vue`,
+        `./composables/*.{js,ts}`,
         `./composables/**/*.{js,ts}`,
+        `./plugins/*.{js,ts}`,
         `./plugins/**/*.{js,ts}`,
-        `/pages/**/*.vue`,
-        `/pages/*.vue`,
-        `/components/**/*.{vue,js}`,
-        `/layouts/**/*.vue`,
-        `/pages/**/*.vue`,
-        `/composables/**/*.{js,ts}`,
-        `/plugins/**/*.{js,ts}`,
-        `/App.{js,ts,vue}`,
-        `/app.{js,ts,vue}`
     ],
     darkMode: ['class', '[data-mode="dark"]'],
     theme: {
@@ -34,6 +27,5 @@ module.exports = {
                 light: '#EEE',
             },
         },
-    },
-    plugin: "digimarket-kit/plugin.js"
+    }
 };
