@@ -36,7 +36,7 @@ export default defineAppConfig({
                 title: 'Asia',
                 items: [{
                     key: "1",
-                    title: "Iran",
+                    title: "US",
                     items: Provinces
                 }]
             }

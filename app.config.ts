@@ -1,4 +1,5 @@
 import {defineAppConfig} from "#app";
+import {DigimarketConfig} from "~/schema/types/options";
 
 const Provinces = [
     {
@@ -40,8 +41,10 @@ const Provinces = [
 ];
 
 export default defineAppConfig({
-    digimarket: {
-        logo: '/assets/logo.svg',
+    digimarket: <DigimarketConfig>{
+        lang: 'fa',
+        rtl: true,
+        logo: '/logo.png',
         title: 'Title Here',
         profileMenuItems: [
             {icon: 'fa fa-plus', text: 'premium a', svg: 'plus', link: '/profile/plus'},
@@ -54,7 +57,7 @@ export default defineAppConfig({
                 title: 'Asia',
                 items: [{
                     key: "1",
-                    title: "Iran",
+                    title: "US",
                     items: Provinces
                 }]
             }

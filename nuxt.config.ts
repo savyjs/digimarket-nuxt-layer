@@ -4,7 +4,6 @@ import {dirname, join} from 'path'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
 const Provinces = [];
-import {digimarketConfig} from "./schema/types/options";
 
 export default defineNuxtConfig({
     modules: [

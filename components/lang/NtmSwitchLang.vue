@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <span class="btn btn-primary mx-2">
-      <button @click="locale = 'en'">English</button>
-    </span>
-    <span class="btn btn-primary mx-2">
-      <button @click="locale = 'fa'">فارسی</button>
-    </span>
+  <div class="absolute">
+    <div class="flex">
+      <select v-model="locale" class="input">
+        <option selected value="en">En</option>
+        <option value="fa">فا</option>
+      </select>
+    </div>
   </div>
 </template>
 

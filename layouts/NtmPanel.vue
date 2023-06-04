@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'light': !darkmode , 'rtl': true,'min-h-screen' : true,'bg-default' : true }">
+  <div :class="{'light': !darkmode , 'rtl': rtl,'min-h-screen' : true,'bg-default' : true }">
     <NtmMarketHeader/>
     <main class="container bg-default mx-auto pt-[110px]">
       <transition>
@@ -15,6 +15,7 @@
 <script setup>
 
 const darkmode = useDarkmode()
+const rtl = useRtl()
 const backdrop = useState('backdrop', () => false)
 
 onMounted(() => {

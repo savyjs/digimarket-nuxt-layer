@@ -44,6 +44,6 @@
 
 import {useAppConfig} from "#app";
 
-const logo = useAppConfig()?.ntm?.logo
-const title = useAppConfig()?.ntm?.title
+const logo = useAppConfig()?.digimarket?.logo
+const title = useAppConfig()?.digimarket?.title
 </script>

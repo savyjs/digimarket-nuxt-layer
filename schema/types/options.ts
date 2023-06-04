@@ -1,6 +1,10 @@
 import {Layout} from "./layout";
 
-export interface digimarketConfig extends Layout {
+export interface DigimarketConfig extends Layout {
+    lang: string,
+    rtl: boolean,
+    title: string,
+    logo: string,
     divisions?: divisions[];
     profileMenuItems?: { title: string; to: string; icon?: string }[];
 }
