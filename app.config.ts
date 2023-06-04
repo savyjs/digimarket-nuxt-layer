@@ -44,9 +44,9 @@ export default defineAppConfig({
         logo: '/assets/dkala/logo.svg',
         title: 'Title Here',
         profileMenuItems: [
-            {icon: 'fa fa-plus', text: 'پلاس اکانت', svg: 'plus', link: '/profile/plus'},
-            {icon: 'fa fa-list', text: 'خلاصه فعالیت‌ها', svg: 'list', link: '/profile/activity'},
-            {icon: 'fa fa-list', text: 'سفارش‌ها', svg: 'order', link: '/profile/orders'},
+            {icon: 'fa fa-plus', text: 'premium account', svg: 'plus', link: '/profile/plus'},
+            {icon: 'fa fa-list', text: 'my activity', svg: 'list', link: '/profile/activity'},
+            {icon: 'fa fa-list', text: 'orders', svg: 'order', link: '/profile/orders'},
         ],
         divisions: [
             {
