@@ -42,6 +42,10 @@ const Provinces = [
 
 export default defineAppConfig({
     digimarket: <DigimarketConfig>{
+        rtlDictionary: {
+            en: false,
+            fa: true
+        },
         lang: 'fa',
         rtl: true,
         logo: '/logo.png',
@@ -61,6 +65,7 @@ export default defineAppConfig({
                     items: Provinces
                 }]
             }
-        ]
+        ],
+        messages: undefined
     }
 })

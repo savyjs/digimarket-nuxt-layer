@@ -1,11 +1,14 @@
 import {Layout} from "./layout";
 
 export interface DigimarketConfig extends Layout {
-    lang: string,
-    rtl: boolean,
+    rtlDictionary?: {
+        [index: string]: boolean
+    },
+    lang?: string,
+    rtl?: boolean,
     title: string,
     logo: string,
-    divisions?: divisions[];
+    divisions?: divisions[]
     profileMenuItems?: { title: string; to: string; icon?: string }[];
 }
 

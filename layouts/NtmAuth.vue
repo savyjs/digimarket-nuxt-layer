@@ -1,7 +1,19 @@
 <template>
   <div :class="{'light': !darkmode , 'rtl': rtl,'min-h-screen' : true,'bg-default' : true }">
     <LangNtmSwitchLang/>
-    <slot/>
+    <div class="grid h-full min-w-full content-center py-10">
+      <div
+          class="mx-auto max-w-md rounded-lg border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6 lg:p-6">
+        <div class="mb-5 flex w-full justify-center text-center">
+          <nuxt-link to="/" v-if="logo || title">
+            <a class="text-link px-0.5">
+              <img width="150" height="40" :src="logo" :alt="title"/>
+            </a>
+          </nuxt-link>
+        </div>
+        <slot/>
+      </div>
+    </div>
   </div>
 </template>
 <script setup>
@@ -9,6 +21,8 @@
 const darkmode = useDarkmode()
 const rtl = useRtl()
 const backdrop = useState('backdrop', () => false)
+
+let {logo, title} = useAppConfig()?.digimarket;
 
 onMounted(() => {
   // On page load or when changing themes, best to add inline in `head` to avoid FOUC
