@@ -1,0 +1,17 @@
+@layer components {
+  .card {
+    @apply rounded-lg border border-gray-200 p-5 sm:p-6 lg:p-6;
+  }
+
+  .card-primary {
+    @apply card;
+  }
+
+  .card-primary {
+    @apply bg-default dark:bg-dark;
+  }
+
+  .card-primary .card-title {
+    @apply dark:text-white dark:text-gray-200;
+  }
+}

@@ -1,0 +1,17 @@
+@layer components {
+  .tabs-primary {
+    @apply flex;
+  }
+
+  .tabs-primary li {
+    @apply sm:grow lg:grow-0;
+  }
+
+  .tabs-primary button {
+    @apply inline-block w-full font-semibold text-sm rounded-t-lg border-b-2 border-transparent py-4 px-4 text-center text-gray-500;
+  }
+
+  .tabs-primary [role='tab'].active {
+    @apply border-b-red-600 font-extrabold border-b-4 rounded-r border-r-4 border-r-transparent  rounded-l border-l-4 border-l-transparent text-red-600 hover:border-red-600 hover:border-t-transparent hover:border-l-transparent hover:border-r-transparent hover:text-red-600;
+  }
+}

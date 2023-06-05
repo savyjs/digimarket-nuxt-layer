@@ -2,6 +2,7 @@
   "register": "ثبت نام",
   "ntm": {
     "login_title": "ورود",
+    "register_title": "ثبت‌نام",
     "terms_and_conditions": "شرایط و قوانین {title} را می‌پذیرم"
   }
 }

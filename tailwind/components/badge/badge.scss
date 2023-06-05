@@ -1,0 +1,13 @@
+@layer components {
+  .badge-primary {
+    @apply rounded bg-gray-400 px-1.5 py-0.5 text-xs font-bold font-semibold text-white dark:bg-gray-700 dark:text-gray-300;
+  }
+
+  .badge-warning {
+    @apply rounded-xl bg-orange-100 px-1.5 py-0.5 text-xs font-bold font-semibold text-orange-400 dark:bg-gray-700 dark:text-gray-300;
+  }
+
+  .active .badge-primary {
+    @apply bg-primary;
+  }
+}

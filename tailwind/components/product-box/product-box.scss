@@ -1,0 +1,45 @@
+@layer components {
+  .product-box-primary {
+    @apply pr-10;
+  }
+
+  .product-box-primary {
+    @apply text-[12px] font-bold;
+  }
+
+  .product-box-primary .title {
+    @apply text-right text-[14px] mb-5;
+  }
+
+  .product-box-primary .attributes {
+    @apply text-right text-[12px] font-light text-gray-700 space-y-2;
+  }
+
+  .product-box-primary .btn-gray-outlined {
+    @apply text-[12px] font-bold;
+  }
+
+  .product-box-primary .image {
+    @apply p-1 w-1/6  grid grid-cols-1 pb-2;
+  }
+
+  .product-box-primary .image .counter-box-container {
+    @apply place-self-end w-full flex justify-center;
+  }
+
+  .product-box-primary .image a {
+    @apply justify-center flex flex-wrap;
+  }
+
+  .product-box-primary .image img {
+    @apply max-w-full w-28;
+  }
+
+  .product-box-primary .delivery {
+    @apply grow-0 text-right flex gap-3 w-1/2 font-light text-[14px];
+  }
+
+  .product-box-primary .delivery .icon-gray {
+    @apply ml-1;
+  }
+}

@@ -1,0 +1,21 @@
+@layer components {
+  .alert {
+    @apply flex p-1 my-1 text-[12px] rounded-lg gap-1 items-center;
+  }
+
+  .alert-info {
+    @apply alert text-blue-700 fill-blue-700;
+  }
+
+  .alert-warning {
+    @apply alert text-orange-400  fill-orange-400;
+  }
+
+  .alert-error {
+    @apply alert text-red-700  fill-red-700;
+  }
+
+  .alert-success {
+    @apply alert text-green-500 fill-green-500;
+  }
+}

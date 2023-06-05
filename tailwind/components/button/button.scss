@@ -1,0 +1,53 @@
+@layer components {
+  .btn {
+    @apply text-center justify-center flex rounded-lg px-5 py-2.5 text-center text-sm font-medium;
+  }
+
+  .btn-primary {
+    @apply btn;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white dark:bg-primary dark:focus:ring-red-800;
+  }
+
+  .btn-primary-outlined {
+    @apply btn bg-transparent border;
+  }
+
+  .btn-primary-outlined {
+    @apply text-primary border-primary dark:focus:bg-primary dark:text-primary dark:bg-transparent;
+  }
+
+  .btn-success {
+    @apply btn;
+  }
+
+  .btn-success {
+    @apply text-white bg-success dark:bg-success dark:focus:ring-success;
+  }
+
+  .btn-success-outlined {
+    @apply btn-success bg-transparent border;
+  }
+
+  .btn-success-outlined {
+    @apply text-success border-success dark:focus:ring-success dark:text-success dark:bg-transparent;
+  }
+
+  .btn-black {
+    @apply btn;
+  }
+
+  .btn-black {
+    @apply text-white bg-black dark:text-black dark:text-white;
+  }
+
+  .btn-black-outlined {
+    @apply btn-black bg-transparent border;
+  }
+
+  .btn-gray-outlined {
+    @apply text-black border-black dark:focus:ring-black dark:text-gray-800 dark:bg-transparent;
+  }
+}

@@ -1,0 +1,76 @@
+@layer components {
+  /* list and list items */
+  .list.list-primary {
+  }
+
+  .list.list-timeline {
+  }
+
+  .list {
+    @apply p-0;
+  }
+
+  .list .list-item {
+    @apply flex gap-1 py-5 align-middle;
+  }
+
+  .list.list-timeline .list-item {
+    @apply mx-[23pt] py-0;
+  }
+
+  .list.list-primary .list-item:hover {
+    @apply bg-gray-100;
+  }
+
+  .list.list-primary .list-item.active {
+    @apply border-r-2 border-red-300;
+  }
+
+  .list.list-timeline .list-item .list-item-text {
+    @apply align-middle flex self-center px-3;
+  }
+
+  .list.list-timeline .list-item .list-item-decoration {
+    @apply flex flex-col justify-center items-center;
+  }
+
+  .list.list-timeline .list-item .list-item-dot {
+    @apply w-2 h-2 bg-gray-300 rounded-full absolute;
+  }
+
+  .list.list-timeline .list-item .list-item-linedot {
+    @apply w-[1px] min-h-[70px] h-[100%] bg-gray-300 self-start justify-self-start;
+  }
+
+  .list.list-timeline .list-item-avatar {
+    @apply lg:max-w-[50pt] md:max-w-[50pt] max-w-[50px] px-[3pt] mb-0;
+  }
+
+  .list.list-timeline .list-item-avatar img {
+    @apply max-w-full max-h-full z-10;
+  }
+
+  .list .list-item .list-item-icon {
+    @apply min-w-[10%] flex justify-center text-center align-middle dark:fill-gray-200;
+  }
+
+  .list .list-item .list-item-text {
+    @apply dark:text-gray-200;
+  }
+
+  .list.list-timeline .list-item:last-child .list-item-decoration {
+    @apply justify-start;
+  }
+
+  .list.list-timeline .list-item:last-child .list-item-dot {
+    @apply self-center justify-self-center mt-[20px];
+  }
+
+  .list.list-timeline .list-item:last-child .list-item-linedot {
+    @apply min-h-[20px] max-h-[20px] justify-self-start self-start;
+  }
+
+  .list.list-timeline .list-item:first-child {
+    @apply px-0 mx-0;
+  }
+}

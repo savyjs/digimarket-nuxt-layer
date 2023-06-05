@@ -1,0 +1,5 @@
+@layer components {
+  .checkbox.input-primary {
+    @apply focus:border-blue-500 focus:border-blue-500 focus:ring-cyan-200 focus:ring-cyan-200 dark:border-gray-600 dark:border-gray-600 dark:text-white dark:text-white dark:placeholder-gray-400 dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:ring-blue-500;
+  }
+}

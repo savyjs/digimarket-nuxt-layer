@@ -1,0 +1,49 @@
+@layer base {
+  .icon-x-small {
+    @apply w-2 h-2;
+  }
+
+  .icon-xs {
+    @apply icon-x-small;
+  }
+
+  .icon-small {
+    @apply w-4 h-4;
+  }
+
+  .icon-sm {
+    @apply icon-small;
+  }
+
+  .icon-medium {
+    @apply w-6 h-6;
+  }
+
+  .icon-md {
+    @apply icon-medium;
+  }
+
+  .icon-large {
+    @apply w-8 h-8;
+  }
+
+  .icon-lg {
+    @apply icon-large;
+  }
+
+  .icon-x-large {
+    @apply w-8 h-8;
+  }
+
+  .icon-xl {
+    @apply icon-x-large;
+  }
+
+  .icon-gray {
+    @apply fill-gray-600;
+  }
+
+  .icon-primary {
+    @apply fill-primary;
+  }
+}

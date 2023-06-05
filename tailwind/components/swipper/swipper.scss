@@ -1,0 +1,10 @@
+@layer components {
+  .swiper-button-next,
+  .swiper-button-prev {
+    @apply bg-white text-white p-10 rounded-full scale-50 text-[20px] border-[1px];
+  }
+
+  .swiper-button-disabled {
+    @apply hidden invisible;
+  }
+}

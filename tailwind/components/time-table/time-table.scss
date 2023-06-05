@@ -1,0 +1,33 @@
+@layer components {
+  .time-table .nav-tabs li a {
+    @apply block font-medium text-xs leading-tight uppercase border-x-0 border-t-0 border-b-2 border-transparent px-6 p-0 my-0;
+  }
+
+  .time-table .nav-tabs li a.active {
+    @apply text-blue-300 fill-blue-300 border-blue-300 border-0;
+  }
+
+  .time-table .nav-tabs li a.active p:nth-child(2) {
+    @apply border-b-2 border-blue-300;
+  }
+
+  .time-table .nav-tabs li a div {
+    @apply flex flex-col text-center h-20 justify-around items-center p-0 text-[16px] font-bold pt-2;
+  }
+
+  .time-table .nav-tabs li a div p {
+    @apply pb-4;
+  }
+
+  .time-table .nav-tabs li a div p:nth-child(2) {
+    @apply text-[18px] font-semibold text-gray-600  w-8;
+  }
+
+  .list-options input[type='radio'] + label {
+    @apply fill-gray-400 cursor-pointer;
+  }
+
+  .list-options input[type='radio']:checked + label {
+    @apply fill-blue-400;
+  }
+}
