@@ -3,15 +3,17 @@
     <div class="m-5">
       <p class="">Nuxt pages:</p>
       <div class="gap-3 flex">
-        Active:
+        <p class="">Active:</p>
         <nuxt-link class="btn-success" :to="`${prefix}/user/login`">Login (mobile and password)</nuxt-link>
         <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/login-email-password`">Login (email and password)
         </nuxt-link>
-        <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/login-username-password`">Login (username and password)
+        <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/login-username-password`">Login (username and
+          password)
         </nuxt-link>
         <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/login-oauth`">Login (OAuth)</nuxt-link>
         <nuxt-link class="btn-success" :to="`${prefix}/user/register`">Register (name - mobile - password)</nuxt-link>
-        <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/register-username-password`">Register (username password)
+        <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/register-username-password`">Register (username
+          password)
         </nuxt-link>
         <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/register-oauth`">Register (OAuth)</nuxt-link>
         <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/verify`">Verify (SMS)</nuxt-link>
@@ -19,7 +21,7 @@
         <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/success`">Success Registration</nuxt-link>
       </div>
       <div class="gap-3 flex mt-5">
-        Archived:
+        <p class="">Archived:</p>
         <nuxt-link class="btn-success-outlined btn-disabled" :to="`${prefix}/market`">Market Landing</nuxt-link>
         <nuxt-link class="btn-success-outlined btn-disabled" :to="`${prefix}/market/profile`">Profile</nuxt-link>
         <nuxt-link class="btn-success-outlined btn-disabled" :to="`${prefix}/market/profile/orders`">Orders</nuxt-link>
