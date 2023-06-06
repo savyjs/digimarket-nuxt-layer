@@ -18,7 +18,7 @@
         <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/verify-otp`">Verify (OTP or Email)</nuxt-link>
         <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/success`">Success Registration</nuxt-link>
       </div>
-      <div class="gap-3 flex">
+      <div class="gap-3 flex mt-5">
         Archived:
         <nuxt-link class="btn-success-outlined btn-disabled" :to="`${prefix}/market`">Market Landing</nuxt-link>
         <nuxt-link class="btn-success-outlined btn-disabled" :to="`${prefix}/market/profile`">Profile</nuxt-link>
