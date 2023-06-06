@@ -1,9 +1,9 @@
 <template>
-  <div class="absolute">
+  <div>
     <div class="flex">
-      <select v-model="locale" class="input">
-        <option selected value="en">En</option>
-        <option value="fa">فا</option>
+      <select v-model="locale" class="list bg-transparent text-white">
+        <option class="bg-gray-700" selected value="en">En</option>
+        <option class="bg-gray-700" value="fa">فا</option>
       </select>
     </div>
   </div>
