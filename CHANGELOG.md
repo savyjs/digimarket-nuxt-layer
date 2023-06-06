@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.0](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.4.2...v1.0.0) (2023-06-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* move pages into pages/v1 for ability to add into .nuxtignore
+
+### Features
+
+* add tailwind components ([7e23ce7](https://github.com/savyjs/digimarket-nuxt-layer/commit/7e23ce75824b3a9fca649c09bbf77849eabf0a14))
+* add useRtl and rtlDictionary in the AppCongfig ([28e9586](https://github.com/savyjs/digimarket-nuxt-layer/commit/28e9586377c41b598efd7ef68f95151879651ac0))
+
+
+### BREAKING
+
+* move pages into pages/v1 for ability to add into .nuxtignore ([e85ccbf](https://github.com/savyjs/digimarket-nuxt-layer/commit/e85ccbf88efbe5313d30fad23eb4fbdde4a544b3))
+
 ## [0.4.2](https://github.com/savyjs/digimarket-nuxt-module/compare/v0.3.0...v0.4.2) (2023-06-04)
 
 
