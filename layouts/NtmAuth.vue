@@ -1,20 +1,23 @@
 <template>
-  <div :class="{'light': !darkmode , 'rtl': rtl,'min-h-screen' : true,'bg-default' : true }">
-    <LangNtmSwitchLang/>
-    <div class="grid h-full min-w-full content-center py-10">
-      <div
-          class="mx-auto max-w-md rounded-lg border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6 lg:p-6">
-        <div class="mb-5 flex w-full justify-center text-center">
-          <nuxt-link to="/" v-if="logo || title">
-            <a class="text-link px-0.5">
-              <img width="150" height="40" :src="logo" :alt="title"/>
-            </a>
-          </nuxt-link>
+  <NuxtLayout name="ntm-demo">
+    <div :class="{'light': !darkmode , 'rtl': rtl,'min-h-screen' : true,'bg-default' : true }">
+      <div class="container mx-auto">
+        <div class="h-full min-w-full py-10">
+          <div
+              class="mx-auto max-w-md rounded-lg border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6 lg:p-6">
+            <div class="mb-5 flex w-full justify-center text-center">
+              <nuxt-link to="/" v-if="logo || title">
+                <a class="text-link px-0.5">
+                  <img width="150" height="40" :src="logo" :alt="title"/>
+                </a>
+              </nuxt-link>
+            </div>
+            <slot/>
+          </div>
         </div>
-        <slot/>
       </div>
     </div>
-  </div>
+  </NuxtLayout>
 </template>
 <script setup>
 
