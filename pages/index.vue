@@ -1,7 +1,7 @@
 <template>
   <div class="m-5">
     <div class="m-5">
-      <p class="my-5">Nuxt pages:</p>]
+      <p class="my-5">Nuxt pages:</p>
       <p class="">Active:</p>
       <div class="gap-3 flex">
         <nuxt-link class="btn-success" :to="`${prefix}/user/login`">Login (mobile and password)</nuxt-link>
