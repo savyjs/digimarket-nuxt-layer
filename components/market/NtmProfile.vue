@@ -7,7 +7,7 @@
             <div class="list list-timeline py-2">
               <div class="list-item">
                 <div class="list-item-avatar">
-                  <img src="@ntmRoot/assets/img/profile/avatar.svg"/>
+                  <img src="/assets/img/profile/avatar.svg"/>
                 </div>
                 <div class="list-item-text flex w-full justify-between">
                   <div class="grow">
@@ -81,7 +81,7 @@
                 <div class="flex">
                   <div class='product-carousel gap-1 mx-1 border-l-[1px] px-4'>
                     <div class='justify-between self-start'>
-                      <img src="@ntmRoot/public/dkala/SpecialSell.svg"/>
+                      <img src="/public/dkala/SpecialSell.svg"/>
                     </div>
                     <div class='image inline-block justify-center grow w-full flex py-12'>
                       <div class='justify-between self-end'>

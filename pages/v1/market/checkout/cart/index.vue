@@ -33,7 +33,7 @@
                  class='card-primary my-5 grid grid-cols-1 items-center justify-center text-center align-middle'
                  role='tabpanel' aria-labelledby='cart-tab'>
                 <div class='flex w-full justify-center'>
-                    <img src='@ntmRoot/public/dkala/empty-cart.svg' />
+                    <img src='/public/dkala/empty-cart.svg' />
                 </div>
                 <div class='my-5'>
                     <h1>سبد خرید شما خالی است!</h1>
@@ -59,7 +59,7 @@
                         <div class='card-primary'>
                             <div class="items-center justify-center align-middle grid-cols-1 grid text-center">
                                 <div class="flex w-full justify-center">
-                                    <img src="@ntmRoot/public/dkala/empty-cart.png" width="25%"/>
+                                    <img src="/public/dkala/empty-cart.png" width="25%"/>
                                 </div>
                                 <div class="my-5">
                                     <h1>سبد خرید بعدی شما خالی است!</h1>
