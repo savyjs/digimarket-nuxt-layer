@@ -1,9 +1,9 @@
 <template>
   <div class="m-5">
     <div class="m-5">
-      <p class="">Nuxt pages:</p>
+      <p class="my-5">Nuxt pages:</p>]
+      <p class="">Active:</p>
       <div class="gap-3 flex">
-        <p class="">Active:</p>
         <nuxt-link class="btn-success" :to="`${prefix}/user/login`">Login (mobile and password)</nuxt-link>
         <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/login-email-password`">Login (email and password)
         </nuxt-link>
@@ -20,7 +20,7 @@
         <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/verify-otp`">Verify (OTP or Email)</nuxt-link>
         <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/success`">Success Registration</nuxt-link>
       </div>
-      <p class="">Archived:</p>
+      <p class="my-3">Archived:</p>
       <div class="gap-3 flex mt-5">
         <nuxt-link class="btn-success-outlined btn-disabled" :to="`${prefix}/market`">Market Landing</nuxt-link>
         <nuxt-link class="btn-success-outlined btn-disabled" :to="`${prefix}/market/profile`">Profile</nuxt-link>
