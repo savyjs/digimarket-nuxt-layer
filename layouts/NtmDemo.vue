@@ -1,6 +1,6 @@
 <template>
-  <div :class="{'bg-gray-900':true,'fixed':true,'w-full':true}">
-    <div class="container mx-auto py-1">
+  <div :class="{'bg-teal-900':true,'fixed':true,'w-full':true}">
+    <div class="container mx-auto py-1 ">
       <div class="flex justify-between">
         <p class="text-white flex">
           {{ $t('demo_warning', 'Hello! This site is demo for digimarket kit. for documentation please go to ') }}
