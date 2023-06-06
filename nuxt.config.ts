@@ -15,6 +15,6 @@ export default defineNuxtConfig({
         join(currentDir, "./tailwind/all.css")
     ],
     nitro:{
-        preset: "netlify"
+        preset: "netlify-edge"
     }
 })
