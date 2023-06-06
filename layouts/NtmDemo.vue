@@ -1,10 +1,13 @@
 <template>
   <div>
-    <div class="container">
+    <div class="container mx-auto">
       <div class="flex justify-between">
         <span>{{ $t('demo_warning', 'This is a demo! for document go to ') }} <a href="https://digimarket.savyjs.com">digimarket documents</a></span>
         <span>
-        <LangNtmSwitchLang/>
+        <span>
+          <LangNtmSwitchLang/>
+          <
+        </span>
       </span>
       </div>
     </div>
