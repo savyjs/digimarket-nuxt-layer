@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.5.0](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.4.3...v0.5.0) (2023-06-06)
+
+
+### Features
+
+* add demo navbar ([f054284](https://github.com/savyjs/digimarket-nuxt-layer/commit/f0542842f22e6702ec2962a13c64e4268fd97926))
+
+
+### Bug Fixes
+
+* add demo navbar teal color ([23e10c4](https://github.com/savyjs/digimarket-nuxt-layer/commit/23e10c449fce447555565d3291d84a2b3f40368e))
+* center container ([56c3eb3](https://github.com/savyjs/digimarket-nuxt-layer/commit/56c3eb3e3f14fafc820596683fef76b50490b462))
+* rename files ([ac35784](https://github.com/savyjs/digimarket-nuxt-layer/commit/ac35784fbabc4bbb062b556f068eff2137c071e1))
+
 ## [0.4.3](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.4.2...v0.4.3) (2023-06-06)
 
 
