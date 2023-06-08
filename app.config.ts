@@ -22,7 +22,7 @@ export default defineAppConfig({
         divisions: [
             {
                 key: '1',
-                title: 'Asia',
+                title: 'America',
                 items: [{
                     key: "1",
                     title: "US",
