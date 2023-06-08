@@ -1,59 +1,23 @@
 import {defineAppConfig} from "#app";
 import {DigimarketConfig} from "~/schema/types/options";
 
-const Provinces = [
-    {
-        key: '1',
-        title: 'آذربایجان شرقی',
-    },
-    {
-        key: '2',
-        title: 'آذربایجان غربی',
-    },
-    {
-        key: '3',
-        title: 'اردبیل',
-    },
-    {
-        key: '4',
-        title: 'اصفهان',
-    },
-    {
-        key: '5',
-        title: 'البرز',
-    },
-    {
-        key: '6',
-        title: 'ایلام',
-    },
-    {
-        key: '7',
-        title: 'بوشهر',
-    },
-    {
-        key: '8',
-        title: 'تهران',
-    },
-    {
-        key: '9',
-        title: 'چهارمحال و بختیاری',
-    },
-];
+const Provinces = [];
 
 export default defineAppConfig({
     digimarket: <DigimarketConfig>{
+
         rtlDictionary: {
             en: false,
             fa: true
         },
-        lang: 'fa',
-        rtl: true,
+        lang: 'en',
+        rtl: false,
         logo: '/logo.png',
         title: 'Title Here',
         profileMenuItems: [
-            {icon: 'fa fa-plus', text: 'premium a', svg: 'plus', link: '/profile/plus'},
-            {icon: 'fa fa-list', text: 'my activites', svg: 'list', link: '/profile/activity'},
-            {icon: 'fa fa-list', text: 'سفارش‌ها', svg: 'order', link: '/profile/orders'},
+            {icon: 'fa fa-plus', text: 'Premium Account', svg: 'plus', link: '/v1/profile/plus'},
+            {icon: 'fa fa-list', text: 'My Actiity', svg: 'list', link: '/v1/profile/activity'},
+            {icon: 'fa fa-list', text: 'Orders', svg: 'order', link: '/v1/profile/orders'},
         ],
         divisions: [
             {

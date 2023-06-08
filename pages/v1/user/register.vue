@@ -5,6 +5,7 @@
 <script setup>
 import NtmRegisterBox from "~/components/user/NtmRegisterBox.vue";
 
-async function login(data) {
+async function register(data) {
+
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class=" font-weight-bold pull-right text-[18px]">
+    <h1 class="font-weight-bold pull-right text-[18px]">
       {{ $t('login', 'Login') }}
     </h1>
     <div>
@@ -12,12 +12,20 @@
           </p>
         </div>
 
-        <slot>
-          <NtmGetMobile/>
-          <NtmGetPassword/>
 
-        </slot>
-        <button @click="$emit('action',credential)" class="btn-primary w-full mt-5 py-3.5">
+        <div>
+          <div>
+            <input
+                type="text"
+                v-model="credentials.name"
+                class="input-primary py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                required
+            />
+          </div>
+        </div>
+
+
+        <button @click="$emit('action',credentials)" class="btn-primary w-full mt-5 py-3.5">
           {{ $t('ntm.login_title', 'Login') }}
         </button>
 
@@ -30,8 +38,6 @@
 
 </template>
 <script setup lang="ts">
-import NtmGetPassword from "~/components/user/NtmGetPassword.vue";
-
+const credentials = ref({})
 const title = useAppConfig()?.digimarket?.title;
-import NtmGetMobile from "~/components/user/NtmGetMobile.vue";
 </script>
