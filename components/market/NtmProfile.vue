@@ -111,7 +111,7 @@
                           <span class="self-center">۶%</span>
                         </div>
                         <div class="flex">
-                          <div class='mx-1 ltr'>۳۶,۵۰۰
+                          <div class='mx-1'>۳۶,۵۰۰
                             <p class="text-gray-400 text-[80%] font-light line-through">۳۹,۵۰۰</p>
                           </div>
                           <div class=''>

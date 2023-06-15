@@ -9,7 +9,7 @@
               :key="category.key"
               :to="`/categories/${category.key}`"
               @mouseover="megaMenuMainCategoryIndex = index"
-              class="hover flex items-center px-1 py-4 text-right hover:bg-gray-100 hover:fill-red-500 hover:text-red-500"
+              class="hover flex items-center px-1 py-4 hover:bg-gray-100 hover:fill-red-500 hover:text-red-500"
           >
             <svg class="h-4 w-4" fill="currentColor">
               <use :href="category?.icon"></use>
@@ -21,7 +21,7 @@
       <div v-if="mainCategory" class="w-full px-4">
         <div class="flex">
           <div class="w-4/5">
-            <a class="flex cursor-pointer py-4 text-right text-[11px] text-gray-700">
+            <a class="flex cursor-pointer py-4 text-[11px] text-gray-700">
               <span class="pl-1">همه </span>
               <span>{{ mainCategory?.title }}</span>
               <svg class="h-4 w-4" fill="currentColor">

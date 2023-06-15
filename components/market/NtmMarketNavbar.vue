@@ -1,5 +1,5 @@
 <template>
-  <div :class="`rtl bg-default navbar-wrapper ${showNavbar ? 'show-nav' : 'hide-nav'}`">
+  <div :class="`bg-default navbar-wrapper ${showNavbar ? 'show-nav' : 'hide-nav'}`">
     <nav class="nav bg-default">
       <ul class="flex items-end md:text-[12px] lg:text-[13px]">
         <li @mouseover="megaMenuStatus = true" @mouseleave="megaMenuStatus = false">

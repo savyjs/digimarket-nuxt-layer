@@ -38,7 +38,7 @@
               </div>
               <div class="p-1">
                 <div class="text-body-2 rounded-8p ">
-                  <div class="mt-3 text-right">
+                  <div class="mt-3">
                     <span>جستجوهای پرطرفدار</span>
                   </div>
 

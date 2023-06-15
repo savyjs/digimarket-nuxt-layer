@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto rtl">
+    <div class="container mx-auto">
         <NtmSvgIcons/>
         <NtmMarketHeader/>
         <main class="container mx-auto mt-[110px]">

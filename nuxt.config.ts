@@ -7,8 +7,7 @@ const Provinces = [];
 
 export default defineNuxtConfig({
     modules: [
-        "@nuxtjs/tailwindcss",
-        // "@nuxtjs/i18n"
+        "@nuxtjs/tailwindcss"
     ],
     css: [
         join(currentDir, "./assets/styles/ntm.scss"),

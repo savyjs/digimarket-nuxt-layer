@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout name="ntm-demo">
-    <div :class="{'light': !darkmode , 'rtl': rtl,'min-h-screen' : true,'bg-default' : true }">
+    <div :class="{'light': !darkmode , 'min-h-screen' : true,'bg-default' : true }">
       <div class="container mx-auto">
         <div class="h-full min-w-full py-10">
           <div

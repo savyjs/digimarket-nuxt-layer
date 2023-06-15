@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h1 class="rtl font-weight-bold pull-right text-[18px]">
+    <h1 class="font-weight-bold pull-right text-[18px]">
       {{ $t('register', 'Register') }}
     </h1>
     <div>
-      <div class="rtl mb-6">
-        <div class="font-light rtl my-5 block text-right text-[12px] text-gray-900 dark:text-gray-300">
+      <div class="mb-6">
+        <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
           <p class="my-1 font-light">{{ $t('hello', 'Hello') }}</p>
           <p class="font-light">
             {{ $t('fill_credentials', 'please fill requested information') }}
@@ -32,7 +32,6 @@
                     required
                 />
               </div>
-
             </div>
           </div>
 
@@ -40,8 +39,8 @@
             {{ $t('ntm.register_title', 'Register') }}
           </button>
           <div class="flex gap-1 ">
-            <input type="checkbox" for="terms_and_conditions"/>
-            <p id="terms_and_conditions" class="font-weight-light mt-5 w-full text-right text-[10px]">
+            <input type="checkbox" id="terms_and_conditions"/>
+            <p id="terms_and_conditions" class="font-weight-light mt-5 w-full  text-[10px]">
               {{ $t("ntm.terms_and_conditions", {title}) }}
             </p>
           </div>

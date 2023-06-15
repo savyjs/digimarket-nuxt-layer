@@ -1,5 +1,5 @@
 <template>
-  <header class="relative rtl container-4xl-w z-[3] flex w-full bg-default px-3 pt-4 pb-1">
+  <header class="relative container-4xl-w z-[3] flex w-full bg-default px-3 pt-4 pb-1">
     <div class="flex-auto">
       <div class="flex w-full items-center">
         <a href="/" class="ml-5 shrink-0">

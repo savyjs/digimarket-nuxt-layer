@@ -1,5 +1,5 @@
 <template>
-  <footer class="rtl border-n-200 w-full border-t bg-white pt-2">
+  <footer class="border-n-200 w-full border-t bg-white pt-2">
     <div class="container-4xl-w mx-auto ">
       <div class="px-5">
         <div class="flex select-none items-center justify-between">

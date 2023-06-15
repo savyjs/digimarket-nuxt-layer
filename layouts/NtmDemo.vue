@@ -1,4 +1,5 @@
 <template>
+  <Html :lang="lang" :dir="dir ? 'rtl' : 'ltr'">
   <div :class="{'bg-teal-900':true,'fixed':true,'w-full':true}">
     <div class="container mx-auto py-1 ">
       <div class="flex justify-between">
@@ -34,8 +35,17 @@
     </div>
     <slot/>
   </div>
+  </Html>
 </template>
 <script setup>
+
+import {useI18n} from "vue-i18n";
+
+let {locale} = useI18n()
+
+let dir = useRtl()
+let lang = locale
+
 
 const darkmode = useDarkmode()
 const rtl = useRtl()

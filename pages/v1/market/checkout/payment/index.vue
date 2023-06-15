@@ -100,7 +100,7 @@
                                 خلاصه سفارش
                             </h3>
                             <div class='flex items-center gap-3 py-3'>
-                                <div class='text-right'>
+                                <div class=''>
                                     <div>
                                         <svg
                                                 class='icon-primary w-8 h-8 fill-red-600'>
@@ -109,7 +109,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <div class='text-right space-y-2 w-full'>
+                                <div class=' space-y-2 w-full'>
                                     <div class='flex w-full gap-2 items-center'>
                                         <h2>پنج‌شنبه ۱۱ فروردین - بازه ۱۵-۱۸</h2>
                                         <span

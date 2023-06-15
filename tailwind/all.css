@@ -6,17 +6,16 @@
 @import 'general/colors.css';
 @import 'general/styles.css';
 
-@import './components/alert/alert.scss';
-@import './components/badge/badge.scss';
-@import './components/card/card.scss';
-@import './components/button/button.scss';
-@import './components/elements/input.scss';
-@import './components/elements/radio.scss';
-@import './components/elements/checkbox.scss';
-@import './components/list/list.scss';
-@import './components/modal/modal.scss';
-@import './components/swipper/swipper.scss';
-@import './components/time-table/time-table.scss';
-@import './components/tab/tab.scss';
-@import './components/product-box/product-box.scss';
-
+@import 'components/alert/alert.scss';
+@import 'components/badge/badge.scss';
+@import 'components/card/card.scss';
+@import 'components/button/button.scss';
+@import 'components/elements/input.scss';
+@import 'components/elements/radio.scss';
+@import 'components/elements/checkbox.scss';
+@import 'components/list/list.scss';
+@import 'components/modal/modal.scss';
+@import 'components/swipper/swipper.scss';
+@import 'components/time-table/time-table.scss';
+@import 'components/tab/tab.scss';
+@import 'components/product-box/product-box.scss';

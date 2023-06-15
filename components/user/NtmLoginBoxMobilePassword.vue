@@ -5,7 +5,7 @@
     </h1>
     <div>
       <div class=" mb-6">
-        <div class="font-light  my-5 block text-right text-[12px] text-gray-900 dark:text-gray-300">
+        <div class="font-light  my-5 block text-[12px] text-gray-900 dark:text-gray-300">
           <p class="my-1 font-light">{{ $t('hello', 'Hello') }}</p>
           <p class="font-light">
             {{ $t('welocme', 'welcome') }}
@@ -29,7 +29,7 @@
           {{ $t('ntm.login_title', 'Login') }}
         </button>
 
-        <p class="font-weight-light mt-5 w-full text-right text-[10px]">
+        <p class="font-weight-light mt-5 w-full text-[10px]">
           {{ $t("ntm.terms_and_conditions", {title: $t(title)}) }}
         </p>
       </div>

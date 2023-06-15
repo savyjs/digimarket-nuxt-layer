@@ -8,11 +8,11 @@
   }
 
   .product-box-primary .title {
-    @apply text-right text-[14px] mb-5;
+    @apply  text-[14px] mb-5;
   }
 
   .product-box-primary .attributes {
-    @apply text-right text-[12px] font-light text-gray-700 space-y-2;
+    @apply  text-[12px] font-light text-gray-700 space-y-2;
   }
 
   .product-box-primary .btn-gray-outlined {
@@ -36,7 +36,7 @@
   }
 
   .product-box-primary .delivery {
-    @apply grow-0 text-right flex gap-3 w-1/2 font-light text-[14px];
+    @apply grow-0  flex gap-3 w-1/2 font-light text-[14px];
   }
 
   .product-box-primary .delivery .icon-gray {

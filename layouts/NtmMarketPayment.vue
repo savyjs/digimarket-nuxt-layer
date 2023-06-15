@@ -49,7 +49,7 @@
     </div>
     <NtmSvgIcons/>
     <main>
-      <div class='container mx-auto rtl'>
+      <div class='container mx-auto '>
         <nuxt-page/>
       </div>
     </main>

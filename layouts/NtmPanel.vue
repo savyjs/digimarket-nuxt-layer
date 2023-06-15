@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'light': !darkmode , 'rtl': rtl,'min-h-screen' : true,'bg-default' : true }">
+  <div :class="{'light': !darkmode ,'min-h-screen' : true,'bg-default' : true }">
     <NtmMarketHeader/>
     <main class="container bg-default mx-auto pt-[110px]">
       <transition>

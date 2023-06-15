@@ -124,7 +124,7 @@
 
             <div class='card-primary p-6 py-0 gap-5 pt-10'>
               <div class='flex items-center gap-3'>
-                <div class='text-right'>
+                <div class=''>
                   <div>
                     <svg
                         class='icon-primary w-8 h-8 fill-red-600'>
@@ -133,7 +133,7 @@
                     </svg>
                   </div>
                 </div>
-                <div class='text-right space-y-2'>
+                <div class=' space-y-2'>
                   <div class='flex gap-2 items-center'>
                     <h2>ارسال عادی</h2>
                     <span
@@ -244,7 +244,7 @@
                                 </div>
                                 <div>
                                   <label htmlFor='country-option-2'
-                                         class='block text-right ml-2 text-[14px] text-sm font-medium text-gray-900 dark:text-gray-300'>
+                                         class='block  ml-2 text-[14px] text-sm font-medium text-gray-900 dark:text-gray-300'>
                                     خیابان ۱۷ شهریور (شهربانی)،رو به روی مجتمع تجاری
                                     سیتی سنتر ،جنب اداره پست،مرکز
                                     لجستیک دیجی کالا
@@ -269,7 +269,7 @@
                                 </div>
                                 <div>
                                   <label htmlFor='country-option-2'
-                                         class='block text-right ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
+                                         class='block  ml-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
                                     خیابان ۱۷ شهریور (شهربانی)،رو به روی مجتمع تجاری
                                     سیتی سنتر ،جنب اداره پست،مرکز
                                     لجستیک دیجی کالا
