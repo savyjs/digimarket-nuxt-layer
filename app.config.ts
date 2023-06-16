@@ -5,7 +5,6 @@ const Provinces = [];
 
 export default defineAppConfig({
     digimarket: <DigimarketConfig>{
-
         rtlDictionary: {
             en: false,
             fa: true
@@ -13,7 +12,7 @@ export default defineAppConfig({
         lang: 'en',
         rtl: false,
         logo: '/logo.png',
-        title: 'Title Here',
+        title: 'title',
         profileMenuItems: [
             {icon: 'fa fa-plus', text: 'Premium Account', svg: 'plus', link: '/v1/profile/plus'},
             {icon: 'fa fa-list', text: 'My Actiity', svg: 'list', link: '/v1/profile/activity'},

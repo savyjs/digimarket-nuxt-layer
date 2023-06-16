@@ -1,49 +1,96 @@
 <template>
   <div>
     <h1 class="font-weight-bold pull-right text-[18px]">
-      {{ $t('register', 'Register') }}
+      {{ $t('ntm.register', 'Register') }}
     </h1>
     <div>
       <div class="mb-6">
         <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
-          <p class="my-1 font-light">{{ $t('hello', 'Hello') }}</p>
-          <p class="font-light">
-            {{ $t('fill_credentials', 'please fill requested information') }}
+          <p class="my-1 font-light">
+            {{ $t('ntm.hello', 'Hello') }},
+            {{ $t('ntm.fill_credentials', 'please fill requested information') }}
           </p>
         </div>
 
-        <div class="form-group">
-          <div class="element-group">
-            <label for="name">{{ $t("mobile", "Mobile") }}</label>
+
+        <div class="form-group flex flex-col gap-5">
+          <div class="element-group w-full  flex flex-col gap-1">
+            <label for="name" class="py-2">{{ $t("ntm.mobile", "Mobile") }}</label>
             <input
+                dir="auto"
                 id="name"
                 type="text"
                 v-model="credentials.name"
                 class="input-primary input-mobile py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
             />
-            <div>
-              <div class="element-group">
-                <label>{{ $t("email", "Email") }}</label>
-                <input
-                    type="email"
-                    v-model="credentials.email"
-                    class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
-                    required
-                />
-              </div>
-            </div>
           </div>
 
+          <div class="element-group w-full  flex flex-col gap-1">
+            <label for="password" class="py-2">{{ $t("ntm.password", "Password") }}</label>
+            <input
+                id="password"
+                type="password"
+                v-model="credentials.password"
+                class="input-primary input-password py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                required
+            />
+          </div>
+          <div class="element-group w-full  flex flex-col gap-1">
+            <label for="password_confirmation" class="py-2">{{ $t("ntm.password_confirmation", "Password Confirmation") }}</label>
+            <input
+                id="password_confirmation"
+                type="password"
+                v-model="credentials.password_confirmation"
+                class="input-primary input-password py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                required
+            />
+          </div>
+
+          <div class="element-group w-full flex flex-col gap-1">
+            <label for="email">{{ $t("ntm.email", "Email") }}</label>
+            <input
+                dir="auto"
+                type="email"
+                id="email"
+                v-model="credentials.email"
+                class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                required
+            />
+          </div>
+
+          <div class="element-group w-full flex flex-col gap-1">
+            <label for="first_name">{{ $t("ntm.first_name", "First Name") }}</label>
+            <input
+                dir="auto"
+                type="text"
+                id="first_name"
+                v-model="credentials.first_name"
+                class="input-primary input-text py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                required
+            />
+          </div>
+          <div class="element-group w-full flex flex-col gap-1">
+            <label for="last_name">{{ $t("ntm.last_name", "Last Name") }}</label>
+            <input
+                dir="auto"
+                type="text"
+                id="last_name"
+                v-model="credentials.last_name"
+                class="input-primary input-text py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                required
+            />
+          </div>
+
+          <div class="flex py-4 gap-2 items-baseline">
+            <input type="checkbox" id="terms_and_conditions"/>
+            <label for="terms_and_conditions" class="self-center font-weight-light w-full text-[10px]">
+              {{ $t("ntm.terms_and_conditions", {title:$t(title)}) }}
+            </label>
+          </div>
           <button type="submit" class="btn-primary w-full mt-5 py-3.5">
             {{ $t('ntm.register_title', 'Register') }}
           </button>
-          <div class="flex gap-1 ">
-            <input type="checkbox" id="terms_and_conditions"/>
-            <p id="terms_and_conditions" class="font-weight-light mt-5 w-full  text-[10px]">
-              {{ $t("ntm.terms_and_conditions", {title}) }}
-            </p>
-          </div>
         </div>
       </div>
     </div>

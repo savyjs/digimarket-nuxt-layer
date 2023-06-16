@@ -5,13 +5,11 @@
     </h1>
     <div>
       <div class=" mb-6">
-        <div class="font-light  my-5 block text-[12px] text-gray-900 dark:text-gray-300">
-          <p class="my-1 font-light">{{ $t('hello', 'Hello') }}</p>
-          <p class="font-light">
-            {{ $t('welocme', 'welcome') }}
+        <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
+          <p class="my-1 font-light">
+            {{ $t('ntm.hello', 'Hello') }}, {{ $t('welocme', 'welcome') }}
           </p>
         </div>
-
 
         <div>
           <div>
@@ -23,7 +21,6 @@
             />
           </div>
         </div>
-
 
         <button @click="$emit('action',credentials)" class="btn-primary w-full mt-5 py-3.5">
           {{ $t('ntm.login_title', 'Login') }}
@@ -38,6 +35,9 @@
 
 </template>
 <script setup lang="ts">
+import {useI18n} from "vue-i18n";
+
 const credentials = ref({})
-const title = useAppConfig()?.digimarket?.title;
+let {t} = useI18n()
+const title = t(useAppConfig()?.digimarket?.title);
 </script>

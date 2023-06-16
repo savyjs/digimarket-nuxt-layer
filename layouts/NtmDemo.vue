@@ -33,8 +33,8 @@
         </div>
       </div>
     </div>
-    <slot/>
   </div>
+  <slot/>
   </Html>
 </template>
 <script setup>

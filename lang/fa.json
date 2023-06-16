@@ -1,6 +1,15 @@
 {
-  "register": "ثبت نام",
   "ntm": {
+    "title": "دیجی‌مارکت",
+    "register": "ثبت نام",
+    "email": "پست‌الکترونیک",
+    "mobile": "موبایل",
+    "password": "رمزعبور",
+    "password_confirmation": "تایید رمز عبور",
+    "first_name": "نام",
+    "last_name": "نام خانوادگی",
+    "hello": "سلام!",
+    "fill_credentials": "لطفا موارد خواسته شده را پر کنید",
     "login_title": "ورود",
     "register_title": "ثبت‌نام",
     "terms_and_conditions": "شرایط و قوانین {title} را می‌پذیرم"
