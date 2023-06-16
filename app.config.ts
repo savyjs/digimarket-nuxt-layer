@@ -12,7 +12,7 @@ export default defineAppConfig({
         lang: 'en',
         rtl: false,
         logo: '/logo.png',
-        title: 'title',
+        title: 'ntm.title',
         profileMenuItems: [
             {icon: 'fa fa-plus', text: 'Premium Account', svg: 'plus', link: '/v1/profile/plus'},
             {icon: 'fa fa-list', text: 'My Actiity', svg: 'list', link: '/v1/profile/activity'},

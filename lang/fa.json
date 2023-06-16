@@ -11,6 +11,10 @@
     "hello": "سلام!",
     "fill_credentials": "لطفا موارد خواسته شده را پر کنید",
     "login_title": "ورود",
+    "already_have_account": "من یک حساب کاربری دارم،",
+    "dont_have_account": "حساب کاربری ندارید؟",
+    "forgot_password": "رمزعبور خود را فراموش کرده‌ام،",
+    "forgot_title": "بازیابی رمزعبور",
     "register_title": "ثبت‌نام",
     "terms_and_conditions": "شرایط و قوانین {title} را می‌پذیرم"
   }

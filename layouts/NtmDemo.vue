@@ -34,7 +34,9 @@
       </div>
     </div>
   </div>
-  <slot/>
+  <div class="pt-8">
+    <slot/>
+  </div>
   </Html>
 </template>
 <script setup>
@@ -50,4 +52,27 @@ let lang = locale
 const darkmode = useDarkmode()
 const rtl = useRtl()
 const version = 1
+
+
+onMounted(() => {
+  // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    darkmode.value = true;
+  } else {
+    darkmode.value = false;
+  }
+
+  rtl.value = !!localStorage.rtl
+  locale.value = localStorage.lang
+
+
+  watch(lang, function (newVal) {
+    localStorage.lang = newVal
+  })
+  watch(rtl, function (newVal) {
+    localStorage.rtl = newVal
+  })
+
+})
+
 </script>

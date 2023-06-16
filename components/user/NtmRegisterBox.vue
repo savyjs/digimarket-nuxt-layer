@@ -7,13 +7,14 @@
       <div class="mb-6">
         <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
           <p class="my-1 font-light">
-            {{ $t('ntm.hello', 'Hello') }},
-            {{ $t('ntm.fill_credentials', 'please fill requested information') }}
+            {{ $t('ntm.hello', 'Hello') }}
+            <br/>
+            {{ $t('ntm.fill_credentials', 'Please fill requested information') }}
           </p>
         </div>
 
 
-        <div class="form-group flex flex-col gap-5">
+        <div class="form-group flex flex-col gap-4">
           <div class="element-group w-full  flex flex-col gap-1">
             <label for="name" class="py-2">{{ $t("ntm.mobile", "Mobile") }}</label>
             <input
@@ -37,7 +38,9 @@
             />
           </div>
           <div class="element-group w-full  flex flex-col gap-1">
-            <label for="password_confirmation" class="py-2">{{ $t("ntm.password_confirmation", "Password Confirmation") }}</label>
+            <label for="password_confirmation" class="py-2">{{
+                $t("ntm.password_confirmation", "Password Confirmation")
+              }}</label>
             <input
                 id="password_confirmation"
                 type="password"
@@ -85,12 +88,21 @@
           <div class="flex py-4 gap-2 items-baseline">
             <input type="checkbox" id="terms_and_conditions"/>
             <label for="terms_and_conditions" class="self-center font-weight-light w-full text-[10px]">
-              {{ $t("ntm.terms_and_conditions", {title:$t(title)}) }}
+              {{ $t("ntm.terms_and_conditions", {title: $t(title)}) }}
             </label>
           </div>
           <button type="submit" class="btn-primary w-full mt-5 py-3.5">
             {{ $t('ntm.register_title', 'Register') }}
           </button>
+
+          <div class="flex justify-around gap-3 text-xs">
+            <span>
+              {{ $t("ntm.already_have_account", "I already have an account,") }}
+              <a href="./login" class="text-link">
+                {{ $t("ntm.login_title", "Login") }}
+              </a>
+            </span>
+          </div>
         </div>
       </div>
     </div>
