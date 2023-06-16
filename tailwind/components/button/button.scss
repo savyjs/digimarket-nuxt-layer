@@ -35,6 +35,22 @@
     @apply text-success border-success dark:focus:ring-success dark:text-success dark:bg-transparent;
   }
 
+  .btn-warning {
+    @apply btn;
+  }
+
+  .btn-warning {
+    @apply text-white bg-warning dark:bg-warning dark:focus:ring-warning;
+  }
+
+  .btn-warning-outlined {
+    @apply btn-warning bg-transparent border;
+  }
+
+  .btn-warning-outlined {
+    @apply text-warning border-success dark:focus:ring-warning dark:text-warning dark:bg-transparent;
+  }
+
   .btn-black {
     @apply btn;
   }

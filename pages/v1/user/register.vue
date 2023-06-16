@@ -5,8 +5,6 @@
 </template>
 
 <script setup>
-import NtmRegisterBox from "~/components/user/NtmRegisterBox.vue";
-
 async function register(data) {
 
 }

@@ -20,7 +20,7 @@ module.exports = {
                 secondary: '#008eb2',
                 error: '#f44336',
                 success: '#1e7c1e',
-                alert: '#ff9800',
+                warning: '#e0a107',
                 dark: '#212121',
                 primary: '#a41919',
                 accent: '#343232',
