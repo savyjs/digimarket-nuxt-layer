@@ -1,18 +1,22 @@
 <template>
-  <div :class="{'light': !darkmode ,'min-h-screen' : true,'bg-default' : true }">
-    <NtmMarketHeader/>
-    <main class="container bg-default mx-auto pt-[110px]">
-      <transition>
-        <div id="backdrop-searchModal" v-show="backdrop">
-          <div class="backdrop delay-700" @click="backdrop=false"></div>
-        </div>
-      </transition>
-      <NuxtPage/>
-    </main>
-    <NtmSvgIcons/>
-  </div>
+  <NuxtLayout name="ntm-demo">
+    <div :class="{'light': !darkmode ,'min-h-screen' : true,'bg-default' : true }">
+      <main class="container bg-default mx-auto pt-[110px]">
+        <transition>
+          <div id="backdrop-searchModal" v-show="backdrop">
+            <div class="backdrop delay-700" @click="backdrop=false"></div>
+          </div>
+        </transition>
+        <slot/>
+      </main>
+      <NtmSvgIcons/>
+    </div>
+  </NuxtLayout>
 </template>
 <script setup>
+
+import NtmMarketHeader from "~/components/market/NtmMarketHeader.vue";
+import NtmSvgIcons from "~/components/market/NtmSvgIcons.vue";
 
 const darkmode = useDarkmode()
 const rtl = useRtl()

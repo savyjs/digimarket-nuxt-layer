@@ -1,8 +1,6 @@
 pages/v1/market
-pages/v1/profile
 pages/v1/blog
 layouts/NtmPanel.vue
-layouts/NtmMarketShipping.vue
 layouts/NtmMarketShipping.vue
 layouts/NtmMarketPayment.vue
 layouts/NtmMarket.vue

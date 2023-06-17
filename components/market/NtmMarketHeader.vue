@@ -12,4 +12,7 @@
   </div>
 </template>
 <script setup>
+import NtmMarketTop from "~/components/market/NtmMarketTop.vue";
+import NtmMarketTopMobile from "~/components/market/NtmMarketTopMobile.vue";
+import NtmMarketNavbar from "~/components/market/NtmMarketNavbar.vue";
 </script>

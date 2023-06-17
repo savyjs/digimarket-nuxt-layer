@@ -57,6 +57,8 @@
 </template>
 
 <script setup>
+import NtmSearchModal from "~/components/market/NtmSearchModal.vue";
+
 const {logo, title} = [];
 let darkmode = useDarkmode()
 
