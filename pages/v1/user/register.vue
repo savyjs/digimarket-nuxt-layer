@@ -1,6 +1,6 @@
 <template>
   <nuxt-layout name="ntm-auth">
-    <NtmRegisterBox @next="register"/>
+    <UserNtmRegisterBox @next="register"/>
   </nuxt-layout>
 </template>
 

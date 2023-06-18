@@ -1,6 +1,6 @@
 <template>
   <nuxt-layout name="ntm-auth">
-    <NtmForgotBoxMobile @action="forgot" mobile=""/>
+    <UserNtmForgotBoxMobile @action="forgot" mobile=""/>
   </nuxt-layout>
 </template>
 <script setup>
