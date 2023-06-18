@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="flex">
-      <select v-model="locale" class="list bg-transparent text-white">
+      <select v-model="locale" class="btn py-1.5 dark:text-white">
         <option class="bg-gray-700" selected value="en">En</option>
         <option class="bg-gray-700" value="fa">فا</option>
       </select>

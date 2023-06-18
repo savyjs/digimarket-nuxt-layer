@@ -3,6 +3,10 @@
     @apply text-center justify-center flex rounded-lg px-5 py-2.5 text-center text-sm font-medium;
   }
 
+  .btn {
+    @apply text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-dark dark:border-gray-500 dark:border-[1px];
+  }
+
   .btn-primary {
     @apply btn;
   }

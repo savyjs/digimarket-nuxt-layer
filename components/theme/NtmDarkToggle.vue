@@ -2,7 +2,6 @@
   <client-only>
 
     <button id="darkmodeToggle" @click="toggleDarkmode">
-
       <Vue3Lottie
           v-if="showAnime"
           :animationData="darkmode ? lightToDarkJSON : darkToLightJSON"
