@@ -5,9 +5,10 @@
 
       <Vue3Lottie
           v-if="showAnime"
-          :animationData="!darkmode ? darkToLightJSON : lightToDarkJSON"
+          :animationData="darkmode ? lightToDarkJSON : darkToLightJSON"
           :height="34"
           :width="70"
+          speed="4"
       />
       <!--    light-->
       <svg width="70" v-if="!darkmode && !showAnime" height="34" viewBox="0 0 70 34" fill="none"
@@ -4024,169 +4025,15 @@ watch(showAnime, (newVal) => {
   if (!!newVal) {
     setTimeout(() => {
       showAnime.value = false
-    }, 1500)
+    }, 300)
   }
 })
 
 </script>
 
 <style scoped>
-#darkmodeToggle {
-  transition: all linear 150ms;
+#darkmodeToggle , #darkmodeToggle *{
+  transition: all 1000ms;
 }
-
-/*
-The CSS export should solely be used as a reference.
-For a more detailed animation export the JSON file should be used.
-*//*
-The CSS export should solely be used as a reference.
-For a more detailed animation export the JSON file should be used.
-*/
-
-#Rectangle_31 {
-  transform: translateX(-50%) translateY(-50%) scaleX(var(--fgmtn-scale-x)) scaleY(var(--fgmtn-scale-y)) rotate(var(--fgmtn-rotation));
-  animation: Rectangle_31__fillColor__1 1030ms 0ms linear forwards, Rectangle_31__strokeColor__1 1030ms 0ms linear forwards, Rectangle_31__opacity__1 1027ms 0ms linear forwards;
-}
-
-@keyframes Rectangle_31__fillColor__1 {
-  from {
-    background: rgba(255, 255, 255, 1);
-  }
-
-  to {
-    background: rgba(43, 45, 46, 1);
-  }
-}
-
-@keyframes Rectangle_31__strokeColor__1 {
-  from {
-    border-color: rgba(228.0000016093254, 231.00000143051147, 235.0000011920929, 1);
-  }
-
-  to {
-    border-color: rgba(228.0000016093254, 231.00000143051147, 235.0000011920929, 1);
-  }
-}
-
-@keyframes Rectangle_31__opacity__1 {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-#Rectangle_36 {
-  transform: translateY(-50%) scaleX(var(--fgmtn-scale-x)) scaleY(var(--fgmtn-scale-y)) rotate(var(--fgmtn-rotation));
-  animation: Rectangle_36__opacity__1 500ms 0ms linear forwards, Rectangle_36__opacity__2 1ms 500ms linear forwards, Rectangle_36__width__1 501ms 0ms linear forwards, Rectangle_36__width__2 499ms 501ms linear forwards;
-}
-
-@keyframes Rectangle_36__opacity__1 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes Rectangle_36__opacity__2 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes Rectangle_36__width__1 {
-  from {
-    width: 73px;
-  }
-
-  to {
-    width: 73px;
-  }
-}
-
-@keyframes Rectangle_36__width__2 {
-  from {
-    width: 73px;
-  }
-
-  to {
-    width: 29px;
-  }
-}
-
-#Rectangle_35 {
-  transform: translateX(-100%) translateY(-50%) scaleX(var(--fgmtn-scale-x)) scaleY(var(--fgmtn-scale-y)) rotate(var(--fgmtn-rotation));
-  animation: Rectangle_35__width__1 500ms 0ms linear forwards, Rectangle_35__opacity__1 500ms 0ms linear forwards, Rectangle_35__opacity__2 1ms 500ms linear forwards;
-}
-
-@keyframes Rectangle_35__width__1 {
-  from {
-    width: 30px;
-  }
-
-  to {
-    width: 72.87139892578125px;
-  }
-}
-
-@keyframes Rectangle_35__opacity__1 {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes Rectangle_35__opacity__2 {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-#Vector {
-  transform: translateX(-50%) translateY(-50%) scaleX(var(--fgmtn-scale-x)) scaleY(var(--fgmtn-scale-y)) rotate(var(--fgmtn-rotation));
-  animation: Vector__fillColor__1 1030ms 0ms linear forwards;
-}
-
-@keyframes Vector__fillColor__1 {
-  from {
-    background: rgba(177.08776473999023, 184.700109064579, 192.31249898672104, 1);
-  }
-
-  to {
-    background: rgba(245, 247, 250, 1);
-  }
-}
-
-#Rectangle_37 {
-  transform: translateX(-50%) translateY(-50%) scaleX(var(--fgmtn-scale-x)) scaleY(var(--fgmtn-scale-y)) rotate(var(--fgmtn-rotation));
-  animation: Rectangle_37__opacity__1 1050ms 0ms linear forwards;
-}
-
-@keyframes Rectangle_37__opacity__1 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
 
 </style>
