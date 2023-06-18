@@ -21,7 +21,7 @@ module.exports = {
                 error: '#f44336',
                 success: '#1e7c1e',
                 warning: '#e0a107',
-                dark: '#212121',
+                dark: '##28272A',
                 primary: '#a41919',
                 accent: '#343232',
                 light: '#EEE',
