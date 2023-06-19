@@ -1,16 +1,16 @@
 <template>
   <client-only>
 
-    <button id="darkmodeToggle" @click="toggleDarkmode">
+    <button id="darkmodeToggle" @click="toggleDarkmode" class="items-center">
       <Vue3Lottie
           v-if="showAnime"
-          :animationData="darkmode ? lightToDarkJSON : darkToLightJSON"
-          :height="34"
-          :width="70"
+          :animationData="!darkmode ? lightToDarkJSON : darkToLightJSON"
+          :height="25"
+          :width="50"
           speed="4"
       />
       <!--    light-->
-      <svg width="70" v-if="!darkmode && !showAnime" height="34" viewBox="0 0 70 34" fill="none"
+      <svg width="50" v-if="!darkmode && !showAnime" height="25" viewBox="0 0 70 34" fill="none"
            xmlns="http://www.w3.org/2000/svg">
         <rect x="0.5" y="0.5" width="69" height="33" rx="16.5" fill="white" stroke="#E4E7EB"/>
         <path
@@ -22,7 +22,7 @@
               fill="#F5F7FA"/>
       </svg>
       <!--    dark -->
-      <svg width="70" v-if="darkmode && !showAnime" height="34" viewBox="0 0 70 34" fill="none"
+      <svg width="50" v-if="darkmode && !showAnime" height="25" viewBox="0 0 70 34" fill="none"
            xmlns="http://www.w3.org/2000/svg">
         <rect x="0.5" y="0.5" width="69" height="33" rx="16.5" fill="#2B2D2E" stroke="#47475E"/>
         <rect x="5" y="5" width="24" height="24" rx="12" fill="#0181FB"/>
@@ -39,6 +39,26 @@
 </template>
 <script setup>
 import 'vue3-lottie/dist/style.css'
+
+let darkmode = useDarkmode()
+const showAnime = ref(false)
+
+function toggleDarkmode() {
+  showAnime.value = true;
+  setTimeout(() => {
+    darkmode.value = !darkmode.value
+    showAnime.value = false
+  }, 300)
+}
+
+
+watch(showAnime, (newVal) => {
+  if (!!newVal) {
+    setTimeout(() => {
+      // showAnime.value = false
+    }, 300)
+  }
+})
 
 const lightToDarkJSON = {
   "ddd": 0, "h": 32, "w": 68, "meta": {"g": "LottieFiles Figma v36"}, "layers": [{
@@ -4011,23 +4031,6 @@ const darkToLightJSON = {
     }], "ind": 5
   }], "v": "5.7.0", "fr": 30, "op": 46.50000089406967, "ip": 0, "assets": []
 };
-let darkmode = useDarkmode()
-const showAnime = ref(false)
-
-function toggleDarkmode() {
-  showAnime.value = true;
-  darkmode.value = !darkmode.value
-}
-
-
-watch(showAnime, (newVal) => {
-  if (!!newVal) {
-    setTimeout(() => {
-      showAnime.value = false
-    }, 300)
-  }
-})
-
 </script>
 
 <style scoped>

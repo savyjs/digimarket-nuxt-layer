@@ -18,13 +18,13 @@
         </div>
 
         <div class="flex gap-3 items-center">
-          <div>
+          <div class="flex items-center">
             <LangNtmSwitchLang/>
           </div>
-          <div>
+          <div class="flex items-center">
             <ThemeNtmSwitchRTL/>
           </div>
-          <div>
+          <div class="flex items-center">
             <ThemeNtmDarkToggle/>
           </div>
           <span class="text-xs self-center items-center">
