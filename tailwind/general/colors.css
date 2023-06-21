@@ -1,4 +1,12 @@
 @layer base {
-  :root {
-  }
+    :root {
+        --color-dark-bg: "#28272A";
+        --color-bg: "#FFF";
+        --color-dark-card-bg: '#2B2D2E';
+        --color-dark-card-border: '#47475E';
+        --color-dark-card-text: '#8E8E90';
+        --color-card-bg: '#FFF';
+        --color-card-border: '#E4E7EB';
+        --color-card-text: '#7B8794';
+    }
 }

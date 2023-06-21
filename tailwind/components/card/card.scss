@@ -8,10 +8,10 @@
   }
 
   .card-primary {
-    @apply bg-default dark:bg-dark;
+    @apply bg-[var(--color-card-bg)] dark:bg-[var(--color-dark-card-bg)] text-[var(--color-card-text)] dark:text-[var(--color-dark-card-text)];
   }
 
   .card-primary .card-title {
-    @apply dark:text-white dark:text-gray-200;
+    @apply text-[var(--color-card-text)] dark:text-[var(--color-dark-card-text)];
   }
 }

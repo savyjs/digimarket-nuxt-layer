@@ -1,63 +1,67 @@
 @layer components {
-  .bg-default {
-    @apply bg-white dark:bg-dark;
-  }
+    .bg-default {
+        @apply bg-white dark:bg-dark;
+    }
 
-  .bg-default {
-    @apply dark:text-white dark:fill-white dark:border-white;
-  }
+    .bg-default {
+        @apply dark:text-white dark:fill-white dark:border-white;
+    }
 
-  .dark.bg-default {
-    @apply bg-dark;
-  }
+    .dark.bg-default {
+        @apply bg-dark;
+    }
 
-  .title-decoration-underline {
-    @apply w-16 mt-2 h-[2px] bg-primary;
-  }
+    .bg-default {
+        @apply transition delay-[50] duration-[500] ease-in-out transition dark:delay-[50] dark:duration-[500];
+    }
 
-  .text-link {
-    @apply text-secondary fill-secondary;
-  }
+    .title-decoration-underline {
+        @apply w-16 mt-2 h-[2px] bg-primary;
+    }
 
-  .text-warning {
-    @apply text-orange-400;
-  }
+    .text-link {
+        @apply text-secondary fill-secondary;
+    }
 
-  a[data-bs-toggle='collapse'] {
-    @apply fill-gray-400 text-gray-400;
-  }
+    .text-warning {
+        @apply text-orange-400;
+    }
 
-  a[data-bs-toggle='collapse'][aria-expanded='true'] .open,
-  a[data-bs-toggle='collapse'][aria-expanded='false'] .close {
-    @apply hidden;
-  }
+    a[data-bs-toggle='collapse'] {
+        @apply fill-gray-400 text-gray-400;
+    }
+
+    a[data-bs-toggle='collapse'][aria-expanded='true'] .open,
+    a[data-bs-toggle='collapse'][aria-expanded='false'] .close {
+        @apply hidden;
+    }
 }
 
 @layer utilities {
-  .dot::before {
-    position: relative;
-    content: '';
-    display: block;
-    background: rgb(220, 220, 220);
-    width: 6pt;
-    height: 6pt;
-    margin-top: 20px;
-    border-radius: 500pt;
-  }
+    .dot::before {
+        position: relative;
+        content: '';
+        display: block;
+        background: rgb(220, 220, 220);
+        width: 6pt;
+        height: 6pt;
+        margin-top: 20px;
+        border-radius: 500pt;
+    }
 
-  .filter-none {
-    filter: none;
-  }
+    .filter-none {
+        filter: none;
+    }
 
-  .ltr {
-    direction: ltr;
-  }
+    .ltr {
+        direction: ltr;
+    }
 
-  .rtl {
-    direction: rtl;
-  }
+    .rtl {
+        direction: rtl;
+    }
 
-  .filter-grayscale {
-    filter: grayscale(100%);
-  }
+    .filter-grayscale {
+        filter: grayscale(100%);
+    }
 }

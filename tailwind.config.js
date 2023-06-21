@@ -16,8 +16,8 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                dark: '#28272A',
-                light: '#FFF',
+                dark: 'var(--color-dark-bg)',
+                light: 'var(--color-bg)',
                 transparent: 'transparent',
                 secondary: '#008eb2',
                 error: '#f44336',
