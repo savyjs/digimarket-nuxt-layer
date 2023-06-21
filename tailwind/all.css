@@ -2,9 +2,9 @@
 @import 'tailwindcss/components.css';
 @import 'tailwindcss/utilities.css';
 
+@import 'general/styles.css';
 @import 'general/icons.scss';
 @import 'general/colors.css';
-@import 'general/styles.css';
 
 @import 'components/alert/alert.scss';
 @import 'components/badge/badge.scss';

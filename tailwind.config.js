@@ -1,8 +1,7 @@
 module.exports = {
     content: [
-        './components/*.{scss,css,vue,jsx,html}',
-        './components/**/*.{scss,css,vue,jsx,html}',
-        './general/*.{scss,css,vue,jsx,html}',
+        './components/*.{vue,jsx,html}',
+        './components/**/*.{vue,jsx,html}',
         `./layouts/*.vue`,
         `./layouts/**/*.vue`,
         `./pages/*.vue`,

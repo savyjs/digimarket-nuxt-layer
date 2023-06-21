@@ -1,6 +1,6 @@
 <template>
   <Html :lang="lang" :dir="dir ? 'rtl' : 'ltr'">
-  <div :class="{'bg-default':true,'text-white':darkmode,'fixed':true,'w-full':true}">
+  <div :class="{'bg-default':true,'fixed':true,'w-full':true}">
     <div class="container mx-auto py-1">
       <div class="flex justify-between items-center">
         <p class="flex max-md:hidden items-center">

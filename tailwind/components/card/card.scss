@@ -1,14 +1,14 @@
 @layer components {
   .card {
-    @apply rounded-lg border border-gray-200 p-5 sm:p-6 lg:p-6;
+    @apply rounded-[5px] border p-5 sm:p-6 lg:p-6;
+  }
+
+  .card {
+    @apply bg-[var(--color-card-bg)] dark:bg-[var(--color-dark-card-bg)] text-[var(--color-card-text)] dark:text-[var(--color-dark-card-text)];
   }
 
   .card-primary {
     @apply card;
-  }
-
-  .card-primary {
-    @apply bg-[var(--color-card-bg)] dark:bg-[var(--color-dark-card-bg)] text-[var(--color-card-text)] dark:text-[var(--color-dark-card-text)];
   }
 
   .card-primary .card-title {
