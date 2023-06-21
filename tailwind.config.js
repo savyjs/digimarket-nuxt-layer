@@ -15,15 +15,15 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                dark: 'var(--color-dark-bg)',
-                light: 'var(--color-bg)',
+                link: 'var(--color-link)',
+                dark: 'var(--color-dark)',
+                light: 'var(--color-light)',
                 transparent: 'transparent',
-                secondary: '#008eb2',
-                error: '#f44336',
+                primary: '#a41919',
+                info: '#0d5fe8',
+                error: '#b40b00',
                 success: '#1e7c1e',
                 warning: '#e0a107',
-                primary: '#a41919',
-                accent: '#343232',
             },
         },
     }

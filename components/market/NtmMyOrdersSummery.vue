@@ -9,7 +9,7 @@
         <nuxt-link>
           <a class="text-link text-xs flex gap-1">
             مشاهده‌ی همه
-            <svg class="icon icon-small fill-secondary">
+            <svg class="icon icon-small fill-link">
               <use href="#chevronLeft"/>
             </svg>
           </a>
