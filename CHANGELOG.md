@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.2](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.6.0...v0.6.2) (2023-06-23)
+
+
+### Miscellaneous Chores
+
+* add version ([ef30c2e](https://github.com/savyjs/digimarket-nuxt-layer/commit/ef30c2e2e79323b09b39031b7c4e89d4a31ccc5c))
+
 ## [0.6.0](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.5.0...v0.6.0) (2023-06-21)
 
 
