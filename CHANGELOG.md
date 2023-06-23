@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.6.4](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.6.2...v0.6.4) (2023-06-23)
+
+
+### Miscellaneous Chores
+
+* git ignore legacy ([483e432](https://github.com/savyjs/digimarket-nuxt-layer/commit/483e432c617f342bca80a5ecf1c922c99109a0fa))
+* git ignore legacy ([6bbb3fd](https://github.com/savyjs/digimarket-nuxt-layer/commit/6bbb3fd8b7c423e6df30432d370205e99081418e))
+
 ## [0.6.2](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.6.0...v0.6.2) (2023-06-23)
 
 
