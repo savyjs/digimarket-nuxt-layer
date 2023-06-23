@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.6.0](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.5.0...v0.6.0) (2023-06-21)
+
+
+### Features
+
+* add dir and lang to HTML tag ([94f1d5d](https://github.com/savyjs/digimarket-nuxt-layer/commit/94f1d5dd0a56cb87f7bab0ee5ff8b57cc9599641))
+* add flex style to buttons ([7c554b2](https://github.com/savyjs/digimarket-nuxt-layer/commit/7c554b2970d3dd5429d6e3709082c3a30ff7231c))
+* add link color ([e1c8e33](https://github.com/savyjs/digimarket-nuxt-layer/commit/e1c8e33280d47138dcec2e55e6439c281ca46d44))
+* add link color ([1498c58](https://github.com/savyjs/digimarket-nuxt-layer/commit/1498c58a2a2e551e39f8f751f69d970958a7d252))
+* add lottie for darkmode toggle animation ([c85a31a](https://github.com/savyjs/digimarket-nuxt-layer/commit/c85a31a67a30fb50572f4b52c77b8b080555b724))
+* **check code:** auto fill and auto empty ([2413acf](https://github.com/savyjs/digimarket-nuxt-layer/commit/2413acf31b54fb029348cbc4c5b5f27e70f1cc68))
+* edit navbar ([913fdf9](https://github.com/savyjs/digimarket-nuxt-layer/commit/913fdf9c5ccf37f5defabb95a10ee7261795a9d7))
+* **login:** translated languages for fa and en ([4fa3f0f](https://github.com/savyjs/digimarket-nuxt-layer/commit/4fa3f0fa0295da2122531a05fce31d48e549bd91))
+* **profile:** replacing components with actual HTML code ([a9dc46c](https://github.com/savyjs/digimarket-nuxt-layer/commit/a9dc46cb2ae0299cbdd5ab75260702d4294f34e0))
+* **register:** translated languages for fa and en ([9b9cf96](https://github.com/savyjs/digimarket-nuxt-layer/commit/9b9cf964271669e4813ebd2f046eaf61dbc0987e))
+* use color variables  in theme ([594246b](https://github.com/savyjs/digimarket-nuxt-layer/commit/594246b07ca174b08164ab033f2c59bc21167da7))
+* use color variables  in theme ([db15f2e](https://github.com/savyjs/digimarket-nuxt-layer/commit/db15f2eb00f2c9b3a8792cab04c52b93becb71a7))
+
+
+### Bug Fixes
+
+* app configs ([2ab97f5](https://github.com/savyjs/digimarket-nuxt-layer/commit/2ab97f57a7a64c80ef8e5dda475237cf32f81d8a))
+* app configs ([f1da40b](https://github.com/savyjs/digimarket-nuxt-layer/commit/f1da40b0d34e63ed299959951148fd9a1d89559b))
+* bg dark color code ([5859799](https://github.com/savyjs/digimarket-nuxt-layer/commit/5859799be7cfefd52a6eb558958735d435914b85))
+* import user pages ([da373bb](https://github.com/savyjs/digimarket-nuxt-layer/commit/da373bb0c31da3db4902cc6a5cd9cc8c90cb5ef6))
+
 ## [0.5.0](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.4.3...v0.5.0) (2023-06-06)
 
 
