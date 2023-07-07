@@ -1,10 +1,10 @@
 import {defineAppConfig} from "#app";
 import {DigimarketConfig} from "~/schema/types/options";
 
-const Provinces = [];
+const Provinces: never[] = [];
 
 export default defineAppConfig({
-    digimarket: <DigimarketConfig>{
+    digimarket: <DigimarketConfig><unknown>{
         rtlDictionary: {
             en: false,
             fa: true

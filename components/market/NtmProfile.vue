@@ -31,7 +31,7 @@
               <div class="list-item-text w-full">
                 <div class="w-full py-5">
                   <div class="flex justify-between">
-                    <span>{{ $T('ntm.assets','Assets') }}</span>
+                    <span>{{ $t('ntm.assets','Assets') }}</span>
                     <span class="flex gap-1">250 <svg class="icon-small dark:fill-gray-200"><use
                         href="#toman"/></svg></span>
                   </div>
@@ -68,7 +68,7 @@
         <div class="list list-primary list-sidemenu">
           <template v-for="(item,index) in profileMenuItems">
             <nuxt-link class="list-item" :to="item?.link">
-              <div v-if="item.svg" class="list-item-icon">
+              <div v-if="item?.svg" class="list-item-icon">
                 <svg class="icon w-5 h-5">
                   <use :href="`#${item.svg}`"/>
                 </svg>
@@ -88,8 +88,8 @@
     </div>
     <div class="grow w-2/3">
       <slot name="main">
-        <NtmVerifyMessage/>
-        <NtmMyOrdersSummery class="my-2"/>
+        <MarketNtmVerifyMessage />
+        <MarketNtmMyOrdersSummery class="my-2" />
         <div class="card-primary">
           <div class="card-title card-title-underline-primary flex justify-between">
             <div>
@@ -98,8 +98,8 @@
             </div>
           </div>
           <div class='card products-sweeper w-full py-5'>
-            <NtmSwiper :slidesPerView="4">
-              <NtmSwiperSlide v-for="i in 6">
+            <MarketNtmSwiper :slidesPerView="4">
+              <MarketNtmSwiperSlide v-for="i in 6">
                 <div class="flex">
                   <div class='product-carousel gap-1 mx-1 border-l-[1px] px-4'>
                     <div class='justify-between self-start'>
@@ -146,8 +146,8 @@
                     </div>
                   </div>
                 </div>
-              </NtmSwiperSlide>
-            </NtmSwiper>
+              </MarketNtmSwiperSlide>
+            </MarketNtmSwiper>
           </div>
         </div>
       </slot>
@@ -155,11 +155,6 @@
   </div>
 </template>
 <script setup>
-
-import NtmVerifyMessage from "~/components/market/NtmVerifyMessage.vue";
-import NtmMyOrdersSummery from "~/components/market/NtmMyOrdersSummery.vue";
-import NtmSwiper from "~/components/market/NtmSwiper.vue";
-import NtmSwiperSlide from "~/components/market/NtmSwiperSlide.vue";
 
 const {sideMenu, user, statistics, productSliders} = defineProps([
   'sideMenu', 'user', 'statistics', 'productSliders'
