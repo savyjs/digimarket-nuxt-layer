@@ -36,7 +36,7 @@
                         href="#toman"/></svg></span>
                   </div>
                   <nuxt-link class="text-link flex pt-2 text-[11pt] align-center">
-                    <small>{{$t('ntm.')}}</small>
+                    <small>{{$t('ntm.example_product_title','Example product Title')}}</small>
                     <span><svg class="icon-small fill-link" fill="currentColor"><use
                         href="#chevronLeft"/></svg></span>
                   </nuxt-link>
@@ -159,11 +159,10 @@
 import NtmVerifyMessage from "~/components/market/NtmVerifyMessage.vue";
 import NtmMyOrdersSummery from "~/components/market/NtmMyOrdersSummery.vue";
 import NtmSwiper from "~/components/market/NtmSwiper.vue";
-import NtmProfileSideMenu from "~/components/market/NtmProfileSideMenu.vue";
 import NtmSwiperSlide from "~/components/market/NtmSwiperSlide.vue";
 
 const {sideMenu, user, statistics, productSliders} = defineProps([
   'sideMenu', 'user', 'statistics', 'productSliders'
 ]);
-const {profileMenuItems} = useAppConfig()?.digimarket
+const profileMenuItems = sideMenu
 </script>

@@ -15,7 +15,7 @@ export default defineAppConfig({
         title: 'ntm.title',
         profileMenuItems: [
             {icon: 'fa fa-plus', text: 'Premium Account', svg: 'plus', link: '/v1/profile/plus'},
-            {icon: 'fa fa-list', text: 'My Actiity', svg: 'list', link: '/v1/profile/activity'},
+            {icon: 'fa fa-list', text: 'My Activity', svg: 'list', link: '/v1/profile/activity'},
             {icon: 'fa fa-list', text: 'Orders', svg: 'order', link: '/v1/profile/orders'},
         ],
         divisions: [

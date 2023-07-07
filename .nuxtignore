@@ -1,7 +1,7 @@
 pages/v1/market
 pages/v1/blog
 /pages/legacy/
-layouts/NtmPanel.vue
+#layouts/NtmPanel.vue
 layouts/NtmMarketShipping.vue
 layouts/NtmMarketPayment.vue
 layouts/NtmMarket.vue
