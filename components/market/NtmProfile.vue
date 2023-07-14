@@ -14,7 +14,7 @@
               </div>
               <div class="list-item-text flex w-full justify-between">
                 <div class="grow">
-                  <p>{{ user?.fullName || $t('ntm.first_name') }}</p>
+                  <p>{{ user?.fullName || $t('ntm.first_name',"First Name") }}</p>
                   <p class="text-gray-400">{{ user?.username || '@username' }}</p>
                 </div>
                 <nuxt-link class="text-link px-[23pt] flex pt-2 text-[11pt] align-center">
@@ -51,8 +51,8 @@
               <div class="list-item-text w-full">
                 <div class="w-full">
                   <div class="flex justify-between">
-                    <span class="grow-1">{{ $t('ntm.club_title','Club') }}</span>
-                    <span>۲۳<small class="px-1">{{ $t("ntm.club_point",'Points') }}</small></span>
+                    <span class="grow-1">{{ $t('ntm.club','Club') }}</span>
+                    <span>۲۳<small class="px-1">{{ $t("ntm.club_points",'Points') }}</small></span>
                   </div>
                   <nuxt-link class="text-link flex pt-2 text-[11pt] align-center">
                     <small>
@@ -81,7 +81,7 @@
                 <i :class="item.icon"></i>
               </div>
               <div v-if="item.text" class="list-item-text">
-                {{ item.text }}
+                {{ $t(item.text.replaceAll(" ","_").toLowerCase(), item.text)}}
               </div>
             </nuxt-link>
             <div v-if="index+1 != profileMenuItems?.length" class="border-b-[1px] mx-5"></div>
