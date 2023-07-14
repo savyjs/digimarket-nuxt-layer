@@ -2,13 +2,13 @@
   <div class="card-primary">
     <div class="card-title card-title-underline-primary flex justify-between">
       <div>
-        <b>سفارش‌های من</b>
+        <b>{{ $t("ntm.my_orders", "My orders") }}</b>
         <div class="title-decoration-underline"></div>
       </div>
       <button>
         <nuxt-link>
           <a class="text-link text-xs flex gap-1">
-            مشاهده‌ی همه
+            {{ $t("ntm.show_all", "Show all") }}
             <svg class="icon icon-small fill-link">
               <use href="#chevronLeft"/>
             </svg>
@@ -21,24 +21,24 @@
         <div class="flex w-[1/3] grow mx-3 align-middle gap-5">
           <div><img src="/public/dkala/status-processing.svg"/></div>
           <div class="flex flex-col justify-end">
-            <p><b class="text-sm">0 سفارش</b></p>
-            <p><small>جاری</small></p>
+            <p><b class="text-sm">0 {{ $t("ntm.delivered_orders_count", "orders") }}</b></p>
+            <p><small>{{ $t("ntm.active_orders_count", "Active") }}</small></p>
           </div>
         </div>
         <div class="border-r-[1px]"></div>
         <div class="flex w-[1/3] grow mx-3 align-middle gap-5">
           <div><img src="/public/dkala/status-delivered.svg"/></div>
           <div class="flex flex-col justify-end">
-            <p><b class="text-sm">29 سفارش</b></p>
-            <p><small>تحویل شده</small></p>
+            <p><b class="text-sm">29 {{ $t("ntm.delivered_orders_count", "orders") }}</b></p>
+            <p><small>{{ $t("ntm.delivered_orders_count", "Delivered") }}</small></p>
           </div>
         </div>
         <div class="border-r-[1px]"></div>
         <div class="flex w-[1/3] grow mx-3 align-middle gap-5">
           <div><img src="/public/dkala/status-returned.svg"/></div>
           <div class="flex flex-col justify-end">
-            <p><b class="text-sm">0 سفارش</b></p>
-            <p><small>مرجوع شده</small></p>
+            <p><b class="text-sm">0 {{ $t("ntm.delivered_orders_count", "orders") }}</b></p>
+            <p><small>{{ $t("ntm.rejected_orders_count", "Rejected") }}</small></p>
           </div>
         </div>
       </div>

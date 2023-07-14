@@ -5,7 +5,7 @@
       <!-- Profile side menu -->
       <div class="card-primary p-0">
 
-        <template #topsidebar>
+        <slot name="topsidebar">
 
           <div class="list list-timeline py-2">
             <div class="list-item">
@@ -31,12 +31,12 @@
               <div class="list-item-text w-full">
                 <div class="w-full py-5">
                   <div class="flex justify-between">
-                    <span>{{ $t('ntm.assets','Assets') }}</span>
+                    <span>{{ $t('ntm.assets', 'Assets') }}</span>
                     <span class="flex gap-1">250 <svg class="icon-small dark:fill-gray-200"><use
                         href="#toman"/></svg></span>
                   </div>
                   <nuxt-link class="text-link flex pt-2 text-[11pt] align-center">
-                    <small>{{$t('ntm.example_product_title','Example product Title')}}</small>
+                    <small>{{ $t('ntm.example_product_title', 'Example product Title') }}</small>
                     <span><svg class="icon-small fill-link" fill="currentColor"><use
                         href="#chevronLeft"/></svg></span>
                   </nuxt-link>
@@ -51,11 +51,13 @@
               <div class="list-item-text w-full">
                 <div class="w-full">
                   <div class="flex justify-between">
-                    <span class="grow-1">کلاب</span>
-                    <span>۲۳<small class="px-1">امتیاز</small></span>
+                    <span class="grow-1">{{ $t('ntm.club_title','Club') }}</span>
+                    <span>۲۳<small class="px-1">{{ $t("ntm.club_point",'Points') }}</small></span>
                   </div>
                   <nuxt-link class="text-link flex pt-2 text-[11pt] align-center">
-                    <small>مشاهده جوایز</small>
+                    <small>
+                      {{ $t("ntm.club_awards","Awards")}}
+                    </small>
                     <span><svg class="icon-small fill-link" fill="currentColor"><use
                         href="#chevronLeft"/></svg></span>
                   </nuxt-link>
@@ -64,7 +66,9 @@
             </div>
           </div>
           <div class="border-b-[1px] mx-5"></div>
-        </template>
+        </slot>
+
+
         <div class="list list-primary list-sidemenu">
           <template v-for="(item,index) in profileMenuItems">
             <nuxt-link class="list-item" :to="item?.link">
@@ -88,12 +92,14 @@
     </div>
     <div class="grow w-2/3">
       <slot name="main">
-        <MarketNtmVerifyMessage />
-        <MarketNtmMyOrdersSummery class="my-2" />
+        <MarketNtmVerifyMessage/>
+        <MarketNtmMyOrdersSummery class="my-2"/>
         <div class="card-primary">
           <div class="card-title card-title-underline-primary flex justify-between">
             <div>
-              <b>خریدهای پرتکرار شما</b>
+              <b>
+                {{$t("ntm.recommended_for_you","Recommended for you")}}
+              </b>
               <div class="title-decoration-underline"></div>
             </div>
           </div>

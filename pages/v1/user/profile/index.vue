@@ -1,12 +1,12 @@
 <template>
   <nuxt-layout name="ntm-panel">
     <MarketNtmProfile
-        :sideMenu="sideMenu"
-        :user="userData"
-        :statistics="userOrdersSummeryData"
-        :productSliders="[userList,userFavourites,recommendedProducts]"
-    >
-    </MarketNtmProfile>
+      :sideMenu="sideMenu"
+      :user="userData"
+      :statistics="userOrdersSummeryData"
+      :productSliders="[userList,userFavourites,recommendedProducts]"
+  >
+  </MarketNtmProfile>
   </nuxt-layout>
 </template>
 

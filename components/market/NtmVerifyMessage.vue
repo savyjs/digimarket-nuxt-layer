@@ -1,5 +1,5 @@
 <template>
   <div class="card-primary">
-    حساب کاربری شما هنوز تایید نشده است
+    {{$t("ntm.you_are_not_verified","Your account isn't activated yet")}}
   </div>
 </template>
