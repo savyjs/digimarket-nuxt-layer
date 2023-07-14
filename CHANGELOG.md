@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.7.0](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.6.5...v0.7.0) (2023-07-14)
+
+
+### Features
+
+* add user profile page ([9974ec5](https://github.com/savyjs/digimarket-nuxt-layer/commit/9974ec5a277ad98d5c95b98296845e324e4d2464))
+
+
+### Bug Fixes
+
+* change template to slot in ntm profile ([5c82872](https://github.com/savyjs/digimarket-nuxt-layer/commit/5c828722aef7a4b22d9d591ce6cc6e68f21b12ff))
+* color root without quotations ([64e8e00](https://github.com/savyjs/digimarket-nuxt-layer/commit/64e8e00d9781a9620928bfa1a8844839b6e4a8e0))
+
 ## [0.6.5](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.6.4...v0.6.5) (2023-06-23)
 
 
