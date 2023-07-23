@@ -1,4 +1,4 @@
-export interface Layout {
+declare interface Layout {
     /**
      * Base url that will be used for main logo
      *

@@ -1,10 +1,17 @@
 import {defineAppConfig} from "#app";
-import {DigimarketConfig} from "~/schema/types/options";
+import {DigimarketConfig} from "~/schema/options";
 
 const Provinces: never[] = [];
 
 export default defineAppConfig({
-    digimarket: <DigimarketConfig><unknown>{
+    digimarket: <DigimarketConfig>{
+        commerce: "zoho",
+        mode: "state", // api
+        zoho: {
+            commerce: {
+                domain: ""
+            }
+        },
         rtlDictionary: {
             en: false,
             fa: true
@@ -14,9 +21,9 @@ export default defineAppConfig({
         logo: '/logo.png',
         title: 'ntm.title',
         profileMenuItems: [
-            {icon: 'fa fa-plus', text: 'Premium Account', svg: 'plus', link: '/v1/profile/plus'},
-            {icon: 'fa fa-list', text: 'My Activity', svg: 'list', link: '/v1/profile/activity'},
-            {icon: 'fa fa-list', text: 'Orders', svg: 'order', link: '/v1/profile/orders'},
+            {icon: 'fa fa-plus', title: 'Premium Account', svg: 'plus', link: '/v1/profile/plus'},
+            {icon: 'fa fa-list', title: 'My Activity', svg: 'list', link: '/v1/profile/activity'},
+            {icon: 'fa fa-list', title: 'Orders', svg: 'order', link: '/v1/profile/orders'},
         ],
         divisions: [
             {
