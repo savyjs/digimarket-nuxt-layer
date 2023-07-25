@@ -3,6 +3,12 @@ import {Zoho} from "~/schema/zoho";
 
 export default defineEventHandler(async (event) => {
     const id = event.context.params.id
+    const module = event.context.params.module
+
+    // generate Auth token for CRM
+    let AuthUrl = 'https://accounts.zoho.com'
+
+
     let product: Zoho.Product = {}
     product.name = "Product number 1"
     product.variants = [

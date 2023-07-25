@@ -1,5 +1,4 @@
 export declare namespace Zoho {
-    type SomeType = [boolean, string, number];
 
     interface Cart {
         addToCart()
