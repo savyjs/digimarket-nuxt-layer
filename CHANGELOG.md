@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.7.0...v0.7.1) (2023-07-23)
+
+
+### Features
+
+* add schema and factory class for zoho ([3b9d6a6](https://github.com/savyjs/digimarket-nuxt-layer/commit/3b9d6a61dca4f1af6e2960b3a6347508b2465b55))
+
 ## [0.7.0](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.6.5...v0.7.0) (2023-07-14)
 
 
