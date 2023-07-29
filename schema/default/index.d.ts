@@ -1,7 +1,6 @@
 import {CurrencyDisplay} from "@intlify/core-base";
 
 export declare namespace Ntm {
-
     interface Category {
         id?: ID;
         title: string;
@@ -26,19 +25,15 @@ export declare namespace Ntm {
         order: number;
     }
 
+    interface Collection extends Category {
+        is_selected?: boolean // Denotes whether the sort by option is selected.
+    }
+
     interface SEO {
         description: string;
         keyword: string;
         title: string;
-    }
 
-    interface Currency {
-        symbol: string;
-        code: string;
-        symbol_formatted: string;
-        code_on_left: boolean;
-        format: string;
-        symbol_on_left: boolean;
     }
 
 
@@ -64,6 +59,29 @@ export declare namespace Ntm {
         attached_labels: AttachedLabel[] // Available label to show on product, Sold, Off, Amazing, ...
         available_from_datetime?: DateObject // Price would be available from this time
         available_to_datetime?: DateObject // Price would be available until this time
+    }
+
+    interface Cart {
+        id?: ID;
+        code: string;
+        customer: Customer[]
+        total_price: number;
+        quantity: number;
+        items: CartItem[];
+    }
+
+
+    interface CartItem {
+        id?: ID
+        quantity: number;
+        product_id: ID;
+        product: Product;
+        price_id: ID;
+        price: Price;
+        label_price: number;
+        total_price: number;
+        discount_amount: number;
+        custom_fields: CustomField[];
     }
 
     interface Brand {
@@ -153,16 +171,20 @@ export declare namespace Ntm {
 
     interface Currency {
         id?: ID
-        currency_code: string;
-        currency_name: string;
-        currency_symbol: string;
+        title: string;
+        symbol: string;
         price_precision: number;
-        currency_format: string;
+        format: string;
         is_base_currency: boolean;
-
+        icon?: string
+        image?: Image
+        code: string;
+        symbol_formatted: string;
+        code_on_left: boolean;
+        symbol_on_left: boolean;
     }
 
-    interface CurrenctConvert {
+    interface CurrencyConvert {
         id?: ID
         src_currency?: "USD" | "IRT" | string // The basic price source currency
         src_price?: string | number
@@ -255,6 +277,8 @@ export declare namespace Ntm {
     }
 
     interface Address {
+        id?: ID
+        customer?: Customer
         street_address1: string;
         street_address2: string;
         city: string;
@@ -294,16 +318,6 @@ export declare namespace Ntm {
         value: string;
         index: number;
         label: string;
-    }
-
-    interface Address {
-        attention: string;
-        address: string;
-        street2: string;
-        city: string;
-        state: string;
-        zip: number;
-        country: string;
     }
 
     interface ContactPerson {
@@ -533,39 +547,11 @@ export declare namespace Ntm {
         last_modified_time: DateObject;
     }
 
-    interface SalesOrder {
-        customer_id: number;
-        salesorder_number: string;
-        date: string;
-        shipment_date: string;
-        custom_fields: CustomField[];
-        reference_number: string;
-        line_items: LineItem[];
-        notes: string;
-        terms: string;
-        discount: string;
-        is_discount_before_tax: boolean;
-        discount_type: string;
-        shipping_charge: number;
-        delivery_method: string;
-        adjustment: number;
-        pricebook_id: number;
-        salesperson_id: number;
-        adjustment_description: string;
-        is_inclusive_tax: boolean;
-        exchange_rate: number;
-        template_id: number;
-        documents: Document[];
-        addresses: Address;
-        place_of_supply: string;
-        gst_treatment: string;
-        gst_no: string;
-    }
-
 
     interface PaymentGateway {
         configured: boolean;
-        additional_field1: string;
+        additional_field: string;
+        custom_fields: CustomField;
         gateway_name: string;
     }
 
@@ -617,6 +603,23 @@ export declare namespace Ntm {
         shipping_address_id: number;
         shipping_address: Address[];
         is_retainer_invoice: boolean; // Is retainer invoice?
+    }
+
+    interface Coupon {
+        id?: ID
+        customer_id?: ID[]
+        price_id?: ID[]
+        limit?: number
+        from_date?: DateObject
+        to_date?: DateObject
+        product_id?: ID[]
+        category_id?: ID[]
+        enabled: boolean;
+        coupon_code: string;
+        discount: string;
+        max_discount?: number
+        min_price?: number
+        discount_type: "flat" | "percentage";
     }
 
     interface Payment {
