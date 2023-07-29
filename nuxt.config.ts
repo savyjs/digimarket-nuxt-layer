@@ -8,10 +8,10 @@ const Provinces = [];
 export default defineNuxtConfig({
     // This is the list of available modules
     extends: [
-        "layers/auth",
-        "layers/commerce",
-        "layers/inventory",
-        "layers/blog"
+        "layers/auth-v1",
+        "layers/commerce-v1",
+        "layers/inventory-v1",
+        "layers/blog-v1"
     ],
     modules: [
         "@nuxtjs/tailwindcss"
