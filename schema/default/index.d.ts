@@ -1,4 +1,47 @@
+import {CurrencyDisplay} from "@intlify/core-base";
+
 export declare namespace Ntm {
+
+    interface Category {
+        id?: ID;
+        title: string;
+        slug: string;
+        description: string;
+        tax_id: number;
+        products: Product[];
+        brands: Brand[];
+        attributes: Attribute[];
+        images: Image[];
+        videos: Video[];
+        documents: Document[];
+        active: boolean;
+        visibility: boolean;
+        sort_by_options: SortByOption[];
+        bread_crumbs: BreadCrumb[];
+        specifications: Specification[];
+        parent_id: string;
+        items: Category[];
+        number_columns: number;
+        seo: SEO;
+        order: number;
+    }
+
+    interface SEO {
+        description: string;
+        keyword: string;
+        title: string;
+    }
+
+    interface Currency {
+        symbol: string;
+        code: string;
+        symbol_formatted: string;
+        code_on_left: boolean;
+        format: string;
+        symbol_on_left: boolean;
+    }
+
+
     interface Product {
         id?: ID // ID of product
         title: string // Main product title
@@ -92,14 +135,9 @@ export declare namespace Ntm {
         guaranty?: Guaranty // Guarantee specification
         attribute?: Attribute[] // Selected attribute for price, for example 'yellow color' has different price than 'red color'
         sku?: ID // Stock keeping unit
+        unit?: "item" | "box" | "hour" | "service" | "file" | string
         multiple_currency?: boolean // Show multiple currency?
-        currencies: {
-            src_currency?: "USD" | "IRT" | string // The basic price source currency
-            src_price?: string | number
-            dst_currency?: "USD" | "IRT" | string // The destination price currency
-            dst_price?: string | number
-            exchange_rate?: number // The convert price factor
-        }[]
+        currencies: Currency[]
         items?: InventoryItem[] // Available inventory items
         countries: Country[]
         commission_rate?: number // the commission rate
@@ -110,6 +148,27 @@ export declare namespace Ntm {
         min_allowed_order?: number
         max_allowed_order?: number
         bulk_step?: number | number[] // The step for bulk sales , default 1 , could be 10,20, etc.
+    }
+
+
+    interface Currency {
+        id?: ID
+        currency_code: string;
+        currency_name: string;
+        currency_symbol: string;
+        price_precision: number;
+        currency_format: string;
+        is_base_currency: boolean;
+
+    }
+
+    interface CurrenctConvert {
+        id?: ID
+        src_currency?: "USD" | "IRT" | string // The basic price source currency
+        src_price?: string | number
+        dst_currency?: "USD" | "IRT" | string // The destination price currency
+        dst_price?: string | number
+        exchange_rate?: number // The convert price factor
     }
 
     interface Country {
@@ -326,22 +385,23 @@ export declare namespace Ntm {
         gst_treatment?: string;
     }
 
-    interface SalesOrder {
-        salesorder_id: number; // Sales order ID
-        salesorder_number: string; // Sales order number
-        date: string; // Date of the sales order
-        status: string; // Status of the sales order (fulfilled, pending, etc.)
-        shipment_date: string; // Shipment date for the sales order
-        reference_number: string; // Reference number for the sales order
-        customer_id: number; // ID of the customer associated with the sales order
-        customer_name: string; // Name of the customer
-        contact_persons: { contact_person_id: number }[]; // Contact persons associated with the customer
-        currency_id: number; // Currency ID for the sales order
-        currency_code: string; // Currency code (e.g., USD, EUR)
-        currency_symbol: string; // Currency symbol (e.g., $, €)
-        exchange_rate: number; // Exchange rate for the currency
+    interface Customer {
+
+    }
+
+    interface Order {
+        id: ID; // Sales order ID
+        tracking_code: ID; // Sales order number
+        order_date: DateObject; // Date of the sales order
+        status: "pending" | "processing" | "shipped" | "delivered" | "cancelled" | "refunded" | "partially_shipped" | "partially_delivered" | string; // Status of the sales order (fulfilled, pending, etc.)
+        shipment_date: DateObject; // Shipment date for the sales order
+        customer_id: ID; // ID of the customer associated with the sales order
+        customer: Customer; // Name of the customer
+        contact_persons: ContactPerson[]; // Contact persons associated with the customer
+        currency_id: ID; // Currency ID for the sales order
+        currency?: Currency
         discount_amount: number; // Discount amount applied to the sales order
-        discount: string; // Discount percentage (e.g., "20.00%")
+        discount: number | string; // Discount percentage (e.g., "20.00%")
         is_discount_before_tax: boolean; // Indicates if the discount is applied before tax
         discount_type: string; // Type of discount (e.g., entity_level, item_level)
         estimate_id: number; // ID of the associated estimate
@@ -373,9 +433,9 @@ export declare namespace Ntm {
 
 // Interface for a line item in the sales order
     interface LineItem {
-        id ?: ID; // Item ID
-        line_item_id: number; // Line item ID
-        name: string; // Name of the item
+        id?: ID; // Item ID
+        line_item_id: ID; // Line item ID
+        title: string; // Name of the item
         description: string; // Description of the item
         item_order: number; // Order of the item in the sales order
         bcy_rate: number; // Rate of the item in base currency
@@ -399,6 +459,203 @@ export declare namespace Ntm {
         hsn_or_sac: number; // HSN or SAC code for the item
         sat_item_key_code: number; // SAT item key code for the item
         unitkey_code: string; // Unit key code for the item
+    }
+
+    interface Package {
+        id?: ID;
+        package_number: string;
+        order_id: number;
+        order: Order;
+        tracking_code: ID;
+        date: DateObject;
+        customer_id: number;
+        customer_name: string;
+        email: string;
+        phone: string;
+        mobile: string;
+        is_emailed: boolean;
+        notes: string;
+        total_quantity: number;
+        created_time: DateObject;
+        last_modified_time: string;
+        template_id: number;
+        template_name: string;
+        template_type: string;
+        billing_address: Address;
+
+        shipping_address: Address;
+
+        contact_persons: ContactPerson[];
+
+        line_items: LineItem[];
+    }
+
+    interface Shipment {
+        id?: ID
+        order_id: number;
+        order: Order
+        tracking_code: string;
+        date: DateObject;
+        status: string;
+        detailed_status: string;
+        status_message: string;
+        carrier: string;
+        service: string;
+        delivery_days: number;
+        delivery_guarantee: boolean;
+        reference_number: string;
+        customer_id: number;
+        customer: Customer
+        currency_id: number;
+        currency: Currency
+        discount_amount: number;
+        discount: string;
+        is_discount_before_tax: boolean;
+        discount_type: string;
+        estimate_id: number;
+        delivery_method: string;
+        delivery_method_id: number;
+        line_items: LineItem[];
+        shipping_charge: number;
+        sub_total: number;
+        tax_total: number;
+        total: number;
+        taxes: Tax[];
+        price_precision: number;
+        is_emailed: boolean;
+        billing_address: Address[];
+        shipping_address: Address[];
+        template_id: number;
+        template_name: string;
+        template_type: string;
+        notes: string;
+        created_time: DateObject;
+        last_modified_time: DateObject;
+    }
+
+    interface SalesOrder {
+        customer_id: number;
+        salesorder_number: string;
+        date: string;
+        shipment_date: string;
+        custom_fields: CustomField[];
+        reference_number: string;
+        line_items: LineItem[];
+        notes: string;
+        terms: string;
+        discount: string;
+        is_discount_before_tax: boolean;
+        discount_type: string;
+        shipping_charge: number;
+        delivery_method: string;
+        adjustment: number;
+        pricebook_id: number;
+        salesperson_id: number;
+        adjustment_description: string;
+        is_inclusive_tax: boolean;
+        exchange_rate: number;
+        template_id: number;
+        documents: Document[];
+        addresses: Address;
+        place_of_supply: string;
+        gst_treatment: string;
+        gst_no: string;
+    }
+
+
+    interface PaymentGateway {
+        configured: boolean;
+        additional_field1: string;
+        gateway_name: string;
+    }
+
+    interface PaymentOptions {
+        payment_gateways: PaymentGateway[];
+    }
+
+    interface Invoice {
+        id?: ID
+        customer_id: number;
+        customer: Customer
+        contact_persons: ContactPerson[];
+        invoice_number: string;
+        reference_number: string;
+        template_id: number;
+        date: DateObject;
+        payment_terms: number; // Payment terms in days e.g. 15, 30, 60. Invoice due date will be calculated based on this. Maximum length [100]
+        payment_terms_label: string;
+        due_date: DateObject;
+        discount: number;
+        is_discount_before_tax: boolean;
+        discount_type: string;
+        is_inclusive_tax: boolean;
+        exchange_rate: number;
+        recurring_invoice_id: string;
+        invoiced_estimate_id: string;
+        salesperson_name: string;
+        custom_fields: CustomField[];
+        project_id: string;
+        line_items: LineItem[];
+        payment_options: PaymentOptions;
+        allow_partial_payments: boolean;
+        custom_body: string;
+        custom_subject: string;
+        notes: string;
+        terms: string;
+        shipping_charge: number;
+        adjustment: number;
+        adjustment_description: string;
+        reason: string;
+        tax_authority_id: number;
+        tax_exemption_id: number;
+        avatax_use_code: string;
+        avatax_exempt_no: string;
+        vat_treatment: string;
+        tax_treatment: string;
+        billing_address_id: number;
+        billing_address: Address[];
+        shipping_address_id: number;
+        shipping_address: Address[];
+        is_retainer_invoice: boolean; // Is retainer invoice?
+    }
+
+    interface Payment {
+        id?: string;                 // Unique ID of the payment generated by the server. Maximum length allowed [2000]
+        payment_mode: string;               // Mode through which payment is made. This can be check, cash, creditcard, banktransfer, bankremittance, autotransaction or others. Maximum length [100]
+        amount: number;                     // Amount paid in the respective payment.
+        amount_refunded: number;            // Amount that is refunded. Refunds are applicable only for payments whose payment_mode is autotransaction. Refunds would be made to the respective card provided by the customer.
+        bank_charges: number;               // Denotes any additional bank charges.
+        payment_date: DateObject;            // Date on which payment is made. Date Format [yyyy-mm-dd]
+        status: string;                     // Status of the payment. It can either be success or failure.
+        reference_number: string;           // Reference number generated for the payment. A string of your choice can also be used as the reference number. Maximum length of the reference number [100]
+        description: string;                // Description about the payment.
+        customer_id: string;                // Customer ID of the customer involved in the payment.
+        customer: Customer;                // The customer involved in the payment.
+        email: string;                      // Email address of the customer involved in the payment.
+        tax_amount_withheld: number;        // Amount withheld for tax.
+        invoices: Invoice[];                // Invoice related to a payment (array of Invoice objects)
+        currency_id: string;                // ID of the currency used in the payment
+        currency: Currency;
+        account_id: string;                 // ID of the cash/bank account the payment has to be deposited.
+        account_name: string;               // Name of the cash/bank account the payment has to be deposited.
+        tax_account_id: string;             // ID of the tax account, in case of withholding tax.
+        tax_account_name: string;           // Name of the tax account, in case of withholding tax.
+        unused_amount: number;              // Amount which is not used for invoice payment yet.
+        last_four_digits: number;           // Last four digits of the card.
+        custom_fields: CustomField[];       // Additional field for a payment (array of CustomField objects)
+    }
+
+    interface Warehouse {
+        id?: ID
+        active?: boolean
+        warehouse_name: string;
+        address: string;
+        city: string;
+        state: string;
+        country: string;
+        zip: number;
+        phone: string;
+        email: string;
     }
 
 
