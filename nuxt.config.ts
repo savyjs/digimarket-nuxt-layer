@@ -6,10 +6,12 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 const Provinces = [];
 
 export default defineNuxtConfig({
+    // This is the list of available modules
     extends: [
         "layers/auth",
         "layers/commerce",
-        "layers/inventory"
+        "layers/inventory",
+        "layers/blog"
     ],
     modules: [
         "@nuxtjs/tailwindcss"
