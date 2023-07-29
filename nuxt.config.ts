@@ -14,8 +14,12 @@ export default defineNuxtConfig({
         "layers/blog-v1"
     ],
     modules: [
-        "@nuxtjs/tailwindcss"
+        "@nuxtjs/tailwindcss",
+        '@nuxtjs/strapi'
     ],
+    strapi: {
+        url: 'http://localhost:1337'
+    },
     css: [
         // join(currentDir, "./assets/styles/ntm.scss"),
         join(currentDir, "./tailwind/all.css")
