@@ -1,0 +1,84 @@
+{
+  "name": "digimarket-nuxt-layer-auth",
+  "description": "Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
+  "version": "0.7.1",
+  "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "tailwind",
+    "marketplace",
+    "UI kit",
+    "theme",
+    "ui framework",
+    "component framework",
+    "ui library",
+    "component library",
+    "commercial components",
+    "landing pages",
+    "podcast ui",
+    "shopping ui",
+    "ecommerce ui",
+    "blog ui"
+  ],
+  "type": "module",
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --port=3001",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:e2e-browser": "jest test/browser.test",
+    "test:unit": "jest test/unit.test",
+    "test:types": "tsc -p types/test"
+  },
+  "devDependencies": {
+    "@nuxt/schema": "latest",
+    "@nuxt/test-utils": "latest",
+    "@types/node": "^18",
+    "fs": "^0.0.1-security",
+    "jest": "^29.3.1",
+    "nuxt": "^3.5.2",
+    "path": "^0.12.7",
+    "postcss-import-ext-glob": "^2.1.1",
+    "sass": "^1.52.3",
+    "sass-loader": "latest",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/vue-fontawesome": "^3.0.1",
+    "@mdi/font": "^6.1.95",
+    "@mdi/js": "^6.1.95",
+    "@nuxt/kit": "^3.5.2",
+    "@nuxtjs/tailwindcss": "^6.7.0",
+    "@sidebase/nuxt-auth": "^0.6.0-beta.3",
+    "font-awesome": "^4.7.0",
+    "lodash": "^4.17.21",
+    "lodash-deep": "^1.6.0",
+    "material-design-icons-iconfont": "^5.0.1",
+    "material-icons": "^0.3.1",
+    "moment-jalaali": "^0.9.2",
+    "nuxt-jsonld": "^2.0.8",
+    "swiper": "^9.0.5",
+    "vue-i18n": "^9.2.2",
+    "vue3-lottie": "^2.7.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/savyjs/digimarket-nuxt-module/issues"
+  },
+  "homepage": "https://digimarket.savyjs.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/savyjs/digimarket-nuxt-module.git"
+  }
+}
