@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.7.2](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.7.1...v0.7.2) (2023-08-03)
+
+
+### Features
+
+* **modeuls:** add blog module ([b796bab](https://github.com/savyjs/digimarket-nuxt-layer/commit/b796babb45d08c67471152b24226868516482374))
+* **modules:** add commerce and inventory layers as modules ([dae1913](https://github.com/savyjs/digimarket-nuxt-layer/commit/dae19133416f80e38c9763bf5a807e543e07d100))
+* **type:** add open data structure ([5aacb46](https://github.com/savyjs/digimarket-nuxt-layer/commit/5aacb46064db8819601b3afcce29dddc60742a73))
+
+
+### Miscellaneous Chores
+
+* version 0.7.2 ([c13998c](https://github.com/savyjs/digimarket-nuxt-layer/commit/c13998cfdc40f347f3a3eb9c6a0c4359def385c3))
+
 ## [0.7.1](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.7.0...v0.7.1) (2023-07-23)
 
 
