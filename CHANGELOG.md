@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.8.0](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.7.2...v0.8.0) (2023-08-13)
+
+
+### Features
+
+* add VSD-3 layer ([3c94766](https://github.com/savyjs/digimarket-nuxt-layer/commit/3c9476629e45c20a8263b9e8e909b7c2c5c46688))
+* add VSD-3 layer ([dba14e3](https://github.com/savyjs/digimarket-nuxt-layer/commit/dba14e3db2239d6a8ea9c516784d83a68e73588f))
+
 ## [0.7.2](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.7.1...v0.7.2) (2023-08-03)
 
 
