@@ -69,8 +69,8 @@
     "swiper": "^9.0.5",
     "vue-i18n": "^9.2.2",
     "vue3-lottie": "^2.7.1",
-    "vuetify": "^3.3.12"
-
+    "vuetify": "^3.3.12",
+    "@nuxtjs/strapi" : "^1.9.3"
   },
   "publishConfig": {
     "access": "public"

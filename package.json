@@ -60,7 +60,7 @@
     "@mdi/js": "^6.1.95",
     "@nuxt/kit": "^3.5.2",
     "@nuxtjs/tailwindcss": "^6.7.0",
-    "@sidebase/nuxt-auth": "^0.6.0-beta.3",
+    "@sidebase/nuxt-auth": "^0.6.0-beta.4",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.21",
     "lodash-deep": "^1.6.0",

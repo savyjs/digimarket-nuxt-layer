@@ -12,7 +12,7 @@ export default defineNuxtConfig({
         "layers/commerce-v1",
         "layers/inventory-v1",
         "layers/blog-v1",
-        "layers/vsd-v3",
+        "layers/vuetify-strapi-dashboard-v3",
     ],
     modules: [
         "@nuxtjs/tailwindcss",
