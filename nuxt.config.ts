@@ -11,7 +11,8 @@ export default defineNuxtConfig({
         "layers/auth-v1",
         "layers/commerce-v1",
         "layers/inventory-v1",
-        "layers/blog-v1"
+        "layers/blog-v1",
+        "layers/vsd-v3",
     ],
     modules: [
         "@nuxtjs/tailwindcss",
