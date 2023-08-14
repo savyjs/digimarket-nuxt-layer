@@ -50,7 +50,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "vuetify-strapi-dashboard": "file:layers/vsd-3",
+    "vuetify-strapi-dashboard": "file:layers/vuetify-strapi-dashboard-v3",
     "@nuxtjs/strapi": "^1.9.3",
     "@fortawesome/fontawesome-free": "^5.15.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",

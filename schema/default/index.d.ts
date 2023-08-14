@@ -1,5 +1,3 @@
-import {CurrencyDisplay} from "@intlify/core-base";
-
 export declare namespace Ntm {
     interface Category {
         id?: ID;
