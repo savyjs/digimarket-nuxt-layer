@@ -1,6 +1,4 @@
 import {defineAppConfig} from "#app";
-import {DigimarketConfig} from "~/schema/options";
-import {VSD} from "~/layers/vuetify-strapi-dashboard-v3/schema";
 import VuetifyStrapiDashboardConfig = VSD.VuetifyStrapiDashboardConfig;
 
 const Provinces: never[] = [];
