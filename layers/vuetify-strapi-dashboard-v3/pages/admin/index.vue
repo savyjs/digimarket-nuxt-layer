@@ -1,10 +1,11 @@
 <template>
-   <div>Hi world! - this is  your dashboard </div>
+  <div>Hi world! - this is your dashboard</div>
 </template>
-<script>
+<script setup>
 
-export default {
-    layout: 'vsd'
-}
+definePageMeta({
+  layout: 'vsd'
+})
+
 </script>
 
