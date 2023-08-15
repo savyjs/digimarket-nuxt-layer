@@ -1,20 +1,24 @@
-import {defineNuxtPlugin} from "nuxt/app";
-
-
-// Vuetify
 import 'vuetify/styles'
-import {createVuetify} from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
+import { createVuetify } from 'vuetify'
 
-export default defineNuxtPlugin(nuxtApp => {
+export default createVuetify()
 
-    const vuetify = createVuetify({
-        ssr: true,
-        components,
-        directives,
-    });
-
-    vuetify.install(nuxtApp.vueApp);
-
-})
+// import {defineNuxtPlugin} from "nuxt/app";
+//
+//
+// // Vuetify
+// import 'vuetify/styles'
+// import {createVuetify} from 'vuetify'
+// import * as components from 'vuetify/components'
+// import * as directives from 'vuetify/directives'
+//
+// export default defineNuxtPlugin((nuxtApp) => {
+//
+//     const vuetify = createVuetify({
+//         ssr: true,
+//         components,
+//         directives,
+//     });
+//
+//     vuetify.install(nuxtApp.vueApp);
+// })
