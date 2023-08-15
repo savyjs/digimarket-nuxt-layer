@@ -1,6 +1,5 @@
 import {defineNuxtConfig} from "nuxt/config";
-import {createVuetify} from 'vuetify'
-import VsdVuetify from "~/plugins/VsdVuetify";
+import VsdVuetify from "./plugins/VsdVuetify";
 
 export default defineNuxtConfig({
     modules: ['@nuxtjs/strapi'],
