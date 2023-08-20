@@ -197,7 +197,7 @@ export declare namespace Ntm {
         code?: string // Country locale code
         icon?: string
         image?: Image
-        zone?: string // Time zone
+        time_zone?: string // Time zone
         items: Division // List of country divisions, State[] | Province[] | City[]
     }
 
@@ -289,18 +289,26 @@ export declare namespace Ntm {
         id?: ID
         title?: string
         full_name?: string
-        image?: Image
+        active?: boolean // Is active
+        has_branch?: boolean // Has branches
+        stage?: "Development" | "Test" | "Production"
+        logo?: Image
+        images?: Image[]
         description?: string
         country?: string
-
-        is_default_org: boolean;
+        is_default: boolean;
         time_zone: string;
         language_code: string;
         tax_group_enabled: boolean;
         user_status: string;
-        contact_name: string;
         industry_type: string;
         address: Address[];
+        members: User[];
+    }
+
+    interface User {
+        id?: ID
+
     }
 
     interface Address {
@@ -352,7 +360,8 @@ export declare namespace Ntm {
 
     interface Contact {
         id?: ID;
-        contact_name: string;
+        title?: string;
+        active?: boolean
         company_name: string;
         has_transaction: boolean;
         contact_type: string;
