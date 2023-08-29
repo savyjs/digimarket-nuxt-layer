@@ -10,7 +10,7 @@ export default defineAppConfig({
         title: "vuetify strapi dashboard",
         singularTitle: "VSD",
         footerTitle: "VSD",
-        systemLogo: '/system-logo.png # top of menu',
+        systemLogo: '/system-logo.png # top of layout',
         loader: true,
         enable2fa: false,
         splash: true,

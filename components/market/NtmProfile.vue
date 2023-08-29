@@ -2,7 +2,7 @@
   <div class="flex w-full gap-2 bg-default">
     <div class="grow w-1/3">
 
-      <!-- Profile side menu -->
+      <!-- Profile side layout -->
       <div class="card-primary p-0">
 
         <slot name="topsidebar">
