@@ -1,9 +1,16 @@
 import {defineNuxtConfig} from "nuxt/config";
+import dotenv from "dotenv"
+dotenv.config()
 
 export default defineNuxtConfig({
     modules: ['@nuxtjs/strapi'],
+    vite:{
+        ssr: {
+            noExternal: ['vuetify']
+        }
+    },
     // @ts-ignore
     strapi: {
-        url: 'http://localhost:1337'
+        url: process.env?.VSD_API_URL || "/api"
     }
 })

@@ -3,8 +3,6 @@
     <nuxt-page/>
   </nuxt-layout>
 </template>
-<script>
-export default {
-  layout: 'vsd'
-}
+<script setup>
+
 </script>
