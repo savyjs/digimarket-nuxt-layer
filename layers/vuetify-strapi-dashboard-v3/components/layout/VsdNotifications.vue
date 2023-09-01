@@ -1,3 +1,3 @@
 <template>
-  <div>Hi</div>
+  <div>Vsd Notifications</div>
 </template>
