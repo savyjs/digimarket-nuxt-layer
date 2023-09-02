@@ -1,6 +1,10 @@
 export global {
     export declare namespace VSD {
         interface VuetifyStrapiDashboardConfig {
+
+            rtlDictionary?: {};
+            rtl?: boolean;
+            lang?: string;
             description?: string;
             keywords?: string;
             title?: string;
@@ -15,7 +19,7 @@ export global {
             showUser?: boolean;
             menu?: {
                 navbar?: MenuItem[];
-                adminDrawer?: MenuItem[];
+                drawer?: MenuItem[];
                 panelDashboard?: MenuItem[];
                 footerLinks?: MenuItem[];
                 panelDrawer?: MenuItem[];
@@ -26,6 +30,9 @@ export global {
         interface MenuItem {
             title?: string;
             icon?: string;
+            to?: string;
+            role?: string;
+            permission?: string;
             link?: string;
             target?: string;
             items?: MenuItem[]
