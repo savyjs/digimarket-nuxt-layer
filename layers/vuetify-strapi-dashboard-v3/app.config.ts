@@ -1,6 +1,6 @@
 import {defineAppConfig} from "#app";
 import VuetifyStrapiDashboardConfig = VSD.VuetifyStrapiDashboardConfig;
-import All from "~/layers/vuetify-strapi-dashboard-v3/presets/all";
+import All from "./presets/all";
 
 const Provinces: never[] = [];
 

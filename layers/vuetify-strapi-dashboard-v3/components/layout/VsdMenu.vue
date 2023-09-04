@@ -48,6 +48,7 @@
 
 defineProps(['data', 'value', 'label', 'items'])
 const showLoader = useState('showLoader', () => true)
+const appConfig = useAppConfig();
 
 function capitalize(s) {
   if (typeof s !== 'string') return ''
@@ -56,8 +57,8 @@ function capitalize(s) {
 
 function isAllowedMenu(s) {
   // Check user permissions
-  return true
+  return !!s?.title
 }
 
-const drawerItems = await useAppConfig()?.vsd?.menu?.drawer;
+const drawerItems = appConfig?.vsd?.menu?.drawer;
 </script>

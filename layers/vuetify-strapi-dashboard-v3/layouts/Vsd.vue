@@ -16,15 +16,15 @@
                   <v-img
                       max-width="100%"
                       contain
-                      :src="SYSTEM_LOGO"
+                      :src="systemLogo"
                   />
                 </v-avatar>
               </v-col>
               <v-col cols="6" class="pt-0 mt-0">
                 <v-list-item-content>
                   <v-list-item-title class="pt-5 drawertext--text">
-                    <small> {{ $t("control_panel", "User panel") }} </small>
-                    <p><b>{{ SINGLE_TITLE }}</b></p>
+                    <small> {{ $t("vsd.control_panel", "User panel") }} </small>
+                    <p><b>{{ singleTitle }}</b></p>
                   </v-list-item-title>
                 </v-list-item-content>
               </v-col>
@@ -64,7 +64,6 @@
       </v-list>
       <LayoutVsdMenu></LayoutVsdMenu>
     </v-navigation-drawer>
-
     <v-app-bar elevation="1" app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title style="cursor: pointer"
@@ -76,7 +75,6 @@
       <span class="text-center mx-2">
         <template v-for="item in navbarMenu">
           <component :is="item.component" v-if="item?.component"/>
-
         <v-menu
             v-else-if=" item?.items"
             :close-on-content-click="false"
@@ -116,14 +114,13 @@
       <LayoutVsdSettings v-if="showSettings"/>
       <LayoutVsdAccount/>
     </v-app-bar>
-
     <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
       <nuxt-page/>
     </v-main>
     <v-footer app class="py-0" inset>
       <v-btn x-small outlined elevation="0" class="mb-1 mx-1 pa-1 mt-1 font-10">
-        {{ FOOTER_TITLE || 'VSD' }}
-        {{ VERSION }}
+        {{ footerTitle || 'VSD' }}
+        {{ Version }}
       </v-btn>
     </v-footer>
   </v-layout>
@@ -138,17 +135,13 @@ const isRTL = useRtl();
 const {mobile} = useDisplay()
 
 let isMobile = false;
+
 onMounted(() => {
-
-
-
-
-
-
-
-
   isMobile = mobile.value
 })
+
+const singleTitle = appConfig?.vsd?.title;
+const systemLogo = appConfig?.vsd?.systemLogo || "~/assets/img/vsd.png";
 
 const showNotifications = useState('showNotifications', () => false);
 
@@ -162,6 +155,6 @@ const user = useState("user", () => {
 })
 
 const navbarMenu = [];
-const FOOTER_TITLE = 'VSD'
-const VERSION = 0.1
+const footerTitle = appConfig?.vsd?.footerTitle || 'VSD'
+const Version = 0.1
 </script>
