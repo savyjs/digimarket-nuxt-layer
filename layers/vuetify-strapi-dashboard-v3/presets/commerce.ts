@@ -8,7 +8,7 @@ export default {
         },
         {
             title: 'Attribute Groups',
-            icon: 'mdi-table-row-plus-before'
+            icon: 'mdi-list-row-plus-before'
         },
         {
             title: 'Attributes',
