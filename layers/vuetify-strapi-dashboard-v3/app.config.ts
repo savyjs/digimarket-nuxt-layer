@@ -20,18 +20,8 @@ export default defineAppConfig({
         showUser: false,
         menu:
             {
-                navbar: [
-                    {title: 'home', icon: 'home', link: '/', target: '_blank'},
-                    {
-                        title: 'example', icon: 'add', items: [
-                            {title: 'all', permission: "example.find", icon: 'link', link: '/admin/example'},
-                            {title: 'new', permission: "example.create", icon: 'link', link: '/admin/example/create'}
-                        ]
-                    }
-                ],
-                drawer: [
-                    All
-                ],
+                navbar: [],
+                drawer: [],
                 panelDashboard: [],
                 footerLinks: []
             }

@@ -1,10 +1,13 @@
 import {defineNuxtConfig} from "nuxt/config";
 import dotenv from "dotenv"
+
 dotenv.config()
 
 export default defineNuxtConfig({
-    modules: ['@nuxtjs/strapi'],
-    vite:{
+    modules: [
+        '@nuxtjs/strapi'
+    ],
+    vite: {
         ssr: {
             noExternal: ['vuetify']
         }

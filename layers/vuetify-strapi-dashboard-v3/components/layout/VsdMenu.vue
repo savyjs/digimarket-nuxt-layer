@@ -3,11 +3,10 @@
     <v-list-item color="drawertext">
       <v-text-field
           v-model="search"
-          outlined
-          append-icon="search"
+          variant="underlined"
+          append-icon="fa-search"
           dense
-          clearable
-          :placeholder="$t('vsd.search','Type something ...')"></v-text-field>
+          :placeholder="$t('vsd.search','Search ...')"></v-text-field>
     </v-list-item>
     <template v-for="(menuItem, i) in drawerItems">
       <template v-if="isAllowedMenu(menuItem)">
