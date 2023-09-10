@@ -29,8 +29,9 @@
             >
             </v-list-item>
           </template>
-          <template v-for="(item, i) in menuItem.items" v-if="isAllowedMenu(item)">
+          <template v-for="(item, i) in menuItem.items">
             <v-list-item
+                v-if="isAllowedMenu(item)"
                 :to="item?.to"
                 :href="item?.link"
                 router
@@ -59,7 +60,7 @@ function capitalize(s) {
 
 function isAllowedMenu(item) {
   // Check user permissions
-  return !!item?.title
+  return item?.title
 }
 
 const drawerItems = appConfig?.vsd?.menu?.drawer;
