@@ -11,13 +11,14 @@ export default defineAppConfig({
         title: "vuetify strapi dashboard",
         singularTitle: "VSD",
         footerTitle: "VSD",
-        systemLogo: '/system-logo.png # top of layout',
+        systemLogo: undefined,
         loader: true,
         enable2fa: false,
         splash: true,
         recaptchaKey: 'FROM_GOOGLE',
-        loginUrl: '/auth/local',
+        loginUrl: '/auth/login',
         showUser: false,
+        darkmodeToggleBtn: true,
         menu:
             {
                 navbar: [],

@@ -1,9 +1,11 @@
-import { ref, watch } from 'vue'
-import {useState} from "nuxt/app";
+import {defineNuxtPlugin} from "#app";
+import {watch} from "vue";
 
-export const useDarkmode = () => {
-    const darkmode = useState('darkmode', () => false)
-    watch(darkmode, (value : boolean) => {
+
+export default defineNuxtPlugin(nuxtApp => {
+
+    const darkmode = useState("darkmode", () => localStorage.theme == 'dark')
+    watch(darkmode, (value: boolean) => {
         if (value) {
             document.getElementsByTagName("html")[0].setAttribute('data-mode', 'dark')
         } else {
@@ -11,5 +13,4 @@ export const useDarkmode = () => {
         }
         localStorage.theme = value ? 'dark' : 'light'
     })
-    return darkmode;
-}
+})

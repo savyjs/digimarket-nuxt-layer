@@ -26,7 +26,7 @@ export default defineNuxtPlugin(nuxtApp => {
     nuxtApp.provide("i18n", i18n);
     nuxtApp.provide("useI18n", useI18n);
     watch(i18n.global.locale, (newVal) => {
-        let rtl = useRt()
+        let rtl = useRtl()
         rtl.value = !!rtlDictionary[newVal] ?? false
     })
 

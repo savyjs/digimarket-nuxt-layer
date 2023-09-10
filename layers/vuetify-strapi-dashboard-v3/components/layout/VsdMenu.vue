@@ -14,7 +14,7 @@
             v-if="!menuItem?.items?.length"
             :to="menuItem?.to"
             :href="menuItem?.link"
-            :prepend-icon="menuItem?.icon"
+            :prepend-icon="menuItem?.icon ?? (isRTL ? 'mdi-menu-left' : 'mdi-menu-right')"
             :title="capitalize($t(menuItem?.title))"
         >
         </v-list-item>
@@ -44,19 +44,22 @@
   </v-list>
 </template>
 <script setup>
+import {useRtl} from 'vuetify'
 
 defineProps(['data', 'value', 'label', 'items'])
 const showLoader = useState('showLoader', () => true)
 const appConfig = useAppConfig();
+const search = useState('SearchInMenu', () => '')
+const isRTL = useRtl();
 
 function capitalize(s) {
   if (typeof s !== 'string') return ''
   return s.charAt(0).toUpperCase() + s.slice(1)
 }
 
-function isAllowedMenu(s) {
+function isAllowedMenu(item) {
   // Check user permissions
-  return !!s?.title
+  return !!item?.title
 }
 
 const drawerItems = appConfig?.vsd?.menu?.drawer;
