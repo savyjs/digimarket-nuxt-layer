@@ -1,5 +1,48 @@
 # Changelog
 
+## [0.7.2](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.7.2...v0.7.2) (2023-09-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* move common files to core-v1 module
+* move common module parts into core-v1 module
+
+### BREAKING
+
+* move common files to core-v1 module ([9782d6e](https://github.com/savyjs/digimarket-nuxt-layer/commit/9782d6e557817a9d2ae8501290e664099f49dc6d))
+* move common module parts into core-v1 module ([558a830](https://github.com/savyjs/digimarket-nuxt-layer/commit/558a8307dfed2ac34236f3bf5ca5f85272e84ea8))
+
+
+### Features
+
+* add all presets ([6840950](https://github.com/savyjs/digimarket-nuxt-layer/commit/6840950955dda09bbb2fe7768c3d2296fc82ca70))
+* add commerce menu ([868986b](https://github.com/savyjs/digimarket-nuxt-layer/commit/868986b1c9f8158cf764bd855027ec814acbb1f4))
+* add interface for item in VSD ([dad3ec7](https://github.com/savyjs/digimarket-nuxt-layer/commit/dad3ec733a04fe3c6df5c4ab182784217cc2df79))
+* add interface for zoho crm order ([233fee0](https://github.com/savyjs/digimarket-nuxt-layer/commit/233fee0c62792bfb4042049f24d67881c0b1fac4))
+* add legacy roles and users ([cc4ec7a](https://github.com/savyjs/digimarket-nuxt-layer/commit/cc4ec7a6eca8c48a4dd3334f772ec5b9f32ab5a1))
+* add Vsd Menu ([a1d97b8](https://github.com/savyjs/digimarket-nuxt-layer/commit/a1d97b8201e646d19276138442159753dd8c34b9))
+* add VSD-3 layer ([3c94766](https://github.com/savyjs/digimarket-nuxt-layer/commit/3c9476629e45c20a8263b9e8e909b7c2c5c46688))
+* add VSD-3 layer ([dba14e3](https://github.com/savyjs/digimarket-nuxt-layer/commit/dba14e3db2239d6a8ea9c516784d83a68e73588f))
+* add VsdLayout components: Account, Settings, Darkmode, Locale templates ([acbae64](https://github.com/savyjs/digimarket-nuxt-layer/commit/acbae64e5b912c75f194845693bfeb256f4a15db))
+* add VsdLocale plugin ([33d51c0](https://github.com/savyjs/digimarket-nuxt-layer/commit/33d51c031e8286bdfe0dc8da26a16a48450256e3))
+* add vuetify plugin ([0b54b55](https://github.com/savyjs/digimarket-nuxt-layer/commit/0b54b55dd5ca6d8072c1f24537e4d81da9e307ef))
+
+
+### Bug Fixes
+
+* add layout for admin ([03162da](https://github.com/savyjs/digimarket-nuxt-layer/commit/03162da3d08d2222e1ec3139ddfbe856e7222554))
+* noExternal option for vite ([df608ed](https://github.com/savyjs/digimarket-nuxt-layer/commit/df608ed8600de9d647a5ea7fecc9e84d7bde7e56))
+* plugin import ([7aab32a](https://github.com/savyjs/digimarket-nuxt-layer/commit/7aab32a310d397a16dbb95d4be9aee5b0c5fadcd))
+* refactor folders ([1ae1b9d](https://github.com/savyjs/digimarket-nuxt-layer/commit/1ae1b9dfe3280fc390b9adba6d2e48e3bb9deba7))
+* update interfaces ([4500566](https://github.com/savyjs/digimarket-nuxt-layer/commit/45005664a32f82fc65085f30c0652903acb391dc))
+* vsdMenu showing sub menu items ([8a87294](https://github.com/savyjs/digimarket-nuxt-layer/commit/8a872948a90b5658f4b0a382d90ce863dfd34898))
+
+
+### Miscellaneous Chores
+
+* version 0.7.2 ([f1d00c8](https://github.com/savyjs/digimarket-nuxt-layer/commit/f1d00c8bc0254766a0ed98cbf0f2b86d7df9255f))
+
 ## [0.7.2](https://github.com/savyjs/digimarket-nuxt-layer/compare/v0.7.1...v0.7.2) (2023-08-03)
 
 
