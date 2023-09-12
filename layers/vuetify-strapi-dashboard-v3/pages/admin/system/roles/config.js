@@ -1,0 +1,20 @@
+export default {
+  title: 'Roles',
+  resource: 'users-permissions/roles',
+  icon: "shield",
+  name: '/admin/system/roles',
+  api: 'roles',
+  popTitle: 'Role',
+  popWidth: '1120',
+  color: 'success darken-4',
+  sortable: true,
+  filterable: false,
+  reportable: false,
+  searchable: false,
+  searchQuery: false,
+  deleteAll: true,
+  newItem: true,
+  editItem: true,
+  defaultActions: true,
+}
+

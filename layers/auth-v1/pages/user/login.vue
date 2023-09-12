@@ -6,8 +6,9 @@
 <script setup>
 
 import {useRouter} from "#app";
+
 async function login(credential) {
-  useApi("/login").then(res => {
+  useNtmLogin(credential, "/login", 'POST').then(res => {
     useRouter().push('./verify')
   })
 }
