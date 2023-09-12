@@ -1,7 +1,7 @@
 {
   "name": "digimarket-nuxt-layer-commerce",
   "description": "Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "0.7.1",
+  "version": "1.0.0-development.2",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -59,6 +59,7 @@
     "@nuxt/kit": "^3.5.2",
     "@nuxtjs/tailwindcss": "^6.7.0",
     "@sidebase/nuxt-auth": "^0.6.0-beta.3",
+    "digimarket-nuxt-layer-core": "^1.0.0-development.2",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.21",
     "lodash-deep": "^1.6.0",
@@ -74,11 +75,11 @@
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/savyjs/digimarket-nuxt-module/issues"
+    "url": "https://github.com/savyjs/digimarket-nuxt-layer/issues"
   },
   "homepage": "https://digimarket.savyjs.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/savyjs/digimarket-nuxt-module.git"
+    "url": "git+https://github.com/savyjs/digimarket-nuxt-layer.git"
   }
 }

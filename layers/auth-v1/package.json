@@ -1,7 +1,7 @@
 {
   "name": "digimarket-nuxt-layer-auth",
   "description": "Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "0.7.1",
+  "version": "1.0.0-development.2",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -58,7 +58,8 @@
     "@mdi/js": "^6.1.95",
     "@nuxt/kit": "^3.5.2",
     "@nuxtjs/tailwindcss": "^6.7.0",
-    "@sidebase/nuxt-auth": "^0.6.0-beta.3",
+    "@sidebase/nuxt-auth": "^0.6.0-beta.5",
+    "digimarket-nuxt-layer-core": "^1.0.0-development.2",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.21",
     "lodash-deep": "^1.6.0",

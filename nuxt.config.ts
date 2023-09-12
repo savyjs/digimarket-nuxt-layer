@@ -8,24 +8,21 @@ const Provinces = [];
 export default defineNuxtConfig({
     // This is the list of available modules
     extends: [
-        "layers/auth-v1",
-        "layers/commerce-v1",
-        "layers/inventory-v1",
-        "layers/blog-v1",
-        "layers/vsd-v3",
+        // "layers/auth-v1",
+        // "layers/commerce-v1",
+        // "layers/inventory-v1",
+        // "layers/blog-v1",
+        "layers/vuetify-strapi-dashboard-v3",
     ],
     modules: [
-        "@nuxtjs/tailwindcss",
+        // "@nuxtjs/tailwindcss",
         '@nuxtjs/strapi'
     ],
-    strapi: {
-        url: 'http://localhost:1337'
-    },
     css: [
         // join(currentDir, "./assets/styles/ntm.scss"),
-        join(currentDir, "./tailwind/all.css")
+        // join(currentDir, "./tailwind/all.css")
     ],
-    nitro: {
-        preset: "node"
-    }
+    // nitro: {
+    //     preset: "node"
+    // }
 })
