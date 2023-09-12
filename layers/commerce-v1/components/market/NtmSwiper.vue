@@ -19,10 +19,10 @@
 
 </template>
 <script setup lang="ts">
-import {SwiperOptions} from 'swiper/types/swiper-options';
+
 import Swiper, {Navigation, Pagination, Scrollbar} from 'swiper';
 
-interface Props extends SwiperOptions {
+interface Props {
   slidesPerView?: number
 }
 

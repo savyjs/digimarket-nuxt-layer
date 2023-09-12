@@ -1,7 +1,7 @@
 {
   "name": "digimarket-nuxt-layer-core",
   "description": "This is the core module. Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "1.0.0-development.2",
+  "version": "1.0.0-development.4",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -42,8 +42,8 @@
     "@types/node": "^18",
     "fs": "^0.0.1-security",
     "jest": "^29.3.1",
-    "nuxt": "^3.5.2",
     "lodash": "^4.17.21",
+    "nuxt": "^3.5.2",
     "path": "^0.12.7",
     "postcss-import-ext-glob": "^2.1.1",
     "sass": "^1.52.3",
@@ -51,15 +51,14 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@nuxtjs/strapi": "^1.9.3",
     "@fortawesome/fontawesome-free": "^5.15.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@mdi/font": "^7.2.96",
     "@mdi/js": "^7.2.96",
+    "@nuxtjs/strapi": "^1.9.3",
     "@nuxtjs/tailwindcss": "^6.7.0",
-    "@sidebase/nuxt-auth": "^0.6.0-beta.4",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.21",
     "lodash-deep": "^1.6.0",
@@ -67,8 +66,9 @@
     "material-icons": "^1.13.10",
     "moment-jalaali": "^0.9.2",
     "nuxt-jsonld": "^2.0.8",
+    "pinia": "^2.1.6",
     "swiper": "^9.0.5",
-    "vue-i18n": "^9.2.2",
+    "vue-i18n": "^9.4.0",
     "vue3-lottie": "^2.7.1"
   },
   "publishConfig": {

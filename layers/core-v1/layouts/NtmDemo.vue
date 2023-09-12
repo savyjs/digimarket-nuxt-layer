@@ -52,7 +52,6 @@ onMounted(() => {
   if (appConfig?.digimarket?.messages?.[locale.value]) {
     locale.value = localStorage?.lang
   }
-  alert(locale.value)
 
   rtl.value = appConfig?.digimarket?.rtlDictionary?.[locale.value] ? !!localStorage.rtl : !!appConfig?.digimarket?.rtl
 

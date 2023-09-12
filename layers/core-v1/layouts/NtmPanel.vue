@@ -15,9 +15,6 @@
 </template>
 <script setup>
 
-import NtmMarketHeader from "~/components/market/NtmMarketHeader.vue";
-import NtmSvgIcons from "~/components/market/NtmSvgIcons.vue";
-
 const darkmode = useDarkmode()
 const rtl = useRtl()
 const backdrop = useState('backdrop', () => false)

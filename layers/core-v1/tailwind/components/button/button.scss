@@ -15,6 +15,10 @@
     @apply bg-primary text-white dark:bg-primary dark:focus:ring-red-800;
   }
 
+  .btn-primary[disabled=""] {
+    @apply bg-gray-200 text-white dark:focus:ring-gray-800;
+  }
+
   .btn-primary-outlined {
     @apply btn bg-transparent border;
   }

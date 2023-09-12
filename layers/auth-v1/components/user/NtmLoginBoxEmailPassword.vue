@@ -15,11 +15,11 @@
 
         <div class="form-group flex flex-col gap-4">
           <div class="element-group w-full  flex flex-col gap-1">
-            <label for="name" class="py-2">{{ $t("ntm.mobile", "Mobile") }}</label>
+            <label for="name" class="py-2">{{ $t("ntm.email", "Email Address") }}</label>
             <input
                 dir="auto"
-                id="name"
-                type="text"
+                id="email"
+                type="email"
                 v-model="credentials.username"
                 class="input-primary input-mobile py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
@@ -38,23 +38,24 @@
           </div>
           <div class="flex gap-3 text-xs">
             <span>
-              {{ $t("ntm.forgot_password", "I forgot my password,") }}
+              {{ $t("ntm.forgot_password", "Forgot your password?") }}
               <a href="./forgot" class="text-link">
-                {{ $t("ntm.forgot_title", "recovery form") }}
+                {{ $t("ntm.forgot_title", "Reset it here") }}
               </a>
             </span>
           </div>
 
 
-          <button @click="$emit('action',credentials)" class="btn-primary w-full mt-5 py-3.5">
+          <button :disabled="!(credentials.username?.length > 1 && credentials.password?.length > 0)"
+                  @click="$emit('action',credentials)" class="btn-primary w-full mt-5 py-3.5">
             {{ $t('ntm.login_title', 'Login') }}
           </button>
 
           <div class="flex justify-around gap-3 text-xs">
             <span>
-              {{ $t("ntm.dont_have_account", "I don't have an account,") }}
+              {{ $t("ntm.dont_have_account", "Don't have an account?") }}
               <a href="./register" class="text-link">
-                {{ $t("ntm.register_title", "register") }}
+                {{ $t("ntm.register_title", "Register now") }}
               </a>
             </span>
           </div>
