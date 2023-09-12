@@ -6,6 +6,7 @@ const Provinces: never[] = [];
 
 export default defineAppConfig({
     vsd: <VuetifyStrapiDashboardConfig>{
+        version: "Development-alpha",
         description: "meta description",
         keywords: "meta keywords",
         title: "vuetify strapi dashboard",

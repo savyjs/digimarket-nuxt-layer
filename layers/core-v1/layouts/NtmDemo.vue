@@ -3,31 +3,18 @@
   <div :class="{'bg-default':true,'fixed':true,'w-full':true}">
     <div class="container mx-auto py-1">
       <div class="flex justify-between items-center">
-        <p class="flex hidden items-center">
-          {{ $t('demo_warning', 'Hello! This site is demo for digimarket kit. for documentation please go to ') }}
-          <nuxt-link class="sm mx-1 font-light" target="_blank" href="https://digimarket.savyjs.com">
-            Digimarket
-          </nuxt-link>
-          , or for the list of available pages visit
-          <nuxt-link class="sm mx-1 font-light" target="_blank" to="/">main page.</nuxt-link>
-        </p>
-        <div class="hidden items-center">
-          <nuxt-link class="sm mx-1 font-light" target="_blank" href="https://digimarket.savyjs.com">
-            Digimarket
-          </nuxt-link>
-        </div>
 
         <div class="flex gap-3 items-center">
-          <div class="flex items-center">
+          <div class="flex items-center" v-if="$i18n?.availableLocales?.length > 1">
             <LangNtmSwitchLang/>
           </div>
           <div class="flex items-center">
-            <ThemeNtmSwitchRTL/>
+            <ThemeNtmSwitchRTL v-if="appConfig?.rtlDictionary?.length > 1"/>
           </div>
           <div class="flex items-center">
             <ThemeNtmDarkToggle/>
           </div>
-          <span class="text-xs self-center items-center">
+          <span v-if="version" class="text-xs self-center items-center">
           Version {{ version }}
         </span>
         </div>
@@ -43,15 +30,15 @@
 
 import {useI18n} from "vue-i18n";
 
+const appConfig = useAppConfig()
 let {locale} = useI18n()
 
 let dir = useRtl()
 let lang = locale
 
-
+const version = appConfig?.digimarket?.version
 const darkmode = useDarkmode()
 const rtl = useRtl()
-const version = 1
 
 
 onMounted(() => {
@@ -62,8 +49,12 @@ onMounted(() => {
     darkmode.value = false;
   }
 
-  rtl.value = !!localStorage.rtl
-  locale.value = localStorage.lang
+  if (appConfig?.digimarket?.messages?.[locale.value]) {
+    locale.value = localStorage?.lang
+  }
+  alert(locale.value)
+
+  rtl.value = appConfig?.digimarket?.rtlDictionary?.[locale.value] ? !!localStorage.rtl : !!appConfig?.digimarket?.rtl
 
 
   watch(lang, function (newVal) {
