@@ -7,9 +7,12 @@
               class="mx-auto max-w-md rounded-lg border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 bg-default sm:p-6 lg:p-6">
             <div class="mb-5 flex w-full justify-center text-center">
               <nuxt-link to="/" v-if="logo || title">
-                <a class="text-link px-0.5">
+                <a class="text-link px-0.5" v-if="logo">
                   <img width="150" height="40" :src="logo" :alt="title"/>
                 </a>
+                <span v-else>
+                  {{ title }}
+                </span>
               </nuxt-link>
             </div>
             <slot/>
