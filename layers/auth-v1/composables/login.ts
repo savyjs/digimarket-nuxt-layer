@@ -1,5 +1,3 @@
-import {useStrapiAuth} from "#imports";
-
 export const useLogin = (credentials: Digimarket.Credential) => {
 
     alert('alert hello from core package')
