@@ -1,7 +1,7 @@
 {
   "name": "digimarket-nuxt-layer-core",
   "description": "This is the core module. Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "1.0.0-development.6",
+  "version": "1.0.0-development.7",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -67,6 +67,8 @@
     "moment-jalaali": "^0.10.0",
     "nuxt-jsonld": "^2.0.8",
     "pinia": "^2.1.6",
+    "vee-validate": "^4.11.6",
+    "vue-sweetalert2": "^5.0.5",
     "@pinia/nuxt": "^0.4.11",
     "swiper": "^9.0.5",
     "vue-i18n": "^9.4.0",

@@ -1,4 +1,3 @@
-import {defineNuxtConfig} from "nuxt/config";
 import dotenv from "dotenv"
 
 dotenv.config()

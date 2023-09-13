@@ -1,4 +1,3 @@
-import {defineAppConfig} from "#app";
 import VuetifyStrapiDashboardConfig = VSD.VuetifyStrapiDashboardConfig;
 import All from "./presets/all";
 
