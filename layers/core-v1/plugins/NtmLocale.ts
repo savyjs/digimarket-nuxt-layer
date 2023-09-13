@@ -9,17 +9,18 @@ import _ from "lodash";
 export default defineNuxtPlugin(nuxtApp => {
 
     let appConfig = useAppConfig()
-    let defaultLocale = appConfig?.digimarket?.lang || 'en'
+    let defaultLocale = appConfig?.digimarket?.i18n?.lang || 'en'
 
-    const rtlDictionary = appConfig?.digimarket?.rtlDictionary || {}
+    const rtlDictionary = appConfig?.digimarket?.i18n?.rtlDictionary || {}
 
-    let messages = appConfig?.digimarket?.messages || {fa, en}
-    messages = _.merge(messages, appConfig?.messages)
+    let messages = appConfig?.digimarket?.i18n?.messages || {fa, en}
+    messages = _.merge(messages, appConfig?.i18n?.messages)
 
     let options = {
         legacy: false,
         locale: defaultLocale,
-        messages
+        messages,
+        missingWarn: appConfig?.digimarket?.i18n?.missingWarn || false
     };
     let i18n = createI18n(options)
     i18n.install(nuxtApp.vueApp)

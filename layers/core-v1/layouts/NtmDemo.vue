@@ -49,11 +49,11 @@ onMounted(() => {
     darkmode.value = false;
   }
 
-  if (appConfig?.digimarket?.messages?.[locale.value]) {
+  if (appConfig?.digimarket?.i18n?.messages?.[locale.value]) {
     locale.value = localStorage?.lang
   }
 
-  rtl.value = appConfig?.digimarket?.rtlDictionary?.[locale.value] ? !!localStorage.rtl : !!appConfig?.digimarket?.rtl
+  rtl.value = appConfig?.digimarket?.i18n?.rtlDictionary?.[locale.value] ? !!localStorage.rtl : !!appConfig?.digimarket?.i18n?.rtl
 
 
   watch(lang, function (newVal) {

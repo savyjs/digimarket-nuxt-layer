@@ -5,6 +5,7 @@ export const useLogin = (credentials: Digimarket.Credential) => {
     useStrapiAuth().login({
         identifier: credentials?.username,
         password: credentials?.password
-    }).then(r => alert('ok')).catch(err => alert('no'))
+    })
+
 
 }

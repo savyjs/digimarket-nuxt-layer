@@ -6,7 +6,6 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 
 export default defineNuxtConfig({
     modules: [
-        // '@nuxtjs/strapi',
         "@nuxtjs/tailwindcss"
     ],
     css: [
