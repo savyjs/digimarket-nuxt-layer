@@ -5,7 +5,7 @@
 Install the following packages first.
 
 ```bash
-yarn add  digimarket-nuxt-layer-core  digimarket-nuxt-layer-auth digimarket-nuxt-layer-commerce
+yarn add @nuxtjs/tailwindcss @nuxtjs/strapi  digimarket-nuxt-layer-core  digimarket-nuxt-layer-auth digimarket-nuxt-layer-commerce
 ```
 
 extend layers to your currenct project:
@@ -17,6 +17,9 @@ import {config} from 'dotenv'
 config()
 
 export default defineNuxtConfig({
+    modules: [
+        '@nuxtjs/strapi'
+    ],
     extends: [
         "digimarket-nuxt-layer-auth",
         "digimarket-nuxt-layer-commerce",
@@ -26,4 +29,21 @@ export default defineNuxtConfig({
     },
     css: []
 })
+```
+
+If you want to make changes in any layer, just go to that folder and run 
+```ts
+yarn link
+```
+
+Then back to your main project and run 
+
+```bash
+yarn link package-name 
+```
+
+Or for all layers 
+
+```bash
+yarn sync
 ```
