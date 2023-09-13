@@ -19,6 +19,7 @@ export default defineAppConfig({
         loginUrl: '/auth/login',
         showUser: false,
         darkmodeToggleBtn: true,
+        i18n: {},
         menu:
             {
                 navbar: [],

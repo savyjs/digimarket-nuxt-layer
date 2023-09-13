@@ -2,9 +2,12 @@ export global {
     export declare namespace VSD {
         interface VuetifyStrapiDashboardConfig {
             version?: string | number;
-            rtlDictionary?: {};
-            rtl?: boolean;
-            lang?: string;
+            i18n?: {
+                missingWarn?: boolean;
+                rtlDictionary?: {};
+                rtl?: boolean;
+                lang?: string;
+            }
             description?: string;
             keywords?: string;
             title?: string;
