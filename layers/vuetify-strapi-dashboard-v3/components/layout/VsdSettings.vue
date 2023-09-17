@@ -11,5 +11,5 @@
 </template>
 
 <script setup>
-const settingsRoute = `/admin/systems/settings`
+const settingsRoute = `/admin/system/settings`
 </script>

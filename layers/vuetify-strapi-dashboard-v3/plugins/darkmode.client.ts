@@ -1,4 +1,3 @@
-import {defineNuxtPlugin} from "#app";
 import {watch} from "vue";
 
 

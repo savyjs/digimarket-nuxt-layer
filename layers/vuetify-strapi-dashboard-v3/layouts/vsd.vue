@@ -106,7 +106,6 @@
       <LayoutVsdAccount class="mx-2"/>
     </v-app-bar>
 
-
     <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
       <nuxt-page/>
     </v-main>
@@ -118,9 +117,14 @@
     </v-footer>
   </v-layout>
 </template>
-<script setup>
+<script setup lang="ts">
+
+definePageMeta({
+  middleware: ['authenticated']
+});
 
 import {useDisplay} from 'vuetify'
+
 
 const appConfig = useAppConfig();
 
@@ -142,5 +146,5 @@ const darkmodeToggleBtn = appConfig?.vsd?.darkmodeToggleBtn || true;
 
 const navbarMenu = [];
 const footerTitle = appConfig?.vsd?.footerTitle || 'VSD'
-const Version = 0.1
+const Version = '0.7-Alpha-1'
 </script>

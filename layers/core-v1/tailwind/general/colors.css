@@ -1,4 +1,3 @@
-@tailwind base;
 @layer base {
     :root {
         --color-light: #FFF;
@@ -18,5 +17,14 @@
         --color-dark-card-bg: #2B2D2E;
         --color-dark-card-border: #47475E;
         --color-dark-card-text: #8E8E90;
+
+        --color-btn-bg: #2B2D2E;
+        --color-btn-border: #47475E;
+        --color-btn-text: #8E8E90;
+        --color-btn-card-bg: #FFF;
+        --color-btn-card-border: #E4E7EB;
+        --color-btn-card-text: #7B8794;
+
+
     }
 }

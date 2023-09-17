@@ -4,7 +4,7 @@
 <script setup>
 
 definePageMeta({
-  layout: 'vsd'
+  layout: 'vsd',
 })
 
 </script>

@@ -1,10 +1,8 @@
 <template>
   <builder-vsd-list-page
-      :value="{config,fields}"
+      :schema="schema"
   />
 </template>
 <script setup>
-import config from './config.ts'
-import fields from './fields.ts'
-
+import schema from './schema.ts'
 </script>
