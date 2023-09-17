@@ -1,5 +1,7 @@
 @layer base {
     :root {
+        /* Pattern: --color-{scope?}-{dark?}-{tag} */
+
         /* Light: General text and border and background */
         --color-light: #FFF;
         --color-light-bg: #FFF;
@@ -14,21 +16,21 @@
         --color-dark-link: #4389ce;
         --color-dark-border: #E4E7EB;
 
-        /* Card colors for text, border, and background */
+        /* Card: colors for text, border, and background */
         --color-card-bg: #FFF;
         --color-card-border: #E4E7EB;
         --color-card-text: #7B8794;
-        --color-dark-card-bg: #2B2D2E;
-        --color-dark-card-border: #47475E;
-        --color-dark-card-text: #8E8E90;
+        --color-card-dark-bg: #2B2D2E;
+        --color-card-dark-border: #47475E;
+        --color-card-dark-text: #8E8E90;
 
-        /* Button colors for background, text and border */
-        --color-btn-bg: #2B2D2E;
-        --color-btn-border: #47475E;
-        --color-btn-text: #8E8E90;
-        --color-btn-card-bg: #FFF;
-        --color-btn-card-border: #E4E7EB;
-        --color-btn-card-text: #7B8794;
+        /* Button: colors for background, text and border */
+        --color-btn-bg: #d7d7d7;
+        --color-btn-border: #afaeae;
+        --color-btn-text: #3f3f3f;
+        --color-btn-dark-bg: #FFF;
+        --color-btn-dark-border: #E4E7EB;
+        --color-btn-dark-text: #7B8794;
 
     }
 }
