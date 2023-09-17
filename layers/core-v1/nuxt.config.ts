@@ -10,7 +10,7 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss'
     ],
     css: [
-        // join(currentDir, "./assets/styles/ntm.scss"),
+        join(currentDir, "./assets/styles/ntm.scss"),
         join(currentDir, "./tailwind/all.css")
     ]
 })
