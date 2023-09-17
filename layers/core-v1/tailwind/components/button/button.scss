@@ -4,7 +4,7 @@
   }
 
   .btn {
-    @apply text-[var(--color-btn-text)] dark:text-[var(--color-dark-btn-text)] bg-[var(--color-btn-bg)] dark:bg-[var(--color-btn-dark-bg)] border-[var(--color-btn-border)] dark:border-[var(--color-btn-dark-border)];
+    @apply text-[var(--color-btn-text)] dark:text-[var(--color-btn-dark-text)] bg-[var(--color-btn-bg)] dark:bg-[var(--color-btn-dark-bg)] border-[var(--color-btn-border)] dark:border-[var(--color-btn-dark-border)];
   }
 
   .btn-primary {
