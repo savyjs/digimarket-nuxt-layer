@@ -1,10 +1,14 @@
 @layer components {
   .btn {
-    @apply text-center justify-center flex rounded-lg px-5 py-2.5 text-center text-sm font-medium  border-[1px] dark:border-[1px];
+    @apply text-center justify-center flex rounded-2xl px-5 py-2.5 text-center text-sm font-medium  border-[1px] dark:border-[1px];
   }
 
   .btn {
     @apply text-[var(--color-btn-text)] dark:text-[var(--color-btn-dark-text)] bg-[var(--color-btn-bg)] dark:bg-[var(--color-btn-dark-bg)] border-[var(--color-btn-border)] dark:border-[var(--color-btn-dark-border)];
+  }
+
+  .btn:hover {
+    @apply shadow-lg text-[var(--color-btn-text-hover)] dark:text-[var(--color-btn-dark-text-hover)] bg-[var(--color-btn-bg-hover)] dark:bg-[var(--color-btn-dark-bg-hover)] border-[var(--color-btn-border-hover)] dark:border-[var(--color-btn-dark-border-hover)];
   }
 
   .btn-primary {
@@ -32,7 +36,11 @@
   }
 
   .btn-success {
-    @apply text-white bg-success dark:bg-success dark:focus:ring-success;
+    @apply text-white/[.95] dark:text-success/[.95]  bg-success/[.85] dark:bg-success/[.85] border-success/[.85] dark:border-success/[.85];
+  }
+
+  .btn-success:hover {
+    @apply text-white  dark:text-success bg-success dark:bg-success;
   }
 
   .btn-success-outlined {

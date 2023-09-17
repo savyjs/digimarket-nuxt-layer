@@ -1,6 +1,6 @@
 @layer base {
     :root {
-        /* Pattern: --color-{scope?}-{dark?}-{tag} */
+        /* Pattern: --color-{scope?}-{dark?}-{tag}-{event?} */
 
         /* Light: General text and border and background */
         --color-light: #FFF;
@@ -25,12 +25,19 @@
         --color-card-dark-text: #8E8E90;
 
         /* Button: colors for background, text and border */
-        --color-btn-bg: #d7d7d7;
+        --color-btn-bg: #eaeaea;
         --color-btn-border: #afaeae;
         --color-btn-text: #3f3f3f;
         --color-btn-dark-bg: #FFF;
         --color-btn-dark-border: #E4E7EB;
         --color-btn-dark-text: #7B8794;
+        --color-btn-bg-hover: #eaeaea;
+        --color-btn-bg-hover-hover: #eaeaea;
+        --color-btn-border-hover: #707070;
+        --color-btn-text-hover: #2d2d2d;
+        --color-btn-dark-bg-hover: #FFF;
+        --color-btn-dark-border-hover: #E4E7EB;
+        --color-btn-dark-text-hover: #7B8794;
 
     }
 }
