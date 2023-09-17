@@ -10,6 +10,9 @@
 @import 'components/badge/badge.scss';
 @import 'components/card/card.scss';
 @import 'components/button/button.scss';
+@import 'components/elements/form-group.css';
+@import 'components/elements/element-group.css';
+@import 'components/elements/input-label.css';
 @import 'components/elements/input.scss';
 @import 'components/elements/radio.scss';
 @import 'components/elements/checkbox.scss';

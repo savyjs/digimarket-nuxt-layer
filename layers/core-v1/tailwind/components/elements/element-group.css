@@ -1,0 +1,5 @@
+@layer components {
+    .element-group {
+        @apply flex gap-y-3 text-sm mb-4
+    }
+}

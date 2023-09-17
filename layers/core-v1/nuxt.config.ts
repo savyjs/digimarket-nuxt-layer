@@ -10,7 +10,8 @@ export default defineNuxtConfig({
         '@nuxtjs/tailwindcss'
     ],
     css: [
-        join(currentDir, "./assets/styles/ntm.scss"),
+        //join(currentDir, "./assets/styles/ntm.scss"),
+        "@tabler/icons-webfont/tabler-icons.min.css",
         join(currentDir, "./tailwind/all.css")
     ]
 })

@@ -1,6 +1,7 @@
 node_modules/
 .idea/
 yarn.lock
+chat.*
 package-lock.json
 coverage/tmp/
 test/fixture2
