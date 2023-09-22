@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     ],
     modules: [
         // "@nuxtjs/tailwindcss",
-        '@nuxtjs/strapi'
+        // '@nuxtjs/strapi'
     ],
     css: [
         join(currentDir, "./assets/styles/ntm.scss"),
