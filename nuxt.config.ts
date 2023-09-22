@@ -13,8 +13,5 @@ export default defineNuxtConfig({
         "layers/inventory-v1",
         "layers/blog-v1",
         // "layers/vuetify-strapi-dashboard-v3",
-    ],
-    // nitro: {
-    //     preset: "node"
-    // }
+    ]
 })
