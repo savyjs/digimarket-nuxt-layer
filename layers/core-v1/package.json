@@ -1,7 +1,7 @@
 {
   "name": "digimarket-nuxt-layer-core",
   "description": "This is the core module. Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "1.0.0-development.8",
+  "version": "1.0.0-development.9",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -51,20 +51,13 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
+    "material-design-icons-iconfont": "^6.7.0",
     "@tabler/icons-webfont": "^2.34.0",
-    "@fortawesome/fontawesome-free": "^6.4.2",
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/vue-fontawesome": "^3.0.3",
     "@mdi/font": "^7.2.96",
-    "@mdi/js": "^7.2.96",
     "@nuxtjs/strapi": "^1.9.3",
     "@nuxtjs/tailwindcss": "^6.7.0",
-    "font-awesome": "^4.7.0",
     "lodash": "^4.17.21",
     "lodash-deep": "^1.6.0",
-    "material-design-icons-iconfont": "^6.7.0",
-    "material-icons": "^1.13.11",
     "moment-jalaali": "^0.10.0",
     "nuxt-jsonld": "^2.0.8",
     "pinia": "^2.1.6",

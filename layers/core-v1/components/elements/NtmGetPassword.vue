@@ -10,5 +10,5 @@
 </template>
 <script setup lang="ts">
 const show = ref(false)
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+
 </script>
