@@ -42,7 +42,7 @@
     "@types/node": "^18",
     "fs": "^0.0.1-security",
     "jest": "^29.3.1",
-    "nuxt": "^3.5.2",
+    "nuxt": "^3.7.3",
     "path": "^0.12.7",
     "postcss-import-ext-glob": "^2.1.1",
     "sass": "^1.52.3",
@@ -50,21 +50,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@mdi/font": "^6.1.95",
-    "@mdi/js": "^6.1.95",
-    "@nuxt/kit": "^3.5.2",
-    "@nuxtjs/tailwindcss": "^6.7.0",
-    "@sidebase/nuxt-auth": "^0.6.0-beta.3",
-    "font-awesome": "^4.7.0",
-    "lodash": "^4.17.21",
-    "lodash-deep": "^1.6.0",
-    "material-design-icons-iconfont": "^5.0.1",
-    "material-icons": "^0.3.1",
-    "moment-jalaali": "^0.9.2",
-    "nuxt-jsonld": "^2.0.8",
-    "swiper": "^9.0.5",
-    "vue-i18n": "^9.2.2",
-    "vue3-lottie": "^2.7.1"
+    "digimarket-nuxt-layer-core": "latest"
   },
   "publishConfig": {
     "access": "public"
