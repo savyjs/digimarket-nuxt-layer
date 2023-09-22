@@ -1,5 +1,4 @@
 import {defineNuxtPlugin} from "nuxt/app";
-import "@fortawesome/vue-fontawesome"
 
 export default defineNuxtPlugin((nuxtApp) => {
 
