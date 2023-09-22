@@ -105,7 +105,7 @@
           </div>
           <div class="flex gap-2 text-sm text-gray-500 dark:text-gray-200 px-3">
               <span>
-                <img src='/public/dkala/club-point.svg' class='w-4'/>
+                /public/dkala/club-point.svg
               </span>
             <span>امتیاز کلاب</span>
             <b class="text-gray-800 dark:text-gray-100">۱۸</b>

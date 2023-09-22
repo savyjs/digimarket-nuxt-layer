@@ -5,7 +5,7 @@
         <use href="#hamburgerMenu"></use>
       </svg>
       <a href="/" class="ml-5 shrink-0">
-        <img width="100" height="30" src="assets/dkala/logo.svg" alt="logo"/>
+        assets/dkala/logo.svg
       </a>
 
       <svg class="h-6 w-6" fill="currentColor">

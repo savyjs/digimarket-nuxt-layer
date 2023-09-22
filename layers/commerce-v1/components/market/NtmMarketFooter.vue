@@ -4,14 +4,7 @@
       <div class="px-5">
         <div class="flex select-none items-center justify-between">
           <div class="ml-4">
-            <a class="text-link px-0.5">
-              <img
-                  width="100"
-                  height="30"
-                  src="/public/dkala/logo-fa.svg"
-                  alt="logo"
-              />
-            </a>
+            /public/dkala/logo-fa.svg
           </div>
           <button
               onclick="window.scrollTo({top: 0,behavior: 'smooth',})"
@@ -49,13 +42,7 @@
               class="flex-column grow-1 flex-auto items-center justify-between py-3 text-center"
               href=""
           >
-            <img
-                width="56"
-                height="56"
-                src="/public/dkala/express-delivery.svg"
-                alt="express-delivery"
-                class="mx-auto"
-            />
+            /public/dkala/express-delivery.svg
             <span class="">امکان تحویل اکسپرس</span>
           </a>
 
@@ -64,13 +51,7 @@
               class="flex-column grow-1 flex-auto items-center justify-between py-3 text-center"
               href=""
           >
-            <img
-                width="56"
-                height="56"
-                src="/public/dkala/cash-on-delivery.svg"
-                alt="cash-on-delivery"
-                class="mx-auto"
-            />
+            /public/dkala/cash-on-delivery.svg
             <span class="">امکان پرداخت در محل</span>
           </a>
 
@@ -79,13 +60,7 @@
               class="flex-column grow-1 flex-auto items-center justify-between py-3 text-center"
               href=""
           >
-            <img
-                width="56"
-                height="56"
-                src="/public/dkala/support.svg"
-                alt="support"
-                class="mx-auto"
-            />
+            public/dkala/support.svg
             <span class=""> ۷ روز هفته، ۷ ساعته</span>
           </a>
 
@@ -94,13 +69,7 @@
               class="flex-column grow-1 flex-auto items-center justify-between py-3 text-center"
               href=""
           >
-            <img
-                width="56"
-                height="56"
-                src="/public/dkala/days-return.svg"
-                alt="days-return"
-                class="mx-auto"
-            />
+            /public/dkala/days-return.svg
             <span class="">هفت روز ضمانت بازگشت</span>
           </a>
 
@@ -109,13 +78,7 @@
               class="flex-column grow-1 flex-auto items-center justify-between py-3 text-center"
               href=""
           >
-            <img
-                width="56"
-                height="56"
-                src="/public/dkala/original-products.svg"
-                alt="original-products"
-                class="mx-auto"
-            />
+            /public/dkala/original-products.svg
             <span class="">ضمانت اصل بودن کالا</span>
           </a>
         </div>

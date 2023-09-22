@@ -33,7 +33,7 @@
                  class='card-primary my-5 grid grid-cols-1 items-center justify-center text-center align-middle'
                  role='tabpanel' aria-labelledby='cart-tab'>
                 <div class='flex w-full justify-center'>
-                    <img src='/public/dkala/empty-cart.svg' />
+                  empty-cart.svg
                 </div>
                 <div class='my-5'>
                     <h1>سبد خرید شما خالی است!</h1>
