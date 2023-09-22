@@ -1,5 +1,4 @@
 import VuetifyStrapiDashboardConfig = VSD.VuetifyStrapiDashboardConfig;
-import All from "./presets/all";
 
 const Provinces: never[] = [];
 
