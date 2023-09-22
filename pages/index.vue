@@ -70,5 +70,5 @@
   </div>
 </template>
 <script setup>
-const prefix = "/v1";
+const prefix = "/";
 </script>

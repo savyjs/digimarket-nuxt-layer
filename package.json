@@ -52,6 +52,7 @@
     "nuxt": "^3.7.3",
     "path": "^0.12.7",
     "postcss-import-ext-glob": "^2.1.1",
+    "postcss": "^8.1.14",
     "sass": "^1.52.3",
     "sass-loader": "latest",
     "typescript": "^4.9.5"

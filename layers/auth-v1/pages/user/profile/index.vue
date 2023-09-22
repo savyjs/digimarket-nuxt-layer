@@ -1,12 +1,13 @@
 <template>
   <nuxt-layout name="ntm-panel">
-    <MarketNtmProfile
-      :sideMenu="sideMenu"
-      :user="userData"
-      :statistics="userOrdersSummeryData"
-      :productSliders="[userList,userFavourites,recommendedProducts]"
-  >
-  </MarketNtmProfile>
+    <!--    <MarketNtmProfile
+          :sideMenu="sideMenu"
+          :user="userData"
+          :statistics="userOrdersSummeryData"
+          :productSliders="[userList,userFavourites,recommendedProducts]"
+      >
+      </MarketNtmProfile>-->
+    <div>user panel will be here</div>
   </nuxt-layout>
 </template>
 
@@ -15,7 +16,8 @@
 const options = useAppConfig()?.digimarket;
 
 // user data includes all information for current logged-in user
-const userData = useState('userData',()=>{});
+const userData = useState('userData', () => {
+});
 
 const sideMenu = ref(options.profileMenuItems);
 
