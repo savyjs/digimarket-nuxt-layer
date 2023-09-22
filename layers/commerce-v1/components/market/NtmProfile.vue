@@ -109,7 +109,7 @@
                 <div class="flex">
                   <div class='product-carousel gap-1 mx-1 border-l-[1px] px-4'>
                     <div class='justify-between self-start'>
-                      <img src="/public/dkala/SpecialSell.svg"/>
+                      Special Sell Logo
                     </div>
                     <div class='image inline-block justify-center grow w-full flex py-12'>
                       <div class='justify-between self-end'>
