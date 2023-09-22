@@ -1,6 +1,8 @@
 
 # NTM (Nuxt3 Tailwind Marketplace Kit)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d32a9c9a-2986-40f8-b0f8-30de401b0808/deploy-status)](https://app.netlify.com/sites/diginuxt/deploys)
+
 ## documentation (alpha version)
 
 - [Install And Usage Guide](https://digimarket.savyjs.com)
