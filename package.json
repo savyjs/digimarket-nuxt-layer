@@ -1,7 +1,7 @@
 {
   "name": "digimarket-nuxt-layer",
   "description": "Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "1.0.0-development.3",
+  "version": "1.0.0-development.4",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -63,22 +63,7 @@
     "digimarket-nuxt-layer-auth": "file:layers/auth-v1",
     "digimarket-nuxt-layer-commerce": "file:layers/commerce-v1",
     "digimarket-nuxt-layer-blog": "file:layers/blog-v1",
-    "digimarket-nuxt-layer-inventory": "file:layers/inventory-v1",
-    "@nuxtjs/strapi": "^1.9.3",
-    "@mdi/font": "^7.2.96",
-    "@mdi/js": "^7.2.96",
-    "@nuxtjs/tailwindcss": "^6.7.0",
-    "@sidebase/nuxt-auth": "^0.6.0-beta.4",
-    "font-awesome": "^4.7.0",
-    "lodash": "^4.17.21",
-    "lodash-deep": "^1.6.0",
-    "material-design-icons-iconfont": "^6.7.0",
-    "material-icons": "^1.13.10",
-    "moment-jalaali": "^0.9.2",
-    "nuxt-jsonld": "^2.0.8",
-    "swiper": "^9.0.5",
-    "vue-i18n": "^9.4.0",
-    "vue3-lottie": "^2.7.1"
+    "digimarket-nuxt-layer-inventory": "file:layers/inventory-v1"
   },
   "overrides": {
     "vue": "latest"
