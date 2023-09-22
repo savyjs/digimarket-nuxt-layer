@@ -10,9 +10,9 @@ export default defineNuxtConfig({
     extends: [
         "layers/auth-v1",
         "layers/commerce-v1",
-        // "layers/inventory-v1",
-        // "layers/blog-v1",
-        "layers/vuetify-strapi-dashboard-v3",
+        "layers/inventory-v1",
+        "layers/blog-v1",
+        // "layers/vuetify-strapi-dashboard-v3",
     ],
     // nitro: {
     //     preset: "node"
