@@ -23,8 +23,6 @@ export default defineNuxtPlugin(nuxtApp => {
     let i18n = createI18n(options)
     i18n.install(nuxtApp.vueApp)
 
-    nuxtApp.provide("i18n", i18n);
-    nuxtApp.provide("useI18n", useI18n);
     watch(i18n.global.locale, (newVal) => {
         let rtl = useRtl()
         rtl.value = !!rtlDictionary[newVal] ?? false
