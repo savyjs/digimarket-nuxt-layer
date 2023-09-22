@@ -4,31 +4,31 @@
       <p class="my-5">Nuxt pages:</p>
       <p class="">Active:</p>
       <div class="gap-3 flex">
-        <nuxt-link class="btn-success" :to="`${prefix}/user/login`">Login (mobile and password)</nuxt-link>
-        <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/login-email-password`">Login (email and password)
+        <nuxt-link class="btn-success" :href="`${prefix}/user/login`">Login (mobile and password)</nuxt-link>
+        <nuxt-link class="btn-success-outlined" :href="`${prefix}/user/login-email-password`">Login (email and password)
         </nuxt-link>
-        <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/login-username-password`">Login (username and
+        <nuxt-link class="btn-success-outlined" :href="`${prefix}/user/login-username-password`">Login (username and
           password)
         </nuxt-link>
-        <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/login-oauth`">Login (OAuth)</nuxt-link>
-        <nuxt-link class="btn-success" :to="`${prefix}/user/register`">Register (name - mobile - password)</nuxt-link>
-        <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/register-username-password`">Register (username
+        <nuxt-link class="btn-success-outlined" :href="`${prefix}/user/login-oauth`">Login (OAuth)</nuxt-link>
+        <nuxt-link class="btn-success" :href="`${prefix}/user/register`">Register (name - mobile - password)</nuxt-link>
+        <nuxt-link class="btn-success-outlined" :href="`${prefix}/user/register-username-password`">Register (username
           password)
         </nuxt-link>
-        <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/register-oauth`">Register (OAuth)</nuxt-link>
-        <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/verify`">Verify (SMS)</nuxt-link>
-        <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/verify-otp`">Verify (OTP or Email)</nuxt-link>
-        <nuxt-link class="btn-success-outlined" :to="`${prefix}/user/success`">Success Registration</nuxt-link>
+        <nuxt-link class="btn-success-outlined" :href="`${prefix}/user/register-oauth`">Register (OAuth)</nuxt-link>
+        <nuxt-link class="btn-success-outlined" :href="`${prefix}/user/verify`">Verify (SMS)</nuxt-link>
+        <nuxt-link class="btn-success-outlined" :href="`${prefix}/user/verify-otp`">Verify (OTP or Email)</nuxt-link>
+        <nuxt-link class="btn-success-outlined" :href="`${prefix}/user/success`">Success Registration</nuxt-link>
       </div>
       <p class="my-3">Archived:</p>
       <div class="gap-3 flex mt-5">
-        <nuxt-link class="btn-success-outlined btn-disabled" :to="`${prefix}/market`">Market Landing</nuxt-link>
-        <nuxt-link class="btn-success-outlined btn-disabled" :to="`${prefix}/market/profile`">Profile</nuxt-link>
-        <nuxt-link class="btn-success-outlined btn-disabled" :to="`${prefix}/market/profile/orders`">Orders</nuxt-link>
-        <nuxt-link class="btn-success-outlined btn-disabled" :to="`${prefix}/market/profile/order-details/1`">Order
+        <nuxt-link class="btn-success-outlined btn-disabled" :href="`${prefix}/market`">Market Landing</nuxt-link>
+        <nuxt-link class="btn-success-outlined btn-disabled" :href="`${prefix}/market/profile`">Profile</nuxt-link>
+        <nuxt-link class="btn-success-outlined btn-disabled" :href="`${prefix}/market/profile/orders`">Orders</nuxt-link>
+        <nuxt-link class="btn-success-outlined btn-disabled" :href="`${prefix}/market/profile/order-details/1`">Order
           Details
         </nuxt-link>
-        <nuxt-link class="btn-success-outlined" :to="`${prefix}/market/products/8364953`">Product page</nuxt-link>
+        <nuxt-link class="btn-success-outlined" :href="`${prefix}/market/products/8364953`">Product page</nuxt-link>
       </div>
     </div>
     <div class="m-5">
@@ -64,7 +64,7 @@
     <div class="m-5">
       <p class="">Pure HTML pages:</p>
       <div class="gap-3 flex">
-        <nuxt-link class="btn btn-gray-outlined text-ad" :to="`${prefix}/market/products/8364953`">landing 2</nuxt-link>
+        <nuxt-link class="btn btn-gray-outlined text-ad" :href="`${prefix}/market/products/8364953`">landing 2</nuxt-link>
       </div>
     </div>
   </div>
