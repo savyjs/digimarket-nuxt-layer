@@ -10,7 +10,7 @@
           <div class="list list-timeline py-2">
             <div class="list-item">
               <div class="list-item-avatar">
-                <img src="/assets/img/profile/avatar.svg"/>
+                <img src="~digimarket-nuxt-layer-commerce/assets/img/profile/avatar.svg"/>
               </div>
               <div class="list-item-text flex w-full justify-between">
                 <div class="grow">
