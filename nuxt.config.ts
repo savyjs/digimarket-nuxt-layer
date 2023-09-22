@@ -15,14 +15,6 @@ export default defineNuxtConfig({
         "layers/blog-v1",
         "layers/vuetify-strapi-dashboard-v3",
     ],
-    modules: [
-        // "@nuxtjs/tailwindcss",
-        // '@nuxtjs/strapi'
-    ],
-    css: [
-        join(currentDir, "./assets/styles/ntm.scss"),
-        join(currentDir, "./tailwind/all.css")
-    ],
     // nitro: {
     //     preset: "node"
     // }
