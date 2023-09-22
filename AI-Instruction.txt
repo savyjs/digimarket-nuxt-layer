@@ -1,0 +1,56 @@
+Technologies are = [
+CSS Framework: Tailwind CSS
+Frontend Framework: Nuxt.js version 3.7.0
+Design System: Atlassian Design System
+Backend Cms: Strapi Headless system , Top of Koa framewrok;
+nuxt module: Strapi 1.9.0;
+]
+HTML and CSS context: [
+HTML: use Vue 3 and Nuxt 3 tags
+Css: use tailwindcss classes
+]
+
+Nuxt Architecture: [
+layers: yes, project using layers. the name of layers exists in nuxt.config.ts. layers are outside of project. layers are developing in other folders and linked to this project with command `yarn link` and `yarn sync`;
+]
+
+Purpose is =  [
+Creating an e-commerce CMS;
+]
+Style and Design : [
+color: both Dark mode and Light modes; default: system color;
+use default color and styles of Atlassian design system
+]
+
+Command list for AI: [
+"Read Instructions": "open this file again, read it, remember as instruction"
+]
+
+ignore list: [
+node_modules
+.git
+.github
+.nuxt
+dist
+]
+
+list of nuxt layers in `./layers` folder : [
+core-v1: core modules and packages will be here
+auth-v1: a nuxt layer for auth Ui and logic
+commerce-v1: a nuxt layer for commerce Ui and login
+blog-v1: a layer for blog UI and logic using nuxt-content
+vuetify-strapi-dashboard-v3: a different Layer to create an admin panel connected to Strapi headless CMS as backend
+]
+
+Commerce folder and files (pages) that stored in `./layers/commerce-v1/pages/` :[
+./layers/commerce-v1/pages/checkout/order/index.vue
+./layers/commerce-v1/pages/checkout/payment/confirm/index.vue
+]
+
+Commerce folder and files (pages) that stored in: [
+./layers/auth-v1/pages/user/forgot.vue
+./layers/auth-v1/pages/user/login.vue
+./layers/auth-v1/pages/user/profile/index.vue
+./layers/auth-v1/pages/user/register.vue
+./layers/auth-v1/pages/user/verify.vue
+]

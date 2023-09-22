@@ -1,7 +1,7 @@
 {
   "name": "digimarket-nuxt-layer",
   "description": "Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "1.0.0-development.2",
+  "version": "1.0.0-development.3",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -25,6 +25,13 @@
   "type": "module",
   "main": "./nuxt.config.ts",
   "scripts": {
+    "sync": "yarn sync-core && yarn sync-auth && yarn sync-commerce && yarn sync-blog && yarn sync-vsd && yarn sync-inventory ",
+    "sync-core": "cd layers/core-v1 && yarn link",
+    "sync-auth": "cd layers/auth-v1 && yarn link",
+    "sync-blog": "cd layers/blog-v1 && yarn link",
+    "sync-inventory": "cd layers/inventory-v1 && yarn link",
+    "sync-commerce": "cd layers/commerce-v1 && yarn link",
+    "sync-vsd": "cd layers/vuetify-strapi-dashboard-v3 && yarn link",
     "build": "nuxt build",
     "dev": "nuxt dev --port=3001",
     "generate": "nuxt generate",
