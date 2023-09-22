@@ -1,5 +1,3 @@
-import {useFetch} from "#app";
-
 export const useApi = () => {
     const options = useAppConfig().fetchOptions || {}
     // @ts-ignore

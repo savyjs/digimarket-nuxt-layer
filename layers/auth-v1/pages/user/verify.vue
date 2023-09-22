@@ -5,7 +5,6 @@
 </template>
 <script setup>
 
-import {useRouter} from "#app";
 
 async function verify(credential) {
   useApi("/login").then(res => {

@@ -1,4 +1,3 @@
-import {defineAppConfig} from "#app";
 import {DigimarketConfig} from "~/schema/options";
 
 const Provinces: never[] = [];
