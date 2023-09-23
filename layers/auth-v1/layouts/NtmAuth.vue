@@ -15,15 +15,7 @@
                 </span>
               </nuxt-link>
             </div>
-            <div>
-              loader: {{ useLoader().status('auth') }}
-            </div>
-            <div class="alert" :class="`alert-${message?.type}`" v-if="message?.message">
-              <h4>{{ message?.title }}</h4>
-              <p>
-                {{ message?.message }}
-              </p>
-            </div>
+            <ui-ntm-toast/>
             <slot/>
           </div>
         </div>
