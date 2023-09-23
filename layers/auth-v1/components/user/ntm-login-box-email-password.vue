@@ -67,9 +67,5 @@
 
 </template>
 <script setup lang="ts">
-import {useI18n} from "vue-i18n";
-
-const credentials = ref({})
-let {t} = useI18n()
 const title = useAppConfig()?.digimarket?.title;
 </script>

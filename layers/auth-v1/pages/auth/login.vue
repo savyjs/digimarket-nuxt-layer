@@ -1,6 +1,6 @@
 <template>
   <nuxt-layout name="ntm-auth">
-    <UserNtmLoginBoxEmailPassword @action="login" mobile=""/>
+    <user-ntm-login-box-email-password @action="login" mobile=""/>
   </nuxt-layout>
 </template>
 <script setup>
