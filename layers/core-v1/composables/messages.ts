@@ -25,9 +25,9 @@ export const useMessages = defineStore('messages', {
                 if (target) {
                     return state.inbox.filter((item) => {
                         return item.target == target && !item.seen
-                    }).slice(-1)
+                    }).slice(-1)?.[0]
                 }
-                return state.inbox.filter((item) => !item.seen).slice(-1)
+                return state.inbox.filter((item) => !item.seen).slice(-1)?.[0]
             }
         },
         oldest: (state) => {
@@ -73,23 +73,22 @@ export const useMessages = defineStore('messages', {
     },
     actions: {
         read(identifier: Message | number) {
-
-            this.inbox.filter(item => {
-                if (!item.seen) return false
-                if (typeof identifier == 'number') return identifier == item.id
-                return identifier.id == item.id
-            }).map(item => {
-                item.seen = true;
+            this.inbox.map(item => {
+                if (item?.id && (identifier?.id == item.id || identifier == item?.id)) {
+                    item.seen = true;
+                }
                 return item;
             })
         },
         readAll(target?: string) {
-            this.inbox.filter(item => {
-                if (!item.seen) return false
-                if (typeof target == 'string') return item.target == target
-                return true;
-            }).map(item => {
-                item.seen = true;
+            this.inbox.map(item => {
+                if (target) {
+                    if (item?.target == target) {
+                        item.seen = true;
+                    }
+                } else {
+                    item.seen = true;
+                }
                 return item;
             })
         },
