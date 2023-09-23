@@ -83,9 +83,15 @@
           <button type="submit"
                   :disabled="useLoader().status('auth')"
                   @click="$emit('action',credentials)"
-                  class="btn-primary w-full mt-5 py-3.5">
-            <i class="t t-loader" v-if="useLoader().status('auth')"></i>
-            {{ $t('ntm.register_title', 'Register') }}
+                  class="btn-primary flex gap-2 w-full mt-5 py-3.5 align-center">
+            <span v-if="useLoader().status('auth')" class="animate-spin">
+              <i class="ti ti-refresh icon-md">
+              {{ useLoader().status('auth') }}
+            </i>
+            </span>
+            <span v-else>
+              {{ $t('ntm.register_title', 'Register') }}
+            </span>
           </button>
 
           <div class="flex justify-around gap-3 text-xs">

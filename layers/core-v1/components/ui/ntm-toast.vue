@@ -1,66 +1,40 @@
 <template>
-  <div v-show="message?.message" :class="`alert-${message?.type}`"
-       class="fixed top-0 left-0 right-0 p-4 flex">
-    <button class="absolute top-2 right-2 text-white"
+  <div
+      v-show="count"
+      :class="`toast-${type}`"
+      class="toast">
+    <button class="close-btn"
             @click="closeToast">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M10 1a9 9 0 100 18A9 9 0 0010 1zm4.95 12.95a7 7 0 11-9.9-9.9l9.9 9.9z"
-              clip-rule="evenodd"/>
-      </svg>
+      <i class="ti ti-x icon-sm"></i>
     </button>
-    <div class="bg-gray-800 text-white rounded-lg p-4">
-      <div>
-        <h4>{{ message?.title }}</h4>
-        {{ message?.message }}
+    <div class="toast-body">
+      <h4>{{ message?.title }}</h4>
+      {{ message?.message }}
+      <div class="text-sm pt-2">
+        <template v-if="useMessages().count('toast') > 1">
+          <hr/>
+          <div class="flex justify-between">
+            <small>{{ useMessages().count('toast') }} more messages left</small>
+            <button class=""
+                    @click="closeAllToasts">
+              <small>{{ $t("ntm.close_all", "Clear All") }}</small>
+            </button>
+          </div>
+        </template>
       </div>
     </div>
   </div>
 </template>
 <script setup>
-const message = useMessages().newest('toast')
+
+let message = useMessages().newest('toast')
+const type = message?.type || 'info';
 
 function closeToast() {
+  useMessages().read(message)
+}
 
+function closeAllToasts() {
+  useMessages().readAll('toast')
 }
 </script>
-<style scoped>
-.fixed {
-  position: fixed;
-}
-
-.top-0 {
-  top: 0;
-}
-
-.left-0 {
-  left: 0;
-}
-
-.right-0 {
-  right: 0;
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
-.flex {
-  display: flex;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.bg-gray-800 {
-  background-color: #1f2937;
-}
-
-.text-white {
-  color: #fff;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-</style>

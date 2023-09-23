@@ -6,6 +6,7 @@
 @import 'general/colors.css';
 @import 'general/styles.css';
 
+@import 'components/toast/toast.css';
 @import 'components/alert/alert.scss';
 @import 'components/badge/badge.scss';
 @import 'components/card/card.scss';

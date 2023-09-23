@@ -1,0 +1,34 @@
+@layer components {
+    .toast {
+        @apply text-sm ring-[1px]
+        rounded-lg fixed top-4
+        min-w-[350px] max-w-[100%]
+        self-center
+        bg-white
+        flex
+    }
+
+    .toast .toast-body {
+        @apply w-full px-4 pt-3 pb-2
+    }
+
+    .toast.toast-info .toast-body {
+        @apply bg-info/[0.075] ring-info text-info
+    }
+
+    .toast.toast-warning .toast-body {
+        @apply bg-warning/[0.075] ring-warning text-warning
+    }
+
+    .toast.toast-error .toast-body {
+        @apply bg-error/[0.075] ring-error text-error
+    }
+
+    .toast.toast-success .toast-body {
+        @apply bg-success/[0.075] ring-success text-success
+    }
+
+    .toast .close-btn {
+        @apply absolute top-2 right-2
+    }
+}
