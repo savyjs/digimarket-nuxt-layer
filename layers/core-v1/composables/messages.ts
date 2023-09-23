@@ -6,23 +6,48 @@ interface Message {
     title?: string;
     type?: string;
     message: string;
-    target?: string
+    target?: string;
 }
 
 export const useMessages = defineStore('messages', {
     // a function that returns a fresh state
     state: () => ({
         inbox: [] as Array<Message>,
+        archive: [] as Array<Message>
     }),
     // optional getters
     getters: {
         // getters receive the state as first parameter
-        newest: (state) => state.inbox.pop(),
-        oldest: (state) => state.inbox.shift(),
-        all: (state) => state.inbox,
-        module: (state) => {
-            return (target: string) => state.inbox.filter((item) => item.target == target)
+        newest: (state) => {
+            return (target?: string) => {
+                if (target) {
+                    return state.inbox.filter((item) => {
+                        return item.target == target
+                    }).pop()
+                }
+                return state.inbox.pop()
+            }
         },
+        oldest: (state) => {
+            return (target?: string) => {
+                if (target) {
+                    return state.inbox.filter((item) => {
+                        return item.target == target
+                    }).shift()
+                }
+                return state.inbox.shift()
+            }
+        },
+        all: (state) => {
+            return (target?: string) => {
+                if (target) {
+                    return state.inbox.filter((item) => {
+                        return item.target == target
+                    })
+                }
+                return state.inbox
+            }
+        }
     },
     actions: {
         pushMessage(item: Message) {

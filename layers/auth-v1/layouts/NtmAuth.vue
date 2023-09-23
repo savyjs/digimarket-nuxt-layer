@@ -15,10 +15,10 @@
                 </span>
               </nuxt-link>
             </div>
-            <div v-for="item in messages">
-              <h4>{{ item.title }}</h4>
+            <div v-if="messages.length">
+              <h4>{{ messages.pop().title }}</h4>
               <p>
-                {{ item?.message }}
+                {{ item?.pop()?.message }}
               </p>
             </div>
             <slot/>
@@ -34,7 +34,8 @@ const darkmode = useDarkmode()
 const rtl = useRtl()
 const backdrop = useState('backdrop', () => false)
 const store = useMessages()
-const messages = store?.all ?? []
+const messages = store.target('auth') ?? []
+
 let {logo, title} = useAppConfig()?.digimarket;
 
 onMounted(() => {
