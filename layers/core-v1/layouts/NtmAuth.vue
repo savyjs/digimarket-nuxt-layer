@@ -15,6 +15,12 @@
                 </span>
               </nuxt-link>
             </div>
+            <div v-for="item in messages">
+              <h4>{{ item.title }}</h4>
+              <p>
+                {{ item?.message }}
+              </p>
+            </div>
             <slot/>
           </div>
         </div>
@@ -27,7 +33,8 @@
 const darkmode = useDarkmode()
 const rtl = useRtl()
 const backdrop = useState('backdrop', () => false)
-
+const store = useMessages()
+const messages = store?.all ?? []
 let {logo, title} = useAppConfig()?.digimarket;
 
 onMounted(() => {
@@ -37,6 +44,7 @@ onMounted(() => {
   } else {
     darkmode.value = false;
   }
+
 
 })
 

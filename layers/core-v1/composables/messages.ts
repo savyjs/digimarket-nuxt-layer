@@ -9,7 +9,7 @@ interface Message {
     target?: string
 }
 
-export const useLoader = defineStore('messages', {
+export const useMessages = defineStore('messages', {
     // a function that returns a fresh state
     state: () => ({
         inbox: [] as Array<Message>,
@@ -25,7 +25,7 @@ export const useLoader = defineStore('messages', {
         },
     },
     actions: {
-        push(item: Message) {
+        pushMessage(item: Message) {
             // `this` is the store instance
             // const inbox =  as Array<{}>
             if (item?.message) {
