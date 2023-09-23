@@ -11,6 +11,6 @@ export const useSnackbar = ((msg: string | number | [], type: "info" | "error" |
 
         // persist the whole state to the local storage whenever it changes
         // localStorage.setItem('cart', JSON.stringify(state))
-        alert(messages.target('snackbar'))
+
     })
 })

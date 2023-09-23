@@ -7,14 +7,16 @@ export const useLoader = defineStore('loader', {
     state: () => ({
         active: false,
         timeout: 0,
+        targets: {} as Partial<{ [key: string]: { active: boolean } }>
     }),
     // optional getters
     getters: {
         // getters receive the state as first parameter
         status: (state) => {
             return (target ?: string) => {
-                if (state?.[target]?.active) return state[target].active
-                else if (target) return false
+                if (typeof target == 'string' && state?.targets?.[target]?.active) {
+                    return !!state?.targets?.[target]?.active
+                }
                 else return state.active
             }
         }
@@ -22,7 +24,7 @@ export const useLoader = defineStore('loader', {
     actions: {
         stop(target ?: string) {
             if (typeof target === 'string') {
-                this[target] = {active: false}
+                this.targets[target] = {active: false}
             } else {
                 this.active = false
                 this.timeout = 0
@@ -31,7 +33,7 @@ export const useLoader = defineStore('loader', {
         start(target ?: string) {
             // `this` is the store instance
             if (typeof target === 'string') {
-                this[target] = {active: true}
+                this.targets[target] = {active: true}
             } else {
                 this.active = true
                 this.timeout = 120
