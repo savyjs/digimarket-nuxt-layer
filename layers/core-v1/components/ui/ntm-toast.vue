@@ -1,4 +1,8 @@
 <template>
+  <div>
+    {{ count }}
+    {{ useMessages().inbox }}
+    {{ message }}
   <div
       v-show="count"
       :class="`toast-${type}`"
@@ -24,10 +28,12 @@
       </div>
     </div>
   </div>
+  </div>
 </template>
 <script setup>
 
 let message = useMessages().newest('toast')
+let count = useMessages().count('toast')
 const type = message?.type || 'info';
 
 function closeToast() {

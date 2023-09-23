@@ -22,37 +22,37 @@ export const useMessages = defineStore('messages', {
         // getters receive the state as first parameter
         newest: (state) => {
             return (target?: string) => {
-                if (target?.length) {
+                if (target) {
                     return state.inbox.filter((item) => {
-                        return item.target == target && item.seen
-                    })?.slice(-1)
+                        return item.target == target && !item.seen
+                    }).slice(-1)
                 }
-                return state.inbox?.filter((item) => item.seen)?.slice(-1)
+                return state.inbox.filter((item) => !item.seen).slice(-1)
             }
         },
         oldest: (state) => {
             return (target?: string) => {
-                if (target?.length) {
+                if (target) {
                     return state.inbox.filter((item) => {
-                        return item.target == target && item.seen
+                        return item.target == target && !item.seen
                     })?.[0]
                 }
-                return state.inbox?.filter((item) => item.seen)?.[0]
+                return state.inbox.filter((item) => !item.seen)?.[0]
             }
         },
         unread: (state) => {
             return (target?: string) => {
-                if (target?.length) {
+                if (target) {
                     return state.inbox.filter((item) => {
-                        return item.target == target && item.seen
+                        return item.target == target && !item.seen
                     })
                 }
-                return state.inbox?.filter((item) => item.seen)
+                return state.inbox.filter((item) => !item.seen)
             }
         },
         all: (state) => {
             return (target?: string) => {
-                if (target?.length) {
+                if (target) {
                     return state.inbox.filter((item) => {
                         return item.target == target
                     })
@@ -62,21 +62,22 @@ export const useMessages = defineStore('messages', {
         },
         count: (state) => {
             return (target?: string) => {
-                if (target?.length) {
+                if (target) {
                     return state.inbox.filter((item) => {
-                        return item.target == target && item.seen
+                        return item.target == target && !item.seen
                     }).length
                 }
-                return state.inbox?.filter((item) => item.seen)?.length
+                return state.inbox.filter((item) => !item.seen).length
             }
         },
     },
     actions: {
         read(identifier: Message | number) {
+
             this.inbox.filter(item => {
                 if (!item.seen) return false
-                if (typeof identifier == 'number') return identifier == item?.id
-                return identifier?.id == item?.id
+                if (typeof identifier == 'number') return identifier == item.id
+                return identifier.id == item.id
             }).map(item => {
                 item.seen = true;
                 return item;
@@ -94,8 +95,8 @@ export const useMessages = defineStore('messages', {
         },
         pushMessage(item: Message) {
             // `this` is the store instance
-            // const inbox =  as Array<{}>
             if (item?.message) {
+                item.seen = false
                 item.id = Date.now() + this.count()
                 this.inbox.push(item)
             } else {
