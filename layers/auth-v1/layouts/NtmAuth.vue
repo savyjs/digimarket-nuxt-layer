@@ -15,10 +15,10 @@
                 </span>
               </nuxt-link>
             </div>
-            <div v-if="messages.length">
-              <h4>{{ messages.pop().title }}</h4>
+            <div class="alert" :class="`alert-${message?.type}`" v-if="message?.message">
+              <h4>{{ message?.title }}</h4>
               <p>
-                {{ item?.pop()?.message }}
+                {{ message?.message }}
               </p>
             </div>
             <slot/>
@@ -33,8 +33,9 @@
 const darkmode = useDarkmode()
 const rtl = useRtl()
 const backdrop = useState('backdrop', () => false)
-const store = useMessages()
-const messages = store.target('auth') ?? []
+
+const {newest} = useMessages()
+const message = newest('auth')
 
 let {logo, title} = useAppConfig()?.digimarket;
 

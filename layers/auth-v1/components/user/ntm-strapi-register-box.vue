@@ -81,8 +81,10 @@
             </label>
           </div>
           <button type="submit"
+                  :disabled="useLoader().status('auth')"
                   @click="$emit('action',credentials)"
                   class="btn-primary w-full mt-5 py-3.5">
+            <i class="t t-loader" v-if="useLoader().status('auth')"></i>
             {{ $t('ntm.register_title', 'Register') }}
           </button>
 

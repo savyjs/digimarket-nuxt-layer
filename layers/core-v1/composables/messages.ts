@@ -20,9 +20,10 @@ export const useMessages = defineStore('messages', {
         // getters receive the state as first parameter
         newest: (state) => {
             return (target?: string) => {
-                if (target) {
+                if (target?.length) {
                     return state.inbox.filter((item) => {
                         return item.target == target
+                        console.log({target})
                     }).pop()
                 }
                 return state.inbox.pop()
@@ -30,7 +31,7 @@ export const useMessages = defineStore('messages', {
         },
         oldest: (state) => {
             return (target?: string) => {
-                if (target) {
+                if (target?.length) {
                     return state.inbox.filter((item) => {
                         return item.target == target
                     }).shift()
@@ -40,7 +41,7 @@ export const useMessages = defineStore('messages', {
         },
         all: (state) => {
             return (target?: string) => {
-                if (target) {
+                if (target?.length) {
                     return state.inbox.filter((item) => {
                         return item.target == target
                     })
@@ -56,7 +57,7 @@ export const useMessages = defineStore('messages', {
             if (item?.message) {
                 this.inbox.push(item)
             } else {
-                console.warn('Message is not vaild.', item)
+                console.warn('Message is not valid.', item)
             }
         }
     },

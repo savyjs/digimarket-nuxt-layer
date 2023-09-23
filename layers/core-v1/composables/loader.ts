@@ -7,27 +7,35 @@ export const useLoader = defineStore('loader', {
     state: () => ({
         active: false,
         timeout: 0,
-        auth: {
-            register: false,
-            login: false,
-            verify: false,
-        }
     }),
     // optional getters
     getters: {
         // getters receive the state as first parameter
-        doubleCounter: (state) => state.active
+        status: (state) => {
+            return (target ?: string) => {
+                if (state?.[target]?.active) return state[target].active
+                else if (target) return false
+                else return state.active
+            }
+        }
     },
     actions: {
-        stop() {
-            // `this` is the store instance
-            this.active = false
-            this.timeout = 0
+        stop(target ?: string) {
+            if (typeof target === 'string') {
+                this[target] = {active: false}
+            } else {
+                this.active = false
+                this.timeout = 0
+            }
         },
-        start() {
+        start(target ?: string) {
             // `this` is the store instance
-            this.active = true
-            this.timeout = 120
+            if (typeof target === 'string') {
+                this[target] = {active: true}
+            } else {
+                this.active = true
+                this.timeout = 120
+            }
         },
     },
 })

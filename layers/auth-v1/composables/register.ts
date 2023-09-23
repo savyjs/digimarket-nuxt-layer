@@ -1,6 +1,7 @@
 export const useRegister = (credentials: Digimarket.Credential) => {
     console.info('You can override useRegister() composable')
 
+    useLoader().start('auth')
     useStrapiAuth().register({
         email: credentials?.email,
         username: credentials?.username,
@@ -24,5 +25,7 @@ export const useRegister = (credentials: Digimarket.Credential) => {
         useMessages().pushMessage(errorMessage)
         console.error({err})
         alert(err?.error)
+    }).finally(() => {
+        useLoader().stop('auth')
     })
 }
