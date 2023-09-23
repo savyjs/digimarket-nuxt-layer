@@ -5,7 +5,8 @@ import {defineStore} from 'pinia'
 interface Message {
     title?: string;
     type?: string;
-    message: string
+    message: string;
+    target?: string
 }
 
 export const useLoader = defineStore('messages', {
@@ -19,6 +20,9 @@ export const useLoader = defineStore('messages', {
         newest: (state) => state.inbox.pop(),
         oldest: (state) => state.inbox.shift(),
         all: (state) => state.inbox,
+        module: (state) => {
+            return (target: string) => state.inbox.filter((item) => item.target == target)
+        },
     },
     actions: {
         push(item: Message) {
@@ -26,6 +30,8 @@ export const useLoader = defineStore('messages', {
             // const inbox =  as Array<{}>
             if (item?.message) {
                 this.inbox.push(item)
+            } else {
+                console.warn('Message is not vaild.', item)
             }
         }
     },
