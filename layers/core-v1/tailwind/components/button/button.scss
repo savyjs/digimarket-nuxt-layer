@@ -1,6 +1,6 @@
 @layer components {
   .btn {
-    @apply text-center justify-center flex rounded-2xl px-5 py-2.5 text-center text-sm font-medium border-[1px] dark:border-[1px];
+    @apply text-center justify-center flex rounded-3xl px-5 py-2.5 text-center text-sm font-medium border-[1px] dark:border-[1px];
   }
 
   .btn {
@@ -8,7 +8,11 @@
   }
 
   .btn:hover {
-    @apply shadow-lg text-[var(--color-btn-text-hover)] dark:text-[var(--color-btn-dark-text-hover)] bg-[var(--color-btn-bg-hover)] dark:bg-[var(--color-btn-dark-bg-hover)] border-[var(--color-btn-border-hover)] dark:border-[var(--color-btn-dark-border-hover)];
+    @apply shadow-lg;
+  }
+
+  .btn-default:hover {
+    @apply text-[var(--color-btn-text-hover)] dark:text-[var(--color-btn-dark-text-hover)] bg-[var(--color-btn-bg-hover)] dark:bg-[var(--color-btn-dark-bg-hover)] border-[var(--color-btn-border-hover)] dark:border-[var(--color-btn-dark-border-hover)];
   }
 
   .btn-primary {
