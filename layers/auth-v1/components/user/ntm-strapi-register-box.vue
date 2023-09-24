@@ -123,7 +123,7 @@
 
           <button type="submit"
                   :disabled="useLoader().status('auth')"
-                  @click="submitForm()"
+                  @click="submitForm"
                   class="btn-primary flex gap-2 w-full mt-5 py-3.5 align-center">
             <span v-if="useLoader().status('auth')" class="animate-spin">
               <i class="ti ti-refresh icon-md">
@@ -179,7 +179,7 @@ const isValid = reactive(useIsFormDirty()?.value && useIsFormValid()?.value)
 
 const emit = defineEmits(['data'])
 
-const submitForm = useSubmitForm((values, actions) => {
+const submitForm = useSubmitForm((values) => {
   // Send data to your api ...
   alert(JSON.stringify(values, null, 2));
   emit('data', values)
