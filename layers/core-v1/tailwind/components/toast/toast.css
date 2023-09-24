@@ -12,20 +12,36 @@
         @apply w-full px-4 pt-3 pb-2
     }
 
+    .toast.toast-info {
+        @apply ring-info text-info fill-info
+    }
+
+    .toast.toast-warning {
+        @apply ring-warning text-warning fill-warning
+    }
+
+    .toast.toast-error {
+        @apply ring-error text-error fill-error
+    }
+
+    .toast.toast-success {
+        @apply ring-success text-success fill-success
+    }
+
     .toast.toast-info .toast-body {
-        @apply bg-info/[0.075] ring-info text-info
+        @apply bg-info/[0.075]
     }
 
     .toast.toast-warning .toast-body {
-        @apply bg-warning/[0.075] ring-warning text-warning
+        @apply bg-warning/[0.075]
     }
 
     .toast.toast-error .toast-body {
-        @apply bg-error/[0.075] ring-error text-error
+        @apply bg-error/[0.075]
     }
 
     .toast.toast-success .toast-body {
-        @apply bg-success/[0.075] ring-success text-success
+        @apply bg-success/[0.075]
     }
 
     .toast .close-btn {

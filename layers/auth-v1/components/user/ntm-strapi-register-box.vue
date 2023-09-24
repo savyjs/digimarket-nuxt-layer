@@ -14,28 +14,6 @@
         </div>
 
         <div class="form-group flex flex-col gap-4">
-          <div class="element-group w-full  flex flex-col gap-1">
-            <label for="name" class="py-2">{{ $t("ntm.mobile", "Username") }}</label>
-            <input
-                dir="auto"
-                id="username"
-                type="text"
-                v-model="credentials.username"
-                class="input-primary input-mobile py-3 w-full dark:border-gray-800 dark:text-gray-900"
-                required
-            />
-          </div>
-
-          <div class="element-group w-full  flex flex-col gap-1">
-            <label for="password" class="py-2">{{ $t("ntm.password", "Password") }}</label>
-            <input
-                id="password"
-                type="password"
-                v-model="credentials.password"
-                class="input-primary input-password py-3 w-full dark:border-gray-800 dark:text-gray-900"
-                required
-            />
-          </div>
 
           <div class="element-group w-full flex flex-col gap-1">
             <label for="email">{{ $t("ntm.email", "Email") }}</label>
@@ -43,36 +21,34 @@
                 dir="auto"
                 type="email"
                 id="email"
-                v-model="credentials.email"
+                v-model="email.value"
+                @change="email.validate()"
                 class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
             />
-          </div>
-          <div class="flex gap-2">
-            <div class="element-group w-full flex flex-col gap-1">
-              <label for="first_name">{{ $t("ntm.first_name", "First Name") }}</label>
-              <input
-                  dir="auto"
-                  type="text"
-                  id="first_name"
-                  v-model="credentials.first_name"
-                  class="input-primary input-text py-3 w-full dark:border-gray-800 dark:text-gray-900"
-                  required
-              />
-            </div>
-            <div class="element-group w-full flex flex-col gap-1">
-              <label for="last_name">{{ $t("ntm.last_name", "Last Name") }}</label>
-              <input
-                  dir="auto"
-                  type="text"
-                  id="last_name"
-                  v-model="credentials.last_name"
-                  class="input-primary input-text py-3 w-full dark:border-gray-800 dark:text-gray-900"
-                  required
-              />
-            </div>
+            {{email}}
+            <div class="input-error">{{ useFieldError('email') }}</div>
           </div>
 
+          <div class="element-group w-full  flex flex-col gap-1">
+            <label for="password" class="py-2">{{ $t("ntm.password", "Password") }}</label>
+            <div class="flex">
+              <input
+                  id="password"
+                  :type="!showPassword ? 'password' : 'text'"
+                  v-model="password"
+                  class="input-primary input-password py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                  required
+              />
+              <span class="flex place-content-center items-center align-baseline">
+                <button class="absolute transition opacity-20 hover:opacity-100 active:opacity-100 -ml-10"
+                        @click="showPassword=!showPassword">
+                <i class="ti ti-eye text-3xl" v-if="!showPassword"></i>
+                <i class="ti ti-eye-off text-3xl" v-if="showPassword"></i>
+                </button>
+              </span>
+            </div>
+          </div>
 
           <div class="flex py-4 gap-2 items-baseline">
             <input type="checkbox" id="terms_and_conditions"/>
@@ -110,6 +86,14 @@
 </template>
 
 <script setup lang="ts">
-const credentials = ref({name: null, email: null, password: null, mobile: null})
+import {useField, useFieldError,useForm} from 'vee-validate';
+
+const showPassword = ref(false);
+
+const username = useField('username', 'required|min:3');
+const email = useField('email', 'required|email');
+const password = useField('password', 'required|min:6');
+
+const credentials = ref({email, password, username})
 const {logo, title} = useAppConfig()?.digimarket;
 </script>
