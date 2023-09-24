@@ -5,6 +5,7 @@
     </h1>
     <div>
       <div class="mb-6">
+
         <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
           <p class="my-1 font-light">
             {{ $t('ntm.hello', 'Hello!') }}
@@ -25,7 +26,7 @@
                 class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
             />
-            {{ username.errorMessage }}
+            {{ errors.username }}
           </div>
 
 
@@ -35,10 +36,12 @@
                 dir="auto"
                 type="email"
                 id="email"
-                v-bind="email"
+                v-model="email.value"
                 class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
             />
+            <span>
+            </span>
             <span>{{ errors.email }}</span>
           </div>
 
@@ -49,6 +52,7 @@
                   id="password"
                   :type="!showPassword ? 'password' : 'text'"
                   v-model="password.value"
+                  :class="{'input-has-error':password?.dirty}"
                   class="input-primary input-password py-3 w-full dark:border-gray-800 dark:text-gray-900"
                   required
               />
@@ -60,7 +64,10 @@
                 </button>
               </span>
             </div>
-            <div class="input-error">{{ password.errorMessage }}</div>
+
+            <div v-show="password?.dirty" class="input-help input-error flex align-baseline gap-2">
+              <i class="ti ti-error mx-1 icn-small" ></i>
+              {{ errors.password }}</div>
           </div>
 
           <div class="flex py-4 gap-2 items-baseline">
@@ -70,13 +77,11 @@
             </label>
           </div>
           <div>
-            {{ useFormErrors() }}
-            {{ useIsFormDirty() }}
-            {{ useSubmitCount() }}
+
           </div>
           <button type="submit"
-                  :disabled="useLoader().status('auth')"
-                  @click="validate() && $emit('action', credentials)"
+                  :disabled="useLoader().status('auth') || useIsFormDirty()"
+                  @click="onSubmit()"
                   class="btn-primary flex gap-2 w-full mt-5 py-3.5 align-center">
             <span v-if="useLoader().status('auth')" class="animate-spin">
               <i class="ti ti-refresh icon-md">
@@ -97,26 +102,35 @@
             </span>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 
 </template>
 
-<script setup lang="ts">
-import {useSubmitForm, useValidateForm} from 'vee-validate';
-const validate = useValidateForm();
+<script setup>
+import { reactive } from 'vue';
+const {logo, title} = useAppConfig()?.digimarket;
 
+import {useField, useForm} from 'vee-validate';
+
+const {errors, handleSubmit, values} = useForm();
 
 const showPassword = ref(false);
 
-const {errors, defineInputBinds} = useForm();
-const username = defineInputBinds('username', 'required|min:3');
-const email = defineInputBinds('email', 'required|email');
-const password = defineInputBinds('password', 'required|min:8');
+const username = reactive(useField('username', 'required|min:3'));
+const email = reactive(useField('email', 'required|email'));
+const password = reactive(useField('password', 'required|min:8'));
 
 
+const form = reactive(useForm());
 
-const credentials = useForm();
-const {logo, title} = useAppConfig()?.digimarket;
+
+const onSubmit = handleSubmit.withControlled((data, actions) => {
+  // Send only controlled values to the API
+  // Only fields declared with `useField` or `useFieldModel` will be printed
+  alert(JSON.stringify(data, null, 2));
+});
+
 </script>

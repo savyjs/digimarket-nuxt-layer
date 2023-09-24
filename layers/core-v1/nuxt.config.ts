@@ -16,7 +16,13 @@ export default defineNuxtConfig({
     ],
     veeValidate: {
         // disable or enable auto imports
-        autoImports: true
+        autoImports: true,
+        componentNames: {
+            Form: 'VeeForm',
+            Field: 'VeeField',
+            FieldArray: 'VeeFieldArray',
+            ErrorMessage: 'VeeErrorMessage',
+        },
     },
     strapi: {
         url: process.env?.API_URL || "/api"

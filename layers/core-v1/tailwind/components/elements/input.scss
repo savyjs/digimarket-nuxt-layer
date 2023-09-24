@@ -3,6 +3,15 @@
     @apply w-full rounded-sm border p-3 text-sm font-light
   }
 
+  .input-help {
+    @apply py-2 transition
+  }
+
+  .input-help.input-error {
+    @apply text-error
+  }
+
+
   .input-primary {
     @apply border-gray-300 text-gray-900 focus:border-blue-500
     focus:ring-cyan-200 dark:border-gray-600
@@ -14,4 +23,12 @@
   .input-mobile {
     @apply text-left ltr
   }
+
+  .input-has-error {
+    @apply border-error text-error focus:border-error
+    focus:ring-error dark:border-error
+    dark:placeholder-error
+    dark:focus:ring-error
+  }
+
 }
