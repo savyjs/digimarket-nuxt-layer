@@ -16,7 +16,22 @@
         <div class="form-group flex flex-col gap-4">
 
           <div class="element-group w-full flex flex-col gap-1">
+            <label for="username">{{ $t("ntm.username", "Username") }}</label>
+            <input
+                dir="auto"
+                type="email"
+                id="username"
+                v-model="username.value"
+                class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                required
+            />
+            {{ username.errorMessage }}
+          </div>
+
+
+          <div class="element-group w-full flex flex-col gap-1">
             <label for="email">{{ $t("ntm.email", "Email") }}</label>
+            <label for="email">{{email.label}}</label>
             <input
                 dir="auto"
                 type="email"
@@ -25,9 +40,7 @@
                 class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
             />
-            {{credentials.values}}
-            {{ email }}
-            <div class="input-error">{{ useFieldError('email') }}</div>
+            {{ email.errorMessage }}
           </div>
 
           <div class="element-group w-full  flex flex-col gap-1">
@@ -48,7 +61,7 @@
                 </button>
               </span>
             </div>
-            <div class="input-error">{{ useFieldError('password') }}</div>
+            <div class="input-error">{{ password.errorMessage }}</div>
           </div>
 
           <div class="flex py-4 gap-2 items-baseline">
@@ -87,12 +100,11 @@
 </template>
 
 <script setup lang="ts">
-
 const showPassword = ref(false);
 
 const username = useField('username', 'required|min:3');
 const email = useField('email', 'required|email');
-const password = useField('password', 'required|min:6');
+const password = useField('password', { required: true, min: 8 });
 
 const credentials = useForm();
 const {logo, title} = useAppConfig()?.digimarket;

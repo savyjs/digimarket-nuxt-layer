@@ -14,6 +14,10 @@ export default defineNuxtConfig({
         '@nuxtjs/strapi',
         '@vee-validate/nuxt'
     ],
+    veeValidate: {
+        // disable or enable auto imports
+        autoImports: true
+    },
     strapi: {
         url: process.env?.API_URL || "/api"
     },
