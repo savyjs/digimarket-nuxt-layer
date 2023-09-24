@@ -76,7 +76,7 @@
           </div>
           <button type="submit"
                   :disabled="useLoader().status('auth')"
-                  @click="submit()"
+                  @click="validate() && $emit('action', credentials)"
                   class="btn-primary flex gap-2 w-full mt-5 py-3.5 align-center">
             <span v-if="useLoader().status('auth')" class="animate-spin">
               <i class="ti ti-refresh icon-md">
@@ -116,11 +116,6 @@ const email = defineInputBinds('email', 'required|email');
 const password = defineInputBinds('password', 'required|min:8');
 
 
-
-function submit() {
-  validate();
-  $emit('action', credentials);
-}
 
 const credentials = useForm();
 const {logo, title} = useAppConfig()?.digimarket;

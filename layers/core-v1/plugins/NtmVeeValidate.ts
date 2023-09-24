@@ -11,12 +11,12 @@ export default defineNuxtPlugin((nuxtApp) => {
             defineRule(rule, ruleFn)
         }
     });
-    setLocale('en');
     configure({
         generateMessage: localize({
             en,
             fa,
         }),
     });
+    setLocale('en');
 
 })
