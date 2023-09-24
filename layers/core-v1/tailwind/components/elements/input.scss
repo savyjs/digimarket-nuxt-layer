@@ -3,14 +3,26 @@
     @apply w-full rounded-sm border p-3 text-sm font-light
   }
 
-  .input-help {
-    @apply py-2 transition
+  .input {
+
   }
 
-  .input-help.input-error {
+  .input-help {
+    @apply py-2 transition text-sm flex items-center content-center gap-1
+  }
+
+  .input-error {
     @apply text-error
   }
 
+  .input-success {
+    @apply text-success
+  }
+
+
+  .input-primary {
+    @apply input
+  }
 
   .input-primary {
     @apply border-gray-300 text-gray-900 focus:border-blue-500
@@ -24,11 +36,20 @@
     @apply text-left ltr
   }
 
-  .input-has-error {
+  .has-error .input {
     @apply border-error text-error focus:border-error
     focus:ring-error dark:border-error
     dark:placeholder-error
     dark:focus:ring-error
   }
+
+  .is-valid .input {
+    @apply border-success text-success focus:border-success
+    focus:ring-success dark:border-success
+    dark:placeholder-success
+    dark:focus:ring-success
+  }
+
+
 
 }

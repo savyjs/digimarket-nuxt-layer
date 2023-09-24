@@ -23,10 +23,17 @@
                 type="email"
                 id="username"
                 v-model="username.value"
+                :class="{
+                  'input-has-error':errors?.username,
+                  'input-is-valid':username?.meta?.dirty && username?.meta?.valid
+                  }"
                 class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
             />
-            {{ errors.username }}
+            <div v-show="errors.username" class="input-help input-error">
+              <i class="ti ti-exclamation-circle icon-small"></i>
+              {{ errors.username }}
+            </div>
           </div>
 
 
@@ -37,22 +44,34 @@
                 type="email"
                 id="email"
                 v-model="email.value"
+                :class="{
+                  'input-has-error':errors.email,
+                  'input-is-valid':email?.meta?.dirty && email?.meta?.valid
+                  }"
                 class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
             />
-            <span>
-            </span>
-            <span>{{ errors.email }}</span>
+            <div v-show="errors.email" class="input-help input-error">
+              <i class="ti ti-exclamation-circle icon-small"></i>
+              {{ errors.email }}
+            </div>
           </div>
 
-          <div class="element-group w-full  flex flex-col gap-1">
-            <label for="password" class="py-2">{{ $t("ntm.password", "Password") }}</label>
+
+          <div class="element-group w-full flex flex-col gap-1" :class="{
+                  'has-error':errors.password,
+                  'is-valid':password?.meta?.dirty && password?.meta?.valid
+                  }">
+            <label for="password" class="py-2 input-label" >
+              {{ $t("ntm.password", "Password") }} <i
+                class="input-success-icon ti ti-circle-check icon-small"></i>
+            </label>
+
             <div class="flex">
               <input
                   id="password"
                   :type="!showPassword ? 'password' : 'text'"
                   v-model="password.value"
-                  :class="{'input-has-error':password?.dirty}"
                   class="input-primary input-password py-3 w-full dark:border-gray-800 dark:text-gray-900"
                   required
               />
@@ -65,13 +84,16 @@
               </span>
             </div>
 
-            <div v-show="password?.dirty" class="input-help input-error flex align-baseline gap-2">
-              <i class="ti ti-error mx-1 icn-small" ></i>
-              {{ errors.password }}</div>
+            <div class="input-error">
+              <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
+              {{ errors.password }}
+            </div>
+
           </div>
 
+
           <div class="flex py-4 gap-2 items-baseline">
-            <input type="checkbox" id="terms_and_conditions"/>
+            <input type="checkbox" v-model="termsAndConditions.value" id="terms_and_conditions"/>
             <label for="terms_and_conditions" class="self-center font-weight-light w-full text-[10px]">
               {{ $t("ntm.terms_and_conditions", "By creating an account, you agree to our terms and conditions.") }}
             </label>
@@ -110,7 +132,8 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue';
+import {reactive} from 'vue';
+
 const {logo, title} = useAppConfig()?.digimarket;
 
 import {useField, useForm} from 'vee-validate';
@@ -122,7 +145,10 @@ const showPassword = ref(false);
 const username = reactive(useField('username', 'required|min:3'));
 const email = reactive(useField('email', 'required|email'));
 const password = reactive(useField('password', 'required|min:8'));
-
+const termsAndConditions = reactive(useField('terms', 'required', {
+  type: 'checkbox',
+  valueProp: 'Checkbox value'
+}));
 
 const form = reactive(useForm());
 
