@@ -102,7 +102,7 @@
           </div>
 
           <div class="element-group w-full flex flex-col gap-1" :class="{
-                  'has-error':errors.terms,
+                  'has-error':errors?.terms,
                   'is-valid':terms?.meta?.dirty && terms?.meta?.valid
                   }">
             <div class="flex py-4 gap-2 items-baseline">
@@ -120,12 +120,10 @@
           <div>
 
           </div>
-          <span>{{ isValid }}</span>
-          <span>{{ termsAndConditions.value }}</span>
-          <span>{{ errors }}</span>
+
           <button type="submit"
                   :disabled="useLoader().status('auth')"
-                  @click="submitForm"
+                  @click="submitForm()"
                   class="btn-primary flex gap-2 w-full mt-5 py-3.5 align-center">
             <span v-if="useLoader().status('auth')" class="animate-spin">
               <i class="ti ti-refresh icon-md">
@@ -155,7 +153,7 @@
 
 <script setup>
 import {reactive} from 'vue';
-import {useField, useForm, useIsFormDirty, useIsFormValid, useIsSubmitting} from 'vee-validate';
+import {useField, useForm, useSubmitForm, useIsFormDirty, useIsFormValid, useIsSubmitting} from 'vee-validate';
 
 const {logo, title} = useAppConfig()?.digimarket;
 
@@ -176,8 +174,8 @@ const form = reactive(useForm());
 
 const loader = useLoader();
 loader.start('auth')
-loader.targets.auth.active = reactive(form?.meta?.pending || useIsSubmitting().value);
-const isValid = reactive(useIsFormDirty().value && useIsFormValid().value)
+loader.targets.auth.active = reactive(form?.meta?.pending || useIsSubmitting()?.value);
+const isValid = reactive(useIsFormDirty()?.value && useIsFormValid()?.value)
 
 const emit = defineEmits(['data'])
 
@@ -186,4 +184,5 @@ const submitForm = useSubmitForm((values, actions) => {
   alert(JSON.stringify(values, null, 2));
   emit('data', values)
 });
+
 </script>
