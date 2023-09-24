@@ -15,7 +15,7 @@
     @apply text-error
   }
 
-  .input-success {
+  .input-success, .input-success-icon {
     @apply text-success
   }
 
@@ -49,7 +49,6 @@
     dark:placeholder-success
     dark:focus:ring-success
   }
-
 
 
 }

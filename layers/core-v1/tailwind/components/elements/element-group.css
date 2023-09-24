@@ -2,4 +2,24 @@
     .element-group {
         @apply flex gap-y-3 text-sm mb-4
     }
+
+    .element-group .input-error, .element-group .input-success-icon {
+        @apply invisible
+    }
+
+    .element-group.has-error .input-error {
+        @apply visible
+    }
+
+    .element-group.is-valid .input-success-icon {
+        @apply visible
+    }
+
+    .element-group.is-valid .input-label {
+        @apply text-success
+    }
+
+    .element-group.has-error .input-label {
+        @apply text-error
+    }
 }

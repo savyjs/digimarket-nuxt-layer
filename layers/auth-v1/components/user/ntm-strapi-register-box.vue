@@ -16,8 +16,14 @@
 
         <div class="form-group flex flex-col gap-4">
 
-          <div class="element-group w-full flex flex-col gap-1">
-            <label for="username">{{ $t("ntm.username", "Username") }}</label>
+          <div class="element-group w-full flex flex-col gap-1" :class="{
+                  'has-error':errors.username,
+                  'is-valid':username?.meta?.dirty && username?.meta?.valid
+                  }">
+            <label class="input-label" for="username">
+              {{ $t("ntm.username", "Username") }}
+              <i class="input-success-icon ti ti-circle-check icon-small"></i>
+            </label>
             <input
                 dir="auto"
                 type="email"
@@ -30,15 +36,20 @@
                 class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
             />
-            <div v-show="errors.username" class="input-help input-error">
-              <i class="ti ti-exclamation-circle icon-small"></i>
+            <div v-show="errors?.username" class="input-error">
+              <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
               {{ errors.username }}
             </div>
           </div>
 
 
-          <div class="element-group w-full flex flex-col gap-1">
-            <label for="email">{{ $t("ntm.email", "Email") }}</label>
+          <div class="element-group w-full flex flex-col gap-1" :class="{
+                  'has-error':errors.email,
+                  'is-valid':email?.meta?.dirty && email?.meta?.valid
+                  }">
+            <label class="input-label" for="email">{{ $t("ntm.email", "Email") }}
+              <i class="input-success-icon ti ti-circle-check icon-small"></i>
+            </label>
             <input
                 dir="auto"
                 type="email"
@@ -51,8 +62,8 @@
                 class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
             />
-            <div v-show="errors.email" class="input-help input-error">
-              <i class="ti ti-exclamation-circle icon-small"></i>
+            <div v-show="errors?.email" class="input-error">
+              <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
               {{ errors.email }}
             </div>
           </div>
@@ -62,9 +73,9 @@
                   'has-error':errors.password,
                   'is-valid':password?.meta?.dirty && password?.meta?.valid
                   }">
-            <label for="password" class="py-2 input-label" >
-              {{ $t("ntm.password", "Password") }} <i
-                class="input-success-icon ti ti-circle-check icon-small"></i>
+            <label for="password" class="input-label">
+              {{ $t("ntm.password", "Password") }}
+              <i class="input-success-icon ti ti-circle-check icon-small"></i>
             </label>
 
             <div class="flex">
@@ -83,27 +94,38 @@
                 </button>
               </span>
             </div>
-
-            <div class="input-error">
+            <div v-show="errors?.password" class="input-error">
               <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
               {{ errors.password }}
             </div>
 
           </div>
 
-
-          <div class="flex py-4 gap-2 items-baseline">
-            <input type="checkbox" v-model="termsAndConditions.value" id="terms_and_conditions"/>
-            <label for="terms_and_conditions" class="self-center font-weight-light w-full text-[10px]">
-              {{ $t("ntm.terms_and_conditions", "By creating an account, you agree to our terms and conditions.") }}
-            </label>
+          <div class="element-group w-full flex flex-col gap-1" :class="{
+                  'has-error':errors.terms,
+                  'is-valid':terms?.meta?.dirty && terms?.meta?.valid
+                  }">
+            <div class="flex py-4 gap-2 items-baseline">
+              <input type="checkbox" v-model="terms.value" id="terms_and_conditions"/>
+              <label for="terms_and_conditions" class="self-center font-weight-light w-full text-[10px]">
+                {{ $t("ntm.terms_and_conditions", "By creating an account, you agree to our terms and conditions.") }}
+              </label>
+            </div>
+            <div v-show="errors?.terms" class="input-error">
+              <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
+              {{ errors.terms }}
+            </div>
           </div>
+
           <div>
 
           </div>
+          <span>{{ isValid }}</span>
+          <span>{{ termsAndConditions.value }}</span>
+          <span>{{ errors }}</span>
           <button type="submit"
-                  :disabled="useLoader().status('auth') || useIsFormDirty()"
-                  @click="onSubmit()"
+                  :disabled="useLoader().status('auth')"
+                  @click="submitForm"
                   class="btn-primary flex gap-2 w-full mt-5 py-3.5 align-center">
             <span v-if="useLoader().status('auth')" class="animate-spin">
               <i class="ti ti-refresh icon-md">
@@ -133,30 +155,35 @@
 
 <script setup>
 import {reactive} from 'vue';
+import {useField, useForm, useIsFormDirty, useIsFormValid, useIsSubmitting} from 'vee-validate';
 
 const {logo, title} = useAppConfig()?.digimarket;
 
-import {useField, useForm} from 'vee-validate';
-
-const {errors, handleSubmit, values} = useForm();
+const {errors} = useForm();
 
 const showPassword = ref(false);
 
 const username = reactive(useField('username', 'required|min:3'));
 const email = reactive(useField('email', 'required|email'));
 const password = reactive(useField('password', 'required|min:8'));
-const termsAndConditions = reactive(useField('terms', 'required', {
-  type: 'checkbox',
-  valueProp: 'Checkbox value'
+const terms = reactive(useField('terms', 'required', {
+  type: 'checkbox'
 }));
+
+const credentials = ref({username, email, password});
 
 const form = reactive(useForm());
 
+const loader = useLoader();
+loader.start('auth')
+loader.targets.auth.active = reactive(form?.meta?.pending || useIsSubmitting().value);
+const isValid = reactive(useIsFormDirty().value && useIsFormValid().value)
 
-const onSubmit = handleSubmit.withControlled((data, actions) => {
-  // Send only controlled values to the API
-  // Only fields declared with `useField` or `useFieldModel` will be printed
-  alert(JSON.stringify(data, null, 2));
+const emit = defineEmits(['data'])
+
+const submitForm = useSubmitForm((values, actions) => {
+  // Send data to your api ...
+  alert(JSON.stringify(values, null, 2));
+  emit('data', values)
 });
-
 </script>
