@@ -22,11 +22,11 @@
                 type="email"
                 id="email"
                 v-model="email.value"
-                @change="email.validate()"
                 class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
             />
-            {{email}}
+            {{credentials.values}}
+            {{ email }}
             <div class="input-error">{{ useFieldError('email') }}</div>
           </div>
 
@@ -36,7 +36,7 @@
               <input
                   id="password"
                   :type="!showPassword ? 'password' : 'text'"
-                  v-model="password"
+                  v-model="password.value"
                   class="input-primary input-password py-3 w-full dark:border-gray-800 dark:text-gray-900"
                   required
               />
@@ -48,6 +48,7 @@
                 </button>
               </span>
             </div>
+            <div class="input-error">{{ useFieldError('password') }}</div>
           </div>
 
           <div class="flex py-4 gap-2 items-baseline">
@@ -86,7 +87,6 @@
 </template>
 
 <script setup lang="ts">
-import {useField, useFieldError,useForm} from 'vee-validate';
 
 const showPassword = ref(false);
 
@@ -94,6 +94,6 @@ const username = useField('username', 'required|min:3');
 const email = useField('email', 'required|email');
 const password = useField('password', 'required|min:6');
 
-const credentials = ref({email, password, username})
+const credentials = useForm();
 const {logo, title} = useAppConfig()?.digimarket;
 </script>

@@ -11,7 +11,8 @@ export default defineNuxtConfig({
     modules: [
         '@pinia/nuxt',
         '@nuxtjs/tailwindcss',
-        '@nuxtjs/strapi'
+        '@nuxtjs/strapi',
+        '@vee-validate/nuxt'
     ],
     strapi: {
         url: process.env?.API_URL || "/api"
