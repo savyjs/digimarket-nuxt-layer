@@ -31,16 +31,15 @@
 
           <div class="element-group w-full flex flex-col gap-1">
             <label for="email">{{ $t("ntm.email", "Email") }}</label>
-            <label for="email">{{email.label}}</label>
             <input
                 dir="auto"
                 type="email"
                 id="email"
-                v-model="email.value"
+                v-bind="email"
                 class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
             />
-            {{ email.errorMessage }}
+            <span>{{ errors.email }}</span>
           </div>
 
           <div class="element-group w-full  flex flex-col gap-1">
@@ -70,9 +69,14 @@
               {{ $t("ntm.terms_and_conditions", "By creating an account, you agree to our terms and conditions.") }}
             </label>
           </div>
+          <div>
+            {{ useFormErrors() }}
+            {{ useIsFormDirty() }}
+            {{ useSubmitCount() }}
+          </div>
           <button type="submit"
                   :disabled="useLoader().status('auth')"
-                  @click="$emit('action',credentials)"
+                  @click="submit()"
                   class="btn-primary flex gap-2 w-full mt-5 py-3.5 align-center">
             <span v-if="useLoader().status('auth')" class="animate-spin">
               <i class="ti ti-refresh icon-md">
@@ -100,11 +104,23 @@
 </template>
 
 <script setup lang="ts">
+import {useSubmitForm, useValidateForm} from 'vee-validate';
+const validate = useValidateForm();
+
+
 const showPassword = ref(false);
 
-const username = useField('username', 'required|min:3');
-const email = useField('email', 'required|email');
-const password = useField('password', { required: true, min: 8 });
+const {errors, defineInputBinds} = useForm();
+const username = defineInputBinds('username', 'required|min:3');
+const email = defineInputBinds('email', 'required|email');
+const password = defineInputBinds('password', 'required|min:8');
+
+
+
+function submit() {
+  validate();
+  $emit('action', credentials);
+}
 
 const credentials = useForm();
 const {logo, title} = useAppConfig()?.digimarket;
