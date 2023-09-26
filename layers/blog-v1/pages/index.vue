@@ -4,12 +4,12 @@ const {data} = await useFetch('/api/posts')
 
 <template>
   <nuxt-layout name="ntm-blog">
-    <div>
-      <template v-for="item in data">
+    <div class="container">
+      <div class="row" v-for="item in data">
         <article>
-          <blog-ntm-short-blog-post :item="item" />
+          <blog-ntm-short-blog-post :item="item"></blog-ntm-short-blog-post>
         </article>
-        <template>
+      </div>
     </div>
   </nuxt-layout>
 </template>
