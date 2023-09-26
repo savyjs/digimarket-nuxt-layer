@@ -1,4 +1,4 @@
-export default defineEventHandler((event) => {
+export default defineEventHandler(async (event) => {
 
     const url = useAppConfig()?.blog?.devto?.api
     const username = useAppConfig()?.blog?.devto?.username
@@ -6,10 +6,8 @@ export default defineEventHandler((event) => {
     const query = getQuery(event)
     const page = query?.page || 1
 
-    const fetchUrl = url + '/articles?' + username
+    const fetchUrl = url + '/articles?username=' + username
 
+    return await $fetch(fetchUrl)
 
-    return {
-        fetchUrl
-    }
 });
