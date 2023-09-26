@@ -26,7 +26,7 @@
   "main": "./nuxt.config.ts",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --port=3001",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "lint": "eslint .",
@@ -42,7 +42,7 @@
     "@types/node": "^18",
     "fs": "^0.0.1-security",
     "jest": "^29.3.1",
-    "nuxt": "^3.5.2",
+    "nuxt": "^3.7.2",
     "path": "^0.12.7",
     "postcss-import-ext-glob": "^2.1.1",
     "sass": "^1.52.3",

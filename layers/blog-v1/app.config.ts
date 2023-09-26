@@ -1,9 +1,5 @@
-import VuetifyStrapiDashboardConfig = VSD.VuetifyStrapiDashboardConfig;
 import dotenv from 'dotenv'
-
 dotenv.config();
-
-const Provinces: never[] = [];
 
 export default defineAppConfig({
     blog: {
