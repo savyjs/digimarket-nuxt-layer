@@ -1,3 +1,5 @@
-import {defineNuxtConfig} from "nuxt/config";
-
-export default defineNuxtConfig({})
+export default defineNuxtConfig({
+    extends: [
+        'digimarket-nuxt-layer-core'
+    ]
+})
