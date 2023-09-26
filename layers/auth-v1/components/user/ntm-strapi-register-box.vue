@@ -153,7 +153,15 @@
 
 <script setup>
 import {reactive} from 'vue';
-import {useField, useForm, useSubmitForm, useIsFormDirty, useIsFormValid, useIsSubmitting} from 'vee-validate';
+import {
+  useField,
+  useForm,
+  useSubmitForm,
+  useFormValues,
+  useIsFormDirty,
+  useIsFormValid,
+  useIsSubmitting
+} from 'vee-validate';
 
 const {logo, title} = useAppConfig()?.digimarket;
 
@@ -168,9 +176,9 @@ const terms = reactive(useField('terms', 'required', {
   type: 'checkbox'
 }));
 
-const credentials = ref({username, email, password});
+const credentials = reactive({username: username?.value?.value, email: email?.value?.value, password: password?.value?.value});
 
-const form = reactive(useForm());
+const form = useForm();
 
 const loader = useLoader();
 loader.start('auth')
@@ -181,7 +189,7 @@ const emit = defineEmits(['data'])
 
 const submitForm = useSubmitForm((values) => {
   // Send data to your api ...
-  alert(JSON.stringify(values, null, 2));
+  console.log(credentials);
   emit('data', values)
 });
 
