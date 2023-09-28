@@ -7,7 +7,7 @@
       <div class=" mb-6">
         <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
           <p class="my-1 font-light">
-            {{ $t('ntm.send_recovery_code_description', "Fill the form and we'll send you a code") }}
+            {{ $t('ntm.send_recovery_code_description', "Complete the form, and we'll send a verification code to you.") }}
           </p>
         </div>
 

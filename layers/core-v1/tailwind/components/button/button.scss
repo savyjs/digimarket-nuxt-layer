@@ -20,7 +20,12 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-white dark:bg-primary dark:focus:ring-red-800;
+    @apply
+    bg-primary
+    text-white
+    dark:text-white
+    dark:bg-primary
+    dark:focus:ring-red-800;
   }
 
   .btn-primary[disabled=""] {

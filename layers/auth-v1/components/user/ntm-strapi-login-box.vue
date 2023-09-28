@@ -31,7 +31,7 @@
                 :class="{
                   'input-has-error':errors?.identifier,
                   }"
-                class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                class="input-primary input-email"
                 required
             />
             <div :class="{invisible: errors?.identifier}" class="input-error">
@@ -43,6 +43,7 @@
           <div class="element-group w-full flex flex-col gap-1" :class="{
                   'has-error':errors.password,
                   }">
+
             <label for="password" class="input-label">
               {{ $t("ntm.password", "Password") }}
               <i class="input-success-icon ti ti-circle-check icon-small"></i>
@@ -53,7 +54,7 @@
                   id="password"
                   :type="!showPassword ? 'password' : 'text'"
                   v-model="password.value"
-                  class="input-primary input-password py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                  class="input-primary input-password"
                   required
               />
               <span class="flex place-content-center items-center align-baseline">
@@ -68,7 +69,14 @@
               <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
               {{ errors.password }}
             </div>
-
+            <div class="flex text-xs">
+              <span>
+                {{ $t("ntm.forgot_password", "Forgot your password?") }}
+                <a href="./forgot" class="text-link">
+                {{ $t("ntm.forgot_title", "Reset it here") }}
+                </a>
+            </span>
+            </div>
           </div>
 
           <button type="submit"

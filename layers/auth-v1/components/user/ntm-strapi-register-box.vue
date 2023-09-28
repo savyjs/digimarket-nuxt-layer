@@ -33,7 +33,7 @@
                   'input-has-error':errors?.username,
                   'input-is-valid':username?.meta?.dirty && username?.meta?.valid
                   }"
-                class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                class="input-primary"
                 required
             />
             <div :class="{invisible: errors?.username}" class="input-error">
@@ -59,7 +59,7 @@
                   'input-has-error':errors.email,
                   'input-is-valid':email?.meta?.dirty && email?.meta?.valid
                   }"
-                class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                class="input-primary input-email"
                 required
             />
             <div :class="{invisible: errors?.email}" class="input-error">
@@ -83,7 +83,7 @@
                   id="password"
                   :type="!showPassword ? 'password' : 'text'"
                   v-model="password.value"
-                  class="input-primary input-password py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                  class="input-primary input-password"
                   required
               />
               <span class="flex place-content-center items-center align-baseline">

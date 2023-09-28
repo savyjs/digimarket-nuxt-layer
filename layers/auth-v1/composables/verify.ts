@@ -18,8 +18,8 @@ export const useVerify = (credentials: Digimarket.Credential) => {
             let errorMessage = {
                 target: 'toast',
                 type: 'error',
-                title: "Email Sending Error",
-                message: "There was an issue sending the email. Please try again later."
+                title: err?.error?.name ?? "Email Sending Error",
+                message: err?.error?.message ?? "There was an issue sending the email. Please try again later."
             }
             useMessages().pushMessage(errorMessage)
 
