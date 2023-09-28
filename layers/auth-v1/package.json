@@ -46,6 +46,9 @@
     "path": "^0.12.7",
     "typescript": "^4.9.5"
   },
+  "perrDependencies": {
+    "@nuxtjs/strapi": "^1.9.3"
+  },
   "dependencies": {
     "digimarket-nuxt-layer-core": "latest"
   },

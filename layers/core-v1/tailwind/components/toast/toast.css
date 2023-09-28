@@ -1,7 +1,7 @@
 @layer components {
     .toast {
         @apply text-sm ring-[1px]
-        rounded-lg fixed top-4
+        rounded-lg fixed top-4 mx-auto
         min-w-[350px] max-w-[100%]
         self-center
         bg-white
