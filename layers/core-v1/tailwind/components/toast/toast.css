@@ -1,11 +1,15 @@
 @layer components {
+    .toast-container {
+        @apply bg-red-200 w-full h-0 justify-center items-center
+    }
+
     .toast {
         @apply text-sm ring-[1px]
-        rounded-lg fixed top-4 mx-auto
+        rounded-lg top-4 left-2 right-2
         min-w-[350px] max-w-[100%]
-        self-center
         bg-white
         flex
+        absolute
     }
 
     .toast .toast-body {

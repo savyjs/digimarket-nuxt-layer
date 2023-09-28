@@ -1,10 +1,41 @@
 @layer components {
-  .input-primary {
-    @apply w-full rounded-sm border p-2 text-sm font-light
-  }
 
   .input {
+    @apply
+    appearance-none focus:appearance-none
+    border-none active:border-0 focus:border-none
+    focus:ring-2 hover:ring-1 ring-blue-200
+    focus:outline-none
+    h-12
+    p-2
+    w-full
+    grow
+    rounded-sm
+    text-sm
+    font-light
+    bg-gray-50
+  }
 
+  .focused-input {
+    @apply
+    ring-1 focus:ring-1
+    focus:ring-blue-800 hover:ring-blue-400  ring-blue-200
+  }
+
+  div.input {
+    @apply flex gap-1 py-0
+  }
+
+  div.input input {
+    @apply bg-transparent grow appearance-none focus:border-none focus:ring-0 active:border-0 focus:outline-none
+  }
+
+  .input:focus {
+    @apply focused-input
+  }
+
+  div.input:focus-within {
+    @apply focused-input
   }
 
   .input-help {

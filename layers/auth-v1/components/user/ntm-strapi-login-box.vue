@@ -50,20 +50,22 @@
               <i class="input-success-icon ti ti-circle-check icon-small"></i>
             </label>
 
-            <div class="flex">
+            <div class="input-primary">
+              <span class="flex place-content-center items-center align-baseline ">
+                <i class="ti ti-eye text-xl"></i>
+              </span>
               <input
                   id="password"
                   :type="!showPassword ? 'password' : 'text'"
                   v-model="password.value"
                   @keydown.enter="submitForm"
-                  class="input-primary input-password"
                   required
               />
               <span class="flex place-content-center items-center align-baseline">
-                <button class="absolute transition opacity-20 hover:opacity-100 active:opacity-100 -ml-10"
+                <button class="transition opacity-20 hover:opacity-100 active:opacity-100"
                         @click="showPassword=!showPassword">
-                <i class="ti ti-eye text-3xl" v-if="!showPassword"></i>
-                <i class="ti ti-eye-off text-3xl" v-if="showPassword"></i>
+                <i class="ti ti-eye text-xl" v-if="!showPassword"></i>
+                <i class="ti ti-eye-off text-xl" v-if="showPassword"></i>
                 </button>
               </span>
             </div>

@@ -96,7 +96,7 @@ export const useMessages = defineStore('messages', {
                             this.clearTimer();
                             this.runInterval();
                         }
-                        this.timer--;
+                        if (this.timer > 0) this.timer--;
                     }, 1000);
                 } else {
                     this.clearTimer();
