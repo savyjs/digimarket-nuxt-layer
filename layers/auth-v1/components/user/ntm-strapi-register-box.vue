@@ -117,6 +117,7 @@
             </div>
           </div>
 
+          {{ useCheckAuth() ? 'loggedin' : 'not logged in' }}
           <button type="submit"
                   :disabled="useLoader().status('auth')"
                   @click="submitForm"
@@ -140,7 +141,6 @@
             </span>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -151,12 +151,7 @@
 import {reactive} from 'vue';
 import {
   useField,
-  useForm,
-  useSubmitForm,
-  useFormValues,
-  useIsFormDirty,
-  useIsFormValid,
-  useIsSubmitting
+  useForm
 } from 'vee-validate';
 
 // Setup page
@@ -176,7 +171,9 @@ const username = reactive(useField('username', 'required|min:3'));
 const email = reactive(useField('email', 'required|email'));
 const password = reactive(useField('password', 'required|min:8'));
 const terms = reactive(useField('terms', 'required', {
-  type: 'checkbox'
+  type: 'checkbox',
+  initialValue: false,
+  label: "Terms and Conditions"
 }));
 
 

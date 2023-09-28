@@ -84,20 +84,27 @@
           </div>
 
           <div class="flex gap-3">
-            <button ref="check_button" @click="$emit('action',credentials)" class="btn-primary w-full mt-5 py-3.5">
-              {{ $t('ntm.check_code', 'Get code') }}
-            </button>
 
-            <button @click="$emit('action',credentials)" class="btn-warning w-full mt-5 py-3.5">
-              {{ $t('ntm.resend_title', 'Resend') }}
+            <button type="submit"
+                    :disabled="useLoader().status('auth')"
+                    @click="submitForm"
+                    class="btn-primary flex gap-2 w-full mt-2 py-2.5 align-center">
+            <span v-if="useLoader().status('auth')" class="animate-spin">
+              <i class="ti ti-refresh icon-md">
+              {{ useLoader().status('auth') }}
+            </i>
+            </span>
+              <span v-else>
+            {{ $t('ntm.resend_title', 'Resend') }}
+              </span>
             </button>
           </div>
 
           <div class="flex justify-around gap-3 text-xs">
             <span>
-              {{ $t("ntm.dont_have_account", "I don't have an account,") }}
+              {{ $t("ntm.dont_have_account", "Don't have an account?") }}
               <a href="./register" class="text-link">
-                {{ $t("ntm.register_title", "register") }}
+                {{ $t("ntm.register_title", "Register now") }}
               </a>
             </span>
           </div>

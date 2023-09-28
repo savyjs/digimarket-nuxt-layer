@@ -5,5 +5,4 @@ export const useLogin = (credentials: Digimarket.Credential) => {
         password: credentials?.password
     })
 
-
 }

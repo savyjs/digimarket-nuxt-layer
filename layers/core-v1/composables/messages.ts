@@ -94,7 +94,7 @@ export const useMessages = defineStore('messages', {
         },
         pushMessage(item: Message) {
             // `this` is the store instance
-            if (item?.message) {
+            if (typeof item?.message == 'string') {
                 item.seen = false
                 item.id = Date.now() + this.count()
                 this.inbox.push(item)

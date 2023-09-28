@@ -1,6 +1,6 @@
 <template>
   <nuxt-layout name="ntm-auth">
-    <UserNtmVerifyBox @action="verify" mobile=""/>
+    <user-ntm-strapi-verify-box @action="verify" mobile=""/>
   </nuxt-layout>
 </template>
 <script setup>
