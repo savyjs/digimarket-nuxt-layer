@@ -22,19 +22,18 @@
             <label class="input-label" for="email">{{ $t("ntm.email", "Email") }}
               <i class="input-success-icon ti ti-circle-check icon-small"></i>
             </label>
-            <input
-                dir="auto"
-                type="email"
-                id="email"
-                @keydown.enter="submitForm"
-                v-model="email.value"
-                :class="{
-                  'input-has-error':errors.email,
-                  'input-is-valid':email?.meta?.dirty && email?.meta?.valid
-                  }"
-                class="input-primary input-email"
-                required
-            />
+            <div class="input-primary">
+              <span class="flex place-content-center items-center align-baseline ">
+                <i class="ti ti-mail text-xl"></i>
+              </span>
+              <input
+                  dir="auto"
+                  type="email"
+                  id="email"
+                  v-model="email.value"
+                  required
+              />
+            </div>
             <div :class="{invisible: errors?.email}" class="input-error">
               <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
               {{ errors.email }}

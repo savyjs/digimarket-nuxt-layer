@@ -20,22 +20,23 @@
                   'has-error':errors.username,
                   'is-valid':username?.meta?.dirty && username?.meta?.valid
                   }">
+
             <label class="input-label" for="username">
               {{ $t("ntm.username", "Username") }}
               <i class="input-success-icon ti ti-circle-check icon-small"></i>
             </label>
-            <input
-                dir="auto"
-                type="email"
-                id="username"
-                v-model="username.value"
-                :class="{
-                  'input-has-error':errors?.username,
-                  'input-is-valid':username?.meta?.dirty && username?.meta?.valid
-                  }"
-                class="input-primary"
-                required
-            />
+            <div class="input-primary">
+              <span class="flex place-content-center items-center align-baseline ">
+                <i class="ti ti-user-circle text-xl"></i>
+              </span>
+              <input
+                  dir="auto"
+                  type="text"
+                  id="username"
+                  v-model="username.value"
+                  required
+              />
+            </div>
             <div :class="{invisible: errors?.username}" class="input-error">
               <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
               {{ errors.username }}
@@ -50,18 +51,18 @@
             <label class="input-label" for="email">{{ $t("ntm.email", "Email") }}
               <i class="input-success-icon ti ti-circle-check icon-small"></i>
             </label>
-            <input
-                dir="auto"
-                type="email"
-                id="email"
-                v-model="email.value"
-                :class="{
-                  'input-has-error':errors.email,
-                  'input-is-valid':email?.meta?.dirty && email?.meta?.valid
-                  }"
-                class="input-primary input-email"
-                required
-            />
+            <div class="input-primary">
+              <span class="flex place-content-center items-center align-baseline ">
+                <i class="ti ti-mail text-xl"></i>
+              </span>
+              <input
+                  dir="auto"
+                  type="email"
+                  id="email"
+                  v-model="email.value"
+                  required
+              />
+            </div>
             <div :class="{invisible: errors?.email}" class="input-error">
               <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
               {{ errors.email }}
@@ -71,27 +72,29 @@
 
           <div class="element-group w-full flex flex-col gap-1" :class="{
                   'has-error':errors.password,
-                  'is-valid':password?.meta?.dirty && password?.meta?.valid
                   }">
+
             <label for="password" class="input-label">
               {{ $t("ntm.password", "Password") }}
               <i class="input-success-icon ti ti-circle-check icon-small"></i>
             </label>
 
-            <div class="flex">
+            <div class="input-primary">
+              <span class="flex place-content-center items-center align-baseline ">
+                <i class="ti ti-lock text-xl"></i>
+              </span>
               <input
                   id="password"
                   :type="!showPassword ? 'password' : 'text'"
                   v-model="password.value"
-                  class="input-primary input-password"
                   @keydown.enter="submitForm"
                   required
               />
               <span class="flex place-content-center items-center align-baseline">
-                <button class="absolute transition opacity-20 hover:opacity-100 active:opacity-100 -ml-10"
+                <button class="transition opacity-20 hover:opacity-100 active:opacity-100"
                         @click="showPassword=!showPassword">
-                <i class="ti ti-eye text-3xl" v-if="!showPassword"></i>
-                <i class="ti ti-eye-off text-3xl" v-if="showPassword"></i>
+                <i class="ti ti-eye text-xl" v-if="!showPassword"></i>
+                <i class="ti ti-eye-off text-xl" v-if="showPassword"></i>
                 </button>
               </span>
             </div>
@@ -99,16 +102,23 @@
               <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
               {{ errors.password }}
             </div>
-
+            <div class="flex text-xs">
+              <span>
+                {{ $t("ntm.forgot_password", "Forgot your password?") }}
+                <a href="./forgot" class="text-link">
+                {{ $t("ntm.forgot_title", "Reset it here") }}
+                </a>
+            </span>
+            </div>
           </div>
 
           <div class="element-group w-full flex flex-col gap-1" :class="{
                   'has-error':errors?.terms,
                   'is-valid':terms?.meta?.dirty && terms?.meta?.valid
                   }">
-            <div class="flex gap-2 items-baseline">
+            <div class="flex gap-2 items-center">
               <input type="checkbox" v-model="terms.value" id="terms_and_conditions"/>
-              <label for="terms_and_conditions" class="self-center font-weight-light w-full text-[10px]">
+              <label for="terms_and_conditions" class="self-center font-weight-light w-full text-sm text-[10px]">
                 {{ $t("ntm.terms_and_conditions", "By creating an account, you agree to our terms and conditions.") }}
               </label>
             </div>
