@@ -1,15 +1,13 @@
 <template>
   <nuxt-layout name="ntm-auth">
-    <user-ntm-strapi-verify-box @action="verify" mobile=""/>
+    <user-ntm-strapi-verify-box @action="verify"/>
   </nuxt-layout>
 </template>
 <script setup>
 
 
 async function verify(credential) {
-  useApi("/login").then(res => {
-    useRouter().push('./verify')
-  })
+  useVerify(credential).resend()
 }
 
 </script>

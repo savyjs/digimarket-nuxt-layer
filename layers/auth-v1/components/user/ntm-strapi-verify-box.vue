@@ -7,12 +7,40 @@
       <div class=" mb-6">
         <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
           <p class="my-1 font-light">
-            {{ $t('ntm.verify_code_description', "We sent you a code") }}
+            {{
+              $t('ntm.verify_code_description', "If you haven't received the verification email or have accidentally deleted it, you can request a new one by clicking 'Resend Verification Email.")
+            }}
           </p>
         </div>
 
         <div class="form-group flex flex-col gap-4">
-          <div class="element-group w-full  flex flex-col gap-1">
+
+          <div class="element-group w-full flex flex-col gap-1" :class="{
+                  'has-error':errors.email,
+                  'is-valid':email?.meta?.dirty && email?.meta?.valid
+                  }">
+            <label class="input-label" for="email">{{ $t("ntm.email", "Email") }}
+              <i class="input-success-icon ti ti-circle-check icon-small"></i>
+            </label>
+            <input
+                dir="auto"
+                type="email"
+                id="email"
+                v-model="email.value"
+                :class="{
+                  'input-has-error':errors.email,
+                  'input-is-valid':email?.meta?.dirty && email?.meta?.valid
+                  }"
+                class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                required
+            />
+            <div :class="{invisible: errors?.email}" class="input-error">
+              <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
+              {{ errors.email }}
+            </div>
+          </div>
+
+          <div class="element-group w-full  flex flex-col gap-1 hide">
             <label for="name" class="py-2">{{ $t("ntm.code", "Code") }}</label>
             <div dir="ltr" class="flex justify-between gap-1">
               <input
@@ -83,6 +111,13 @@
             />
           </div>
 
+          <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
+            <p class="my-1 font-light">
+              {{
+                $t('ntm.verify_check_spam', "Sometimes, verification emails end up in the spam or junk folder. Please check your spam folder and mark our emails as 'Not Spam' to ensure you receive important updates.")
+              }}
+            </p>
+          </div>
           <div class="flex gap-3">
 
             <button type="submit"
@@ -95,7 +130,7 @@
             </i>
             </span>
               <span v-else>
-            {{ $t('ntm.resend_title', 'Resend') }}
+            {{ $t('ntm.resend_title', 'Resend Verification Email') }}
               </span>
             </button>
           </div>
@@ -116,9 +151,32 @@
 
 </template>
 <script setup lang="ts">
+import {reactive} from 'vue';
+import {
+  useField,
+  useForm
+} from 'vee-validate';
 import {useI18n} from "vue-i18n";
 
-const credentials = ref({})
-let {t} = useI18n()
+// Setup page
+const emit = defineEmits(['data'])
 const title = useAppConfig()?.digimarket?.title;
+
+//  Initiate Form
+const form = useForm();
+const {handleSubmit, errors} = form;
+
+// Setup Validating fields
+const credentials = ref({})
+const email = reactive(useField('email', 'required|email', {
+  initialValue: useUser()?.value?.email
+}));
+
+// Handle Submit
+const submitForm = handleSubmit((values) => {
+  // Send data to your api ...
+  emit('action', values)
+});
+
+
 </script>

@@ -117,7 +117,7 @@
             </div>
           </div>
 
-          {{ useCheckAuth() ? 'loggedin' : 'not logged in' }}
+
           <button type="submit"
                   :disabled="useLoader().status('auth')"
                   @click="submitForm"
