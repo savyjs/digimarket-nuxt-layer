@@ -163,12 +163,25 @@ import {
   useIsSubmitting
 } from 'vee-validate';
 
+// Setup page
 const {logo, title} = useAppConfig()?.digimarket;
+const emit = defineEmits(['data'])
 
-const {errors} = useForm();
+//  Initiate Form
+const form = useForm();
+const {handleSubmit,errors} = form;
 
+
+// Loader
+const loader = useLoader();
+loader.start('auth')
+loader.targets.auth.active = reactive(form?.meta?.pending || useIsSubmitting()?.value);
+
+
+// Setup Fields
 const showPassword = ref(false);
 
+// Setup Validating fields
 const username = reactive(useField('username', 'required|min:3'));
 const email = reactive(useField('email', 'required|email'));
 const password = reactive(useField('password', 'required|min:8'));
@@ -176,19 +189,13 @@ const terms = reactive(useField('terms', 'required', {
   type: 'checkbox'
 }));
 
-const credentials = reactive({username: username?.value?.value, email: email?.value?.value, password: password?.value?.value});
 
-const form = useForm();
+// Handle Submit
+const submitForm = handleSubmit((values) => {
+  const credentials = {username: username?.value?.value, email: email?.value?.value, password: password?.value?.value};
 
-const loader = useLoader();
-loader.start('auth')
-loader.targets.auth.active = reactive(form?.meta?.pending || useIsSubmitting()?.value);
-const isValid = reactive(useIsFormDirty()?.value && useIsFormValid()?.value)
-
-const emit = defineEmits(['data'])
-
-const submitForm = useSubmitForm((values) => {
   // Send data to your api ...
+  alert(JSON.stringify(values, null, 2));
   console.log(credentials);
   emit('data', values)
 });
