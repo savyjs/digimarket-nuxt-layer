@@ -15,11 +15,11 @@
                 </span>
               </nuxt-link>
             </div>
-            <ui-ntm-toast/>
             <slot/>
           </div>
         </div>
       </div>
+      <ui-ntm-toast/>
     </div>
   </NuxtLayout>
 </template>

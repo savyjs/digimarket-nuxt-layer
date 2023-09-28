@@ -84,6 +84,7 @@
                   :type="!showPassword ? 'password' : 'text'"
                   v-model="password.value"
                   class="input-primary input-password"
+                  @keydown.enter="submitForm"
                   required
               />
               <span class="flex place-content-center items-center align-baseline">
@@ -121,9 +122,10 @@
           <button type="submit"
                   :disabled="useLoader().status('auth')"
                   @click="submitForm"
+                  @keydown.enter="submitForm"
                   class="btn-primary flex gap-2 w-full mt-2 py-2.5 align-center">
             <span v-if="useLoader().status('auth')" class="animate-spin">
-              <i class="ti ti-refresh icon-md">
+              <i class="ti ti-refresh icon-md text-primary">
               {{ useLoader().status('auth') }}
             </i>
             </span>

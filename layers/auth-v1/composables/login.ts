@@ -2,7 +2,7 @@ export const useLogin = (credentials: Digimarket.Credential) => {
     console.info('You can override useLogin() composable')
 
     // Start the loader
-    useLoader().stop('auth')
+    useLoader().start('auth')
 
     // Sending the request
     return useStrapiAuth().login({

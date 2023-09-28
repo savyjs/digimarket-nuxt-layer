@@ -26,12 +26,13 @@
                 dir="auto"
                 type="email"
                 id="email"
+                @keydown.enter="submitForm"
                 v-model="email.value"
                 :class="{
                   'input-has-error':errors.email,
                   'input-is-valid':email?.meta?.dirty && email?.meta?.valid
                   }"
-                class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
+                class="input-primary input-email"
                 required
             />
             <div :class="{invisible: errors?.email}" class="input-error">
@@ -125,7 +126,7 @@
                     @click="submitForm"
                     class="btn-primary flex gap-2 w-full mt-2 py-2.5 align-center">
             <span v-if="useLoader().status('auth')" class="animate-spin">
-              <i class="ti ti-refresh icon-md">
+              <i class="ti ti-refresh icon-md text-primary">
               {{ useLoader().status('auth') }}
             </i>
             </span>

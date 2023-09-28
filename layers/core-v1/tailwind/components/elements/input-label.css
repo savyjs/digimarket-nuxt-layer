@@ -1,5 +1,6 @@
 @layer components {
     .element-group label, .input-label {
-        @apply block text-xs font-medium text-[var(--color-text)] dark:text-[var(--color-dark-text)]
+        @apply block text-sm font-medium
+        text-[var(--color-text)] dark:text-[var(--color-dark-text)]
     }
 }
