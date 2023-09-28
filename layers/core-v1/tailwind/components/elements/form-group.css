@@ -1,5 +1,5 @@
 @layer components {
     .form-group {
-        @apply flex gap-y-3 mb-4
+        @apply flex gap-y-1 mb-4
     }
 }

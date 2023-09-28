@@ -14,7 +14,7 @@
           </p>
         </div>
 
-        <div class="form-group flex flex-col gap-4">
+        <div class="form-group flex flex-col">
 
           <div class="element-group w-full flex flex-col gap-1" :class="{
                   'has-error':errors.username,
@@ -36,7 +36,7 @@
                 class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
             />
-            <div v-show="errors?.username" class="input-error">
+            <div :class="{invisible: errors?.username}" class="input-error">
               <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
               {{ errors.username }}
             </div>
@@ -62,7 +62,7 @@
                 class="input-primary input-email py-3 w-full dark:border-gray-800 dark:text-gray-900"
                 required
             />
-            <div v-show="errors?.email" class="input-error">
+            <div :class="{invisible: errors?.email}" class="input-error">
               <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
               {{ errors.email }}
             </div>
@@ -94,7 +94,7 @@
                 </button>
               </span>
             </div>
-            <div v-show="errors?.password" class="input-error">
+            <div :class="{invisible: errors?.password}" class="input-error">
               <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
               {{ errors.password }}
             </div>
@@ -111,7 +111,7 @@
                 {{ $t("ntm.terms_and_conditions", "By creating an account, you agree to our terms and conditions.") }}
               </label>
             </div>
-            <div v-show="errors?.terms" class="input-error">
+            <div :class="{invisible: errors?.terms}" class="input-error">
               <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
               {{ errors.terms }}
             </div>
@@ -169,14 +169,12 @@ const emit = defineEmits(['data'])
 
 //  Initiate Form
 const form = useForm();
-const {handleSubmit,errors} = form;
+const {handleSubmit, errors} = form;
 
 
 // Loader
 const loader = useLoader();
 loader.start('auth')
-loader.targets.auth.active = reactive(form?.meta?.pending || useIsSubmitting()?.value);
-
 
 // Setup Fields
 const showPassword = ref(false);
@@ -192,11 +190,7 @@ const terms = reactive(useField('terms', 'required', {
 
 // Handle Submit
 const submitForm = handleSubmit((values) => {
-  const credentials = {username: username?.value?.value, email: email?.value?.value, password: password?.value?.value};
-
   // Send data to your api ...
-  alert(JSON.stringify(values, null, 2));
-  console.log(credentials);
   emit('data', values)
 });
 

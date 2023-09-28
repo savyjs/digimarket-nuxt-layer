@@ -1,6 +1,6 @@
 @layer components {
     .element-group {
-        @apply flex gap-y-3 text-sm mb-4
+        @apply flex gap-y-1 text-sm mb-4
     }
 
     .element-group .input-error, .element-group .input-success-icon {
