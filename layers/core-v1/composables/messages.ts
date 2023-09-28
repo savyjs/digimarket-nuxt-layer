@@ -18,7 +18,7 @@ export const useMessages = defineStore('messages', {
         inbox: [] as Array<Message>,
         archive: [] as Array<Message>,
         interval: null,
-        timer: 0
+        timer: 0,
     }),
     // optional getters
     getters: {
@@ -73,22 +73,34 @@ export const useMessages = defineStore('messages', {
                 return state.inbox.filter((item) => !item.seen).length
             }
         },
+        timeRemaining: (state) => {
+            const timeScope: number = useAppConfig()?.ntm?.messageTime ?? 20;
+            return state.timer === timeScope ? timeScope : state.timer % timeScope
+        },
     },
     actions: {
         runInterval(target ?: string) {
+            // Set time scope for each period
             const timeScope: number = useAppConfig()?.ntm?.messageTime ?? 20;
 
-            this.timer = this.count(target) * timeScope;
-            if (this.timer > 0 && this.count()) {
-                this.interval = setInterval(() => {
-                    if (this.timer == 0 || this.timer % timeScope == 0) {
-                        this.inbox.pop();
-                    }
-                    if (this.timer < 1) this.clearTimer();
-                    else if (this.timer > 0) this.timer--;
-                }, 1000);
-            } else {
-                this.clearTimer();
+            // Start the new timer only if there is no existing timer
+            if (this.timer == 0) {
+                // Define a new time at which all messages will turn red.
+                this.timer = this.count(target) * timeScope;
+                if (this.count(target)) {
+                    this.interval = setInterval(() => {
+                        if (this.timer == 0 || this.timeRemaining == 0) {
+                            // Clear newest message
+                            this.inbox.pop();
+                            // Reset the timer at the end of each cycle
+                            this.clearTimer();
+                            this.runInterval();
+                        }
+                        this.timer--;
+                    }, 1000);
+                } else {
+                    this.clearTimer();
+                }
             }
         },
         clearTimer() {
@@ -103,6 +115,7 @@ export const useMessages = defineStore('messages', {
                 }
                 return item;
             })
+            this.clearTimer();
             this.runInterval();
         },
         readAll(target?: string) {
@@ -116,6 +129,7 @@ export const useMessages = defineStore('messages', {
                 }
                 return item;
             })
+            this.clearTimer();
             this.runInterval();
         },
         pushMessage(item: Message) {
