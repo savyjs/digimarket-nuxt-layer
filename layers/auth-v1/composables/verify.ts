@@ -6,9 +6,9 @@ export const useVerify = (credentials: Digimarket.Credential) => {
         useStrapiAuth().sendEmailConfirmation({
             email: credentials?.email
         }).then(() => {
-            let errorMessage = {
+            let message = {
                 target: 'toast',
-                type: 'error',
+                type: 'success',
                 title: "Email sent",
                 message: "The email has been sent successfully."
             }
