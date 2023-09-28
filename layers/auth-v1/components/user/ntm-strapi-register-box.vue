@@ -105,7 +105,7 @@
                   'has-error':errors?.terms,
                   'is-valid':terms?.meta?.dirty && terms?.meta?.valid
                   }">
-            <div class="flex py-4 gap-2 items-baseline">
+            <div class="flex gap-2 items-baseline">
               <input type="checkbox" v-model="terms.value" id="terms_and_conditions"/>
               <label for="terms_and_conditions" class="self-center font-weight-light w-full text-[10px]">
                 {{ $t("ntm.terms_and_conditions", "By creating an account, you agree to our terms and conditions.") }}
@@ -117,14 +117,10 @@
             </div>
           </div>
 
-          <div>
-
-          </div>
-
           <button type="submit"
                   :disabled="useLoader().status('auth')"
                   @click="submitForm"
-                  class="btn-primary flex gap-2 w-full mt-5 py-3.5 align-center">
+                  class="btn-primary flex gap-2 w-full mt-2 py-2.5 align-center">
             <span v-if="useLoader().status('auth')" class="animate-spin">
               <i class="ti ti-refresh icon-md">
               {{ useLoader().status('auth') }}
@@ -172,10 +168,6 @@ const form = useForm();
 const {handleSubmit, errors} = form;
 
 
-// Loader
-const loader = useLoader();
-loader.start('auth')
-
 // Setup Fields
 const showPassword = ref(false);
 
@@ -191,7 +183,7 @@ const terms = reactive(useField('terms', 'required', {
 // Handle Submit
 const submitForm = handleSubmit((values) => {
   // Send data to your api ...
-  emit('data', values)
+  emit('action', values)
 });
 
 </script>
