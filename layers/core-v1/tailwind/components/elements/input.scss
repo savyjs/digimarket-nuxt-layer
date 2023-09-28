@@ -2,9 +2,9 @@
 
   .input {
     @apply
-    appearance-none focus:appearance-none
-    border-none active:border-0 focus:border-none
-    focus:ring-2 hover:ring-1 ring-blue-200
+    appearance-none focus:appearance-none active:appearance-none
+    border-none active:border-none focus:border-none
+    ring-1 focus:ring-2 hover:ring-1
     focus:outline-none
     h-12
     p-2
@@ -13,7 +13,17 @@
     rounded-sm
     text-sm
     font-light
-    bg-gray-50
+  }
+
+  .input {
+    @apply
+    text-[var(--color-input-text)] dark:text-[var(--color-input-dark-text)] focus:text-[var(--color-input-text-focus)] dark:focus:text-[var(--color-input-dark-text-focus)]
+    bg-[var(--color-input-bg)] dark:bg-[var(--color-input-dark-bg)] focus:bg-[var(--color-input-bg-focus)] dark:focus:bg-[var(--color-input-dark-bg-focus)]
+    ring-[var(--color-input-border)] dark:ring-[var(--color-input-dark-border)] focus:ring-[var(--color-input-border-focus)] dark:focus:ring-[var(--color-input-dark-border-focus)]
+  }
+
+  input:-webkit-autofill {
+    -webkit-background-clip: text;
   }
 
   .focused-input {
@@ -55,13 +65,10 @@
     @apply input
   }
 
-  .input-primary {
-    @apply border-gray-300 text-gray-900 focus:border-blue-500
-    focus:ring-cyan-200 dark:border-gray-600
+  .input-primary, div.input-primary input {
+    @apply
     dark:text-white
     dark:placeholder-gray-400
-    dark:focus:ring-blue-500
-    dark:bg-[var(--color-dark-bg)]
   }
 
   .input-mobile {
@@ -70,7 +77,8 @@
 
   .has-error .input {
     @apply border-error text-error focus:border-error
-    focus:ring-error dark:border-error
+    focus:ring-error
+    dark:border-error
     dark:placeholder-error
     dark:focus:ring-error
   }

@@ -23,18 +23,20 @@
               {{ $t("ntm.identifier", "Username or Email") }}
               <i class="input-success-icon ti ti-circle-check icon-small"></i>
             </label>
-            <input
-                dir="auto"
-                type="email"
-                @keydown.enter="submitForm"
-                id="identifier"
-                v-model="identifier.value"
-                :class="{
-                  'input-has-error':errors?.identifier,
-                  }"
-                class="input-primary input-email"
-                required
-            />
+            <div class="input-primary">
+              <span class="flex place-content-center items-center align-baseline ">
+                <i class="ti ti-user-circle text-xl"></i>
+              </span>
+              <input
+                  dir="auto"
+                  type="email"
+                  @keydown.enter="submitForm"
+                  id="identifier"
+                  v-model="identifier.value"
+
+                  required
+              />
+            </div>
             <div :class="{invisible: errors?.identifier}" class="input-error">
               <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
               {{ errors.identifier }}
@@ -52,7 +54,7 @@
 
             <div class="input-primary">
               <span class="flex place-content-center items-center align-baseline ">
-                <i class="ti ti-eye text-xl"></i>
+                <i class="ti ti-lock text-xl"></i>
               </span>
               <input
                   id="password"
