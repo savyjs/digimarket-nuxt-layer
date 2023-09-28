@@ -6,7 +6,7 @@
     border-none active:border-none focus:border-none
     ring-1 focus:ring-2 hover:ring-1
     focus:outline-none
-    h-12
+    h-10
     p-2
     w-full
     grow
@@ -29,7 +29,7 @@
   .focused-input {
     @apply
     ring-1 focus:ring-1
-    focus:ring-blue-800 hover:ring-blue-400  ring-blue-200
+    focus:ring-blue-800 hover:ring-blue-400 ring-blue-200
   }
 
   div.input {
@@ -58,6 +58,13 @@
 
   .input-success, .input-success-icon {
     @apply text-success
+  }
+
+  .input-error, .input-success, .input-success-icon {
+    @apply
+    dark:drop-shadow-2xl
+    shadow-black
+    dark:shadow-white
   }
 
 
