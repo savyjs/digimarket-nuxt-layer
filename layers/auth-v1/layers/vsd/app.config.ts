@@ -1,12 +1,11 @@
-
 export default defineAppConfig({
     authRouting: {
-        login: '/login',
-        register: '/register',
-        verify: '/verify',
-        forgot: '/forgot',
+        login: '/admin/login',
+        register: '/',
+        verify: '/',
+        forgot: '/admin/forgot',
         home: '/',
+        dashboard: '/admin',
         profile: '/admin/system/profile',
-        admin: '/admin'
     }
 })

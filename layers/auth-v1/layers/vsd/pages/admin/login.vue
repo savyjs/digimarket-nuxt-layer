@@ -1,6 +1,6 @@
 <template>
-  <nuxt-layout name="ntm-auth">
-    <user-ntm-strapi-login-box @action="login"/>
+  <nuxt-layout name="vsd-auth">
+    <user-vsd-strapi-login-box @action="login"/>
   </nuxt-layout>
 </template>
 
@@ -9,5 +9,4 @@
 async function login(credential) {
   useLogin(credential)
 }
-
 </script>

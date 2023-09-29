@@ -1,27 +1,26 @@
 <template>
   <div class="card">
     <h1 class="card-title font-weight-bold pull-right text-[18px]">
-      {{ $t('ntm.register', 'Register') }}
+      {{ $t('ntm.login_title', 'Login') }}
     </h1>
-    <div class="">
+    <div>
       <div class="mb-6">
+
         <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
           <p class="my-1 font-light">
-            {{ $t('ntm.hello', 'Hello!') }}
+            {{ $t('ntm.hello', 'Hello') }},
             <br/>
-            {{ $t('ntm.fill_credentials', 'Please provide the requested information.') }}
+            {{ $t('ntm.fill_credentials', 'To access your account, please provide the required information below.') }}
           </p>
         </div>
 
         <div class="form-group flex flex-col">
 
           <div class="element-group w-full flex flex-col gap-1" :class="{
-                  'has-error':errors.username,
-                  'is-valid':username?.meta?.dirty && username?.meta?.valid
+                  'has-error':errors.identifier,
                   }">
-
-            <label class="input-label" for="username">
-              {{ $t("ntm.username", "Username") }}
+            <label class="input-label" for="identifier">
+              {{ $t("ntm.identifier", "Username or Email") }}
               <i class="input-success-icon ti ti-circle-check icon-small"></i>
             </label>
             <div class="input-primary">
@@ -30,44 +29,19 @@
               </span>
               <input
                   dir="auto"
-                  type="text"
-                  id="username"
-                  v-model="username.value"
-                  required
-              />
-            </div>
-            <div :class="{invisible: errors?.username}" class="input-error">
-              <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
-              {{ errors.username }}
-            </div>
-          </div>
-
-
-          <div class="element-group w-full flex flex-col gap-1" :class="{
-                  'has-error':errors.email,
-                  'is-valid':email?.meta?.dirty && email?.meta?.valid
-                  }">
-            <label class="input-label" for="email">{{ $t("ntm.email", "Email") }}
-              <i class="input-success-icon ti ti-circle-check icon-small"></i>
-            </label>
-            <div class="input-primary">
-              <span class="flex place-content-center items-center align-baseline ">
-                <i class="ti ti-mail text-xl"></i>
-              </span>
-              <input
-                  dir="auto"
                   type="email"
-                  id="email"
-                  v-model="email.value"
+                  @keydown.enter="submitForm"
+                  id="identifier"
+                  v-model="identifier.value"
+
                   required
               />
             </div>
-            <div :class="{invisible: errors?.email}" class="input-error">
+            <div :class="{invisible: errors?.identifier}" class="input-error">
               <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
-              {{ errors.email }}
+              {{ errors.identifier }}
             </div>
           </div>
-
 
           <div class="element-group w-full flex flex-col gap-1" :class="{
                   'has-error':errors.password,
@@ -104,36 +78,16 @@
             <div class="flex text-xs">
               <span>
                 {{ $t("ntm.forgot_password", "Forgot your password?") }}
-                <a href="./forgot" class="text-link">
+                <nuxt-link :to="useAuthRoutes('forgot')" class="text-link">
                 {{ $t("ntm.forgot_title", "Reset it here") }}
-                </a>
+                </nuxt-link>
             </span>
             </div>
           </div>
 
-          <div class="element-group w-full flex flex-col gap-1" :class="{
-                  'has-error':errors?.terms,
-                  'is-valid':terms?.meta?.dirty && terms?.meta?.valid
-                  }">
-            <div class="flex gap-2 items-center">
-              <input type="checkbox" v-model="terms.value" id="terms_and_conditions"/>
-              <label for="terms_and_conditions" class="font-light w-full text-[10px]">
-                <small>{{
-                    $t("ntm.terms_and_conditions", "I agree to the terms and conditions.")
-                  }}</small>
-              </label>
-            </div>
-            <div :class="{invisible: errors?.terms}" class="input-error">
-              <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
-              {{ errors.terms }}
-            </div>
-          </div>
-
-
           <button type="submit"
                   :disabled="useLoader().status('auth')"
                   @click="submitForm"
-                  @keydown.enter="submitForm"
                   class="btn-primary flex gap-2 w-full mt-2 py-2.5 align-center">
             <span v-if="useLoader().status('auth')" class="animate-spin">
               <i class="ti ti-refresh icon-md text-primary">
@@ -141,16 +95,16 @@
             </i>
             </span>
             <span v-else>
-              {{ $t('ntm.register_title', 'Register') }}
+              {{ $t('ntm.login_title', 'Login') }}
             </span>
           </button>
 
           <div class="flex justify-around gap-3 text-xs">
             <span>
-              {{ $t("ntm.already_have_account", "Have an account?") }}
-              <a href="./login" class="text-link">
-                {{ $t("ntm.login_title", "Sign in") }}
-              </a>
+              {{ $t("ntm.dont_have_account", "Don't have an account?") }}
+              <nuxt-link :to="useAuthRoutes('register')" class="text-link">
+                {{ $t("ntm.register_title", "Register now") }}
+              </nuxt-link>
             </span>
           </div>
         </div>
@@ -180,14 +134,8 @@ const {handleSubmit, errors} = form;
 const showPassword = ref(false);
 
 // Setup Validating fields
-const username = reactive(useField('username', 'required|min:3'));
-const email = reactive(useField('email', 'required|email'));
+const identifier = reactive(useField('identifier', 'required|min:3'));
 const password = reactive(useField('password', 'required|min:8'));
-const terms = reactive(useField('terms', 'required', {
-  type: 'checkbox',
-  initialValue: false,
-  label: "Terms and Conditions"
-}));
 
 
 // Handle Submit

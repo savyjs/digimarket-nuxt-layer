@@ -1,6 +1,6 @@
 import {defineNuxtConfig} from "nuxt/config";
 
-const schemaName = process?.env?.auth_schema ?? 'ntm' //other options is vsd
+const schemaName = process?.env?.AUTH_SCHEMA ?? 'ntm' //other options is vsd
 
 export default defineNuxtConfig({
     extends: [
