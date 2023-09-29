@@ -122,7 +122,7 @@ import {
 } from 'vee-validate';
 
 // Setup page
-const {logo, title} = useAppConfig()?.digimarket;
+const {logo, title} = useAppConfig()?.vsd;
 const emit = defineEmits(['data'])
 
 //  Initiate Form
