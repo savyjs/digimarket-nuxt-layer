@@ -148,9 +148,9 @@
           <div class="flex justify-around gap-3 text-xs">
             <span>
               {{ $t("ntm.already_have_account", "Have an account?") }}
-              <a href="./login" class="text-link">
+              <nuxt-link :to="useAuthRoutes('login')" class="text-link">
                 {{ $t("ntm.login_title", "Sign in") }}
-              </a>
+              </nuxt-link>
             </span>
           </div>
         </div>

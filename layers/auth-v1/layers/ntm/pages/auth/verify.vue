@@ -1,6 +1,6 @@
 <template>
-  <nuxt-layout :name="`${schemaName}-auth`">
-    <component :is="componentName" @action="register"/>
+  <nuxt-layout name="ntm-auth">
+    <user-ntm-strapi-register-box :is="componentName" @action="register"></user-ntm-strapi-register-box>
   </nuxt-layout>
 </template>
 

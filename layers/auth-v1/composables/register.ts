@@ -22,7 +22,7 @@ export const useRegister = (credentials: Digimarket.Credential) => {
         // Redirect user
         if (user?.confirmed) {
             // If confirmed u
-            useAuthRouting("profile")
+            useAuthNavigate("profile")
         }
     }).catch(err => {
         // Showing the error

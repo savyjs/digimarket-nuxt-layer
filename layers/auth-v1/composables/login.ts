@@ -23,7 +23,7 @@ export const useLogin = (credentials: Digimarket.Credential) => {
             // If confirmed u
             useStrapiAuth().setToken(jwt)
             useStrapiAuth().setUser(user)
-            useAuthRouting("profile")
+            useAuthNavigate("profile")
         }
     }).catch(err => {
         // Showing the error

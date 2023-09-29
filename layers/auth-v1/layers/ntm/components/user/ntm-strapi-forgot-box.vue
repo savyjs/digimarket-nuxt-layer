@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1 class="font-weight-bold pull-right text-[18px]">
+  <div class="card">
+    <h1 class="card-title font-weight-bold pull-right text-[18px]">
       {{ $t('ntm.forgot_title', 'Recovery Password') }}
     </h1>
     <div>

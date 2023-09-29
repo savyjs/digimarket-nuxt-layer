@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1 class="font-weight-bold pull-right text-[18px]">
+  <div class="card">
+    <h1 class="card-title font-weight-bold pull-right text-[18px]">
       {{ $t('ntm.login_title', 'Login') }}
     </h1>
     <div>
@@ -78,9 +78,9 @@
             <div class="flex text-xs">
               <span>
                 {{ $t("ntm.forgot_password", "Forgot your password?") }}
-                <a href="./forgot" class="text-link">
+                <nuxt-link :to="useAuthNavigate('forgot')" class="text-link">
                 {{ $t("ntm.forgot_title", "Reset it here") }}
-                </a>
+                </nuxt-link>
             </span>
             </div>
           </div>
@@ -102,9 +102,9 @@
           <div class="flex justify-around gap-3 text-xs">
             <span>
               {{ $t("ntm.dont_have_account", "Don't have an account?") }}
-              <a href="./register" class="text-link">
+              <nuxt-link :to="useAuthRoutes('register')" class="text-link">
                 {{ $t("ntm.register_title", "Register now") }}
-              </a>
+              </nuxt-link>
             </span>
           </div>
         </div>

@@ -1,5 +1,5 @@
-export const useAuthRouting = (to: string, query ?: string) => {
-    console.info('You can override useAuthRouting(to: string) composable')
+export const useAuthRoutes = (to: string, query ?: string) => {
+    console.info('You can override useAuthNavigate(to: string) composable')
 
     const path = useAppConfig?.authRouting ?? {
         login: '/auth/login',
@@ -10,5 +10,5 @@ export const useAuthRouting = (to: string, query ?: string) => {
         admin: '/admin'
     }
 
-    return navigateTo(path?.[to] || to)
+    return path?.[to] || to
 }
