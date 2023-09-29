@@ -45,12 +45,9 @@
     "nuxt": "^3.5.2",
     "path": "^0.12.7",
     "typescript": "^4.9.5",
-    "vuetify-strapi-dashboard": "latest"
   },
   "perrDependencies": {
     "@nuxtjs/strapi": "^1.9.3"
-  },
-  "dependencies": {
   },
   "publishConfig": {
     "access": "public"

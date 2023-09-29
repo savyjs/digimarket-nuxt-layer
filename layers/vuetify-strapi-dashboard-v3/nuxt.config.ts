@@ -1,9 +1,14 @@
 import dotenv from "dotenv"
+
 dotenv.config()
 
+dotenv.populate(process.env, {AUTH_SChEMA: 'vsd'})
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/strapi'
+    ],
+    extends: [
+        "digimarket-nuxt-layer-auth"
     ],
     strapi: {
         url: process.env?.API_URL || "/api"
