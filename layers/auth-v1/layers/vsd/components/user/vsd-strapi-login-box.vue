@@ -1,16 +1,15 @@
 <template>
   <div class="card">
     <h1 class="card-title font-weight-bold pull-right text-[18px]">
-      {{ $t('ntm.login_title', 'Login') }}
+      {{ $t('vsd.login_title', 'Login') }}
     </h1>
     <div>
       <div class="mb-6">
-
         <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
           <p class="my-1 font-light">
-            {{ $t('ntm.hello', 'Hello') }},
+            {{ $t('vsd.hello', 'Hello') }},
             <br/>
-            {{ $t('ntm.fill_credentials', 'To access your account, please provide the required information below.') }}
+            {{ $t('vsd.fill_credentials', 'To access your account, please provide the required information below.') }}
           </p>
         </div>
 
@@ -20,7 +19,7 @@
                   'has-error':errors.identifier,
                   }">
             <label class="input-label" for="identifier">
-              {{ $t("ntm.identifier", "Username or Email") }}
+              {{ $t("vsd.identifier", "Username or Email") }}
               <i class="input-success-icon ti ti-circle-check icon-small"></i>
             </label>
             <div class="input-primary">
@@ -33,7 +32,6 @@
                   @keydown.enter="submitForm"
                   id="identifier"
                   v-model="identifier.value"
-
                   required
               />
             </div>
@@ -48,7 +46,7 @@
                   }">
 
             <label for="password" class="input-label">
-              {{ $t("ntm.password", "Password") }}
+              {{ $t("vsd.password", "Password") }}
               <i class="input-success-icon ti ti-circle-check icon-small"></i>
             </label>
 
@@ -77,9 +75,9 @@
             </div>
             <div class="flex text-xs">
               <span>
-                {{ $t("ntm.forgot_password", "Forgot your password?") }}
+                {{ $t("vsd.forgot_password", "Forgot your password?") }}
                 <nuxt-link :to="useAuthRoutes('forgot')" class="text-link">
-                {{ $t("ntm.forgot_title", "Reset it here") }}
+                {{ $t("vsd.forgot_title", "Reset it here") }}
                 </nuxt-link>
             </span>
             </div>
@@ -95,15 +93,15 @@
             </i>
             </span>
             <span v-else>
-              {{ $t('ntm.login_title', 'Login') }}
+              {{ $t('vsd.login_title', 'Login') }}
             </span>
           </button>
 
           <div class="flex justify-around gap-3 text-xs">
             <span>
-              {{ $t("ntm.dont_have_account", "Don't have an account?") }}
+              {{ $t("vsd.dont_have_account", "Don't have an account?") }}
               <nuxt-link :to="useAuthRoutes('register')" class="text-link">
-                {{ $t("ntm.register_title", "Register now") }}
+                {{ $t("vsd.register_title", "Register now") }}
               </nuxt-link>
             </span>
           </div>

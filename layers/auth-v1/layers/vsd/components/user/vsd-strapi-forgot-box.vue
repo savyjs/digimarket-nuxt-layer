@@ -1,14 +1,14 @@
 <template>
   <div class="card">
     <h1 class="card-title font-weight-bold pull-right text-[18px]">
-      {{ $t('ntm.forgot_title', 'Recovery Password') }}
+      {{ $t('vsd.forgot_title', 'Recovery Password') }}
     </h1>
     <div>
       <div class=" mb-6">
         <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
           <p class="my-1 font-light">
             {{
-              $t('ntm.send_recovery_code_description', "Complete the form, and we'll send you a link.")
+              $t('vsd.send_recovery_code_description', "Complete the form, and we'll send you a link.")
             }}
           </p>
         </div>
@@ -19,7 +19,7 @@
                   'has-error':errors.email,
                   'is-valid':email?.meta?.dirty && email?.meta?.valid
                   }">
-            <label class="input-label" for="email">{{ $t("ntm.email", "Email") }}
+            <label class="input-label" for="email">{{ $t("vsd.email", "Email") }}
               <i class="input-success-icon ti ti-circle-check icon-small"></i>
             </label>
             <div class="input-primary">
@@ -43,7 +43,7 @@
           <div class="font-light my-2 block text-[12px] text-gray-900 dark:text-gray-300">
             <p class="my-1 font-light">
               {{
-                $t('ntm.verify_check_spam', "Sometimes, verification emails end up in the spam or junk folder. Please check your spam folder and mark our emails as 'Not Spam' to ensure you receive important updates.")
+                $t('vsd.verify_check_spam', "Sometimes, verification emails end up in the spam or junk folder. Please check your spam folder and mark our emails as 'Not Spam' to ensure you receive important updates.")
               }}
             </p>
           </div>
@@ -59,16 +59,16 @@
             </i>
             </span>
               <span v-else>
-            {{ $t('ntm.resend_title', 'Get Reset Link') }}
+            {{ $t('vsd.resend_title', 'Get Reset Link') }}
               </span>
             </button>
           </div>
 
           <div class="flex justify-around gap-3 text-xs">
             <span>
-              {{ $t("ntm.dont_have_account", "Don't have an account?") }}
+              {{ $t("vsd.dont_have_account", "Don't have an account?") }}
               <nuxt-link :to="useAuthRoutes('register')" class="text-link">
-                {{ $t("ntm.register_title", "Register now") }}
+                {{ $t("vsd.register_title", "Register now") }}
               </nuxt-link>
             </span>
           </div>
