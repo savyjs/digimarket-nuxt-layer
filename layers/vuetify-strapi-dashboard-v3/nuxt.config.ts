@@ -9,9 +9,6 @@ export default defineNuxtConfig({
         '@vee-validate/nuxt',
         '@pinia/nuxt'
     ],
-    extends: [
-        "digimarket-nuxt-layer-auth"
-    ],
     veeValidate: {
         // disable or enable auto imports
         autoImports: true,
