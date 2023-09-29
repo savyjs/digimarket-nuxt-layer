@@ -1,8 +1,6 @@
 <template>
-  <NuxtLayout name="vsd-demo">
-
+  <NuxtLayout>
     <slot/>
-
   </NuxtLayout>
 </template>
 <script setup>
