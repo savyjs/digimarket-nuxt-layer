@@ -1,0 +1,66 @@
+{
+  "name": "digimarket-nuxt-layer-auth-ntm",
+  "description": "Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
+  "version": "1.0.0-development.1",
+  "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "tailwind",
+    "marketplace",
+    "UI kit",
+    "theme",
+    "ui framework",
+    "component framework",
+    "ui library",
+    "component library",
+    "commercial components",
+    "landing pages",
+    "podcast ui",
+    "shopping ui",
+    "ecommerce ui",
+    "blog ui"
+  ],
+  "type": "module",
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:e2e-browser": "jest test/browser.test",
+    "test:unit": "jest test/unit.test",
+    "test:types": "tsc -p types/test"
+  },
+  "devDependencies": {
+    "@nuxt/schema": "latest",
+    "@nuxt/test-utils": "latest",
+    "@types/node": "^18",
+    "fs": "^0.0.1-security",
+    "jest": "^29.3.1",
+    "nuxt": "^3.5.2",
+    "path": "^0.12.7",
+    "typescript": "^4.9.5",
+    "digimarket-nuxt-layer-core": "latest"
+  },
+  "perrDependencies": {
+    "@nuxtjs/strapi": "^1.9.3"
+  },
+  "dependencies": {
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/savyjs/digimarket-nuxt-module/issues"
+  },
+  "homepage": "https://digimarket.savyjs.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/savyjs/digimarket-nuxt-module.git"
+  }
+}

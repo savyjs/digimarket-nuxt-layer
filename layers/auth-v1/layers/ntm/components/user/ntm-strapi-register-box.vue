@@ -5,7 +5,6 @@
     </h1>
     <div class="">
       <div class="mb-6">
-
         <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
           <p class="my-1 font-light">
             {{ $t('ntm.hello', 'Hello!') }}
