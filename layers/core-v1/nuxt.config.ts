@@ -9,10 +9,10 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 
 export default defineNuxtConfig({
     modules: [
-        '@pinia/nuxt',
         '@nuxtjs/tailwindcss',
         '@nuxtjs/strapi',
-        '@vee-validate/nuxt'
+        '@vee-validate/nuxt',
+        '@pinia/nuxt'
     ],
     veeValidate: {
         // disable or enable auto imports
