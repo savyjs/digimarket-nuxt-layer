@@ -1,7 +1,7 @@
 {
   "name": "digimarket-nuxt-layer-blog",
   "description": "Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "1.0.0-development.8",
+  "version": "1.0.0-development.9",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -37,9 +37,7 @@
     "test:types": "tsc -p types/test"
   },
   "peerDependencies": {
-    "pinia": "^2.1.6",
     "nuxt": "^3.7.3",
-    "@pinia/nuxt": "^0.4.11",
     "sass": "^1.52.3"
   },
   "devDependencies": {
@@ -56,7 +54,7 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "digimarket-nuxt-layer-core": "^1.0.0-development.19"
+    "digimarket-nuxt-layer-core": "^1.0.0-development.21"
   },
   "publishConfig": {
     "access": "public"

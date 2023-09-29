@@ -16,14 +16,32 @@ module.exports = {
         extend: {
             colors: {
                 link: 'var(--color-link)',
-                dark: 'var(--color-dark)',
-                light: 'var(--color-light)',
                 transparent: 'transparent',
-                primary: '#a41919',
-                info: '#0d5fe8',
-                error: '#b40b00',
-                success: '#1e7c1e',
-                warning: '#e0a107',
+                primary: {
+                    light: '#a41919',
+                    DEFAULT: '#a41919',
+                    dark: '#f60e81',
+                },
+                info: {
+                    light: '#0d5fe8',
+                    DEFAULT: '#0d5fe8',
+                    dark: '#0abcf3'
+                },
+                error: {
+                    light: '#b40b00',
+                    DEFAULT: '#b40b00',
+                    dark: '#fa3131'
+                },
+                success: {
+                    light: '#1e7c1e',
+                    DEFAULT: '#1e7c1e',
+                    dark: '#07cb07',
+                },
+                warning: {
+                    light: '#e0a107',
+                    DEFAULT: '#e0a107',
+                    dark: '#ffc331',
+                },
             },
         },
     }

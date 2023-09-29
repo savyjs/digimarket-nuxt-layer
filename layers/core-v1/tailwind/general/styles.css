@@ -2,14 +2,14 @@
 
     .bg-default {
         @apply
-        bg-light
+        bg-[var(--color-light-bg)]
         text-[var(--color-text)] border-[var(--color-border)]
-        dark:bg-dark
+        dark:bg-[var(--color-dark-bg)]
         dark:text-[var(--color-dark-text)] dark:border-[var(--color-dark-border)]
         transition delay-[50] duration-[500] ease-in-out dark:delay-[50] dark:duration-[500];
     }
 
-    a, p, small, i , .text-link {
+    a, p, small, i, .text-link {
         @apply dark:drop-shadow-md dark:shadow-white
     }
 
