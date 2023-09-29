@@ -4,7 +4,10 @@
   }
 
   .card {
-    @apply bg-[var(--color-card-bg)] dark:bg-[var(--color-dark-card-bg)]  border-[var(--color-card-border)] dark:border-[var(--color-dark-card-border)] text-[var(--color-card-text)] dark:text-[var(--color-dark-card-text)];
+    @apply
+    bg-[var(--color-card-bg)] dark:bg-[var(--color-dark-card-bg)]
+    border-[var(--color-card-border)] dark:border-[var(--color-dark-card-border)]
+    text-[var(--color-card-text)] dark:text-[var(--color-dark-card-text)];
   }
 
   .card-primary {

@@ -1,7 +1,7 @@
-export const useAuthRouting = (to: string , query ?: string) => {
+export const useAuthRouting = (to: string, query ?: string) => {
     console.info('You can override useAuthRouting(to: string) composable')
 
-    const path = useAppConfig?.ntm?.authRoutes ?? {
+    const path = useAppConfig?.authRouting ?? {
         login: '/auth/login',
         register: '/auth/login',
         verify: '/auth/verify',

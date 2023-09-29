@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h1 class="font-weight-bold pull-right text-[18px]">
+  <div class="card">
+    <h1 class="card-title font-weight-bold pull-right text-[18px]">
       {{ $t('ntm.register', 'Register') }}
     </h1>
-    <div>
+    <div class="">
       <div class="mb-6">
 
         <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
@@ -118,8 +118,10 @@
                   }">
             <div class="flex gap-2 items-center">
               <input type="checkbox" v-model="terms.value" id="terms_and_conditions"/>
-              <label for="terms_and_conditions" class="self-center font-weight-light w-full text-sm text-[10px]">
-                {{ $t("ntm.terms_and_conditions", "By creating an account, you agree to our terms and conditions.") }}
+              <label for="terms_and_conditions" class="font-light w-full text-[10px]">
+                <small>{{
+                    $t("ntm.terms_and_conditions", "I agree to the terms and conditions.")
+                  }}</small>
               </label>
             </div>
             <div :class="{invisible: errors?.terms}" class="input-error">
