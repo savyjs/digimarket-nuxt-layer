@@ -1,8 +1,7 @@
 import dotenv from "dotenv"
-
 dotenv.config()
-
 dotenv.populate(process.env, {AUTH_SCHEMA: 'vsd'})
+
 export default defineNuxtConfig({
     modules: [
         '@nuxtjs/strapi'
