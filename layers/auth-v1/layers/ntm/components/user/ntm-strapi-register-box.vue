@@ -104,9 +104,9 @@
             <div class="flex text-xs">
               <span>
                 {{ $t("ntm.forgot_password", "Forgot your password?") }}
-                <a href="./forgot" class="text-link">
+                <nuxt-link :to="useAuthRoutes('forgot')" class="text-link">
                 {{ $t("ntm.forgot_title", "Reset it here") }}
-                </a>
+                </nuxt-link>
             </span>
             </div>
           </div>

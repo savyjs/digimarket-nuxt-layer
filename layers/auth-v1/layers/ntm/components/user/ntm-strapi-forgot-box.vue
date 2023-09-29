@@ -67,9 +67,9 @@
           <div class="flex justify-around gap-3 text-xs">
             <span>
               {{ $t("ntm.dont_have_account", "Don't have an account?") }}
-              <a href="./register" class="text-link">
+              <nuxt-link :to="useAuthRoutes('register')" class="text-link">
                 {{ $t("ntm.register_title", "Register now") }}
-              </a>
+              </nuxt-link>
             </span>
           </div>
         </div>
