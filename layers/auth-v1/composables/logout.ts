@@ -1,4 +1,4 @@
-export const useLogout = (credentials: Digimarket.Credential) => {
+export const useLogout = () => {
     console.info('You can override useLogout() composable')
 
     // Start the loader

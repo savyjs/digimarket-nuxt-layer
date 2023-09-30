@@ -18,12 +18,12 @@
               </v-avatar>
             </v-col>
             <v-col cols="8" class="pt-0 mt-0">
-              <v-list-item-content>
+              <v-list-item>
                 <v-list-item-title class="pt-5">
                   <small> {{ $t("vsd.control_panel", "User panel") }} </small>
                   <p><b>{{ singleTitle }}</b></p>
                 </v-list-item-title>
-              </v-list-item-content>
+              </v-list-item>
             </v-col>
           </v-row>
 
@@ -40,12 +40,12 @@
             </v-hover>
           </v-col>
           <v-col cols="9" class="pt-0 mt-0">
-            <v-list-item-content>
+            <v-list-item>
               <v-list-item-title>
-                <p>{{ user?.role.name || 'user' }}</p>
+                <p>{{ user?.role?.name || 'User' }}</p>
                 <small>{{ $t('vsd.welcome', 'Welcome') }} {{ user?.username || '' }}</small>
               </v-list-item-title>
-            </v-list-item-content>
+            </v-list-item>
           </v-col>
         </v-list-item>
       </v-list>

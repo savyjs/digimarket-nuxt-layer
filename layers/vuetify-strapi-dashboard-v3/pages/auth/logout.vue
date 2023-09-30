@@ -11,7 +11,7 @@ definePageMeta({
 });
 
 // Sending event
-function login(credential) {
+function logout() {
   useLogout()
 }
 </script>

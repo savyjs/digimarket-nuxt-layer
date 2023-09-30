@@ -29,15 +29,14 @@
 
       <v-list>
         <v-list-item>
-          <v-list-item-content>
             <p
                 class="font-12 pt-1">{{ user?.name || '' }} {{
                 user?.lastname || ''
               }} ({{ user?.username || 'Username' }})</p>
             <p class="font-12 pt-1">{{ user?.email || 'No Email Address' }}</p>
             <small class="font-11 py-1">{{ user?.role?.name || 'User' }}</small>
-          </v-list-item-content>
         </v-list-item>
+
         <v-divider/>
         <v-list-item
             to="/admin/system/profile/"

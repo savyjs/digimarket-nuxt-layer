@@ -38,9 +38,9 @@
                         <v-divider/>
         <v-list v-if="getUnreadMessages.length">
           <v-list-item class="grey lighten-4" v-for="(message,i) in getUnreadMessages" :key="i">
-            <v-list-item-content>
+
                 <small>{{ message.text }}</small>
-            </v-list-item-content>
+
             <v-list-item-icon>
                 <v-icon small v-if="message.type">{{ icons?.[message?.type] || 'alert' }}</v-icon>
               </v-list-item-icon>
