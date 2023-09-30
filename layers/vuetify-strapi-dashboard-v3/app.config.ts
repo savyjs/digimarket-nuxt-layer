@@ -29,6 +29,7 @@ export default defineAppConfig({
     },
     authRouting: {
         login: '/auth/login',
+        logout: '/auth/logout',
         register: '/auth/register',
         verify: '/auth/verify',
         forgot: '/auth/forgot',

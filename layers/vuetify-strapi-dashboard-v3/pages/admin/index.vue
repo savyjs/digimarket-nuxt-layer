@@ -1,5 +1,6 @@
 <template>
-  <div>Hi world! - this is your dashboard</div>
+  <div>Hi world! - this is your dashboard
+  </div>
 </template>
 <script setup>
 

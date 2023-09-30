@@ -11,7 +11,6 @@
               fab
               icon
               small
-              :color="color"
           >
           <v-icon icon="mdi-bell"></v-icon>
             <v-badge v-if="getUnreadMessages.length > 0" dot="" color="error"/>

@@ -136,8 +136,7 @@ const showSettings = useState('showSettings', () => true);
 
 const showUser = useState("showUser", () => true)
 const defaultPhoto = useState("defaultPhoto", () => '')
-const user = useState("user", () => {
-})
+const user = useUser()
 const darkmodeToggleBtn = appConfig?.vsd?.darkmodeToggleBtn || true;
 
 const navbarMenu = [];

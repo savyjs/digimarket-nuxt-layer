@@ -6,7 +6,8 @@
         :close-on-content-click="false"
     >
       <template v-slot:activator="{ props }">
-        <v-btn icon v-bind="props">
+
+        <v-btn v-if="userImage" icon v-bind="props">
           <v-avatar variant="outlined" density="compact">
             <v-img
                 max-width="100%"
@@ -15,6 +16,15 @@
             />
           </v-avatar>
         </v-btn>
+        <v-btn
+            v-else
+            v-bind="props"
+            fab
+            icon
+        >
+          <v-icon icon="mdi-account-circle"/>
+        </v-btn>
+
       </template>
 
       <v-list>
@@ -38,39 +48,8 @@
         <v-list-item
             :title="$t('logout', 'Logout')"
             prepend-icon="mdi-lock"
-            @click="menu=false"
+            @click="useAuthNavigate('logout')"
         >
-          <v-dialog
-              v-model="dialog"
-              max-width="290"
-          >
-            <template v-slot:activator="{ on, attrs }">
-              <v-list-item-title
-                  v-bind="attrs"
-                  v-on="on">
-              </v-list-item-title>
-            </template>
-            <v-card>
-              <v-card-text class="pt-5">
-                {{ $t('vsd.quit_alert', 'Are you sure?') }}
-              </v-card-text>
-              <v-card-actions>
-                <v-btn
-                    color="info darken-1"
-                    @click="dialog = false"
-                >
-                  {{ $t('vsd.close', 'Close') }}
-                </v-btn>
-                <v-spacer></v-spacer>
-                <v-btn
-                    color="warning darken-1"
-                    @click="logout"
-                >
-                  {{ $t('logout', 'Logout') }}
-                </v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-dialog>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -80,13 +59,12 @@
 <script setup>
 const dialog = ref(false)
 const menu = ref(false)
-const user = useState("user", () => {
-})
+const user = useUser()
 
 
-let userImage = user?.image || '/assets/img/avatar.png'
+let userImage = user?.value?.avatar
 
 function logout() {
-
+  useAuthNavigate('logout')
 }
 </script>
