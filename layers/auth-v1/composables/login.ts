@@ -12,18 +12,15 @@ export const useLogin = (credentials: Digimarket.Credential) => {
         // Showing the success message
         let message = {
             target: 'toast',
-            type: user?.blocked ? 'error' : 'success',
-            title: user?.blocked ? "Account Blocked" : "Login Successful",
-            message: user?.confirmed ? "Welcome back! You've logged in successfully." : "Almost there! Please check your email to confirm your registration."
+            type: user?.value?.blocked ? 'error' : 'success',
+            title: user?.value?.blocked ? "Account Blocked" : "Login Successful",
+            message: user?.value?.confirmed ? "Welcome back! You've logged in successfully." : "Almost there! Please check your email to confirm your registration."
         }
         useMessages().pushMessage(message)
 
         // Redirect user
-        if (user?.confirmed) {
-            // If confirmed u
-            useStrapiAuth().setToken(jwt)
-            useStrapiAuth().setUser(user)
-            useAuthNavigate("profile")
+        if (user?.value?.confirmed) {
+            useAuthNavigate("dashboard")
         } else {
             console.warn(`User isn't confirmed yet`)
         }

@@ -34,6 +34,6 @@ export default defineAppConfig({
         forgot: '/auth/forgot',
         home: '/',
         profile: '/admin',
-        admin: '/admin'
+        dashboard: '/admin'
     }
 })

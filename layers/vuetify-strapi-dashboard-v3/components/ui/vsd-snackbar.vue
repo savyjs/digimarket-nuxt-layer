@@ -2,7 +2,7 @@
   <div>
     <v-snackbar
         v-for="message in useMessages().unread('toast')"
-        :v-model="message.show"
+        v-model="message.show"
         :timeout="timeScope"
         multi-line
     >
