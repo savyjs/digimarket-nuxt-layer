@@ -1,11 +1,12 @@
-export const useLogin = (credentials: Digimarket.Credential) => {
+export const useLogout = (credentials: Digimarket.Credential) => {
     console.info('You can override useLogout() composable')
 
     // Start the loader
     useLoader().start('auth')
+    try {
+        // Sending the request
+        useStrapiAuth().logout()
 
-    // Sending the request
-    return useStrapiAuth().logout().then(() => {
         // Showing the success message
         let message = {
             target: 'toast',
@@ -18,7 +19,7 @@ export const useLogin = (credentials: Digimarket.Credential) => {
         // Redirect user
         useAuthNavigate("login")
 
-    }).catch(err => {
+    } catch (err) {
         // Showing the error
         let errorMessage = {
             target: 'toast',
@@ -28,9 +29,9 @@ export const useLogin = (credentials: Digimarket.Credential) => {
         }
         useMessages().pushMessage(errorMessage)
 
-    }).finally(() => {
+    } finally {
         // Stopping the loader
         useLoader().stop('auth')
-    })
+    }
 
 }
