@@ -1,5 +1,7 @@
 node_modules/
 .idea/
+.output/
+.nuxt/
 yarn.lock
 chat.*
 package-lock.json

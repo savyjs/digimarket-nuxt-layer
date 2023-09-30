@@ -17,7 +17,7 @@ export const useLoader = defineStore('loader', {
                 if (typeof target == 'string' && state?.targets?.[target]?.active) {
                     return !!state?.targets?.[target]?.active
                 }
-                else return state.active
+                else return state?.active
             }
         }
     },

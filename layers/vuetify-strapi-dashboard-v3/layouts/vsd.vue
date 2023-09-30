@@ -107,7 +107,7 @@
     </v-app-bar>
 
     <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
-      <slot />
+      <slot/>
     </v-main>
     <v-footer app="" class="py-0" inset>
       <v-btn x-small outlined elevation="0" class="mb-1 mx-1 pa-1 mt-1 font-10">
@@ -146,5 +146,13 @@ const darkmodeToggleBtn = appConfig?.vsd?.darkmodeToggleBtn || true;
 
 const navbarMenu = [];
 const footerTitle = appConfig?.vsd?.footerTitle || 'VSD'
-const Version = '0.7-Alpha-1'
+const Version = '0.7-Alpha-1.2'
+
+// handling Page skeleton
+const loading = useLoader();
+loading.start('skeleton')
+onMounted(() => {
+  loading.stop('skeleton')
+})
+
 </script>

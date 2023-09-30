@@ -12,5 +12,8 @@ if (!schemaList.includes(schemaName)) {
 
 const extendPath = `layers/${schemaName}`
 export default defineNuxtConfig({
-    extends: [extendPath]
+    extends: [extendPath],
+    strapi: {
+        url: process.env?.API_URL ?? "/api"
+    },
 })

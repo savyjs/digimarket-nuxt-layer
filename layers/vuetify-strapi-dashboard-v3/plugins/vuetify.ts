@@ -6,7 +6,8 @@ import {aliases, mdi} from 'vuetify/iconsets/mdi'
 import {fa} from 'vuetify/iconsets/fa'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
-
+import {VSkeletonLoader} from 'vuetify/labs/VSkeletonLoader'
+import {VOtpInput} from 'vuetify/labs/VOtpInput'
 
 export default defineNuxtPlugin((nuxt) => {
     const light: ThemeDefinition = {
@@ -35,7 +36,7 @@ export default defineNuxtPlugin((nuxt) => {
             },
         },
         ssr: true,
-        components,
+        components: {...components, VOtpInput, VSkeletonLoader},
         directives,
         theme: {
             defaultTheme: 'dark',
