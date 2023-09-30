@@ -1,7 +1,7 @@
 {
   "name": "vuetify-strapi-dashboard",
   "description": "Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "3.0.0-development.23",
+  "version": "3.0.0-development.24",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -49,7 +49,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "digimarket-nuxt-layer-auth": "^1.0.0-development.20",
+    "digimarket-nuxt-layer-auth": "^1.0.0-development.21",
     "@mdi/font": "^7.2.96",
     "@mdi/js": "^7.2.96",
     "pinia": "^2.1.6",

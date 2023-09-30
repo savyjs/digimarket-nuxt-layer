@@ -1,6 +1,3 @@
-import dotenv from "dotenv"
-dotenv.config()
-
 const schemaList = ['ntm', 'vsd'];
 const schemaName = process?.env?.AUTH_SCHEMA ?? 'ntm' //other options is vsd
 
@@ -13,7 +10,7 @@ if (!schemaList.includes(schemaName)) {
 const extendPath = `layers/${schemaName}`
 export default defineNuxtConfig({
     extends: [extendPath],
-    strapi: {
-        url: process.env?.API_URL ?? "/api"
-    },
+    modules: [
+        '@nuxtjs/strapi'
+    ]
 })
