@@ -30,12 +30,12 @@
           <v-col cols="3" class="pt-0 mt-0">
             <v-hover>
               <nuxt-link to="/admin/system/profile/edit">
-                <v-list-item-avatar size="45">
+                <v-list-item-media size="45" v-if="defaultPhoto">
                   <v-img
                       contain
                       :src="defaultPhoto"
                   />
-                </v-list-item-avatar>
+                </v-list-item-media>
               </nuxt-link>
             </v-hover>
           </v-col>

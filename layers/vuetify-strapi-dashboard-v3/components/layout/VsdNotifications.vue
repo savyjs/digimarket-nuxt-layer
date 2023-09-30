@@ -37,14 +37,9 @@
           </v-card-actions>
                         <v-divider/>
         <v-list v-if="getUnreadMessages.length">
-          <v-list-item class="grey lighten-4" v-for="(message,i) in getUnreadMessages" :key="i">
-
+          <v-list-item :prepend-icon="icons?.[message?.type] || 'alert'" class="grey lighten-4"
+                       v-for="(message,i) in getUnreadMessages" :key="i">
                 <small>{{ message.text }}</small>
-
-            <v-list-item-icon>
-                <v-icon small v-if="message.type">{{ icons?.[message?.type] || 'alert' }}</v-icon>
-              </v-list-item-icon>
-              <v-list-item-icon>
                 <v-btn
                     @click="markRead(message)"
                     class="green--text"
@@ -54,7 +49,7 @@
                 >
                 <v-icon small>check</v-icon>
               </v-btn>
-              </v-list-item-icon>
+
           </v-list-item>
         </v-list>
           <div class="full font-12 text-center ma-1 pb-2 lighten-1" v-else>
