@@ -1,4 +1,7 @@
+legacy/
 node_modules/
+.outpu/
+.nuxt/
 .idea/
 yarn.lock
 chat.*

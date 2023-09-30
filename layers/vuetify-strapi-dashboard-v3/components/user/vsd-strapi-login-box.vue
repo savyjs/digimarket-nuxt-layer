@@ -33,6 +33,15 @@
               class="my-2"
           ></v-text-field>
 
+          <div class="flex text-xs">
+              <span>
+                {{ $t("ntm.forgot_password", "Forgot your password?") }}
+                <nuxt-link :to="useAuthRoutes('forgot')" class="text-link">
+                {{ $t("ntm.forgot_title", "Reset it here") }}
+                </nuxt-link>
+            </span>
+          </div>
+
           <v-row class="d-flex justify-center mt-3">
             <v-btn type="submit"
                    color="primary"
@@ -51,6 +60,7 @@
             </v-btn>
           </v-row>
         </div>
+
       </div>
     </v-card-text>
   </v-card>
