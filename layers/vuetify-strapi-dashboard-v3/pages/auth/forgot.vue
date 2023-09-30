@@ -5,10 +5,8 @@
 </template>
 
 <script setup>
-
 // Sending event
-async function forgot(credential) {
+function forgot(credential) {
   useForgot(credential)
 }
-
 </script>

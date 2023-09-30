@@ -1,12 +1,12 @@
 <template>
   <nuxt-layout name="vsd-auth">
-    <user-vsd-strapi-login-box @action="login"/>
+    <user-vsd-strapi-login-box @action="login"></user-vsd-strapi-login-box>
   </nuxt-layout>
 </template>
 
 <script setup>
 // Sending event
-async function login(credential) {
+function login(credential) {
   useLogin(credential)
 }
 </script>

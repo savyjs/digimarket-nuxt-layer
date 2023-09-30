@@ -107,7 +107,7 @@
     </v-app-bar>
 
     <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
-      <nuxt-page/>
+      <slot />
     </v-main>
     <v-footer app="" class="py-0" inset>
       <v-btn x-small outlined elevation="0" class="mb-1 mx-1 pa-1 mt-1 font-10">

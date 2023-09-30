@@ -1,4 +1,3 @@
-import {defineNuxtConfig} from "nuxt/config";
 import dotenv from "dotenv"
 dotenv.config()
 
@@ -10,8 +9,8 @@ if (!schemaList.includes(schemaName)) {
 } else {
     console.info(`The selected schema is: ${schemaName}`);
 }
+
+const extendPath = `layers/${schemaName}`
 export default defineNuxtConfig({
-    extends: [
-        `layers/${schemaName}`
-    ]
+    extends: [extendPath]
 })

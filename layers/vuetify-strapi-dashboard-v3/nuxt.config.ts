@@ -4,6 +4,9 @@ dotenv.config()
 dotenv.populate(process.env, {AUTH_SCHEMA: 'vsd'})
 
 export default defineNuxtConfig({
+    extends:[
+        'digimarket-nuxt-layer-auth'
+    ],
     modules: [
         '@nuxtjs/strapi',
         '@vee-validate/nuxt',
