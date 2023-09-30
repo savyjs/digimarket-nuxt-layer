@@ -169,7 +169,7 @@ import {
 
 // Setup page
 const {logo, title} = useAppConfig()?.digimarket;
-const emit = defineEmits(['data'])
+const emit = defineEmits(['action'])
 
 //  Initiate Form
 const form = useForm();

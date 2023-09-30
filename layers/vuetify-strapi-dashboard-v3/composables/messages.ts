@@ -5,6 +5,7 @@ import {defineStore} from 'pinia'
 interface Message {
     id?: string | number;
     title?: string;
+    show?: boolean;
     seen?: boolean;
     type?: string;
     message: string;
@@ -16,9 +17,7 @@ export const useMessages = defineStore('messages', {
     // a function that returns a fresh state
     state: () => ({
         inbox: [] as Array<Message>,
-        archive: [] as Array<Message>,
-        interval: null,
-        timer: 0,
+        archive: [] as Array<Message>
     }),
     // optional getters
     getters: {
@@ -79,35 +78,7 @@ export const useMessages = defineStore('messages', {
         },
     },
     actions: {
-        runInterval(target ?: string) {
-            // Set time scope for each period
-            const timeScope: number = useAppConfig()?.ntm?.messageTime ?? 20;
 
-            // Start the new timer only if there is no existing timer
-            if (this.timer == 0) {
-                // Define a new time at which all messages will turn red.
-                this.timer = this.count(target) * timeScope;
-                if (this.count(target)) {
-                    this.interval = setInterval(() => {
-                        if (this.timer == 0 || this.timeRemaining == 0) {
-                            // Clear newest message
-                            this.inbox.pop();
-                            // Reset the timer at the end of each cycle
-                            this.clearTimer();
-                            this.runInterval();
-                        }
-                        if (this.timer > 0) this.timer--;
-                    }, 1000);
-                } else {
-                    this.clearTimer();
-                }
-            }
-        },
-        clearTimer() {
-            clearInterval(this.interval);
-            this.interval = null;
-            this.timer = 0;
-        },
         read(identifier: Message | number) {
             this.inbox.map(item => {
                 if (item?.id && (identifier?.id == item.id || identifier == item?.id)) {
@@ -115,8 +86,6 @@ export const useMessages = defineStore('messages', {
                 }
                 return item;
             })
-            this.clearTimer();
-            this.runInterval();
         },
         readAll(target?: string) {
             this.inbox.map(item => {
@@ -129,16 +98,14 @@ export const useMessages = defineStore('messages', {
                 }
                 return item;
             })
-            this.clearTimer();
-            this.runInterval();
         },
         pushMessage(item: Message) {
             // `this` is the store instance
             if (typeof item?.message == 'string') {
                 item.seen = false
+                item.show = true
                 item.id = Date.now() + this.count()
                 this.inbox.push(item)
-                this.runInterval();
             } else {
                 console.warn('Message is not valid.', item)
             }

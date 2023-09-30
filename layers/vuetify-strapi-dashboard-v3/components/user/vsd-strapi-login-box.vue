@@ -68,7 +68,6 @@
 
           </div>
 
-
           <v-row class="d-flex justify-center mt-3">
             <v-skeleton-loader
                 :loading="useLoader().status('skeleton')"
@@ -77,20 +76,12 @@
               <v-btn type="submit"
                      color="primary"
                      :variant="useStyle('btn')"
-                     :disabled="useLoader().status('auth')"
+                     :loading="useLoader().status('auth')"
                      @click="submitForm"
                      class="btn-primary flex gap-2 w-full mt-2 py-2.5 align-center">
-            <span v-if="useLoader().status('auth')" class="animate-spin">
-              <i class="ti ti-refresh icon-md text-primary">
-              {{ useLoader().status('auth') }}
-            </i>
-            </span>
-                <span v-else>
-              {{ $t('vsd.login_title', 'Login') }}
-            </span>
+                {{ $t('vsd.login_title', 'Login') }}
               </v-btn>
             </v-skeleton-loader>
-
           </v-row>
         </div>
       </div>
@@ -99,7 +90,7 @@
 </template>
 
 <script setup>
-import {useDisplay} from 'vuetify'
+
 import {
   useField,
   useForm
@@ -107,7 +98,7 @@ import {
 
 // Setup page
 const {logo, title} = useAppConfig()?.vsd;
-const emit = defineEmits(['data'])
+const emit = defineEmits(['action'])
 
 //  Initiate Form
 const form = useForm();

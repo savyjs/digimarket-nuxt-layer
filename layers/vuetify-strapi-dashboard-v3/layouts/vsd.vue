@@ -119,12 +119,8 @@
 </template>
 <script setup lang="ts">
 
-definePageMeta({
-  middleware: ['authenticated']
-});
 
 import {useDisplay} from 'vuetify'
-
 
 const appConfig = useAppConfig();
 

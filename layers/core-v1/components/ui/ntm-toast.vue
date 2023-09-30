@@ -3,7 +3,6 @@
     <transition>
       <div
           v-show="useMessages().count('toast')"
-          @change="closeToastDelay(useMessages().newest('toast')?.id)"
           :class="`toast-${useMessages().newest('toast')?.type || 'info'}`"
           :style="`opacity: ${parseInt(useMessages().timeRemaining < 10 ? useMessages().timeRemaining*10 : 100)}%`"
           class="toast transition fade-in-out">
@@ -20,7 +19,7 @@
               <template v-if="useMessages().count('toast') > 1">
                 <hr/>
                 <div class="flex justify-between">
-                  <small>{{ useMessages().count('toast') }} more messages left</small>
+                  <small>{{ useMessages().count('toast') }} {{ $t("ntm.more_messages", "more messages left") }}</small>
                   <button
                       @click="closeAllToasts">
                     <small>{{ $t("ntm.close_all", "Clear All") }}</small>

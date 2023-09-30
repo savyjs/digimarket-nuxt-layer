@@ -5,6 +5,11 @@
 </template>
 
 <script setup>
+
+definePageMeta({
+  middleware: 'not-authenticated'
+});
+
 // Sending event
 function forgot(credential) {
   useForgot(credential)

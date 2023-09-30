@@ -24,6 +24,8 @@ export const useLogin = (credentials: Digimarket.Credential) => {
             useStrapiAuth().setToken(jwt)
             useStrapiAuth().setUser(user)
             useAuthNavigate("profile")
+        } else {
+            console.warn(`User isn't confirmed yet`)
         }
     }).catch(err => {
         // Showing the error

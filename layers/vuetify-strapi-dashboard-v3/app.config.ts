@@ -26,5 +26,14 @@ export default defineAppConfig({
                 panelDashboard: [],
                 footerLinks: []
             }
+    },
+    authRouting: {
+        login: '/auth/login',
+        register: '/auth/register',
+        verify: '/auth/verify',
+        forgot: '/auth/forgot',
+        home: '/',
+        profile: '/admin',
+        admin: '/admin'
     }
 })

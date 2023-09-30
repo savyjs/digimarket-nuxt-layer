@@ -88,7 +88,7 @@ import {
 import {useI18n} from "vue-i18n";
 
 // Setup page
-const emit = defineEmits(['data'])
+const emit = defineEmits(['action'])
 const title = useAppConfig()?.digimarket?.title;
 
 //  Initiate Form

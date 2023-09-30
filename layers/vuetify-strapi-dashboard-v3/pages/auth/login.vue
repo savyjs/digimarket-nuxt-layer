@@ -5,6 +5,11 @@
 </template>
 
 <script setup>
+
+definePageMeta({
+  middleware: 'not-authenticated'
+});
+
 // Sending event
 function login(credential) {
   useLogin(credential)
