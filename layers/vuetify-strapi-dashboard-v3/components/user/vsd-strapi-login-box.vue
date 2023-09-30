@@ -1,9 +1,11 @@
 <template>
-  <div class="card">
-    <h1 class="card-title font-weight-bold pull-right text-[18px]">
-      {{ $t('vsd.login_title', 'Login') }}
-    </h1>
-    <div>
+  <v-card class="pa-5">
+    <v-card-title>
+      <h1 class="card-title font-weight-bold pull-right text-[18px]">
+        {{ $t('vsd.login_title', 'Login') }}
+      </h1>
+    </v-card-title>
+    <v-card-text>
       <div class="mb-6">
         <div class="font-light my-5 block text-[12px] text-gray-900 dark:text-gray-300">
           <p class="my-1 font-light">
@@ -13,107 +15,49 @@
           </p>
         </div>
 
-        <div class="form-group flex flex-col">
+        <div>
 
-          <div class="element-group w-full flex flex-col gap-1" :class="{
-                  'has-error':errors.identifier,
-                  }">
-            <label class="input-label" for="identifier">
-              {{ $t("vsd.identifier", "Username or Email") }}
-              <i class="input-success-icon ti ti-circle-check icon-small"></i>
-            </label>
-            <div class="input-primary">
-              <span class="flex place-content-center items-center align-baseline ">
-                <i class="ti ti-user-circle text-xl"></i>
-              </span>
-              <input
-                  dir="auto"
-                  type="email"
-                  @keydown.enter="submitForm"
-                  id="identifier"
-                  v-model="identifier.value"
-                  required
-              />
-            </div>
-            <div :class="{invisible: errors?.identifier}" class="input-error">
-              <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
-              {{ errors.identifier }}
-            </div>
-          </div>
+          <v-text-field
+              v-model="identifier.value.value"
+              :error-messages="identifier.errorMessage?.value"
+              :label='$t("vsd.identifier", "Identifier")'
+              :variant="useStyle('input')"
+          ></v-text-field>
 
-          <div class="element-group w-full flex flex-col gap-1" :class="{
-                  'has-error':errors.password,
-                  }">
+          <v-text-field
+              v-model="password.value.value"
+              type="password"
+              :error-messages="password.errorMessage?.value"
+              :label='$t("vsd.password", "Password")'
+              :variant="useStyle('input')"
+              class="my-2"
+          ></v-text-field>
 
-            <label for="password" class="input-label">
-              {{ $t("vsd.password", "Password") }}
-              <i class="input-success-icon ti ti-circle-check icon-small"></i>
-            </label>
-
-            <div class="input-primary">
-              <span class="flex place-content-center items-center align-baseline ">
-                <i class="ti ti-lock text-xl"></i>
-              </span>
-              <input
-                  id="password"
-                  :type="!showPassword ? 'password' : 'text'"
-                  v-model="password.value"
-                  @keydown.enter="submitForm"
-                  required
-              />
-              <span class="flex place-content-center items-center align-baseline">
-                <button class="transition opacity-20 hover:opacity-100 active:opacity-100"
-                        @click="showPassword=!showPassword">
-                <i class="ti ti-eye text-xl" v-if="!showPassword"></i>
-                <i class="ti ti-eye-off text-xl" v-if="showPassword"></i>
-                </button>
-              </span>
-            </div>
-            <div :class="{invisible: errors?.password}" class="input-error">
-              <i class="input-error-icon ti ti-exclamation-circle icon-small"></i>
-              {{ errors.password }}
-            </div>
-            <div class="flex text-xs">
-              <span>
-                {{ $t("vsd.forgot_password", "Forgot your password?") }}
-                <nuxt-link :to="useAuthRoutes('forgot')" class="text-link">
-                {{ $t("vsd.forgot_title", "Reset it here") }}
-                </nuxt-link>
-            </span>
-            </div>
-          </div>
-
-          <button type="submit"
-                  :disabled="useLoader().status('auth')"
-                  @click="submitForm"
-                  class="btn-primary flex gap-2 w-full mt-2 py-2.5 align-center">
+          <v-row class="d-flex justify-center mt-3">
+            <v-btn type="submit"
+                   color="primary"
+                   :variant="useStyle('btn')"
+                   :disabled="useLoader().status('auth')"
+                   @click="submitForm"
+                   class="btn-primary flex gap-2 w-full mt-2 py-2.5 align-center">
             <span v-if="useLoader().status('auth')" class="animate-spin">
               <i class="ti ti-refresh icon-md text-primary">
               {{ useLoader().status('auth') }}
             </i>
             </span>
-            <span v-else>
+              <span v-else>
               {{ $t('vsd.login_title', 'Login') }}
             </span>
-          </button>
-
-          <div class="flex justify-around gap-3 text-xs">
-            <span>
-              {{ $t("vsd.dont_have_account", "Don't have an account?") }}
-              <nuxt-link :to="useAuthRoutes('register')" class="text-link">
-                {{ $t("vsd.register_title", "Register now") }}
-              </nuxt-link>
-            </span>
-          </div>
+            </v-btn>
+          </v-row>
         </div>
       </div>
-    </div>
-  </div>
-
+    </v-card-text>
+  </v-card>
 </template>
 
 <script setup>
-import {reactive} from 'vue';
+
 import {
   useField,
   useForm
@@ -132,8 +76,8 @@ const {handleSubmit, errors} = form;
 const showPassword = ref(false);
 
 // Setup Validating fields
-const identifier = reactive(useField('identifier', 'required|min:3'));
-const password = reactive(useField('password', 'required|min:8'));
+const identifier = useField('identifier', 'required|min:3');
+const password = useField('password', 'required|min:8');
 
 
 // Handle Submit
