@@ -31,12 +31,12 @@
                 type="button"
             >
               <v-btn type="submit"
-                     color="primary"
+                     color="error"
                      :variant="useStyle('btn')"
                      :loading="useLoader().status('auth')"
                      @click="submitForm"
                      class="btn-primary flex gap-2 w-full mt-2 py-2.5 align-center">
-                {{ $t('vsd.logout_title', 'Logout') }}
+                {{ $t('vsd.logout_title', 'Yes, Logout') }}
               </v-btn>
             </v-skeleton-loader>
           </v-row>
@@ -48,19 +48,14 @@
 
 <script setup>
 
-import {
-  useField,
-  useForm
-} from 'vee-validate';
-
 // Setup page
 const {logo, title} = useAppConfig()?.vsd;
 const emit = defineEmits(['action'])
 
 // Handle Submit
-const submitForm = handleSubmit((values) => {
+const submitForm = (() => {
   // Send data to your api ...
-  emit('action', values)
+  emit('action', {})
 });
 
 </script>
