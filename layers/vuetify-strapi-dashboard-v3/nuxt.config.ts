@@ -1,5 +1,5 @@
 import dotenv from "dotenv"
-
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 dotenv.populate(process.env, {AUTH_SCHEMA: 'vsd'})
 
 export default defineNuxtConfig({
@@ -24,9 +24,23 @@ export default defineNuxtConfig({
     css: [
         "@tabler/icons-webfont/tabler-icons.min.css",
     ],
+    build: {
+        transpile: ['vuetify'],
+    },
+    modules: [
+        (_options, nuxt) => {
+            nuxt.hooks.hook('vite:extendConfig', (config) => {
+                // @ts-expect-error
+                config.plugins.push(vuetify({ autoImport: true }))
+            })
+        },
+        //...
+    ],
     vite: {
-        ssr: {
-            noExternal: ['vuetify']
-        }
-    }
+        vue: {
+            template: {
+                transformAssetUrls,
+            },
+        },
+    },
 })
