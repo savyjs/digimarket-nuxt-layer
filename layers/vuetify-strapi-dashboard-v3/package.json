@@ -1,7 +1,7 @@
 {
   "name": "vuetify-strapi-dashboard",
   "description": "Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "3.0.0-development.32",
+  "version": "3.0.0-development.35",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -37,26 +37,26 @@
     "test:types": "tsc -p types/test"
   },
   "devDependencies": {
-    "@nuxt/schema": "^3.7.0",
-    "@nuxt/test-utils": "^3.7.0",
+    "@nuxt/schema": "^3.10.1",
+    "@nuxt/test-utils": "^3.11.0",
     "@types/node": "^18",
     "fs": "^0.0.1-security",
     "jest": "^29.3.1",
-    "nuxt": "^3.7.2",
+    "nuxt": "^3.10.1",
     "path": "^0.12.7",
     "sass": "^1.52.3",
     "sass-loader": "^13.3.2",
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "digimarket-nuxt-layer-auth": "^1.0.0-development.27",
+    "digimarket-nuxt-layer-auth": "^1.0.0-development.28",
     "@mdi/font": "^7.2.96",
     "@mdi/js": "^7.2.96",
     "pinia": "^2.1.7",
+    "@pinia/nuxt": "^0.5.1",
     "@nuxtjs/strapi": "^1.9.3",
-    "@pinia/nuxt": "^0.4.11",
     "@sidebase/nuxt-auth": "^0.6.0-beta.6",
-    "@tabler/icons-webfont": "^2.34.0",
+    "@tabler/icons-webfont": "^3.0.0-alpha.1",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.21",
     "lodash-deep": "^1.6.0",
