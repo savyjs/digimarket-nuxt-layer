@@ -22,7 +22,7 @@ export default defineNuxtConfig({
         },
     },
     css: [
-        "@tabler/icons-webfont/tabler-icons.min.css",
+        "@tabler/icons-webfont/dist/tabler-icons-filled.min.css",
     ],
     build: {
         transpile: ['vuetify'],

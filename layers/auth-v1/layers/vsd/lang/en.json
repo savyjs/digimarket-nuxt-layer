@@ -1,0 +1,9 @@
+{
+  "vsd": {
+    "title": "Digimarket",
+    "register": "Register",
+    "login_title": "Login",
+    "register_title": "Register",
+    "terms_and_conditions": "I accept terms and conditions of {title}"
+  }
+}
