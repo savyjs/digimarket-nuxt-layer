@@ -2,7 +2,6 @@ import {createI18n} from "vue-i18n";
 
 import fa from '~/lang/fa.json'
 import en from '~/lang/en.json'
-const _ = require("lodash");
 
 export default defineNuxtPlugin(nuxtApp => {
 
@@ -12,7 +11,7 @@ export default defineNuxtPlugin(nuxtApp => {
     const rtlDictionary = appConfig?.vsd?.i18n?.rtlDictionary || {}
 
     let messages = {fa, en}
-    messages = _.merge(messages, appConfig?.messages)
+    messages = { ...messages, ...appConfig?.messages };
 
     let options = {
         legacy: false,
