@@ -1,7 +1,7 @@
 {
   "name": "vuetify-strapi-dashboard",
   "description": "Nuxt ui kit layer for nuxt 3. a modern and beautiful marketplace ui",
-  "version": "3.0.0-development.37",
+  "version": "3.0.0-development.41",
   "author": "Ehsan Afshari @savyjs <savvyversa@gmail.com>",
   "license": "MIT",
   "keywords": [
@@ -58,6 +58,7 @@
     "@tabler/icons-webfont": "^3.0.0-alpha.1",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.21",
+    "@types/lodash": "^4.14.202",
     "lodash-deep": "^1.6.0",
     "moment-jalaali": "^0.9.2",
     "nuxt-jsonld": "^2.0.8",

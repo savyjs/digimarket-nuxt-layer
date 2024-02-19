@@ -2,7 +2,7 @@ import {createI18n} from "vue-i18n";
 
 import fa from '~/lang/fa.json'
 import en from '~/lang/en.json'
-import _ from "lodash";
+import "lodash";
 
 export default defineNuxtPlugin(nuxtApp => {
 
