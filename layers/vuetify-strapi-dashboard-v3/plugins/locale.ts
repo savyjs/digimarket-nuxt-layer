@@ -11,7 +11,7 @@ export default defineNuxtPlugin(nuxtApp => {
     const rtlDictionary = appConfig?.vsd?.i18n?.rtlDictionary || {}
 
     let messages = {fa, en}
-    messages = { ...messages, ...appConfig?.messages };
+    messages = deepMerge(messages, appConfig?.messages);
 
     let options = {
         legacy: false,
@@ -28,3 +28,16 @@ export default defineNuxtPlugin(nuxtApp => {
     })
 
 })
+
+function deepMerge(target: any, source: any): any {
+    for (const key in source) {
+        if (source.hasOwnProperty(key)) {
+            if (source[key] instanceof Object && key in target) {
+                deepMerge(target[key], source[key]);
+            } else {
+                target[key] = source[key];
+            }
+        }
+    }
+    return target;
+}
