@@ -3,13 +3,20 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 dotenv.populate(process.env, {AUTH_SCHEMA: 'vsd'})
 
 export default defineNuxtConfig({
+    extends: [
+        'digimarket-nuxt-layer-auth'
+    ],
     modules: [
         '@nuxtjs/strapi',
         '@vee-validate/nuxt',
-        '@pinia/nuxt'
-    ],
-    extends: [
-        'digimarket-nuxt-layer-auth'
+        '@pinia/nuxt',
+        (_options, nuxt) => {
+            nuxt.hooks.hook('vite:extendConfig', (config) => {
+                // @ts-expect-error
+                config.plugins.push(vuetify({ autoImport: true }))
+            })
+        },
+        //...
     ],
     veeValidate: {
         // disable or enable auto imports
@@ -27,15 +34,6 @@ export default defineNuxtConfig({
     build: {
         transpile: ['vuetify'],
     },
-    modules: [
-        (_options, nuxt) => {
-            nuxt.hooks.hook('vite:extendConfig', (config) => {
-                // @ts-expect-error
-                config.plugins.push(vuetify({ autoImport: true }))
-            })
-        },
-        //...
-    ],
     vite: {
         vue: {
             template: {

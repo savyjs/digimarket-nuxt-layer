@@ -9,7 +9,7 @@ export default defineNuxtPlugin(nuxtApp => {
     let appConfig = useAppConfig()
     let defaultLocale = appConfig?.vsd?.i18n?.lang || 'en'
 
-    const rtlDictionary = appConfig?.vsd?.i18n?.rtlDictionary
+    const rtlDictionary = appConfig?.vsd?.i18n?.rtlDictionary || {}
 
     let messages = {fa, en}
     messages = _.merge(messages, appConfig?.messages)
@@ -25,7 +25,7 @@ export default defineNuxtPlugin(nuxtApp => {
 
     watch(i18n.global.locale, (newVal) => {
         let rtl = useRtl()
-        rtl.value = !!rtlDictionary[newVal] ?? false
+        rtl.value = typeof newVal == "string" ? !!rtlDictionary?.[newVal] : false
     })
 
 })
