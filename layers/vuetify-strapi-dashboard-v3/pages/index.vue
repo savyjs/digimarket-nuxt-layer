@@ -1,3 +1,12 @@
 <template>
-  <div>Welcome to admin panel!</div>
+  <div>Hi world! - this is your dashboard
+  </div>
 </template>
+<script setup>
+
+definePageMeta({
+  layout: 'vsd',
+})
+
+</script>
+

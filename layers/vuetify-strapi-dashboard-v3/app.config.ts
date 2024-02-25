@@ -34,7 +34,7 @@ export default defineAppConfig({
         verify: '/auth/verify',
         forgot: '/auth/forgot',
         home: '/',
-        profile: '/admin',
-        dashboard: '/admin'
+        profile: '/',
+        dashboard: '/'
     }
 })
