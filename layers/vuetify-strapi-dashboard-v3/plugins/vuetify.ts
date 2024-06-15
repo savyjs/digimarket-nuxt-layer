@@ -7,7 +7,6 @@ import {fa} from 'vuetify/iconsets/fa'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { VCalendar } from 'vuetify/labs/VCalendar'
-import { VCalendar } from 'vuetify/labs/'
 import { VSnackbarQueue } from 'vuetify/labs/VSnackbarQueue'
 
 export default defineNuxtPlugin((nuxt) => {

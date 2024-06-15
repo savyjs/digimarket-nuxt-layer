@@ -104,6 +104,7 @@
       <LayoutVsdNotifications v-if="showNotifications"/>
       <LayoutVsdSettings v-if="showSettings"/>
       <LayoutVsdAccount class="mx-2"/>
+      <ui-vsd-snackbar />
     </v-app-bar>
 
     <v-main class="d-flex align-center justify-center" style="min-height: 300px;">
