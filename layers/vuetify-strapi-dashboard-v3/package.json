@@ -66,7 +66,7 @@
     "vue-i18n": "^9.5.0",
     "vue-sweetalert2": "^5.0.5",
     "vue3-lottie": "^3.1.0",
-    "vuetify": "^3.5.3",
+    "vuetify": "^3.6.9",
     "vite-plugin-vuetify": "^2.0.1",
     "vee-validate": "^4.12.5",
     "@vee-validate/nuxt": "^4.12.5",
