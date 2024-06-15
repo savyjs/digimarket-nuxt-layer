@@ -6,6 +6,9 @@ import {aliases, mdi} from 'vuetify/iconsets/mdi'
 import {fa} from 'vuetify/iconsets/fa'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
+import { VCalendar } from 'vuetify/labs/VCalendar'
+import { VCalendar } from 'vuetify/labs/'
+import { VSnackbarQueue } from 'vuetify/labs/VSnackbarQueue'
 
 export default defineNuxtPlugin((nuxt) => {
     const light: ThemeDefinition = {
@@ -34,7 +37,7 @@ export default defineNuxtPlugin((nuxt) => {
             },
         },
         ssr: true,
-        components: {...components},
+        components: {...components,VCalendar,VSnackbarQueue},
         directives,
         theme: {
             defaultTheme: 'dark',

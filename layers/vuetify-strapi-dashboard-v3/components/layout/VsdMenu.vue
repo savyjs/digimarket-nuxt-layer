@@ -60,7 +60,7 @@ function capitalize(s) {
 
 function isAllowedMenu(item) {
   // Check user permissions
-  return item?.title
+  return item?.title && (item?.avtive !== false)
 }
 
 const drawerItems = appConfig?.vsd?.menu?.drawer;

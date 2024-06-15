@@ -7,7 +7,7 @@
 <script setup>
 
 definePageMeta({
-  middleware: 'not-authenticated'
+  middleware: 'authenticated'
 });
 
 // Sending event
